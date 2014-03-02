@@ -1,0 +1,72 @@
+#progress {
+  /*width: 6px;
+	height:1024px;
+  right:0;*/
+  width:768px;
+  height:6px;
+  top:0;
+	background:#444;
+	z-index:200;
+  }
+
+
+#snow01, #snow02, #snow03 {
+	z-index:10;
+	top:0;
+	left:0;
+  width:768px;
+	height:1024px;
+	background:url('../img/snow_01.png') repeat 0 0;
+  }
+
+#snow02 {
+	z-index:9;
+	background-image:url('../img/snow_02.png');
+  }
+
+#snow03 {
+	z-index:21;
+	background-image:url('../img/snow_03.png');
+  }
+	
+#cover {
+  background-color: $page-color-dark;
+  
+  }
+
+#story {
+  width:334px;
+  margin:50px;
+  position: relative;
+  top:2000px;
+  z-index: 1000;
+  
+  p {color:$story-color;}
+  
+  }  
+
+#howto {
+	top:500px;
+  background-color: $page-color-light;
+  
+  .factoid {
+    width: 300px;
+    position: absolute;
+    top:400px;
+    right:0;  
+    }
+      
+  }
+  
+#empty {;
+  top:1000px;
+  background-color: $page-color-dark;    
+  }
+
+
+#pageEnd {
+  width:768px;
+	height:1024px;
+	top:1024px;
+  background-color: $page-color-dark;  
+  }

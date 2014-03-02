@@ -1,0 +1,96 @@
+/***********************************************************************************************************/
+/*** Begin Type Styles  ************************************************************************************/
+/***********************************************************************************************************/
+
+
+
+html, body, div, span, p, a, del, em, img, ol, ul, li, fieldset, form, label {
+	font-size: 100%;
+	vertical-align: baseline;
+  }
+
+
+html, body {
+	line-height: 1;
+	font-family:$sans-type;
+  text-align: left;
+  }
+
+
+ol, ul {
+	list-style: none;
+  }
+
+  
+.button .closed p {
+  text-align: center;
+  margin:30px;
+	color:white;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 30px;
+  }
+  
+p {
+  font-family: $serif-type;
+  color:black;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.25;
+  margin-bottom: 24px;
+  }
+  
+
+q {
+	font-style:italic;
+	color:#333;
+  }
+
+h1 {
+	font-size:6em;
+	margin:0;
+  }
+
+h1 > small {
+	text-align:right;
+	display:inline-block;
+	font-size:.71em;
+	text-indent:15em;
+	color:#444;
+  }
+
+h2 {
+	color:inherit;
+	font-size:4em;
+	margin:2em 0 1em 0;
+  }
+
+h2:first-child {margin-top:0;}
+
+h3 {
+	color:#333;
+	font-size:1.41em;
+	margin:1em 0;
+  }
+
+h4 {
+	color:#444;
+	font-size:1.11em;
+	margin:1em 0;
+  }
+
+#transform {
+	text-align:center;
+	font-size:150%;
+  }
+
+#properties {
+	text-align:center;
+  }
+
+.drop {
+	font-weight:bold;
+  }
+
+/*** End Type Styles ********************************************************/
+
