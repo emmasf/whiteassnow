@@ -47,30 +47,53 @@ body { background: #fff; background-attachment: fixed; }
 
 /*
 .svg-draw { fill:none; stroke-width:7; stroke-linecap:round; stroke-linejoin:round; stroke-miterlimit:4; stroke-opacity:1; stroke-dasharray:6000; stroke-dashoffset:0;       } 
-.factoid { background-color: $factoid-color; padding:15px;   p { padding:0; margin:0; font-family: $sans-type; }   } 
-.hidden { p {display: none;} } 
-.revealed { p {display: block;} }
 */
+.factoid { position: absolute; min-height: 40px; background-color: rgba(231, 41, 0, 0.75); }
+.factoid p { padding: 20px; display: none; font-family: "Helvetica Neue", Helvetica, Arial, serif; }
+
+.open p { display: block; }
+
 #progress {   /*width: 6px;
 	height:1024px; right:0;*/ width: 768px; height: 6px; top: 0; background: #444; z-index: 200; }
 
 #begin .story { width: 600px; left: 75px; left: 55px; top: 200px; opacity: 0; }
+#begin #factoid02 { width: 300px; top: 800px; left: 0px; }
+#begin div#factoid02.open { height: 100px; }
 
 #snowwhite .story { width: 400px; left: 260px; left: 24px; top: 1024px; }
+#snowwhite #factoid03 { width: 340px; top: 105px; right: 0px; }
+#snowwhite div#factoid03.open { height: 600px; }
 
 #queen .story { width: 660px; left: 30px; left: 10px; top: 1024px; }
+#queen #factoid04 { width: 45px; height: 320px; top: 440px; right: 0px; }
+#queen div#factoid04.open { width: 360px; }
 
 #huntsman .story { width: 460px; left: 220px; left: 20px; top: 1024px; }
+#huntsman #factoid05 { width: 400px; top: 350px; left: 0px; }
+#huntsman div#factoid05.open { height: 100px; }
 
 #dwarves .story { width: 390px; left: 290px; left: 270px; top: 1024px; }
+#dwarves #factoid06 { width: 45px; height: 380px; top: 70px; left: 0px; }
+#dwarves div#factoid06.open { width: 450px; }
 
 #king .story { width: 600px; left: 80px; left: 60px; top: 1024px; }
+#king #factoid07 { width: 50%; top: 150px; left: 25%; }
+#king div#factoid07.open { height: 1200px; }
 
 #sin .story { width: 510px; left: 175px; left: 155px; top: 1024px; }
+#sin #factoid08 { width: 45px; height: 750px; top: 110px; left: 0px; }
+#sin div#factoid08.open { width: 450px; }
 
 #prince .story { width: 345px; left: 31px; left: 11px; top: 1024px; }
+#prince #factoid09 { width: 345px; top: 680px; right: 0px; }
+#prince div#factoid09.open { height: 100px; }
 
 #moral .story { width: 645px; left: 39px; left: 19px; top: 1024px; }
+#moral #factoid10 { width: 390px; top: 415px; left: 0px; }
+#moral div#factoid10.open { height: 100px; }
+
+#end #factoid11 { width: 430px; top: 310px; left: 170px; }
+#end div#factoid11.open { height: 100px; }
 
 /***********************************************************************************************************/
 /*** Begin Type Styles  ************************************************************************************/

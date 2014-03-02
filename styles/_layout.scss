@@ -21,6 +21,17 @@
     top:200px;
     opacity: 0;
     }
+    
+  #factoid02 {
+    width: 300px;
+    top: 800px;
+    left: 0px;
+    }
+
+  div#factoid02.open {
+    height: 100px;
+    } 
+  
   }
 
 #snowwhite {
@@ -30,6 +41,16 @@
     left: 24px;
     top:1024px;
     }
+    
+  #factoid03 {
+    width: 340px;
+    top: 105px;
+    right: 0px;
+    }
+
+  div#factoid03.open {
+    height: 600px;
+    } 
   }
 
 #queen {
@@ -39,6 +60,17 @@
     left: 10px;
     top:1024px;
     }
+    
+  #factoid04 {
+    width: 45px;
+    height: 320px;
+    top: 440px;
+    right: 0px;
+    }
+
+  div#factoid04.open {
+    width: 360px;
+    }     
   }
 
 #huntsman {
@@ -48,6 +80,16 @@
     left: 20px;
     top:1024px;
     }
+    
+  #factoid05 {
+    width: 400px;
+    top: 350px;
+    left: 0px;
+    }
+
+  div#factoid05.open {
+    height: 100px;
+    }     
   }
 
 #dwarves {
@@ -57,6 +99,17 @@
     left: 270px;
     top:1024px;
     }
+    
+  #factoid06 {
+    width: 45px;
+    height: 380px;
+    top: 70px;
+    left: 0px;
+    }
+
+  div#factoid06.open {
+    width: 450px;
+    }  
   }
 
 #king {
@@ -66,6 +119,16 @@
     left: 60px;
     top:1024px;
     }
+    
+  #factoid07 {
+    width: 50%;
+    top: 150px;
+    left: 25%;
+    }
+
+  div#factoid07.open {
+    height: 1200px;
+    }     
   }
 
 #sin {
@@ -75,6 +138,17 @@
     left: 155px;
     top:1024px;
     }
+    
+  #factoid08 {
+    width: 45px;
+    height: 750px;
+    top: 110px;
+    left: 0px;
+    }
+
+  div#factoid08.open {
+    width: 450px;
+    }     
   }
 
 #prince {
@@ -84,6 +158,16 @@
     left: 11px;
     top:1024px;
     }
+    
+  #factoid09 {
+    width: 345px;
+    top: 680px;
+    right: 0px;
+    }
+
+  div#factoid09.open {
+    height: 100px;
+    }     
   }
 
 #moral {
@@ -93,10 +177,29 @@
     left: 19px;
     top:1024px;
     }
+    
+  #factoid10 {
+    width: 390px;
+    top: 415px;
+    left: 0px;
+    }
+
+  div#factoid10.open {
+    height: 100px;
+    }     
+    
   }
 
 #end {
+  #factoid11 {
+    width: 430px;
+    top: 310px;
+    left: 170px;
+    }
 
+  div#factoid11.open {
+    height: 100px;
+    } 
   }
   
 
