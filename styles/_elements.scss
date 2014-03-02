@@ -25,6 +25,7 @@ body {
   width:768px;
 	height:1024px;
 	top:0px;
+	border-bottom: 2px solid #ccc;
 	
   h1 {
     top:100px;
@@ -46,15 +47,55 @@ body {
   	}	  	
 	}
 	
+	
+.page-nav {
+  top:0px;
+  position: relative;
+  height: 60px;
+  width: 100%;
+  
+  .next {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1); 
+    position: absolute;
+    right: 30px;
+    }
+    
+  .previous {
+    position: absolute;
+    left: 30px;
+    }
+    
+  .beginning {
+    position: absolute;
+    left: 100px;
+    }
+  
+  }
+	
   
 .button .closed {
   background-color: $button-color;
-  width:33.333%;
+  width:20%;
   height:90px;
-  left:33.333%;
-  top:450px;
+  left:40%;
+  top:550px;
   }  
 
+      
+.cutout {
+  position:relative;
+  top:0px;  
+  }
+
+.back {z-index:1 !important;}
+.middle {z-index:25 !important;}
+.front {z-index:50 !important;}
+
+
+/*
 .svg-draw {
   fill:none;
   stroke-width:7;
@@ -83,12 +124,5 @@ body {
 .revealed {
   p {display: block;}
   }
-      
-.cutout {
-  position:relative;
-  top:0px;  
-  }
+*/
 
-.back {z-index:1 !important;}
-.middle {z-index:25 !important;}
-.front {z-index:50 !important;}
