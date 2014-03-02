@@ -54,23 +54,23 @@ body { background: #fff; background-attachment: fixed; }
 #progress {   /*width: 6px;
 	height:1024px; right:0;*/ width: 768px; height: 6px; top: 0; background: #444; z-index: 200; }
 
-#begin .story { width: 600px; left: 75px; top: 200px; opacity: 0; }
+#begin .story { width: 600px; left: 75px; left: 55px; top: 200px; opacity: 0; }
 
-#snowwhite .story { width: 400px; left: 260px; top: 1024px; }
+#snowwhite .story { width: 400px; left: 260px; left: 24px; top: 1024px; }
 
-#queen .story { width: 660px; left: 30px; top: 1024px; }
+#queen .story { width: 660px; left: 30px; left: 10px; top: 1024px; }
 
-#huntsman .story { width: 460px; left: 220px; top: 1024px; }
+#huntsman .story { width: 460px; left: 220px; left: 20px; top: 1024px; }
 
-#dwarves .story { width: 390px; left: 290px; top: 1024px; }
+#dwarves .story { width: 390px; left: 290px; left: 270px; top: 1024px; }
 
-#king .story { width: 600px; left: 80px; top: 1024px; }
+#king .story { width: 600px; left: 80px; left: 60px; top: 1024px; }
 
-#sin .story { width: 510px; left: 175px; top: 1024px; }
+#sin .story { width: 510px; left: 175px; left: 155px; top: 1024px; }
 
-#prince .story { width: 345px; left: 31px; top: 1024px; }
+#prince .story { width: 345px; left: 31px; left: 11px; top: 1024px; }
 
-#moral .story { width: 645px; left: 39px; top: 1024px; }
+#moral .story { width: 645px; left: 39px; left: 19px; top: 1024px; }
 
 /***********************************************************************************************************/
 /*** Begin Type Styles  ************************************************************************************/
@@ -83,11 +83,14 @@ ol, ul { list-style: none; }
 
 .button .closed p { text-align: center; margin: 30px; color: white; font-size: 16px; font-weight: 700; line-height: 30px; }
 
-.story p { font-family: "Arnhem", Georgia, serif; color: rgba(0, 0, 0, 0.85); font-size: 24px; font-weight: 400; line-height: 1.25; margin-bottom: 12px; letter-spacing: 0.0125em; }
+.story p { display: inline; font-family: "Arnhem", Georgia, serif; color: black; font-size: 24px; font-weight: 400; line-height: 1.175; line-height: 1.35; margin-bottom: 12px; letter-spacing: 0.0125em; background-color: rgba(233, 197, 129, 0.35); background-color: rgba(255, 255, 255, 0.75);   /*
+text-shadow:     -2px -2px 0 rgba(255,255,255,0.5), 2px -2px 0 rgba(255,255,255,0.5), -2px 2px 0 rgba(255,255,255,0.5), 2px 2px 0 rgba(255,255,255,0.5) ;
+*/ }
 
 .story p:first-child { margin-top: 12px; }
 
-div.story { padding: 9px; background-color: rgba(50, 239, 214, 0.25); }
+div.story { padding: 9px; padding-left: 20px; /*   background-color: $story-bg-color; */ }
+div.story .line-break { height: 12px; }
 
 q { font-style: italic; color: #333; }
 
