@@ -31,13 +31,23 @@ ol, ul {
   line-height: 30px;
   }
   
-p {
+.story p {
   font-family: $serif-type;
-  color:black;
-  font-size: 18px;
+  color:$story-color;
+  font-size: 24px;
   font-weight: 400;
   line-height: 1.25;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
+  letter-spacing: 0.0125em;
+  }
+  
+.story p:first-child {
+  margin-top: 12px;
+  }
+  
+div.story {  
+  padding: 9px;
+  background-color: $story-bg-color;
   }
   
 

@@ -14,43 +14,80 @@
   }
 
 #begin {
-  background: url('.../img/bg_02begin.jpg') no-repeat;
+  .story {
+    width: 600px;
+    left: 75px;
+    top:200px;
+    opacity: 0;
+    }
   }
 
 #snowwhite {
-  background: url('.../img/bg_03snowwhite.jpg') no-repeat;
+  .story {
+    width: 400px;
+    left: 260px;
+    top:1024px;
+    }
   }
 
 #queen {
-  background: url('.../img/bg_04queen.jpg') no-repeat;
+  .story {
+    width: 660px;
+    left: 30px;
+    top:1024px;
+    }
   }
 
 #huntsman {
-  background: url('.../img/bg_05huntsman.jpg') no-repeat;
+  .story {
+    width: 460px;
+    left: 220px;
+    top:1024px;
+    }
   }
 
 #dwarves {
-  background: url('.../img/bg_06dwarves.jpg') no-repeat;
+  .story {
+    width: 390px;
+    left: 290px;
+    top:1024px;
+    }
   }
 
 #king {
-  background: url('.../img/bg_07king.jpg') no-repeat;
+  .story {
+    width: 600px;
+    left: 80px;
+    top:1024px;
+    }
   }
 
 #sin {
-  background: url('.../img/bg_08sin.jpg') no-repeat;
+  .story {
+    width: 510px;
+    left: 175px;
+    top:1024px;
+    }
   }
 
 #prince {
-  background: url('.../img/bg_09prince.jpg') no-repeat;
+  .story {
+    width: 345px;
+    left: 31px;
+    top:1024px;
+    }
   }
 
 #moral {
-  background: url('.../img/bg_10moral.jpg') no-repeat;
+  .story {
+    width: 645px;
+    left: 39px;
+    top:1024px;
+    }
   }
 
 #end {
-  background: url('.../img/bg_11end.jpg') no-repeat;
+
   }
   
 

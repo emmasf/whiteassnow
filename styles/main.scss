@@ -1,3 +1,16 @@
+@font-face
+  { 
+  font-family: "Helvetica Neue"; 
+  src: url('../type/HelveticaNeue-Bold.otf'); 
+  }
+  
+@font-face
+  { 
+  font-family: Arnhem; 
+  src: url('../type/Arnhem-Bold.ttf'); 
+  }
+
+
 @import "variables";
 @import "fixed-positioning";
 @import "elements";

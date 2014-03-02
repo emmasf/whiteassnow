@@ -1,3 +1,7 @@
+@font-face { font-family: "Helvetica Neue"; src: url("../type/HelveticaNeue-Bold.otf"); }
+
+@font-face { font-family: Arnhem; src: url("../type/Arnhem-Bold.ttf"); }
+
 /***********************************************************************************************************/
 /*** Begin Skrollr Fixed Positition Styles  ****************************************************************/
 /***********************************************************************************************************/
@@ -50,25 +54,23 @@ body { background: #fff; background-attachment: fixed; }
 #progress {   /*width: 6px;
 	height:1024px; right:0;*/ width: 768px; height: 6px; top: 0; background: #444; z-index: 200; }
 
-#begin { background: url(".../img/bg_02begin.jpg") no-repeat; }
+#begin .story { width: 600px; left: 75px; top: 200px; opacity: 0; }
 
-#snowwhite { background: url(".../img/bg_03snowwhite.jpg") no-repeat; }
+#snowwhite .story { width: 400px; left: 260px; top: 1024px; }
 
-#queen { background: url(".../img/bg_04queen.jpg") no-repeat; }
+#queen .story { width: 660px; left: 30px; top: 1024px; }
 
-#huntsman { background: url(".../img/bg_05huntsman.jpg") no-repeat; }
+#huntsman .story { width: 460px; left: 220px; top: 1024px; }
 
-#dwarves { background: url(".../img/bg_06dwarves.jpg") no-repeat; }
+#dwarves .story { width: 390px; left: 290px; top: 1024px; }
 
-#king { background: url(".../img/bg_07king.jpg") no-repeat; }
+#king .story { width: 600px; left: 80px; top: 1024px; }
 
-#sin { background: url(".../img/bg_08sin.jpg") no-repeat; }
+#sin .story { width: 510px; left: 175px; top: 1024px; }
 
-#prince { background: url(".../img/bg_09prince.jpg") no-repeat; }
+#prince .story { width: 345px; left: 31px; top: 1024px; }
 
-#moral { background: url(".../img/bg_10moral.jpg") no-repeat; }
-
-#end { background: url(".../img/bg_11end.jpg") no-repeat; }
+#moral .story { width: 645px; left: 39px; top: 1024px; }
 
 /***********************************************************************************************************/
 /*** Begin Type Styles  ************************************************************************************/
@@ -81,7 +83,11 @@ ol, ul { list-style: none; }
 
 .button .closed p { text-align: center; margin: 30px; color: white; font-size: 16px; font-weight: 700; line-height: 30px; }
 
-p { font-family: "Arnhem", Georgia, serif; color: black; font-size: 18px; font-weight: 400; line-height: 1.25; margin-bottom: 24px; }
+.story p { font-family: "Arnhem", Georgia, serif; color: rgba(0, 0, 0, 0.85); font-size: 24px; font-weight: 400; line-height: 1.25; margin-bottom: 12px; letter-spacing: 0.0125em; }
+
+.story p:first-child { margin-top: 12px; }
+
+div.story { padding: 9px; background-color: rgba(50, 239, 214, 0.25); }
 
 q { font-style: italic; color: #333; }
 
