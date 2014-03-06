@@ -46,20 +46,20 @@ body { background: #fff; background-attachment: fixed; }
 
 .front { z-index: 50 !important; }
 
-/*
-.svg-draw { fill:none; stroke-width:7; stroke-linecap:round; stroke-linejoin:round; stroke-miterlimit:4; stroke-opacity:1; stroke-dasharray:6000; stroke-dashoffset:0;       } 
-*/
-.factoid { position: absolute; min-height: 32px; background-color: rgba(231, 41, 0, 0.75); }
-.factoid p { padding: 20px; display: none; font-family: "Helvetica Neue", Helvetica, Arial, serif; }
+.factoid { z-index: 100; position: absolute; min-height: 32px; background-color: rgba(231, 41, 0, 0.75); }
+.factoid p { padding: 30px; display: none; font-family: "Helvetica Neue", Helvetica, Arial, serif; color: #fff; font-size: 18px; letter-spacing: 0.05em; font-weight: 200; line-height: 1.25em; }
 
 .open p { display: block; }
 
+/*
+.svg-draw { fill:none; stroke-width:7; stroke-linecap:round; stroke-linejoin:round; stroke-miterlimit:4; stroke-opacity:1; stroke-dasharray:6000; stroke-dashoffset:0;       } 
+*/
 /***********************************************************************************************************/
 /*** Begin Type Styles  ************************************************************************************/
 /***********************************************************************************************************/
 html, body, div, span, p, a, del, em, img, ol, ul, li, fieldset, form, label { font-size: 100%; vertical-align: baseline; }
 
-html, body { line-height: 1; font-family: "Helvetica Neue", Helvetica, Arial, serif; text-align: left; }
+html, body { line-height: 1.2em; font-family: "Helvetica Neue", Helvetica, Arial, serif; text-align: left; }
 
 ol, ul { list-style: none; }
 

@@ -90,6 +90,31 @@ body {
 .front {z-index:50 !important;}
 
 
+.factoid {
+  z-index: 100;
+  position: absolute;
+  min-height: 32px;
+  background-color: $factoid-color;
+  
+  p { 
+    padding:30px; 
+    display: none;
+    font-family: $sans-type;
+    color:#fff;
+    font-size: 18px;
+    letter-spacing: 0.05em;
+    font-weight: 200;
+    line-height: 1.25em;
+    }
+  
+  }
+
+.open p {
+    display:block;
+    } 
+
+
+
 /*
 .svg-draw {
   fill:none;
@@ -103,22 +128,3 @@ body {
   }
   
 */
-
-.factoid {
-  position: absolute;
-  min-height: 32px;
-  background-color: $factoid-color;
-  
-  p { 
-    padding:20px; 
-    display: none;
-    font-family: $sans-type;
-    }
-  
-  }
-
-.open p {
-    display:block;
-    } 
-
-
