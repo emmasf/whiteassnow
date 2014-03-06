@@ -152,9 +152,12 @@
     left: 0px;
     }
 
+/*
   div#factoid05.open {
-    height: 100px;
-    }     
+    height: 200px;
+    } 
+*/  
+  
   }
   
 #break01, #break02 {
@@ -162,8 +165,9 @@
   h2 {    
     position: absolute;
     width: 700px;
-    top:300px;
-    text-align: center;
+    top:200px;
+    left: 35px;
+    font-size: 60px;
   	}
     
   .story {
@@ -273,14 +277,11 @@
     }
     
   #factoid08 {
-    width: 340px;
+    width: 390px;
     top: 850px;
     left: 0px;
     }
-
-  div#factoid08.open {
-    width: 450px;
-    }     
+    
   }
 
 #prince {
@@ -308,13 +309,13 @@
     
   #factoid09 {
     width: 32px;
-    height: 210px;
+    height: 230px;
     top: 680px;
     right: 0px;
     }
 
   div#factoid09.open {
-    height: 100px;
+    width: 410px;
     }     
   }
 
