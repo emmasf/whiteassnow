@@ -1,72 +1,680 @@
-<!doctype html>
-<html lang="en">
+
+<!DOCTYPE html>
+<html>
 <head>
-<meta charset="UTF-8">
-<title>Drag and drop</title>
-<style type="text/css">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>jQuery.udraggable: Options</title>
+  
+  <style>
+  
+body {
+  font-family: sans-serif;
+  color: #333333;
+  padding: 1em 1em 5em 1em;
+}
 
-    .dragme{
-        position:relative;
-        width: 270px;
-        height: 203px;
-        cursor: move;
-    }
-    #draggable {
-        background-color: #ccc;
-        border: 1px solid #000;
-    }
-</style>
-<script type="text/javascript">
-        function startDrag(e) {
-            // determine event object
-            if (!e) {
-                var e = window.event;
-            }
+p {
+  line-height: 1.3;
+}
 
-            // IE uses srcElement, others use target
-            var targ = e.target ? e.target : e.srcElement;
+blockquote {
+  font-family: serif;
+  font-style: italic;
+  font-size: 110%;
+  max-width: 50em;
+  margin-right: 5em;
+}
 
-            if (targ.className != 'dragme') {return};
-            // calculate event X, Y coordinates
-                offsetX = e.clientX;
-                offsetY = e.clientY;
+pre.code {
+  margin: 2em 1em 2em 0;
+  padding: 1.3em;
+  border: 1px solid #aaaaaa;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
 
-            // assign default values for top and left properties
-            if(!targ.style.left) { targ.style.left='0px'};
-            if (!targ.style.top) { targ.style.top='0px'};
+table.options-list {
+  border-collapse: collapse;
+}
 
-            // calculate integer values for top and left 
-            // properties
-            coordX = parseInt(targ.style.left);
-            coordY = parseInt(targ.style.top);
-            drag = true;
+table.options-list th {
+  padding: 1.4em 2em 0.4em 0;
+  border-bottom: 1px solid #aaaaaa;
+}
 
-            // move div element
-                document.onmousemove=dragDiv;
+table.options-list td {
+  border-bottom: 1px solid #aaaaaa;
+  padding: 1em;
+}
 
-        }
-        function dragDiv(e) {
-            if (!drag) {return};
-            if (!e) { var e= window.event};
-            var targ=e.target?e.target:e.srcElement;
-            // move div element
-            targ.style.left=coordX+e.clientX-offsetX+'px';
-            targ.style.top=coordY+e.clientY-offsetY+'px';
-            return false;
-        }
-        function stopDrag() {
-            drag=false;
-        }
-        window.onload = function() {
-            document.onmousedown = startDrag;
-            document.onmouseup = stopDrag;
-        }
+table.options-list td:first-child {
+  vertical-align: top;
+  max-width: 40em;
+  border-right: 1px solid #aaaaaa;
+}
 
+.arena {
+  position: relative;
+  width: 300px;
+  height: 240px;
+  background-color: #ffffee;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
 
-</script>
+#drag1,
+#drag2,
+#drag3,
+#drag4,
+#drag14,
+#drag15,
+#drag16,
+#drag17,
+#drag18,
+#drag19,
+.sub-drag {
+  position: absolute;
+  top: 105px;
+  left: 135px;
+  width: 26px;
+  height: 26px;
+  border: 2px solid #6666cc;
+  background-color: #ccccff;
+  border-radius: 4px;
+}
 
+#drag4 {
+  top: 0;
+  left: 0;
+}
+
+.blk-red {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border: 2px solid #cc6666;
+  background-color: #ffcccc;
+  border-radius: 4px;
+}
+
+.blk-green {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border: 2px solid #66cc66;
+  background-color: #ccffcc;
+  border-radius: 4px;
+}
+
+#drag5 { top:  33px; left: 125px; }
+#drag6 { top: 180px; left:  77px; }
+#drag7 { top: 110px; left:  16px; }
+#drag8 { top:  79px; left: 270px; }
+#drag9 { top: 150px; left: 230px; }
+#drag10 { top:  7px; left: 169px; }
+
+#map-container {
+  overflow: hidden;
+  border: 1px solid #777777;
+}
+
+#map {
+  position: absolute;
+  left: -460px;
+  top: -60px;
+  width: 1280px;
+  height: 635px;
+  background-image: url(images/world-map.jpg);
+}
+
+#drag11 {
+  position: absolute;
+  border: 4px solid #339933;
+  border-radius: 4px;
+  width: 150px;
+  height: 120px;
+  top: 30px;
+  left: 60px;
+}
+#drag12 { top:  60px; left: 30px; }
+#drag13 { top:  30px; left: 90px; }
+
+#drag14.udraggable-dragging {
+  border: 2px solid #cc6666;
+  background-color: #ffcccc;
+  box-shadow: 1px 1px 3px 3px rgba(100, 100, 100, 0.3);
+}
+
+#status-bar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 24px;
+  font-size: 16px;
+  line-height: 1.4;
+  background-color: #666666;
+  color: #cccccc;
+}
+
+#status-bar .value {
+  color: #ffffff;
+}
+
+#status-bar span {
+  position: absolute;
+  bottom: 1px;
+}
+
+#lbl-mode  { left:  10px; }
+#stat-mode { left:  63px; }
+#lbl-x     { left: 165px; }
+#stat-x    { left: 185px; }
+#lbl-y     { left: 237px; }
+#stat-y    { left: 257px; }
+
+#dialog {
+  position: absolute;
+  top: 30px;
+  left: 50px;
+  width: 200px;
+  padding: 2px;
+  background-color: #dddddd;
+  font-family: sans-serif;
+  font-size: 12px;
+  border: 3px outset #dddddd;
+}
+
+#dialog h1 {
+  background-color: #0000aa;
+  color: #eeeeee;
+  margin: 0 0 10px 0;
+  padding: 3px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px inset #0000aa;
+  cursor: move;
+}
+
+#dialog label {
+  display: inline-block;
+  width: 85px;
+}
+
+#dialog input.text,
+#dialog select {
+  width: 104px;
+}
+
+#dialog button {
+  float: right;
+}
+
+.dice {
+  position: absolute;
+  width: 72px;
+  height: 72px;
+  background-color: #cc0000;
+  border-radius: 10px;
+}
+
+.dot {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #eeeeee;
+  border-radius: 6px;
+}
+
+.dot1 { top:  12px; left:  14px; }
+.dot2 { top:  12px; left:  46px; }
+.dot3 { top:  30px; left:  14px; }
+.dot4 { top:  30px; left:  46px; }
+.dot5 { top:  48px; left:  14px; }
+.dot6 { top:  48px; left:  46px; }
+.dice1 { top: 20px; left: 10px; }
+.dice2 { top: 60px; left: 150px; }
+
+#destroy-btn {
+  width: 80px;
+  position: absolute;
+  bottom: 6px;
+  left: 110px;
+}
+
+#disable-btn,
+#sml-grid-btn,
+#zone-red-btn {
+  width: 80px;
+  position: absolute;
+  bottom: 6px;
+  left: 45px;
+}
+
+#enable-btn,
+#big-grid-btn,
+#zone-blue-btn {
+  width: 80px;
+  position: absolute;
+  bottom: 6px;
+  left: 175px;
+}
+
+#zone-red {
+  position: absolute;
+  width: 120px;
+  height: 150px;
+  left: 89px;
+  top: 29px;
+  background-color: #ff6666;
+  border: 1px solid #881111;
+  opacity: 0.4;
+  border-radius: 4px;
+}
+
+#zone-blue {
+  position: absolute;
+  width: 240px;
+  height: 80px;
+  left: 29px;
+  top: 59px;
+  background-color: #6666ff;
+  border: 1px solid #111188;
+  opacity: 0.4;
+  border-radius: 4px;
+}
+
+  </style>
+  
 </head>
 <body>
-<div id="draggable" class="dragme">"Hello World!"</div>
-<img src="img/queen_drawn.svg" alt="drag-and-drop image script" 
- title="drag-and-drop image script" class="dragme">
+
+  <h1>jQuery.udraggable: Options</h1>
+
+  <p>This is a demo page for the <a href="../">jquery.udraggable.js plugin</a>:</p>
+
+  <blockquote>“This plugin provides an API similar to jQueryUI's draggable but
+  with support for unified mouse and touch events. It builds on Michael S.
+  Mikowski's jquery.event.ue unified event plugin.”</blockquote>
+
+  <p>The following examples illustrate the use of various options.</p>
+
+  <table class="options-list">
+
+    <tr>
+      <th>Description</th>
+      <th>Example</th>
+    </tr>
+
+    <tr>
+      <td>
+        <p><a name="defaults"></a>Default behaviour.</p>
+        <pre class="code">$('#drag1').udraggable();</pre>
+      </td>
+      <td>
+        <div class="arena">
+          <div id="drag1"></div>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <p><a name="constr-parent"></a>Constrain drag to within parent
+        element.</p>
+        <pre class="code">$('#drag2').udraggable({
+    containment: 'parent'
+});</pre>
+      </td>
+      <td>
+        <div class="arena">
+          <div id="drag2"></div>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <p><a name="constr-rect"></a>Constrain drag to a specified
+        rectangular area.</p>
+        <pre class="code">$('#drag3').udraggable({
+    containment: [ 40, 40, 180, 170]
+});</pre>
+        <p><em>Note: the coordinates constrain the possible positions of the
+        top left corner of the draggable element</em></p>
+      </td>
+      <td>
+        <div class="arena">
+          <div id="drag3"></div>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <p><a name="constr-grid"></a>Constrain position of dragged item to
+        a 30px by 30px grid.</p>
+        <pre class="code">$('#drag4').udraggable({
+    containment: [ 0, 0, 270, 210],
+    grid:        [ 30, 30 ]
+});</pre>
+      </td>
+      <td>
+        <div class="arena">
+          <div id="drag4"></div>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <p><a name="constr-axis"></a>Apply draggable behaviour to multiple
+        elements at one time.  Red elements can only be dragged on the "y"
+        axis (up and down).  Green elements can only be dragged on the "x"
+        axis (left and right).</p>
+        <pre class="code">$('.blk-red').udraggable({
+    containment: 'parent',
+    axis:        'y'
+});
+
+$('.blk-green').udraggable({
+    containment: 'parent',
+    axis:        'x'
+});</pre>
+      </td>
+      <td>
+        <div class="arena">
+          <div id="drag5" class="blk-green"></div>
+          <div id="drag6" class="blk-red"></div>
+          <div id="drag7" class="blk-green"></div>
+          <div id="drag8" class="blk-red"></div>
+          <div id="drag9" class="blk-green"></div>
+          <div id="drag10" class="blk-red"></div>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <p><a name="map-pan"></a>Constrain drag to a rectangular area larger
+        than the containing element.  The parent element uses the
+        "<code>overflow: hidden</code>" style to apply a clipping region.</p>
+        <pre class="code">$('#map').udraggable({
+    containment: [ -960, -395, 0, 0]
+});</pre>
+      </td>
+      <td>
+        <div id="map-container" class="arena">
+          <div id="map"></div>
+        </div>
+        <div><em><a href="http://commons.wikimedia.org/wiki/File:World_Map.jpg">Map
+        source</a></em></div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <p><a name="drag-in-drag"></a>It is of course possible to drag an
+        element that contains draggable elements.</p>
+        <pre class="code">$('#drag11').udraggable({
+    containment: 'parent'
+});
+
+$('.sub-drag').udraggable({
+    containment: 'parent'
+});</pre>
+      </td>
+      <td>
+        <div class="arena">
+          <div id="drag11">
+            <div id="drag12" class="sub-drag"></div>
+            <div id="drag13" class="sub-drag"></div>
+          </div>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <p><a name="callbacks"></a>The 'start', 'stop' and 'drag' options
+        allow you to monitor the progress of a drag through callback functions.
+         The item being dragged will also have the "<code>udraggable-dragging</code>"
+         class applied to it automatically - you can use CSS to take advantage
+         of this.</p>
+        <p>This example also sets the <code>distance</code> threshold.  The
+        drag operation will not start until the pointer has been moved at
+        least 15px after the initial touchstart / mousedown.</p>
+        <pre class="code">$('#drag14').udraggable({
+    distance: 15,
+    containment: 'parent',
+    start: function () {
+      $('#stat-mode').text('Dragging');
+    },
+    stop: function () {
+      $('#stat-mode').text('Idle');
+    },
+    drag: function (e, ui) {
+      var pos = ui.position
+      $('#stat-x').text(pos.left);
+      $('#stat-y').text(pos.top);
+    }
+});</pre>
+      </td>
+      <td>
+        <div class="arena">
+          <div id="drag14"></div>
+          <div id="status-bar">
+            <span class="label" id="lbl-mode">Mode:</span>
+            <span class="value" id="stat-mode">Idle</span>
+            <span class="label" id="lbl-x">X:</span>
+            <span class="value" id="stat-x">105</span>
+            <span class="label" id="lbl-y">Y:</span>
+            <span class="value" id="stat-y">135</span>
+          </div>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <p><a name="positionElement"></a>You can override the
+        <code>positionElement</code> function used to adjust the position of
+        the dragged element.  This example uses CSS transforms rather than the
+        default <code>left, top</code>.</p>
+        <pre class="code">$('#drag15').udraggable({
+    containment: 'parent',
+    positionElement: function ($el, dragging, x, y) {
+        if (dragging) {
+            $el.css({
+                left: 'auto',
+                top: 'auto',
+                transform: 'translate(' + x + 'px,' + y + 'px)'
+            });
+        }
+        else {
+            $el.css({
+                left: x,
+                top: y,
+                transform: 'none'
+            });
+        }
+    }
+});</pre>
+      </td>
+      <td>
+        <div class="arena">
+          <div id="drag15">
+          </div>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <p><a name="handle"></a>This example defines a drag handle.  Although
+        the whole panel can be dragged, you can only drag it by the blue title
+        bar.</p>
+        <pre class="code">$('#dialog').udraggable({
+    containment: 'parent',
+    handle:      'h1'
+});</pre>
+      </td>
+      <td>
+        <div class="arena">
+          <div id="dialog">
+            <h1>Personal Details</h1>
+            <form>
+              <label>Full name:</label>
+              <input type="text" class="text">
+              <label>Date of Birth:</label>
+              <input type="text" class="text">
+              <label>Nationality:</label>
+              <select>
+                <option>New Zealander</option>
+                <option>Other</option>
+              </select>
+              <hr>
+              <button type="submit" class="submit">Save</button>
+            </form>
+          </div>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+      <td>
+        <p><a name="handle"></a>The handle selector can reference multiple
+        'drag handle' elements.  In this somewhat silly example the dice can be
+        dragged but only by the dots.</p>
+        <pre class="code">$('.dice').udraggable({
+    containment: 'parent',
+    handle:      '.dot'
+});</pre>
+      </td>
+      <td>
+        <div class="arena">
+          <div class="dice dice1">
+            <div class="dot dot1"></div>
+            <div class="dot dot2"></div>
+            <div class="dot dot3"></div>
+            <div class="dot dot4"></div>
+            <div class="dot dot5"></div>
+            <div class="dot dot6"></div>
+          </div>
+          <div class="dice dice2">
+            <div class="dot dot1"></div>
+            <div class="dot dot2"></div>
+            <div class="dot dot3"></div>
+            <div class="dot dot4"></div>
+            <div class="dot dot5"></div>
+            <div class="dot dot6"></div>
+          </div>
+        </div>
+      </td>
+    </tr>
+
+  </table>
+
+  <p>[<a href="../">Home</a>]</p>
+
+  <hr>
+
+  <p>Copyright &copy; 2013-2014 Grant McLean</p>
+  
+ <!- Begin Javascript -------------------------------------------->
+
+	<!-- JQuery please god don't conflict with skrollr -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    
+  <script type="text/javascript" src="scripts/jquery.event.ue.js"></script>
+  <script type="text/javascript" src="scripts/jquery.udraggable.js"></script>
+
+  <script type="text/javascript">
+
+    $('#drag1').udraggable();
+
+    $('#drag2').udraggable({
+        containment: 'parent'
+    });
+
+    $('#drag3').udraggable({
+        containment: [ 40, 40, 180, 170]
+    });
+
+    $('#drag4').udraggable({
+        containment: [ 0, 0, 270, 210],
+        grid:        [ 30, 30 ]
+    });
+
+    $('.blk-red').udraggable({
+        containment: 'parent',
+        axis:        'y'
+    });
+
+    $('.blk-green').udraggable({
+        containment: 'parent',
+        axis:        'x'
+    });
+
+    $('#map').udraggable({
+        containment: [ -980, -395, 0, 0]
+    });
+
+    $('#drag11').udraggable({
+        containment: 'parent'
+    });
+
+    $('.sub-drag').udraggable({
+        containment: 'parent'
+    });
+
+    $('#drag14').udraggable({
+        distance: 15,
+        containment: 'parent',
+        start: function () {
+          $('#stat-mode').text('Dragging');
+        },
+        stop: function () {
+          $('#stat-mode').text('Idle');
+        },
+        drag: function (e, ui) {
+          var pos = ui.position
+          $('#stat-x').text(pos.left);
+          $('#stat-y').text(pos.top);
+        }
+    });
+
+    $('#drag15').udraggable({
+        containment: 'parent',
+        positionElement: function ($el, dragging, x, y) {
+            if (dragging) {
+                $el.css({
+                    left: 'auto',
+                    top: 'auto',
+                    transform: 'translate(' + x + 'px,' + y + 'px)'
+                });
+            }
+            else {
+                $el.css({
+                    left: x,
+                    top: y,
+                    transform: 'none'
+                });
+            }
+        }
+    });
+
+    $('#dialog').udraggable({
+        containment: 'parent',
+        handle:      'h1'
+    });
+
+    $('.dice').udraggable({
+        containment: 'parent',
+        handle:      '.dot'
+    });
+
+  </script>
+
+</body>
+</html>

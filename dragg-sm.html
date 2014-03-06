@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <title>jQuery.udraggable: Options</title>
+  
+  <style>
+  
+
+.arena {
+  position: relative;
+  width: 700px;
+  height: 400px;
+  background-color: #ffffee;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+#drag2 {
+  position: absolute;
+  top: 105px;
+  left: 135px;
+  width: 26px;
+  height: 26px;
+  border: 2px solid #6666cc;
+  background-color: #ccccff;
+  border-radius: 4px;
+}
+
+  </style>
+  
+</head>
+<body>
+
+
+        <div class="arena">
+          <div id="drag2"><!-- <img src="img/queen_drawn.svg">--></div>
+        </div>
+
+ <!- Begin Javascript -------------------------------------------->
+
+	<!-- JQuery please god don't conflict with skrollr -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    
+  <script type="text/javascript" src="scripts/jquery.event.ue.js"></script>
+  <script type="text/javascript" src="scripts/jquery.udraggable.js"></script>
+
+  <script type="text/javascript">
+
+    $('#drag2').udraggable({
+        containment: 'parent'
+    });
+  </script>
+
+</body>
+</html>
