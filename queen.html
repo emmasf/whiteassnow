@@ -43,11 +43,15 @@
 -->
         </div>
 
-    <div class="icon middle" draggable="true"
+    <div class="icon-positioner"           
       data-0="opacity:1;"
       data-500="opacity:1;">
-      <img src="img/queen_drawn.svg">
-      </div>   
+      <div class="icon-field">
+        <div id="drag2" class="icon middle">
+          <img src="img/queen_drawn.svg">
+        </div>  
+      </div> 
+    </div>
       
       <div class="page-nav"
         data-0="top:934px"
@@ -63,7 +67,17 @@
 	<!-- JQuery please god don't conflict with skrollr -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
    
-  <!-- Factoids -->
+  <script type="text/javascript" src="scripts/jquery.event.ue.js"></script>
+  <script type="text/javascript" src="scripts/jquery.udraggable.js"></script>
+
+  <script type="text/javascript">
+
+    $('#drag2').udraggable({
+        containment: 'parent'
+    });
+  </script>
+  
+    <!-- Factoids -->
 <script type="text/javascript">
 document.getElementById('factoid04').onclick = function() {  
   var className = ' ' + factoid04.className + ' ';  

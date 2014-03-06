@@ -51,6 +51,8 @@ body { background: #fff; background-attachment: fixed; }
 
 .open p { display: block; }
 
+.icon-field { position: relative; width: 768px; height: 1024px; }
+
 /*
 .svg-draw { fill:none; stroke-width:7; stroke-linecap:round; stroke-linejoin:round; stroke-miterlimit:4; stroke-opacity:1; stroke-dasharray:6000; stroke-dashoffset:0;       } 
 */
@@ -111,7 +113,7 @@ h4 { color: #444; font-size: 1.11em; margin: 1em 0; }
 #snowwhite div#factoid03.open { height: 600px; }
 
 #queen h2 { position: absolute; width: 500px; top: 88px; left: 256px; }
-#queen .icon { position: absolute; top: 794px; left: 98px; -webkit-transform: rotate(-15deg); }
+#queen #drag2 { position: absolute; -webkit-transform: rotate(-15deg); }
 #queen .story { width: 660px; left: 30px; left: 10px; top: 1024px; }
 #queen #factoid04 { width: 32px; height: 300px; top: 490px; right: 0px; }
 #queen div#factoid04.open { width: 374px; }
