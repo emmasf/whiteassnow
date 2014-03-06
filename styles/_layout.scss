@@ -98,17 +98,26 @@
     left: 256px;
   	}
   	
+  
+  	
   #drag2 {
     position: absolute;
-    -webkit-transform: rotate(-15deg);
+    top:780px;
+    left:70px;
+    width:580px;
+    img {
+      -webkit-transform: rotate(-15deg);
+      display: block;
+      }
     }
-    
+/*
   .story {
     width: 660px;
     left: 30px;
     left: 10px;
     top:1024px;
     }
+*/
     
   #factoid04 {
     width: 32px;

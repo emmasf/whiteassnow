@@ -46,7 +46,7 @@ body { background: #fff; background-attachment: fixed; }
 
 .front { z-index: 50 !important; }
 
-.factoid { z-index: 100; position: absolute; min-height: 32px; background-color: rgba(231, 41, 0, 0.75); }
+.factoid { z-index: 100; position: absolute; min-height: 32px; background-color: #2494d1; }
 .factoid p { padding: 30px; padding-bottom: 35px; display: none; font-family: "Helvetica Neue", Helvetica, Arial, serif; font-weight: 700; color: #fff; font-size: 17px; letter-spacing: 0.025em; line-height: 1.25em; }
 
 .open p { display: block; }
@@ -112,9 +112,11 @@ h4 { color: #444; font-size: 1.11em; margin: 1em 0; }
 #snowwhite #factoid03 { width: 276px; top: 135px; right: 0px; }
 #snowwhite div#factoid03.open { height: 600px; }
 
+#queen { /* .story { width: 660px; left: 30px; left: 10px; top:1024px; }
+*/ }
 #queen h2 { position: absolute; width: 500px; top: 88px; left: 256px; }
-#queen #drag2 { position: absolute; -webkit-transform: rotate(-15deg); }
-#queen .story { width: 660px; left: 30px; left: 10px; top: 1024px; }
+#queen #drag2 { position: absolute; top: 780px; left: 70px; width: 580px; }
+#queen #drag2 img { -webkit-transform: rotate(-15deg); display: block; }
 #queen #factoid04 { width: 32px; height: 300px; top: 490px; right: 0px; }
 #queen div#factoid04.open { width: 374px; }
 
