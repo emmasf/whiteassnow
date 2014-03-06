@@ -104,11 +104,12 @@ h4 { color: #444; font-size: 1.11em; margin: 1em 0; }
 #progress {   /*width: 6px;
 	height:1024px; right:0;*/ width: 768px; height: 12px; top: 0; background: #444; z-index: 200; }
 
-#begin h2 { position: absolute; top: 90px; left: 60px; -webkit-transform-origin: 0 0; -moz-transform-origin: 0 0; -ms-transform-origin: 0 0; -o-transform-origin: 0 0; transform-origin: 0 0; }
+#begin h2 { position: absolute; top: 120px; left: 60px; -webkit-transform-origin: 0 0; transform-origin: 0 0; }
+#begin .cutout { -webkit-transform: rotate(0deg); transform: rotate(0deg); -webkit-transform-origin: 0 0; transform-origin: 0 0; }
 #begin .icon { position: absolute; top: 630px; right: 56px; }
-#begin .story { width: 600px; left: 75px; left: 55px; top: 200px; opacity: 0; }
-#begin #factoid02 { width: 340px; top: 860px; left: 0px; }
-#begin div#factoid02.open { height: 100px; }
+#begin .story { width: 600px; left: 43px; top: 250px; opacity: 0; }
+#begin #factoid02 { width: 340px; top: 860px; left: 0px; height: 32px; }
+#begin div#factoid02.open { top: 772px; height: 120px; -webkit-transition-duration: height 1s; }
 
 #snowwhite .svg-draw { position: absolute; top: 720px; }
 #snowwhite h2 { position: absolute; width: 600px; top: 682px; left: 60px; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: rotate(-90deg); transform: rotate(-90deg); }

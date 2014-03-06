@@ -20,8 +20,17 @@
     data-500="top:0px">
 
   <img class="cutout back" src="img/begin.png"      
-    data-0="top:0px"
-    data-500="top:0px">
+    data-0="
+      -webkit-transform:rotate(-60deg);
+    	transform:rotate(-60deg); 
+    	-webkit-transform-origin:100% 0;
+    	transform-origin:100% 0;"
+    data-500="
+      -webkit-transform:rotate(0deg);
+    	transform:rotate(0deg); 
+    	-webkit-transform-origin:100% 0;
+    	transform-origin:100% 0;"
+    	>
     
   <h2 class="middle"
     data-0="opacity:1"
@@ -29,13 +38,14 @@
     Let's begin.</h2>
     
   <div class="factoid front" id="factoid02">
-      <p>Tap on colored bars to reveal facts and ideas.</p>
+      <p>Snow White is a silly story.</p>
      </div>
     
   <div class="story"
-    data-0="opacity:0;"
-    data-500="opacity:1;">
-    <p>Scroll down reveal the story.</p>
+    data-0="opacity:1;"
+    data-500="opacity:0;">
+    <p>Scroll down on each page to reveal the history.</p><div class="line-break"></div>
+    <p>Tap on colored bars to reveal facts and ideas.</p>
     </div>
     
   <div class="icon middle"
@@ -63,10 +73,10 @@
 document.getElementById('factoid02').onclick = function() {  
   var className = ' ' + factoid02.className + ' ';  
   if ( ~className.indexOf(' open ') ) {
-      this.className = className.replace(' open ', ' ');
+    this.className = className.replace(' open ', ' ');
     } else {
       this.className += ' open';
-    }              
+      }          
   }
 </script>  
   
