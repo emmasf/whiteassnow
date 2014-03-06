@@ -38,15 +38,10 @@ body {
   	}
   	
   h2 {
-    padding:50px;
-  	-webkit-transform-origin:0 0;
-  	-moz-transform-origin:0 0;
-  	-ms-transform-origin:0 0;
-  	-o-transform-origin:0 0;
-  	transform-origin:0 0;
   	}	  	
 	}
 	
+.cutout {width: 100%;}
 	
 .page-nav {
   top:0px;
@@ -111,7 +106,7 @@ body {
 
 .factoid {
   position: absolute;
-  min-height: 40px;
+  min-height: 32px;
   background-color: $factoid-color;
   
   p { 

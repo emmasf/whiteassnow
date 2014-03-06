@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+	<title>White as Snow</title>
+
+	<link href="styles/main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	
+
+	<div id="progress" data-0="width:0%;background:hsl(200, 100%, 50%);" data-900="width:100%;background:hsl(920, 100%, 50%);"></div>
+
+  	<div id="break01" class="page"
+      data-0="top:0px"
+      data-500="top:0px">
+
+    <h2 class="middle"
+      data-0="opacity:1"
+      data-500="opacity:1">
+      Pause 01</h2>        
+        
+      <div class="story"
+        data-0="top:1024px;"
+        data-500="top:20px;">
+        <p>The servant obeyed and took Little Snow White to the forest to pick flowers. When they were far from home, he prepared to do the Queen’s bidding. As he raised his knife above her head he looked at her face with her innocent eyes, lips red as blood, skin white as snow, and hair black and ebony. He found that he could not kill the beautiful creature, and lowered the blade.</p><div class="line-break"></div>
+        <p>The servant told little Snow White to run and never look back. He returned to the castle with the heart of a boar. The Queen kept it in a box beside her bed, and felt comfort. She felt no need to consult the mirror for she knew the answer.</p>
+        </div>     
+      
+      <div class="page-nav"
+        data-0="top:934px"
+        data-500="top:934px">
+        <a href="queen.html"><img class="previous" src="img/next.png"></a>
+        <a href="huntsman.html"><img class="next" src="img/next.png"></a>
+        </div>
+      
+    </div><!-- Cover -->
+    	
+<!- Begin Javascript -------------------------------------------->
+
+	<!-- JQuery please god don't conflict with skrollr -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+   
+  <!-- Factoids -->
+<script type="text/javascript">
+document.getElementById('factoid05').onclick = function() {  
+  var className = ' ' + factoid05.className + ' ';  
+  if ( ~className.indexOf(' open ') ) {
+      this.className = className.replace(' open ', ' ');
+    } else {
+      this.className += ' open';
+    }              
+  }
+</script> 
+    
+
+	<script type="text/javascript" src="scripts/skrollr.min.js"></script>
+
+	<!--[if lt IE 9]>
+	<script type="text/javascript" src="scripts/skrollr.ie.min.js"></script>
+	<![endif]-->
+
+	<script type="text/javascript">
+	var s = skrollr.init({
+		edgeStrategy: 'set',
+		easing: {
+			WTF: Math.random,
+			inverted: function(p) {
+				return 1-p;
+			}
+		}
+	});
+	</script>
+	
+	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
+		
+</body>
+
+</html>

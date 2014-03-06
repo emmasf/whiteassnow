@@ -14,6 +14,24 @@
   }
 
 #begin {
+
+  h2 {    
+    position: absolute;
+    top:90px;
+    left: 60px;
+  	-webkit-transform-origin:0 0;
+  	-moz-transform-origin:0 0;
+  	-ms-transform-origin:0 0;
+  	-o-transform-origin:0 0;
+  	transform-origin:0 0;
+  	}
+  	
+  .icon {
+    position: absolute;
+    top:630px;
+    right:56px;
+    }
+    
   .story {
     width: 600px;
     left: 75px;
@@ -23,18 +41,36 @@
     }
     
   #factoid02 {
-    width: 300px;
-    top: 800px;
+    width: 340px;
+    top: 860px;
     left: 0px;
     }
 
   div#factoid02.open {
     height: 100px;
-    } 
+    }     
   
   }
 
 #snowwhite {
+
+  h2 {    
+    position: absolute;
+    width: 600px;
+    top:682px;
+    left: 60px;
+  	-webkit-transform-origin:0 0;
+  	transform-origin:0 0;
+    -webkit-transform:rotate(-90deg);
+  	transform:rotate(-90deg);
+  	}
+  	
+  .icon {
+    position: absolute;
+    top:342px;
+    right:14px;
+    }
+    
   .story {
     width: 400px;
     left: 260px;
@@ -43,8 +79,8 @@
     }
     
   #factoid03 {
-    width: 340px;
-    top: 105px;
+    width: 276px;
+    top: 135px;
     right: 0px;
     }
 
@@ -54,6 +90,21 @@
   }
 
 #queen {
+  
+  h2 {    
+    position: absolute;
+    width: 500px;
+    top:88px;
+    left: 256px;
+  	}
+  	
+  .icon {
+    position: absolute;
+    top:794px;
+    left:98px;
+    -webkit-transform: rotate(-15deg);
+    }
+    
   .story {
     width: 660px;
     left: 30px;
@@ -62,7 +113,7 @@
     }
     
   #factoid04 {
-    width: 45px;
+    width: 32px;
     height: 320px;
     top: 440px;
     right: 0px;
@@ -74,6 +125,20 @@
   }
 
 #huntsman {
+  
+  h2 {    
+    position: absolute;
+    width: 700px;
+    top:103px;
+    left: 60px;
+  	}
+  	
+  .icon {
+    position: absolute;
+    top:642px;
+    left:270px;
+    }
+    
   .story {
     width: 460px;
     left: 220px;
@@ -82,8 +147,8 @@
     }
     
   #factoid05 {
-    width: 400px;
-    top: 350px;
+    width: 380px;
+    top: 352px;
     left: 0px;
     }
 
@@ -91,8 +156,41 @@
     height: 100px;
     }     
   }
+  
+#break01, #break02 {
+  
+  h2 {    
+    position: absolute;
+    width: 700px;
+    top:300px;
+    text-align: center;
+  	}
+    
+  .story {
+    width: 660px;
+    left: 220px;
+    left: 20px;
+    top:1024px;
+    }
+    
+  } 
 
 #dwarves {
+    
+  h2 {    
+    position: absolute;
+    width: 600px;
+    top:309px;
+    left: 300px;
+    -webkit-transform: rotate(90deg);
+  	}
+  	
+  .icon {
+    position: absolute;
+    top:516px;
+    left:172px;
+    }
+
   .story {
     width: 390px;
     left: 290px;
@@ -101,10 +199,10 @@
     }
     
   #factoid06 {
-    width: 45px;
-    height: 380px;
-    top: 70px;
-    left: 0px;
+    width: 32px;
+    height: 377px;
+    top: 98px;
+    right: 0px;
     }
 
   div#factoid06.open {
@@ -113,6 +211,26 @@
   }
 
 #king {
+    
+  h2 {    
+    position: absolute;
+    width: 400px;
+    top:125px;
+    left:178px;
+    text-align: center;
+  	}
+  	
+    h2.second { 
+    top:214px;   
+    left:188px;
+  	}
+  	
+  .icon {
+    position: absolute;
+    top:476px;
+    left:34%;
+    }
+    
   .story {
     width: 600px;
     left: 80px;
@@ -122,7 +240,7 @@
     
   #factoid07 {
     width: 50%;
-    top: 150px;
+    top: 154px;
     left: 25%;
     }
 
@@ -131,7 +249,22 @@
     }     
   }
 
+
 #sin {
+  
+  h2 {    
+    position: absolute;
+    top:570px;
+    left:-116px;
+    -webkit-transform: rotate(-90deg);
+  	}
+  	
+  .icon {
+    position: absolute;
+    top: 7%;
+    left:33%;
+    }
+    
   .story {
     width: 510px;
     left: 175px;
@@ -140,9 +273,8 @@
     }
     
   #factoid08 {
-    width: 45px;
-    height: 750px;
-    top: 110px;
+    width: 340px;
+    top: 850px;
     left: 0px;
     }
 
@@ -152,6 +284,21 @@
   }
 
 #prince {
+    
+  h2 {    
+    position: absolute;
+    width: 500px;
+    top:448px;
+    left:30px;
+  	}
+  	
+  .icon {
+    position: absolute;
+    top: 15%;
+    left:32%;
+    -webkit-transform: rotate(-4deg); 
+    }
+  
   .story {
     width: 345px;
     left: 31px;
@@ -160,7 +307,8 @@
     }
     
   #factoid09 {
-    width: 345px;
+    width: 32px;
+    height: 210px;
     top: 680px;
     right: 0px;
     }
@@ -171,6 +319,21 @@
   }
 
 #moral {
+  h2 {    
+    position: absolute;
+    width: 480px;
+    top:154px;
+    left:-48px;
+    -webkit-transform:rotate(90deg);
+  	}
+  	
+  .icon {
+    position: absolute;
+    top: 52%;
+    left:28%;
+    -webkit-transform: rotate(-4deg); 
+    }
+
   .story {
     width: 645px;
     left: 39px;
@@ -179,9 +342,9 @@
     }
     
   #factoid10 {
-    width: 390px;
-    top: 415px;
-    left: 0px;
+    width: 380px;
+    top: 865px;
+    right: 0px;
     }
 
   div#factoid10.open {
@@ -190,7 +353,23 @@
     
   }
 
+
+
 #end {
+  h2 {    
+    position: absolute;
+    width: 50%;
+    top:45%;
+    left:25%;
+    text-align: center;
+  	}
+  	
+  .icon {
+    position: absolute;
+    top: 19%;
+    left:34%;
+    }
+
   #factoid11 {
     width: 430px;
     top: 310px;
