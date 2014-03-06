@@ -47,7 +47,7 @@ body { background: #fff; background-attachment: fixed; }
 .front { z-index: 50 !important; }
 
 .factoid { z-index: 100; position: absolute; min-height: 32px; background-color: rgba(231, 41, 0, 0.75); }
-.factoid p { padding: 30px; padding-bottom: 35px; display: none; font-family: "Helvetica Neue", Helvetica, Arial, serif; font-weight: 700; color: #fff; font-size: 17px; letter-spacing: 0.05em; line-height: 1.25em; }
+.factoid p { padding: 30px; padding-bottom: 35px; display: none; font-family: "Helvetica Neue", Helvetica, Arial, serif; font-weight: 700; color: #fff; font-size: 17px; letter-spacing: 0.025em; line-height: 1.25em; }
 
 .open p { display: block; }
 
@@ -113,8 +113,8 @@ h4 { color: #444; font-size: 1.11em; margin: 1em 0; }
 #queen h2 { position: absolute; width: 500px; top: 88px; left: 256px; }
 #queen .icon { position: absolute; top: 794px; left: 98px; -webkit-transform: rotate(-15deg); }
 #queen .story { width: 660px; left: 30px; left: 10px; top: 1024px; }
-#queen #factoid04 { width: 32px; height: 320px; top: 440px; right: 0px; }
-#queen div#factoid04.open { width: 360px; }
+#queen #factoid04 { width: 32px; height: 300px; top: 490px; right: 0px; }
+#queen div#factoid04.open { width: 374px; }
 
 #huntsman { /* div#factoid05.open { height: 200px; } 
 */ }
