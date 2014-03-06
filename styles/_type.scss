@@ -15,6 +15,14 @@ html, body {
 	font-family:$sans-type;
   text-align: left;
   }
+  
+#break01, #break02, #break03 {
+  
+  color: $red !important;
+  
+  /* .story.break p {color: $red !important;} */
+  
+  }
 
 
 ol, ul {
