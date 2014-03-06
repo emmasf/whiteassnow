@@ -3,7 +3,7 @@
 	height:1024px;
   right:0;*/
   width:768px;
-  height:6px;
+  height:12px;
   top:0;
 	background:#444;
 	z-index:200;
@@ -54,6 +54,11 @@
 
 #snowwhite {
 
+  .svg-draw {
+    position: absolute;
+    top: 720px;
+    }
+
   h2 {    
     position: absolute;
     width: 600px;
@@ -72,11 +77,17 @@
     }
     
   .story {
-    width: 400px;
-    left: 260px;
+    width: 600px;
     left: 24px;
     top:1024px;
+    /* border-left: 7px solid $red; */
+    
+    p {background-color: rgba(255,255,255,.9);
+    padding: 2px;
     }
+
+
+  }
     
   #factoid03 {
     width: 276px;
@@ -167,7 +178,7 @@
   
   }
   
-#break01, #break02 {
+#break01, #break02, #break03 {
   
   h2 {    
     position: absolute;
@@ -182,6 +193,16 @@
     left: 220px;
     left: 20px;
     top:1024px;
+    }
+    
+        
+  .mini-icons {
+    position: absolute;
+    top: 120px;
+    left: 22px;
+    
+    img {margin-right: -20px;}
+
     }
     
   } 

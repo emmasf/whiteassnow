@@ -36,7 +36,7 @@ body { background: #fff; background-attachment: fixed; }
 .page-nav .previous { position: absolute; left: 30px; }
 .page-nav .beginning { position: absolute; left: 100px; }
 
-.button .closed { background-color: #2494d1; width: 20%; height: 90px; left: 40%; top: 550px; }
+.button .closed { background-color: #e72900; width: 20%; height: 90px; left: 40%; top: 550px; }
 
 .cutout { position: relative; top: 0px; }
 
@@ -46,16 +46,18 @@ body { background: #fff; background-attachment: fixed; }
 
 .front { z-index: 50 !important; }
 
-.factoid { z-index: 100; position: absolute; min-height: 32px; background-color: #2494d1; }
+.factoid { z-index: 100; position: absolute; min-height: 32px; background-color: rgba(2, 111, 195, 0.8); }
 .factoid p { padding: 30px; padding-bottom: 35px; display: none; font-family: "Helvetica Neue", Helvetica, Arial, serif; font-weight: 700; color: #fff; font-size: 17px; letter-spacing: 0.025em; line-height: 1.25em; }
 
 .open p { display: block; }
 
 .icon-field { position: relative; width: 768px; height: 1024px; }
 
-/*
-.svg-draw { fill:none; stroke-width:7; stroke-linecap:round; stroke-linejoin:round; stroke-miterlimit:4; stroke-opacity:1; stroke-dasharray:6000; stroke-dashoffset:0;       } 
-*/
+.mini-icons { height: 60px; }
+.mini-icons img { height: 100%; }
+
+.svg-draw { fill: none; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-opacity: 1; stroke-dasharray: 6000; stroke-dashoffset: 0; }
+
 /***********************************************************************************************************/
 /*** Begin Type Styles  ************************************************************************************/
 /***********************************************************************************************************/
@@ -70,6 +72,8 @@ ol, ul { list-style: none; }
 .story p { display: inline; font-family: "Arnhem", Georgia, serif; color: black; font-size: 24px; font-weight: 400; line-height: 1.175; line-height: 1.35; margin-bottom: 12px; letter-spacing: 0.0125em; background-color: rgba(233, 197, 129, 0.35); background-color: rgba(255, 255, 255, 0.75);   /*
 text-shadow:     -2px -2px 0 rgba(255,255,255,0.5), 2px -2px 0 rgba(255,255,255,0.5), -2px 2px 0 rgba(255,255,255,0.5), 2px 2px 0 rgba(255,255,255,0.5) ;
 */ }
+
+#snowwhite .story p { color: black; background-color: rgba(231, 41, 0, 0.8); background-color: rgba(255, 255, 255, 0.5); }
 
 .story p:first-child { margin-top: 12px; }
 
@@ -98,7 +102,7 @@ h4 { color: #444; font-size: 1.11em; margin: 1em 0; }
 
 /*** End Type Styles ********************************************************/
 #progress {   /*width: 6px;
-	height:1024px; right:0;*/ width: 768px; height: 6px; top: 0; background: #444; z-index: 200; }
+	height:1024px; right:0;*/ width: 768px; height: 12px; top: 0; background: #444; z-index: 200; }
 
 #begin h2 { position: absolute; top: 90px; left: 60px; -webkit-transform-origin: 0 0; -moz-transform-origin: 0 0; -ms-transform-origin: 0 0; -o-transform-origin: 0 0; transform-origin: 0 0; }
 #begin .icon { position: absolute; top: 630px; right: 56px; }
@@ -106,9 +110,11 @@ h4 { color: #444; font-size: 1.11em; margin: 1em 0; }
 #begin #factoid02 { width: 340px; top: 860px; left: 0px; }
 #begin div#factoid02.open { height: 100px; }
 
+#snowwhite .svg-draw { position: absolute; top: 720px; }
 #snowwhite h2 { position: absolute; width: 600px; top: 682px; left: 60px; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: rotate(-90deg); transform: rotate(-90deg); }
 #snowwhite .icon { position: absolute; top: 342px; right: 14px; }
-#snowwhite .story { width: 400px; left: 260px; left: 24px; top: 1024px; }
+#snowwhite .story { width: 600px; left: 24px; top: 1024px; /* border-left: 7px solid $red; */ }
+#snowwhite .story p { background-color: rgba(255, 255, 255, 0.9); padding: 2px; }
 #snowwhite #factoid03 { width: 276px; top: 135px; right: 0px; }
 #snowwhite div#factoid03.open { height: 600px; }
 
@@ -127,8 +133,10 @@ h4 { color: #444; font-size: 1.11em; margin: 1em 0; }
 #huntsman .story { width: 460px; left: 220px; left: 20px; top: 1024px; }
 #huntsman #factoid05 { width: 380px; top: 352px; left: 0px; }
 
-#break01 h2, #break02 h2 { position: absolute; width: 700px; top: 200px; left: 35px; font-size: 60px; }
-#break01 .story, #break02 .story { width: 660px; left: 220px; left: 20px; top: 1024px; }
+#break01 h2, #break02 h2, #break03 h2 { position: absolute; width: 700px; top: 200px; left: 35px; font-size: 60px; }
+#break01 .story, #break02 .story, #break03 .story { width: 660px; left: 220px; left: 20px; top: 1024px; }
+#break01 .mini-icons, #break02 .mini-icons, #break03 .mini-icons { position: absolute; top: 120px; left: 22px; }
+#break01 .mini-icons img, #break02 .mini-icons img, #break03 .mini-icons img { margin-right: -20px; }
 
 #dwarves h2 { position: absolute; width: 600px; top: 309px; left: 300px; -webkit-transform: rotate(90deg); }
 #dwarves .icon { position: absolute; top: 516px; left: 172px; }

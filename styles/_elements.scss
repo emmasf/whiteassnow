@@ -121,9 +121,12 @@ body {
   height: 1024px
   }
 
+.mini-icons {
+  height: 60px;
+  img {height:100%}
+  
+  }
 
-
-/*
 .svg-draw {
   fill:none;
   stroke-width:7;
@@ -135,4 +138,3 @@ body {
   stroke-dashoffset:0;      
   }
   
-*/

@@ -1,9 +1,12 @@
 $page-color-dark: rgba(0,0,0,0.025);
 $page-color-light: rgba(255,255,255,1);
 
-$button-color: rgba(36,148,209,1);
-$factoid-color: rgba(231,41,0,0.75);
-$factoid-color: rgba(36,148,209,1);
+$red: rgb(231,41,0);
+$blue: rgb(36,148,209);
+$blue: rgb(2,111,195);
+
+$button-color: rgba($red,1);
+$factoid-color: rgba($blue,0.8);
 
 $story-color:  rgba(0,0,0,1);
 $story-bg-color: rgba(255,255,255,0.5);
