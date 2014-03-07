@@ -1,0 +1,39 @@
+.drawer {
+  margin: 0px 5%;
+	bottom: 0px;
+	/* height: 125px; */
+	height: 420px; /* Total amount; amount shown is this - drawer.content*/
+	overflow: scroll;
+	position: absolute;
+	width: 90%;
+	z-index: 5; /* make this what you need to */
+}
+
+.drawer > header {
+	background: #000000; /* add image if you want */
+	color: #ffffff;
+	display: block;
+	height: 25px;
+	margin: auto;
+	overflow: hidden;
+	padding: 5px;
+	text-align: center;
+	width: 150px;
+	
+	/* Radius round corners - change radius or delete if need be */
+	border-top-left-radius: 25px 25px;
+	border-top-right-radius: 25px 25px;
+}
+
+.drawer-content {
+	background: url(../images/bg.png);
+	border-collapse: collapse;
+	height: 400px;
+	width: 100%;
+  background-color: aqua;
+  border-radius: 25px 25px;
+}
+
+.clickme {
+  cursor: pointer;
+}

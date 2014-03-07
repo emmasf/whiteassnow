@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>toggle demo</title>
+  <link rel="stylesheet" type="text/css" media="all" href="styles/style.css" />
+  
+  <style>
+    body, html {margin:0; padding:0;}
+    #container { padding: 50px;}
+    div.interaction-test > div {float:left;}
+    .interaction-test {
+      border-top: 3px solid #ccc;
+      min-height:300px;
+      font-size: 24px;
+      }
+    #hide-show p {margin-top: 100px;}
+  </style>
+  
+  
+</head>
+<body>
+
+<div id="container">
+ 
+<h1>Interaction Tests</h1> 
+ 
+<!-- Hide / Show via button ----------------------------------------------------->
+<div class="interaction-test" id="hide-show">
+  <div id="icon-button-01"><img src="img/queen_drawn.svg"></div>
+  <div>
+    <p class="hideshow">Hello, I'm an icon that hides and shows things.</p>
+    <p class="hideshow" style="display: none">Good Bye</p>
+  </div>
+</div>
+
+    <div class="icon-positioner">
+      <div class="icon-field">
+        <div id="drag2" class="icon story middle">
+          <img src="img/prince_drawn.svg">
+          <p>I'm an icon that can be dragged.</p>  
+        </div>  
+      </div> 
+    </div>
+
+</div><!-- Container -->
+
+
+
+
+
+ 
+ 
+ 
+
+<!----------------------------------------------------------------------------->
+<!-----------------------------------------------------------------------------> 
+<!----------------------------------------------------------------------------->  
+<!--   Begin JS  ------>
+<script src="../local-js/jquery-1.11.0.js"></script>
+<script src="../local-js/jquery-ui-1.10.4.custom.js"></script>
+<script type="text/javascript" src="scripts/jquery.event.ue.js"></script>
+<script type="text/javascript" src="scripts/jquery.udraggable.js"></script>
+  
+<!-- Draggable -->
+<script type="text/javascript">
+    $('#drag2').udraggable({
+    });
+  </script>
+
+<!-- Hide / Show via button -->
+<script>
+  $( "#icon-button-01" ).click(function() {
+    $( ".hideshow" ).toggle();
+  });
+</script>
+
+ 
+</body>
+</html>
