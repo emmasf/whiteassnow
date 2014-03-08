@@ -33,7 +33,7 @@ body { background: #fff; background-attachment: fixed; }
 
 .nav-icon { background-color: rgba(0, 0, 0, 0.15); height: 60px; width: 60px; border-radius: 30px; position: absolute; }
 
-.nav-icon:hover, .nav-icon:active { background-color: rgba(0, 255, 0, 0.15); }
+.nav-icon:hover, .nav-icon:active { background-color: rgba(0, 255, 0, 0.15); background-color: rgba(0, 0, 0, 0.75); }
 
 .previous { left: 30px; }
 
