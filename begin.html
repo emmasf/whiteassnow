@@ -8,6 +8,59 @@
 	<title>White as Snow</title>
 
 	<link href="styles/main.css" rel="stylesheet" type="text/css" />
+	
+	<style>
+	.drawer {
+  margin:0;
+  bottom: -70px;
+  height: 1163px; /* Total amount; amount shown is this - drawer.content*/
+  overflow: hidden;
+  position: absolute;
+  width: 768px;
+  z-index: 50000; /* make this what you need to */
+  }
+.drawer > header {
+  background:transparent;
+  color: red;
+  display: block;
+  margin: auto;
+  height: 90px;
+  padding: 5px;
+  text-align: center;
+  width: 60px; 
+  }
+.drawer-content {
+  border-collapse: collapse;
+  height: 1024px;
+  width: 729px;
+  background-color: #fff;
+  border: 20px solid #7a39f9;
+  border-radius: 3px;
+  }
+.clickme {
+  cursor: pointer;
+  }
+.book-slider-icon {
+  height:60px;
+  position: absolute;
+  top:-80px;
+  left: 0;
+  margin-left: 35%;
+  }
+  /*
+.book-slider-icon {
+  background-color: rgba(0,0,0,0.15);
+  height:60px;
+  border-radius: 30px;
+  }
+.book-slider-icon:hover, .book-slider-icon:active {
+  background-color: rgba(0,255,0,0.15);
+  }
+*/
+
+	</style>
+	
+	
 </head>
 
 <body>
@@ -38,7 +91,7 @@
     Let's begin.</h2>
     
   <div class="factoid front" id="factoid02">
-      <p>Snow White is a silly story.</p>
+      <p>Snow White is not the story you have in your mind.</p>
      </div>
     
   <div class="story"
@@ -66,13 +119,28 @@
       <a href="index.html"><img class="previous" src="img/next.png"></a>
       <a href="snowwhite.html"><img class="next" src="img/next.png"></a>
       </div>
+      
+	<section class="drawer"
+    data-0="opacity:1"
+    data-500="opacity:1">
+		<!-- <div> -->
+			<header class="clickme"><div class="book-slider-icon"><img src="img/begin_drawn.svg"></div></header>
+		<!-- </div> -->
+		<div class="drawer-content">
+			<div class="drawer-items">
+			  <header class="clickme">I slide down.</header>
+			</div>	
+		</div>
+	</section>
+	
     
   </div><!-- Cover -->
     	
 <!- Begin Javascript -------------------------------------------->
 
 	<!-- JQuery please god don't conflict with skrollr -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="../local-js/jquery-1.11.0.js"></script>
+<script src="../local-js/jquery-ui-1.10.4.custom.js"></script>
    
   <!-- Factoids -->
 <script type="text/javascript">
@@ -85,6 +153,20 @@ document.getElementById('factoid02').onclick = function() {
       }          
   }
 </script>  
+
+
+	  <!-- Bottom Drawer -->
+<script type="text/javascript" src="scripts/jquery.slidedrawer.min.js"></script>
+	<script>
+	$(function(){
+		$('.drawer').slideDrawer({
+			showDrawer: false,
+			slideTimeout: false,
+			slideSpeed: 600,
+			slideTimeoutCount: 3000,
+		});
+	});
+	</script>
   
 
 	<script type="text/javascript" src="scripts/skrollr.min.js"></script>
