@@ -80,7 +80,7 @@
         top: 0, right: 0, bottom: 0, left: 0,
         width: "100%", height: "100%",
         position: "fixed",
-        zIndex: this.options.zIndex,
+        zIndex: this.options.zIndex - 100,
         background: this.options.overlay,
         opacity: initialOpacity
       });
@@ -149,7 +149,7 @@
         left: "50%",
         marginTop: - (this.$elm.outerHeight() / 2),
         marginLeft: - (this.$elm.outerWidth() / 2),
-        zIndex: this.options.zIndex + 1
+        zIndex: this.options.zIndex + 21,
       });
     },
 
@@ -182,9 +182,9 @@
   }
 
   $.modal.defaults = {
-    overlay: "#000",
-    opacity: 0.75,
-    zIndex: 1,
+    overlay: "#ccc",
+    opacity: 1,
+    zIndex: 155,
     escapeClose: true,
     clickClose: true,
     closeText: 'Close',
