@@ -107,6 +107,22 @@ body {
     display:block;
     } 
     
+#topbar {
+    height:40px;
+    width:200px;
+    background-color:green;
+    padding: 10px;
+    color: white;
+    z-index: 60;
+    }
+
+.hide {
+  background-color:black !important;
+  }
+  
+#topbar.hide p {display: none}
+#topbar p {display: block}
+    
 .modal {
   display: none;
   width: 708px;

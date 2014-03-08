@@ -54,6 +54,13 @@
     data-500="opacity:1;">
     <img src="img/begin_drawn.svg">
     </div>
+    
+    <div id="topbar" class="hide"    
+      data-0="opacity:1;"
+      data-500="opacity:1;">
+    I toggle open!
+    <p>I hide inside</p>
+    </div>
       
   <div class="page-nav"
     data-0="top:934px"
@@ -113,6 +120,20 @@
 <!-- JQuery please god don't conflict --------------------->
 <script src="../local-js/jquery-1.11.0.js"></script>
 <script src="../local-js/jquery-ui-1.10.4.custom.js"></script>
+
+<!-- Toggle Bar -->
+<script>
+  $(document).ready(function(){
+    $("#topbar").click(function(){
+      if($(this).hasClass('hide')) {
+        $(this).animate({height:100},200).removeClass('hide');
+      } else { 
+        $(this).animate({height:40},200).addClass('hide');
+      }
+    });
+  });
+</script>
+
 
 <!-- Modal -->
 <script src="scripts/jquery.modal.js" type="text/javascript" charset="utf-8"></script>

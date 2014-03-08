@@ -56,6 +56,14 @@ body { background: #fff; background-attachment: fixed; }
 
 .open p { display: block; }
 
+#topbar { height: 40px; width: 200px; background-color: green; padding: 10px; color: white; z-index: 60; }
+
+.hide { background-color: black !important; }
+
+#topbar.hide p { display: none; }
+
+#topbar p { display: block; }
+
 .modal { display: none; width: 708px; height: 956px; background: #fff; padding: 15px; padding-bottom: 20px; -webkit-border-radius: 5px; border-radius: 5px; }
 
 .inset-story { width: 600px; height: 854px; position: fixed; top: 20px; left: 50px; overflow: scroll; padding: 80px 100px 60px 0; }
