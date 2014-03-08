@@ -2,21 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>toggle demo</title>
-  <link rel="stylesheet" type="text/css" media="all" href="styles/style.css" />
-  
-  <style>
-    body, html {margin:0; padding:0;}
-    #container { padding: 50px;}
-    div.interaction-test > div {float:left;}
-    .interaction-test {
-      border-top: 3px solid #ccc;
-      min-height:300px;
-      font-size: 24px;
-      }
-    #hide-show p {margin-top: 100px;}
-  </style>
-  
+  <title>Interaction Tests</title>
+  <link rel="stylesheet" type="text/css" media="all" href="styles/test-styles.css" />
   
 </head>
 <body>
@@ -34,24 +21,42 @@
   </div>
 </div>
 
-    <div class="icon-positioner">
-      <div class="icon-field">
-        <div id="drag2" class="icon story middle">
-          <img src="img/prince_drawn.svg">
-          <p>I'm an icon that can be dragged.</p>  
-        </div>  
-      </div> 
-    </div>
+<div class="interaction-test" id="hide-show">
+  <div class="icon-positioner">
+    <div class="icon-field">
+      <div id="drag2" class="icon story middle">
+        <img src="img/prince_drawn.svg">
+        <p>Hi, I'm an icon that can be dragged.</p>  
+      </div>  
+    </div> 
+  </div>
+</div>
+    
+<div class="interaction-test" id="modal">    
+  <a class="modalLink" href="#">I open a sliding modal.</a>
+  <div class="overlay"></div>
+  <div class="modal">
+    <a href="#" class="closeBtn">I close the sliding modal.</a>
+    <!-- content here -->
+  </div>
+</div>
 
 </div><!-- Container -->
 
+<!-- Bottom Drawer ----------------------------------------------------->
+	<section class="drawer">
+		<!-- <div> -->
+			<header class="clickme">I slide up.</header>
+		<!-- </div> -->
+		<div class="drawer-content">
+			<div class="drawer-items">
+			  <img src="img/huntsman_drawn.svg">
+			  <header class="clickme">I slide up.</header>
+			</div>	
+		</div>
+	</section>
 
 
-
-
- 
- 
- 
 
 <!----------------------------------------------------------------------------->
 <!-----------------------------------------------------------------------------> 
@@ -59,14 +64,16 @@
 <!--   Begin JS  ------>
 <script src="../local-js/jquery-1.11.0.js"></script>
 <script src="../local-js/jquery-ui-1.10.4.custom.js"></script>
-<script type="text/javascript" src="scripts/jquery.event.ue.js"></script>
-<script type="text/javascript" src="scripts/jquery.udraggable.js"></script>
   
 <!-- Draggable -->
+<script type="text/javascript" src="scripts/jquery.event.ue.js"></script>
+<script type="text/javascript" src="scripts/jquery.udraggable.js"></script>
 <script type="text/javascript">
     $('#drag2').udraggable({
     });
   </script>
+  
+
 
 <!-- Hide / Show via button -->
 <script>
@@ -74,6 +81,70 @@
     $( ".hideshow" ).toggle();
   });
 </script>
+
+<!-- Bottom Drawer -->
+<script type="text/javascript" src="scripts/jquery.slidedrawer.min.js"></script>
+	<script>
+	$(function(){
+		$('.drawer').slideDrawer({
+			showDrawer: false,
+			slideTimeout: false,
+			slideSpeed: 600,
+			slideTimeoutCount: 3000,
+		});
+	});
+	</script>
+<!--
+/* The drawer is hidden by default. It shows then slides down to let user know something is there.
+Three options true, false, 'slide'. True shows on load, false hides on load, 'slide' shows and hides right away */
+showDrawer: false,
+/* Slide drawer speed. The speed that the drawer animates down or up */
+slideSpeed: 700,
+/* Sets the drawer to slide down after set count if set to true. */
+slideTimeout: true,
+/* How long to wait before sliding drawer slides down. */
+slideTimeoutCount: 5000,
+/* Div content height no including tab or border. Just the height of the content area.
+The plugin will pick up this height automatically from your css file
+but you can overwrite that with this setting. */
+drawerContentHeight: drawerContentHeight,
+/* Full div height pulls from height set in css but can be overwritten here. */
+drawerHeight: drawerHeight,
+/* Height of drawer when hidden. So the tab sticks up. */
+drawerHiddenHeight: drawerHiddenHeight,
+/* border height if set in css you can overwrite but best to just leave alone */
+borderHeight: borderHeight
+  }); 
+</script>
+-->
+
+<!-- Sliding Modal -->  
+<script type='text/javascript' src='scripts/jquery.modal.js'></script>
+<script type='text/javascript' src='scripts/site.js'></script>
+<script type="text/javascript">
+  $(document).ready(function(){    
+    $('.modalLink').modal({
+      trigger: '.modalLink',
+      olay:'div.overlay',
+      modals:'div.modal',
+      animationEffect: 'fadeIn',
+      animationSpeed: 400,
+      moveModalSpeed: 'slow',
+      background: '00c2ff',
+      background: '000000',
+      opacity: 0.8,
+      openOnLoad: false,
+      docClose: false,
+      closeByEscape: false,
+      moveOnScroll: true,
+      resizeWindow: false, 
+      close:'.closeBtn'  
+    });  
+  });
+</script>
+
+<!-- Second Modal -->
+<script src="jquery.modal.min.js" type="text/javascript" charset="utf-8"></script>
 
  
 </body>
