@@ -75,14 +75,35 @@
     </div>
 	
   </div><!-- Cover -->
-    	
-<!- Begin Javascript -------------------------------------------->
 
-	<!-- JQuery please god don't conflict with skrollr -->
+
+<!--------------------------------------------------------------->
+<!--------------------------------------------------------------->    	
+<!- Begin Javascript -------------------------------------------->
+<!--------------------------------------------------------------->
+<!--------------------------------------------------------------->
+
+<!-- JQuery please god don't conflict --------------------->
 <script src="../local-js/jquery-1.11.0.js"></script>
 <script src="../local-js/jquery-ui-1.10.4.custom.js"></script>
    
-  <!-- Factoids -->
+   
+<!-- Skrollr ---------------------------->
+<script type="text/javascript" src="scripts/skrollr.min.js"></script>
+<script type="text/javascript">
+var s = skrollr.init({
+	edgeStrategy: 'set',
+	easing: {
+		WTF: Math.random,
+		inverted: function(p) {
+			return 1-p;
+		}
+	}
+});
+</script>
+
+	
+<!-- Factoids: Pure js ---------------------------->
 <script type="text/javascript">
 document.getElementById('factoid02').onclick = function() {  
   var className = ' ' + factoid02.className + ' ';  
@@ -92,43 +113,13 @@ document.getElementById('factoid02').onclick = function() {
       this.className += ' open';
       }          
   }
-</script>  
+</script> 
 
 
-	  <!-- Bottom Drawer -->
-<script type="text/javascript" src="scripts/jquery.slidedrawer.min.js"></script>
-	<script>
-	$(function(){
-		$('.drawer').slideDrawer({
-			showDrawer: false,
-			slideTimeout: false,
-			slideSpeed: 600,
-			slideTimeoutCount: 3000,
-		});
-	});
-	</script>
-  
-
-	<script type="text/javascript" src="scripts/skrollr.min.js"></script>
-
-	<!--[if lt IE 9]>
-	<script type="text/javascript" src="scripts/skrollr.ie.min.js"></script>
-	<![endif]-->
-
-	<script type="text/javascript">
-	var s = skrollr.init({
-		edgeStrategy: 'set',
-		easing: {
-			WTF: Math.random,
-			inverted: function(p) {
-				return 1-p;
-			}
-		}
-	});
-	</script>
+<!-- Livereload REMOVE BEFORE LAUNCH ---------------------------->	
+<script>
+  document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+</script>
 	
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-		
 </body>
-
 </html>
