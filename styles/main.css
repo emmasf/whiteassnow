@@ -2,6 +2,39 @@
 
 @font-face { font-family: Arnhem; src: url("../type/Arnhem-Bold.ttf"); }
 
+/*
+@keyframes textcolormorph
+{
+0%     {background-color: #000;}
+20%    {background-color: #096;}
+40%    {background-color: #66F;}
+60%    {background-color: #CC3;}
+80%    {background-color: #C3C;}
+100%   {background-color: #000;}
+}
+
+@-webkit-keyframes textcolormorph
+{
+0%     {background-color: #000;}
+20%    {background-color: #096;}
+40%    {background-color: #66F;}
+60%    {background-color: #CC3;}
+80%    {background-color: #C3C;}
+100%   {background-color: #000;}
+}
+*/
+@keyframes textcolormorph { 0% { background-color: rgba(2, 111, 195, 0.8); }
+  25% { background-color: #66F; }
+  50% { background-color: rgba(2, 111, 195, 0.8); }
+  75% { background-color: #096; }
+  100% { background-color: rgba(2, 111, 195, 0.8); } }
+
+@-webkit-keyframes textcolormorph { 0% { background-color: rgba(2, 111, 195, 0.8); }
+  25% { background-color: #66F; }
+  50% { background-color: rgba(2, 111, 195, 0.8); }
+  75% { background-color: #096; }
+  100% { background-color: rgba(2, 111, 195, 0.8); } }
+
 /***********************************************************************************************************/
 /*** Begin Skrollr Fixed Positition Styles  ****************************************************************/
 /***********************************************************************************************************/
@@ -51,29 +84,23 @@ body { background: #fff; background-attachment: fixed; }
 
 .cutout { width: 100%; position: relative; top: 0px; }
 
-.factoid { z-index: 100; position: absolute; min-height: 32px; background-color: rgba(2, 111, 195, 0.8); }
-.factoid p { padding: 30px; padding-bottom: 35px; display: none; font-family: "Helvetica Neue", Helvetica, Arial, serif; font-weight: 700; color: #fff; font-size: 17px; letter-spacing: 0.025em; line-height: 1.25em; }
+.factoid { z-index: 100; position: absolute; min-height: 32px; /* background-color: $factoid-color; */ -webkit-animation: textcolormorph 10s infinite ease-in-out; animation: textcolormorph 10s infinite ease-in-out; animation-duration: 5s; animation-play-state: paused; -webkit-animation-play-state: paused; }
+.factoid p { padding: 30px; padding-bottom: 35px; display: block; font-family: "Helvetica Neue", Helvetica, Arial, serif; font-weight: 700; color: #fff; font-size: 17px; letter-spacing: 0.025em; line-height: 1.25em; }
 
-.open p { display: block; }
+#factoid02.hide { animation-play-state: running; -webkit-animation-play-state: running; }
+#factoid02.hide p { display: none; }
 
-#topbar { height: 40px; width: 200px; background-color: green; padding: 10px; color: white; z-index: 60; }
+.modal { display: none; width: 708px; height: 956px; background: #f2f0e9; padding: 15px; padding-bottom: 20px; -webkit-border-radius: 5px; border-radius: 5px; }
 
-.hide { background-color: black !important; }
-
-#topbar.hide p { display: none; }
-
-#topbar p { display: block; }
-
-.modal { display: none; width: 708px; height: 956px; background: #fff; padding: 15px; padding-bottom: 20px; -webkit-border-radius: 5px; border-radius: 5px; }
-
-.inset-story { width: 600px; height: 854px; position: fixed; top: 20px; left: 50px; overflow: scroll; padding: 80px 100px 60px 0; }
+.inset-story { width: 600px; height: 914px; position: fixed; top: 20px; left: 50px; overflow: scroll; padding: 80px 100px 0 0; }
 .inset-story p { font-family: "Arnhem", Georgia, serif; color: black; font-size: 24px; font-weight: 400; line-height: 1.175; line-height: 1.35; margin-bottom: 12px; letter-spacing: 0.0125em; }
+.inset-story p:last-child { margin-bottom: 100px; }
 
 .story-fader { width: 600px; height: 80px; position: absolute; left: 30px; }
 
-.story-fader.top { top: 0; background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, white), color-stop(100%, rgba(255, 255, 255, 0))); background: -webkit-linear-gradient(top, white 50%, rgba(255, 255, 255, 0) 100%); background: linear-gradient(to bottom, white 50%, rgba(255, 255, 255, 0) 100%); }
+.story-fader.top { top: 0; background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #f2f0e9), color-stop(100%, rgba(242, 240, 233, 0))); background: -webkit-linear-gradient(top, #f2f0e9 50%, rgba(242, 240, 233, 0) 100%); background: linear-gradient(to bottom, #f2f0e9 50%, rgba(242, 240, 233, 0) 100%); }
 
-.story-fader.bottom { bottom: 0; background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, white), color-stop(100%, rgba(255, 255, 255, 0))); background: -webkit-linear-gradient(bottom, white 50%, rgba(255, 255, 255, 0) 100%); background: linear-gradient(to top, white 50%, rgba(255, 255, 255, 0) 100%); }
+.story-fader.bottom { bottom: 0; background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f2f0e9), color-stop(100%, rgba(242, 240, 233, 0))); background: -webkit-linear-gradient(bottom, #f2f0e9 50%, rgba(242, 240, 233, 0) 100%); background: linear-gradient(to top, #f2f0e9 50%, rgba(242, 240, 233, 0) 100%); }
 
 /** Page-specific *******/
 .icon-field { position: relative; width: 768px; height: 1024px; }
@@ -139,12 +166,14 @@ h4 { color: #444; font-size: 1.11em; margin: 1em 0; }
 #progress {   /*width: 6px;
 	height:1024px; right:0;*/ width: 768px; height: 12px; top: 0; background: #444; z-index: 51; }
 
-#begin h2 { position: absolute; top: 120px; left: 60px; -webkit-transform-origin: 0 0; transform-origin: 0 0; }
-#begin .cutout { -webkit-transform: rotate(0deg); transform: rotate(0deg); -webkit-transform-origin: 0 0; transform-origin: 0 0; }
-#begin .icon { position: absolute; top: 630px; right: 56px; }
+#begin {  /* #factoid02 { width: 340px; top: 860px; left: 0px; height: 32px; }
+ div#factoid02.open { top: 772px; height: 120px; -webkit-transition-duration: height 1s; } 
+*/ }
+#begin h2 { position: absolute; top: 140px; left: 60px; -webkit-transform-origin: 0 0; transform-origin: 0 0; }
+#begin .cutout { -webkit-transform: rotate(0deg); transform: rotate(0deg); -webkit-transform-origin: 0 0; transform-origin: 0 0; top: -70px; }
+#begin .icon { position: absolute; top: 560px; right: 56px; }
 #begin .story { width: 600px; left: 43px; top: 250px; opacity: 0; }
-#begin #factoid02 { width: 340px; top: 860px; left: 0px; height: 32px; }
-#begin div#factoid02.open { top: 772px; height: 120px; -webkit-transition-duration: height 1s; }
+#begin #factoid02 { width: 340px; top: 820px; left: 0px; height: 32px; }
 
 #snowwhite .svg-draw { position: absolute; top: 720px; }
 #snowwhite h2 { position: absolute; width: 600px; top: 682px; left: 60px; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: rotate(-90deg); transform: rotate(-90deg); }

@@ -1,5 +1,7 @@
 $page-color-dark: rgba(0,0,0,0.025);
 $page-color-light: rgba(255,255,255,1);
+$paper-color: rgb(247,246,242);
+$paper-color: rgb(242,240,233);
 
 $red: rgb(231,41,0);
 $blue: rgb(36,148,209);
@@ -18,3 +20,46 @@ $sans-type: "Helvetica Neue", Helvetica, Arial, serif;
 $serif-type: "Arnhem", Georgia, serif;
 
 $text-color: rgba(0,0,0,1);
+
+
+
+/*
+@keyframes textcolormorph
+{
+0%     {background-color: #000;}
+20%    {background-color: #096;}
+40%    {background-color: #66F;}
+60%    {background-color: #CC3;}
+80%    {background-color: #C3C;}
+100%   {background-color: #000;}
+}
+
+@-webkit-keyframes textcolormorph
+{
+0%     {background-color: #000;}
+20%    {background-color: #096;}
+40%    {background-color: #66F;}
+60%    {background-color: #CC3;}
+80%    {background-color: #C3C;}
+100%   {background-color: #000;}
+}
+*/
+
+
+@keyframes textcolormorph
+{
+0%     {background-color: rgba($blue,0.8);}
+25%    {background-color: #66F;}
+50%     {background-color: rgba($blue,0.8);}
+75%    {background-color: #096;}
+100%   {background-color: rgba($blue,0.8)}
+}
+
+@-webkit-keyframes textcolormorph
+{
+0%     {background-color: rgba($blue,0.8);}
+25%    {background-color: #66F;}
+50%     {background-color: rgba($blue,0.8);}
+75%    {background-color: #096;}
+100%   {background-color: rgba($blue,0.8);}
+}

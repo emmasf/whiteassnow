@@ -38,9 +38,11 @@
     data-500="opacity:1">
     Let's begin.</h2>
     
-  <div class="factoid front" id="factoid02">
-      <p>Snow White is not the story you have in your mind.</p>
-     </div>
+  <div id="factoid02" class="factoid hide"    
+    data-0="opacity:1;"
+    data-500="opacity:1;">
+    <p>Let go of the Snow White you have in your mind.</p>
+    </div>
     
   <div class="story"
     data-0="opacity:1;"
@@ -53,13 +55,6 @@
     data-0="opacity:1;"
     data-500="opacity:1;">
     <img src="img/begin_drawn.svg">
-    </div>
-    
-    <div id="topbar" class="hide"    
-      data-0="opacity:1;"
-      data-500="opacity:1;">
-    I toggle open!
-    <p>I hide inside</p>
     </div>
       
   <div class="page-nav"
@@ -124,7 +119,7 @@
 <!-- Toggle Bar -->
 <script>
   $(document).ready(function(){
-    $("#topbar").click(function(){
+    $("#factoid02").click(function(){
       if($(this).hasClass('hide')) {
         $(this).animate({height:100},200).removeClass('hide');
       } else { 

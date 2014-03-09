@@ -17,7 +17,7 @@
 
   h2 {    
     position: absolute;
-    top:120px;
+    top:140px;
     left: 60px;
   	-webkit-transform-origin:0 0;
   	transform-origin:0 0;
@@ -27,12 +27,13 @@
     -webkit-transform:rotate(0deg);
   	transform:rotate(0deg); 
   	-webkit-transform-origin:0 0;
-  	transform-origin:0 0;  
+  	transform-origin:0 0; 
+  	top: -70px; 
     }
   	
   .icon {
     position: absolute;
-    top:630px;
+    top:560px;
     right:56px;
     }
     
@@ -45,6 +46,14 @@
     
   #factoid02 {
     width: 340px;
+    top: 820px;
+    left: 0px;
+    height: 32px;
+    }
+    
+ /*
+ #factoid02 {
+    width: 340px;
     top: 860px;
     left: 0px;
     height: 32px;
@@ -54,7 +63,8 @@
     top: 772px;
     height: 120px;
     -webkit-transition-duration: height 1s;
-    }     
+    } 
+*/    
   
   }
 

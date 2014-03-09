@@ -182,7 +182,7 @@
   }
 
   $.modal.defaults = {
-    overlay: "#ccc",
+    overlay: "#fff",
     opacity: 1,
     zIndex: 155,
     escapeClose: true,
