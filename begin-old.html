@@ -11,7 +11,7 @@
 	
 	<div id="progress" data-0="width:0%;background:hsl(200, 100%, 50%);" data-900="width:100%;background:hsl(920, 100%, 50%);"></div>
 
-	<div id="begin-tap" class="page"
+	<div id="begin" class="page"
     data-0="top:0px"
     data-500="top:0px">
 
@@ -32,36 +32,31 @@
     data-0="opacity:1"
     data-500="opacity:1">
     Let's begin.</h2>
-        
-  <div id="instructions" class="story"
+    
+  <div id="factoid02" class="factoid hide"    
+    data-0="opacity:1;"
+    data-500="opacity:1;">
+    <p>Let go of the Snow White you have in your mind.</p>
+    </div>
+    
+  <div id ="instructions" class="story"
     data-0="opacity:1;"
     data-500="opacity:0;">
-    <p>Scroll down to assemble the story.</p><div class="line-break"></div>
-    <p>Tap on colored bars to reveal facts and history.</p><div class="line-break"></div>
-    <p>Tap on icons and images to explore.</p>
+    <p>Scroll down on each page to reveal the history.</p><div class="line-break"></div>
+    <p>Tap on colored bars to reveal facts and ideas.</p>
     </div>
     
-  <div id="hide-show" class="icon"
-    data-0="opacity:1;"
-    data-500="opacity:1;">
-    <div id="icon-button-02">
-      <img src="img/begin_drawn.svg" class="hideshow">
-      <img src="img/begin_drawn_red.svg" class="hideshow"  style="display: none">
-      </div>
-    </div>
-    
-    <div id="idea02" class="hideshow-text story"
-    data-0="opacity:1;"
-    data-500="opacity:1;">
-        <p class="hideshow"></p>
-        <p class="hideshow" style="display: none">Let go of the Snow White you have in your mind.</p>
-      </div>
-    
-    <div id="factoid02" class="factoid hide"    
-    data-0="opacity:1;"
-    data-500="opacity:1;">
+  <div class="story"
+    data-0="top:1024px"
+    data-500="top:250px">
     <p>The first published version of the Snow White tale was told to Jacob and Wilhelm Grimm by a friend of the family and published in the 1812 book, Kinder-und Hausmaerchen, or Tales of Children and the Home, in 1812. The brothers were not writing for children; they were academic linguists, interested in preserving German language and culture and in strengthening the Germain identity. Along with the old German words themselves, the brothers felt that a lot of traditional values lay in the stories they recorded.<p><div class="line-break"></div>
     <p>They may have been right, but this story is not uniquely German. Versions of the story appear in Scotland, Ireland, France, Spain, Portugal, Italy, Hungary, Romania, Albania, Greece, Morocco, Algeria, Libya, West Africa, Gabon, Angola and Mozambique. Details vary, but the tale of a young beauty, a jealous older woman, exile, magical poisoning, and a long coma are universal.</p>
+    </div>
+    
+  <div class="icon middle"
+    data-0="opacity:1;"
+    data-500="opacity:1;">
+    <img src="img/begin_drawn.svg">
     </div>
       
   <div class="page-nav"
@@ -73,8 +68,6 @@
       <a class="nav-icon center" href="#story-modal-02"><img src="img/nav_text.svg"></a> 
       </div>
     </div>
-    
-  </div><!-- /Page: Begin -->
     
   <div id="story-modal-02" class="modal">
     <div class="inset-story">
@@ -108,6 +101,7 @@
       <a class="nav-icon close" href="#" rel="modal:close"><img src="img/nav_close.svg"></a>
     </div>
     
+  </div><!-- /Page: Begin -->
 
 
 <!--------------------------------------------------------------->
@@ -119,19 +113,12 @@
 <!-- JQuery please god don't conflict --------------------->
 <script src="scripts/jquery-1.11.0-min.js"></script>
 
-<!-- Hide / Show via button -->
-<script>
-  $( "#icon-button-02" ).click(function() {
-    $( "#begin-tap .hideshow" ).toggle();
-  });
-</script>
-
 <!-- Factoid Toggle Bar -->
 <script>
   $(document).ready(function(){
     $("#factoid02").click(function(){
       if($(this).hasClass('hide')) {
-        $(this).animate({height:580},200).removeClass('hide');
+        $(this).animate({height:100},200).removeClass('hide');
       } else { 
         $(this).animate({height:32},200).addClass('hide');
       }
@@ -144,9 +131,25 @@
 <script src="scripts/jquery.modal.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function() {
+    function log_modal_event(event, modal) {
+      if(typeof console != 'undefined' && console.log) console.log("[event] " + event.type);
+      };
+      
+    $(document).on($.modal.BEFORE_BLOCK, log_modal_event);
+    $(document).on($.modal.BLOCK, log_modal_event);
+    $(document).on($.modal.BEFORE_OPEN, log_modal_event);
+    $(document).on($.modal.OPEN, log_modal_event);
+    $(document).on($.modal.BEFORE_CLOSE, log_modal_event);
+    $(document).on($.modal.CLOSE, log_modal_event);
+
     $('a[href="#story-modal-02"]').click(function(event) {
       event.preventDefault();
       $(this).modal({
+        escapeClose: false,
+        clickClose: false,
+        showClose: false,
+        fadeDuration: 1000,
+        fadeDelay: 0,
       });
     });
   });
@@ -169,11 +172,9 @@ var s = skrollr.init({
 
 
 <!-- Livereload REMOVE BEFORE LAUNCH ---------------------------->	
-<!--
 <script>
   document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
 </script>
--->
 	
 </body>
 </html>

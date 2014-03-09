@@ -15,44 +15,64 @@
     data-0="top:0px"
     data-500="top:0px">
 
-  <h2 class="middle"
-    data-0="opacity:1"
-    data-500="opacity:1">
-    The Queen is a classic narcissist.</h2>
-
-  <img class="cutout back" src="img/queen.png"      
-    data-0="top:0px"
-    data-500="top:0px">
-     
-  <div id="factoid04" class="factoid hide"    
-    data-0="opacity:1;"
-    data-500="opacity:1;">
-    <p>We know this even before taking a closer look at the Queen. She is the center of her own world, delusional about the importance of her beauty, willing to go to any length to deny her mortality.</p>
-  </div>        
-
-  <div class="icon-positioner middle"           
-    data-0="opacity:1;"
-    data-500="opacity:1;">
-    <div class="icon-field">
-      <div id="drag2" class="icon story middle">
-        <img src="img/queen_drawn.svg">
-        <p>Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. </p>  
-      </div>  
-    </div> 
-  </div>
-    
-  <div class="page-nav"
-    data-0="top:934px"
-    data-500="top:934px">
-    <a class="nav-icon previous" href="snowwhite.html"><img src="img/nav_next.svg"></a>
-    <a class="nav-icon next" href="huntsman.html"><img class="flip-horiz" src="img/nav_next.svg"></a>
-    <div class="story-modal" id="modal-04">   
-      <a class="nav-icon center" href="#story-modal-04"><img src="img/nav_text.svg"></a> 
+    <h2 class="middle"
+      data-0="opacity:1"
+      data-500="opacity:1">
+      The Queen is a classic narcissist.</h2>
+  
+    <img class="cutout back" src="img/queen.png"      
+      data-0="top:0px"
+      data-500="top:0px">
+      
+    <div id="hide-show" class="icon"
+      data-0="opacity:1;"
+      data-500="opacity:1;">
+      <div id="icon-button-04">
+        <img src="img/queen_drawn.svg" class="hideshow">
+        <img src="img/begin_drawn_red.svg" class="hideshow"  style="display: none">
+        </div>
       </div>
+      
+    <div id="idea04" class="hideshow-text story"
+      data-0="opacity:1;"
+      data-500="opacity:1;">
+          <p class="hideshow"></p>
+          <p class="hideshow" style="display: none">We know this even before taking a closer look at the Queen. She is the center of her own world, delusional about the importance of her beauty, willing to go to any length to deny her mortality.</p>
+        </div>
+       
+    <div id="factoid04" class="factoid hide"    
+      data-0="opacity:1;"
+      data-500="opacity:1;">
+      <p>Stepmothers everywhere can blame the Grimms for their bad reputation. As the brothers edited their text for the second edition, they softened the story considerably. One of the most major changes was to convert the evil Mother into an evil Stepmother. That's right: originally, it was Snow White's own mother who plotted the girl's demise. Perhaps she saw a younger version of herself in the child and could not face her own mortality.</p>
+    </div>        
+  
+  <!--
+    <div class="icon-positioner middle"           
+      data-0="opacity:1;"
+      data-500="opacity:1;">
+      <div class="icon-field">
+        <div id="drag2" class="icon story middle">
+          <img src="img/queen_drawn.svg">
+          <p>Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. </p>  
+        </div>  
+      </div> 
     </div>
-    
-  <div id="story-modal-04" class="modal">
-    <div class="inset-story">
+  -->
+      
+    <div class="page-nav"
+      data-0="top:934px"
+      data-500="top:934px">
+      <a class="nav-icon previous" href="snowwhite.html"><img src="img/nav_next.svg"></a>
+      <a class="nav-icon next" href="huntsman.html"><img class="flip-horiz" src="img/nav_next.svg"></a>
+      <div class="story-modal" id="modal-04">   
+        <a class="nav-icon center" href="#story-modal-04"><img src="img/nav_text.svg"></a> 
+        </div>
+      </div>   
+  </div><!-- /Page: Queen -->
+  
+        
+    <div id="story-modal-04" class="modal">
+      <div class="inset-story">
         <p>One cold winter's morning, a young Queen was sewing by her window. As she looked out on the snow, she pricked her finger and shed three drops of blood. Taken by the sight, she wished for a child with lips red as blood, skin white as snow, and hair black as the ebony window frame. </p>
         <p>Soon the Queen had her wish, and little Snow White was born. But during her birth the Queen died, and soon a new Queen stood in her place.</p>
         <div class="line-break"></div>
@@ -82,8 +102,6 @@
         <div class="story-fader bottom"></div>
         <a class="nav-icon close" href="#" rel="modal:close"><img src="img/nav_close.svg"></a>
       </div>
-    
-  </div><!-- /Page: Queen -->
     	
 <!--------------------------------------------------------------->
 <!--------------------------------------------------------------->    	
@@ -95,6 +113,13 @@
 <script src="scripts/jquery-1.11.0.js"></script>
 <script src="scripts/jquery-ui-1.10.4.custom.js"></script>
   
+<!-- Icon Fact Toggle -->
+<script>
+  $( "#icon-button-04" ).click(function() {
+    $( "#queen .hideshow" ).toggle();
+  });
+</script>
+
 <!-- Factoid Toggle Bar -->
 <script>
   $(document).ready(function(){
@@ -112,40 +137,24 @@
 <script src="scripts/jquery.modal.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function() {
-    function log_modal_event(event, modal) {
-      if(typeof console != 'undefined' && console.log) console.log("[event] " + event.type);
-      };
-      
-    $(document).on($.modal.BEFORE_BLOCK, log_modal_event);
-    $(document).on($.modal.BLOCK, log_modal_event);
-    $(document).on($.modal.BEFORE_OPEN, log_modal_event);
-    $(document).on($.modal.OPEN, log_modal_event);
-    $(document).on($.modal.BEFORE_CLOSE, log_modal_event);
-    $(document).on($.modal.CLOSE, log_modal_event);
-
     $('a[href="#story-modal-04"]').click(function(event) {
       event.preventDefault();
       $(this).modal({
-        escapeClose: false,
-        clickClose: false,
-        showClose: false,
-        fadeDuration: 1000,
-        fadeDelay: 0,
       });
     });
   });
 </script>
 
 <!-- Draggable -->
+<!--
 <script type="text/javascript" src="scripts/jquery.event.ue.js"></script>
 <script type="text/javascript" src="scripts/jquery.udraggable.js"></script>
-
 
 <script type="text/javascript">
   $('#drag2').udraggable({
   });
 </script>
-   
+-->   
    
 <!-- Skrollr ---------------------------->
 <script type="text/javascript" src="scripts/skrollr.min.js"></script>

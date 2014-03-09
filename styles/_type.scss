@@ -1,6 +1,6 @@
-/***********************************************************************************************************/
-/*** Begin Type Styles  ************************************************************************************/
-/***********************************************************************************************************/
+/***********************************************************************************/
+/******** Begin Type Stylesheet ****************************************************/
+/***********************************************************************************/
 
 
 
@@ -16,23 +16,21 @@ html, body {
   text-align: left;
   }
   
-#break01, #break02, #break03 {
+p {
+  font-family: $serif-type;
+  color:$story-color;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.35;
+  margin: 0;
+  margin-bottom: 12px;
+  letter-spacing: 0.0125em;
+  }  
   
-  color: $red !important;
-  
-  /* .story.break p {color: $red !important;} */
-  
-  }
-
-
-ol, ul {
-	list-style: none;
-  }
-
-  
-.button .closed p {
+.button p {
+  font-family: $sans-type;
   text-align: center;
-  margin:30px;
+  padding:30px;
 	color:white;
   font-size: 16px;
   font-weight: 700;
@@ -40,34 +38,21 @@ ol, ul {
   }
   
 .story p {
-  display: inline;
-  font-family: $serif-type;
-  color:$story-color;
-  font-size: 24px;
-  font-weight: 400;
-  line-height: 1.175;
-  line-height: 1.35;
-  margin-bottom: 12px;
-  letter-spacing: 0.0125em;
+  display: inline; /* To make white hug text */
   background-color: $story-bg-color;
   background-color: rgba(255,255,255,0.75);
-  /*
-text-shadow:     -2px -2px 0 rgba(255,255,255,0.5),
-    2px -2px 0 rgba(255,255,255,0.5),
-    -2px 2px 0 rgba(255,255,255,0.5),
-    2px 2px 0 rgba(255,255,255,0.5) ;
-*/
+  &:first-child {
+    margin-top: 12px;
+    }
+  }
+
+p.hideshow {
+  color: rgba($red,0.8);
+  opacity: 1;
+  background-color: #fff;
   }
   
-#snowwhite .story p {
-  color: $story-color;
-  background-color: rgba($red,0.8);
-  background-color: rgba(255,255,255,0.5);
-  }
-  
-.story p:first-child {
-  margin-top: 12px;
-  }
+p.hideshow:first-child {background-color: rgba(0,0,0,0)}
   
 div.story {  
   padding: 9px;
@@ -79,6 +64,7 @@ div.story {
     }
 
   }
+  
   
 h1, h2 {
   font-family: $sans-type;
@@ -99,34 +85,10 @@ h2 {
 	font-size:5em;
 	line-height: 1.125em;
 	letter-spacing: 0.009em;
+  position: absolute;
   }
 
-h2:first-child {margin-top:0;}
-
-h3 {
-	color:#333;
-	font-size:1.41em;
-	margin:1em 0;
-  }
-
-h4 {
-	color:#444;
-	font-size:1.11em;
-	margin:1em 0;
-  }
-
-#transform {
-	text-align:center;
-	font-size:150%;
-  }
-
-#properties {
-	text-align:center;
-  }
-
-.drop {
-	font-weight:bold;
-  }
+h2:first-child {margin-top:0;} 
   
 .button p a {
   font-family: $sans-type;
@@ -134,5 +96,5 @@ h4 {
   text-decoration: none;
   }
 
-/*** End Type Styles ********************************************************/
+/******** End Type Stylesheet ****************************************/
 

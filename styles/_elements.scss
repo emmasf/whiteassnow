@@ -1,11 +1,16 @@
+/***********************************************************************************/
+/******** Begin Elements Stylesheet ************************************************/
+/***********************************************************************************/
+
+/** General ****************************/   
+
 html, body, div, span, p, a, del, em, img, ol, ul, li, fieldset, form, label {
 	margin: 0;
 	padding: 0;
 	border: 0;
   }
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {
 	display: block;
   }
 
@@ -21,12 +26,14 @@ body {
 	background-attachment:fixed;
   }
 
+
+/** Each Page ****************************/   	
+
 .page {
   width:768px;
 	height:1024px;
 	top:0px;
-	border-bottom: 2px solid $light-gray;
-	
+	border-bottom: 2px solid $light-gray;	
   h1 {
     top:100px;
     padding:50px;
@@ -35,12 +42,11 @@ body {
   	-ms-transform-origin:0 0;
   	-o-transform-origin:0 0;
   	transform-origin:0 0;
-  	}
-  	
-  h2 {
-  	}	  	
+  	}  	
 	}
 	
+/** Bottom Nav ****************************/   	
+
 .page-nav {
   top:0px;
   position: relative;
@@ -49,7 +55,7 @@ body {
   }
   
 .nav-icon {
-   background-color: rgba(0,0,0,0.15);
+   background-color: rgba(0,0,0,0.25);
    height:60px;
    width: 60px;
    border-radius: 30px;
@@ -64,24 +70,19 @@ body {
 .previous { left: 30px; }    
 .next { right: 30px; }  
 .center { right: 354px; }    
-.beginning { left: 100px; } 
-.close { right: 20px; }    
-  
-.flip-horiz {
-  -webkit-transform: scaleX(-1);
-  transform: scaleX(-1); 
-  }
-  
-.flip-vert {
-  -webkit-transform: scaleY(-1);
-  transform: scaleY(-1); 
-  }
-	
+.beginning { left: 100px; }    
+
+
+/** Cutout Images ****************************/   	
+
 .cutout {
   width: 100%;
   position:relative;
   top:0px;  
   }
+  
+
+/** Factoid Slider ****************************/   
 
 .factoid {
   z-index: 100;
@@ -94,8 +95,7 @@ body {
   -webkit-animation-play-state:paused;
   
   p { 
-    padding:26px; 
-    padding-bottom: 35px;
+    padding:0 45px 0 30px; 
     display: block;
     font-family: $sans-type;
     font-weight: 700;
@@ -103,7 +103,12 @@ body {
     font-size: 17px;
     letter-spacing: 0.025em;
     line-height: 1.25em;
+    margin: 0;
+    margin-bottom: 12px;
     }
+    
+  p:first-child {padding-top: 30px;}
+  p:last-child {padding-bottom: 45px;}
   
   }
   
@@ -112,26 +117,32 @@ body {
   animation-play-state:running;
   -webkit-animation-play-state:running;
   }
-    
+
+/** Story Modal ****************************/    
+
+.close { 
+  right: 20px; 
+  top: 20px;} 
+
 .modal {
   display: none;
   width: 708px;
   height: 956px;
   background: $paper-color;
-  padding: 15px;
-  padding-bottom: 20px;
+  padding: 0;
   -webkit-border-radius: 5px;
   border-radius: 5px;
   }
   
 .inset-story {
-  width:600px;
-  height:914px;
+  width:574px;
+  height:870px;
   position: fixed;
-  top:20px;
-  left: 50px;
+  top:40px;
+  left: 60px;
   overflow: scroll;
   padding: 80px 100px 0 0;
+  margin: 0;
   
   p {  
     font-family: $serif-type;
@@ -148,10 +159,10 @@ body {
   }
   
 .story-fader  {
-  width: 600px;
+  width: 620px;
   height: 80px;
   position: absolute;
-  left:30px;
+  left:20px;
   }
   
 .story-fader.top {
@@ -169,20 +180,6 @@ body {
     }
 
 /** Page-specific *******/
-
-.icon-positioner {}
-.icon-field {
-  position: relative;
-  width: 768px;
-  height: 1024px
-  }
-
-.mini-icons {
-  height: 60px;
-  img {height:100%}
-  
-  }
-  
   
 .button .closed {
   background-color: $button-color;
@@ -191,7 +188,6 @@ body {
   left:40%;
   top:550px;
   }  
-
 
 .svg-draw {
   fill:none;
@@ -203,10 +199,23 @@ body {
   stroke-dasharray:6000;
   stroke-dashoffset:0;      
   }
-  
 
+/** Generic modifiers *******/
 
 .back {z-index:1 !important;}
 .middle {z-index:25 !important;}
 .front {z-index:50 !important;}
+  
+.flip-horiz {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1); 
+  }
+  
+.flip-vert {
+  -webkit-transform: scaleY(-1);
+  transform: scaleY(-1); 
+  }
+
+
+/******** End Type Stylesheet ****************************************/
   

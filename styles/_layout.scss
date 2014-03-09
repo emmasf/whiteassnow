@@ -1,9 +1,13 @@
+/***********************************************************************************/
+/******** Begin Page Layout Stylesheet *********************************************/
+/***********************************************************************************/
+
 #progress {
   /*width: 6px;
 	height:1024px;
   right:0;*/
   width:768px;
-  height:12px;
+  height:24px;
   top:0;
 	background:#444;
 	z-index:51;
@@ -14,54 +18,91 @@
   }
 
 #begin {
-
   h2 {    
-    position: absolute;
     top:140px;
     left: 60px;
   	-webkit-transform-origin:0 0;
   	transform-origin:0 0;
-  	}
-  	
+  	}  	
   .cutout {
     -webkit-transform:rotate(0deg);
   	transform:rotate(0deg); 
   	-webkit-transform-origin:0 0;
   	transform-origin:0 0; 
   	top: -70px; 
-    }
-  	
+    }  	
   .icon {
     position: absolute;
     top:560px;
     right:56px;
-    }
-    
+    }    
   .story {
+    width: 600px;
+    left: 43px;
+    top:1024px;
+    opacity: 1;
+    }        
+  #instructions {
     width: 600px;
     left: 43px;
     top:250px;
     opacity: 0;
-    }
-    
+    }     
   #factoid02 {
     width: 340px;
     height: 32px;
     top: 820px;
     left: 0px;
-    }   
+    }     
+  }
+  
+#begin-tap {
+  h2 {    
+    top:140px;
+    left: 60px;
+  	-webkit-transform-origin:0 0;
+  	transform-origin:0 0;
+  	}  	
+  .cutout {
+    -webkit-transform:rotate(0deg);
+  	transform:rotate(0deg); 
+  	-webkit-transform-origin:0 0;
+  	transform-origin:0 0; 
+  	top: -70px; 
+    }  	
+  .icon {
+    position: absolute;
+    top:560px;
+    right:56px;
+    }        
+  #instructions {
+    width: 600px;
+    left: 43px;
+    top:250px;
+    opacity: 0;
+    }     
+  #factoid02 {
+    width: 560px;
+    height: 32px;
+    top: 184px;
+    left: 0px;    
+    p:first-child {padding-top: 196px;}
+    } 
+  .hideshow-text {
+    width: 600px;
+    left: 43px;
+    top:339px;
+    top:839px;
+   }
   
   }
 
 #snowwhite {
-
   .svg-draw {
     position: absolute;
     top: 720px;
     }
-
   h2 {    
-    position: absolute;
     width: 600px;
     top:682px;
     left: 60px;
@@ -69,47 +110,36 @@
   	transform-origin:0 0;
     -webkit-transform:rotate(-90deg);
   	transform:rotate(-90deg);
-  	}
-  	
+  	}  	
   .icon {
     position: absolute;
     top:342px;
     right:14px;
-    }
-    
-  .story {
-    width: 600px;
-    left: 24px;
-    top:1024px;
-    /* border-left: 7px solid $red; */
-    
-    p {
-      background-color: rgba(255,255,255,.9);
-      padding: 2px;
-      }
-
-  }
-    
+    }       
   #factoid03 {
-    width: 276px;
+    width: 416px;
     height: 32px;
-    top: 135px;
+    top: 215px;
     right: 0px;
-    }
- 
+    }   
+  .hideshow-text {
+    width: 570px;
+    left: 151px;
+    left: 165px;
+    top:770px;
+   }
   }
 
-#queen {
-  
+#queen {  
   h2 {    
-    position: absolute;
     width: 500px;
-    top:88px;
+    top:82px;
     left: 256px;
-  	}
-  	
-  
-  	
+    left: 310px;
+    top: 96px;
+    left: 208px;
+  	}  	
+/*
   #drag2 {
     position: absolute;
     top:780px;
@@ -119,39 +149,48 @@
       -webkit-transform: rotate(-15deg);
       display: block;
       }
-    }
-    
+*/
+  .icon {
+    position: absolute;
+    top:780px;
+    left:90px;
+    width:580px;
+    img {
+      -webkit-transform: rotate(-10deg);
+      display: block;
+      }
+    }    
   #factoid04 {
     width: 32px;
-    height: 300px;
+    height: 320px;
     top: 490px;
     right: 0px;   
     p {width:320px}    
-    }    
+    }   
+  .hideshow-text {
+    width: 570px;
+    left: 51px;
+    top:560px;
+   } 
   }
-
-#huntsman {
   
+#huntsman {  
   h2 {    
-    position: absolute;
     width: 700px;
     top:103px;
     left: 60px;
-  	}
-  	
+    }
   .icon {
     position: absolute;
     top:642px;
     left:270px;
-    }
-    
+    }    
   .story {
     width: 460px;
     left: 220px;
     left: 20px;
     top:1024px;
-    }
-    
+    }    
   #factoid05 {
     width: 374px;
     height:32px;
@@ -160,29 +199,24 @@
     }
   }
   
-#dwarves {
-    
+#dwarves {    
   h2 {    
-    position: absolute;
     width: 600px;
     top:309px;
     left: 300px;
     -webkit-transform: rotate(90deg);
-  	}
-  	
+  	}  	
   .icon {
     position: absolute;
     top:516px;
     left:172px;
     }
-
   .story {
     width: 390px;
     left: 290px;
     left: 270px;
     top:1024px;
-    }
-    
+    }    
   #factoid06 {
     width: 32px;
     height: 237px;
@@ -192,34 +226,28 @@
     }
   }
 
-#king {
-    
+#king {    
   h2 {    
-    position: absolute;
     width: 400px;
     top:125px;
     left:178px;
     text-align: center;
-  	}
-  	
+  	}  	
     h2.second { 
     top:214px;   
     left:188px;
-  	}
-  	
+  	}  	
   .icon {
     position: absolute;
     top:476px;
     left:34%;
-    }
-    
+    }    
   .story {
     width: 600px;
     left: 80px;
     left: 60px;
     top:1024px;
-    }
-    
+    }    
   #factoid07 {
     width: 50%;
     height:32px;
@@ -229,92 +257,76 @@
   }
 
 
-#sin {
-  
+#sin {  
   h2 {    
-    position: absolute;
     top:570px;
     left:-116px;
     -webkit-transform: rotate(-90deg);
-  	}
-  	
+  	}  	
   .icon {
     position: absolute;
     top: 7%;
     left:33%;
-    }
-    
+    }    
   .story {
     width: 510px;
     left: 175px;
     left: 155px;
     top:1024px;
-    }
-    
+    }    
   #factoid08 {
     width: 390px;
     height:32px;
     top: 635px;
     right: 0px;
-    }
-    
+    }    
   }
 
-#prince {
-    
+#prince {    
   h2 {    
-    position: absolute;
     width: 500px;
     top:448px;
     left:32px;
-  	}
-  	
+  	}  	
   .icon {
     position: absolute;
     top: 15%;
     left:32%;
     -webkit-transform: rotate(-4deg); 
-    }
-  
+    }  
   .story {
     width: 345px;
     left: 31px;
     left: 11px;
     top:1024px;
-    }
-    
+    }    
   #factoid09 {
     width: 32px;
     height: 250px;
     top: 660px;
     right: 0px;
-    }
-    
+    }    
   }
 
 #moral {
   h2 {    
-    position: absolute;
     width: 480px;
     top:154px;
     left:-48px;
     -webkit-transform:rotate(90deg);
   	}
-  	
   .icon {
     position: absolute;
     top: 43%;
     left:35%;
     -webkit-transform: rotate(-4deg); 
     }
-
   .story {
     width: 645px;
     left: 39px;
     left: 19px;
     top:1024px;
-    }
-    
+    }   
   #factoid10 {
     width: 380px;
     height: 32px;
@@ -325,19 +337,16 @@
 
 #end {
   h2 {    
-    position: absolute;
     width: 50%;
     top:45%;
     left:25%;
     text-align: center;
-  	}
-  	
+  	}  	
   .icon {
     position: absolute;
     top: 19%;
     left:34%;
     }
-
   #factoid11 {
     width: 430px;
     height:32px;
@@ -346,4 +355,4 @@
     }
   }
   
-
+/******** End Page Layout Stylesheet *********************************/

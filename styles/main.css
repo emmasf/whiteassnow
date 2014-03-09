@@ -2,6 +2,9 @@
 
 @font-face { font-family: Arnhem; src: url("../type/Arnhem-Bold.ttf"); }
 
+/***********************************************************************************/
+/******** Begin Variables **********************************************************/
+/***********************************************************************************/
 /*
 @keyframes textcolormorph
 {
@@ -35,9 +38,10 @@
   75% { background-color: rgba(9, 6, 255, 0.8); }
   100% { background-color: rgba(2, 111, 195, 0.8); } }
 
-/***********************************************************************************************************/
-/*** Begin Skrollr Fixed Positition Styles  ****************************************************************/
-/***********************************************************************************************************/
+/******** End Variables **********************************************/
+/***********************************************************************************/
+/******** Begin Fixed Positition Stylesheet ****************************************/
+/***********************************************************************************/
 html, body { width: 100%; height: 100%; padding: 0; margin: 0; overflow-x: hidden; }
 
 .skrollable { /* First-level skrollables are positioned relative to window */ position: fixed; /* Skrollables by default have a z-index of 100 in order to make it easy to position elements in front/back without changing each skrollable */ z-index: 100; }
@@ -50,7 +54,11 @@ html, body { width: 100%; height: 100%; padding: 0; margin: 0; overflow-x: hidde
 
 .skrollable .skrollable .skrollable { /* Third-level (and below) skrollables are positioned static */ position: static; }
 
-/*** End Skrollr Fixed Positition Styles ************************************/
+/******** End Fixed Positition Stylesheet ****************************/
+/***********************************************************************************/
+/******** Begin Elements Stylesheet ************************************************/
+/***********************************************************************************/
+/** General ****************************/
 html, body, div, span, p, a, del, em, img, ol, ul, li, fieldset, form, label { margin: 0; padding: 0; border: 0; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
@@ -59,12 +67,14 @@ html, body { min-height: 100%; background-color: #000; text-align: left; width: 
 
 body { background: #fff; background-attachment: fixed; }
 
+/** Each Page ****************************/
 .page { width: 768px; height: 1024px; top: 0px; border-bottom: 2px solid #cccccc; }
 .page h1 { top: 100px; padding: 50px; -webkit-transform-origin: 0 0; -moz-transform-origin: 0 0; -ms-transform-origin: 0 0; -o-transform-origin: 0 0; transform-origin: 0 0; }
 
+/** Bottom Nav ****************************/
 .page-nav { top: 0px; position: relative; height: 60px; width: 100%; }
 
-.nav-icon { background-color: rgba(0, 0, 0, 0.15); height: 60px; width: 60px; border-radius: 30px; position: absolute; }
+.nav-icon { background-color: rgba(0, 0, 0, 0.25); height: 60px; width: 60px; border-radius: 30px; position: absolute; }
 
 .nav-icon:hover, .nav-icon:active { background-color: rgba(0, 255, 0, 0.15); background-color: rgba(0, 0, 0, 0.75); }
 
@@ -76,68 +86,67 @@ body { background: #fff; background-attachment: fixed; }
 
 .beginning { left: 100px; }
 
-.close { right: 20px; }
-
-.flip-horiz { -webkit-transform: scaleX(-1); transform: scaleX(-1); }
-
-.flip-vert { -webkit-transform: scaleY(-1); transform: scaleY(-1); }
-
+/** Cutout Images ****************************/
 .cutout { width: 100%; position: relative; top: 0px; }
 
+/** Factoid Slider ****************************/
 .factoid { z-index: 100; position: absolute; /* background-color: $factoid-color; */ -webkit-animation: textcolormorph 10s infinite ease-in-out; animation: textcolormorph 10s infinite ease-in-out; animation-duration: 5s; animation-play-state: paused; -webkit-animation-play-state: paused; }
-.factoid p { padding: 26px; padding-bottom: 35px; display: block; font-family: "Helvetica Neue", Helvetica, Arial, serif; font-weight: 700; color: #fff; font-size: 17px; letter-spacing: 0.025em; line-height: 1.25em; }
+.factoid p { padding: 0 45px 0 30px; display: block; font-family: "Helvetica Neue", Helvetica, Arial, serif; font-weight: 700; color: #fff; font-size: 17px; letter-spacing: 0.025em; line-height: 1.25em; margin: 0; margin-bottom: 12px; }
+.factoid p:first-child { padding-top: 30px; }
+.factoid p:last-child { padding-bottom: 45px; }
 
 .factoid.hide { animation-play-state: running; -webkit-animation-play-state: running; }
 .factoid.hide p { display: none; }
 
-.modal { display: none; width: 708px; height: 956px; background: #f2f0e9; padding: 15px; padding-bottom: 20px; -webkit-border-radius: 5px; border-radius: 5px; }
+/** Story Modal ****************************/
+.close { right: 20px; top: 20px; }
 
-.inset-story { width: 600px; height: 914px; position: fixed; top: 20px; left: 50px; overflow: scroll; padding: 80px 100px 0 0; }
+.modal { display: none; width: 708px; height: 956px; background: #f2f0e9; padding: 0; -webkit-border-radius: 5px; border-radius: 5px; }
+
+.inset-story { width: 574px; height: 870px; position: fixed; top: 40px; left: 60px; overflow: scroll; padding: 80px 100px 0 0; margin: 0; }
 .inset-story p { font-family: "Arnhem", Georgia, serif; color: black; font-size: 24px; font-weight: 400; line-height: 1.175; line-height: 1.35; margin-bottom: 12px; letter-spacing: 0.0125em; }
 .inset-story p:last-child { margin-bottom: 100px; }
 
-.story-fader { width: 600px; height: 80px; position: absolute; left: 30px; }
+.story-fader { width: 620px; height: 80px; position: absolute; left: 20px; }
 
 .story-fader.top { top: 0; background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #f2f0e9), color-stop(100%, rgba(242, 240, 233, 0))); background: -webkit-linear-gradient(top, #f2f0e9 50%, rgba(242, 240, 233, 0) 100%); background: linear-gradient(to bottom, #f2f0e9 50%, rgba(242, 240, 233, 0) 100%); }
 
 .story-fader.bottom { bottom: 0; background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f2f0e9), color-stop(100%, rgba(242, 240, 233, 0))); background: -webkit-linear-gradient(bottom, #f2f0e9 50%, rgba(242, 240, 233, 0) 100%); background: linear-gradient(to top, #f2f0e9 50%, rgba(242, 240, 233, 0) 100%); }
 
 /** Page-specific *******/
-.icon-field { position: relative; width: 768px; height: 1024px; }
-
-.mini-icons { height: 60px; }
-.mini-icons img { height: 100%; }
-
 .button .closed { background-color: #e72900; width: 20%; height: 90px; left: 40%; top: 550px; }
 
 .svg-draw { fill: none; stroke-width: 7; stroke-linecap: round; stroke-linejoin: round; stroke-miterlimit: 4; stroke-opacity: 1; stroke-dasharray: 6000; stroke-dashoffset: 0; }
 
+/** Generic modifiers *******/
 .back { z-index: 1 !important; }
 
 .middle { z-index: 25 !important; }
 
 .front { z-index: 50 !important; }
 
-/***********************************************************************************************************/
-/*** Begin Type Styles  ************************************************************************************/
-/***********************************************************************************************************/
+.flip-horiz { -webkit-transform: scaleX(-1); transform: scaleX(-1); }
+
+.flip-vert { -webkit-transform: scaleY(-1); transform: scaleY(-1); }
+
+/******** End Type Stylesheet ****************************************/
+/***********************************************************************************/
+/******** Begin Type Stylesheet ****************************************************/
+/***********************************************************************************/
 html, body, div, span, p, a, del, em, img, ol, ul, li, fieldset, form, label { font-size: 100%; vertical-align: baseline; }
 
 html, body { line-height: 1.2em; font-family: "Helvetica Neue", Helvetica, Arial, serif; text-align: left; }
 
-#break01, #break02, #break03 { color: #e72900 !important; /* .story.break p {color: $red !important;} */ }
+p { font-family: "Arnhem", Georgia, serif; color: black; font-size: 24px; font-weight: 400; line-height: 1.35; margin: 0; margin-bottom: 12px; letter-spacing: 0.0125em; }
 
-ol, ul { list-style: none; }
+.button p { font-family: "Helvetica Neue", Helvetica, Arial, serif; text-align: center; padding: 30px; color: white; font-size: 16px; font-weight: 700; line-height: 30px; }
 
-.button .closed p { text-align: center; margin: 30px; color: white; font-size: 16px; font-weight: 700; line-height: 30px; }
-
-.story p { display: inline; font-family: "Arnhem", Georgia, serif; color: black; font-size: 24px; font-weight: 400; line-height: 1.175; line-height: 1.35; margin-bottom: 12px; letter-spacing: 0.0125em; background-color: rgba(233, 197, 129, 0.35); background-color: rgba(255, 255, 255, 0.75);   /*
-text-shadow:     -2px -2px 0 rgba(255,255,255,0.5), 2px -2px 0 rgba(255,255,255,0.5), -2px 2px 0 rgba(255,255,255,0.5), 2px 2px 0 rgba(255,255,255,0.5) ;
-*/ }
-
-#snowwhite .story p { color: black; background-color: rgba(231, 41, 0, 0.8); background-color: rgba(255, 255, 255, 0.5); }
-
+.story p { display: inline; /* To make white hug text */ background-color: rgba(233, 197, 129, 0.35); background-color: rgba(255, 255, 255, 0.75); }
 .story p:first-child { margin-top: 12px; }
+
+p.hideshow { color: rgba(231, 41, 0, 0.8); opacity: 1; background-color: #fff; }
+
+p.hideshow:first-child { background-color: rgba(0, 0, 0, 0); }
 
 div.story { padding: 9px; padding-left: 20px; /*   background-color: $story-bg-color; */ }
 div.story .line-break { height: 12px; }
@@ -146,77 +155,83 @@ h1, h2 { font-family: "Helvetica Neue", Helvetica, Arial, serif; color: black; f
 
 h1 { font-size: 6em; margin: 0; }
 
-h2 { color: inherit; font-size: 5em; line-height: 1.125em; letter-spacing: 0.009em; }
+h2 { color: inherit; font-size: 5em; line-height: 1.125em; letter-spacing: 0.009em; position: absolute; }
 
 h2:first-child { margin-top: 0; }
 
-h3 { color: #333; font-size: 1.41em; margin: 1em 0; }
-
-h4 { color: #444; font-size: 1.11em; margin: 1em 0; }
-
-#transform { text-align: center; font-size: 150%; }
-
-#properties { text-align: center; }
-
-.drop { font-weight: bold; }
-
 .button p a { font-family: "Helvetica Neue", Helvetica, Arial, serif; color: #fff; text-decoration: none; }
 
-/*** End Type Styles ********************************************************/
+/******** End Type Stylesheet ****************************************/
+/***********************************************************************************/
+/******** Begin Page Layout Stylesheet *********************************************/
+/***********************************************************************************/
 #progress {   /*width: 6px;
-	height:1024px; right:0;*/ width: 768px; height: 12px; top: 0; background: #444; z-index: 51; }
+	height:1024px; right:0;*/ width: 768px; height: 24px; top: 0; background: #444; z-index: 51; }
 
-#begin h2 { position: absolute; top: 140px; left: 60px; -webkit-transform-origin: 0 0; transform-origin: 0 0; }
+#begin h2 { top: 140px; left: 60px; -webkit-transform-origin: 0 0; transform-origin: 0 0; }
 #begin .cutout { -webkit-transform: rotate(0deg); transform: rotate(0deg); -webkit-transform-origin: 0 0; transform-origin: 0 0; top: -70px; }
 #begin .icon { position: absolute; top: 560px; right: 56px; }
-#begin .story { width: 600px; left: 43px; top: 250px; opacity: 0; }
+#begin .story { width: 600px; left: 43px; top: 1024px; opacity: 1; }
+#begin #instructions { width: 600px; left: 43px; top: 250px; opacity: 0; }
 #begin #factoid02 { width: 340px; height: 32px; top: 820px; left: 0px; }
 
+#begin-tap h2 { top: 140px; left: 60px; -webkit-transform-origin: 0 0; transform-origin: 0 0; }
+#begin-tap .cutout { -webkit-transform: rotate(0deg); transform: rotate(0deg); -webkit-transform-origin: 0 0; transform-origin: 0 0; top: -70px; }
+#begin-tap .icon { position: absolute; top: 560px; right: 56px; }
+#begin-tap #instructions { width: 600px; left: 43px; top: 250px; opacity: 0; }
+#begin-tap #factoid02 { width: 560px; height: 32px; top: 184px; left: 0px; }
+#begin-tap #factoid02 p:first-child { padding-top: 196px; }
+#begin-tap .hideshow-text { width: 600px; left: 43px; top: 339px; top: 839px; }
+
 #snowwhite .svg-draw { position: absolute; top: 720px; }
-#snowwhite h2 { position: absolute; width: 600px; top: 682px; left: 60px; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: rotate(-90deg); transform: rotate(-90deg); }
+#snowwhite h2 { width: 600px; top: 682px; left: 60px; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: rotate(-90deg); transform: rotate(-90deg); }
 #snowwhite .icon { position: absolute; top: 342px; right: 14px; }
-#snowwhite .story { width: 600px; left: 24px; top: 1024px; /* border-left: 7px solid $red; */ }
-#snowwhite .story p { background-color: rgba(255, 255, 255, 0.9); padding: 2px; }
-#snowwhite #factoid03 { width: 276px; height: 32px; top: 135px; right: 0px; }
+#snowwhite #factoid03 { width: 416px; height: 32px; top: 215px; right: 0px; }
+#snowwhite .hideshow-text { width: 570px; left: 151px; left: 165px; top: 770px; }
 
-#queen h2 { position: absolute; width: 500px; top: 88px; left: 256px; }
-#queen #drag2 { position: absolute; top: 780px; left: 70px; width: 580px; }
-#queen #drag2 img { -webkit-transform: rotate(-15deg); display: block; }
-#queen #factoid04 { width: 32px; height: 300px; top: 490px; right: 0px; }
+#queen { /* #drag2 { position: absolute; top:780px; left:70px; width:580px; img { -webkit-transform: rotate(-15deg); display: block; }
+*/ }
+#queen h2 { width: 500px; top: 82px; left: 256px; left: 310px; top: 96px; left: 208px; }
+#queen .icon { position: absolute; top: 780px; left: 90px; width: 580px; }
+#queen .icon img { -webkit-transform: rotate(-10deg); display: block; }
+#queen #factoid04 { width: 32px; height: 320px; top: 490px; right: 0px; }
 #queen #factoid04 p { width: 320px; }
+#queen .hideshow-text { width: 570px; left: 51px; top: 560px; }
 
-#huntsman h2 { position: absolute; width: 700px; top: 103px; left: 60px; }
+#huntsman h2 { width: 700px; top: 103px; left: 60px; }
 #huntsman .icon { position: absolute; top: 642px; left: 270px; }
 #huntsman .story { width: 460px; left: 220px; left: 20px; top: 1024px; }
 #huntsman #factoid05 { width: 374px; height: 32px; top: 352px; left: 0px; }
 
-#dwarves h2 { position: absolute; width: 600px; top: 309px; left: 300px; -webkit-transform: rotate(90deg); }
+#dwarves h2 { width: 600px; top: 309px; left: 300px; -webkit-transform: rotate(90deg); }
 #dwarves .icon { position: absolute; top: 516px; left: 172px; }
 #dwarves .story { width: 390px; left: 290px; left: 270px; top: 1024px; }
 #dwarves #factoid06 { width: 32px; height: 237px; top: 98px; right: 0px; }
 #dwarves #factoid06 p { width: 400px; }
 
-#king h2 { position: absolute; width: 400px; top: 125px; left: 178px; text-align: center; }
+#king h2 { width: 400px; top: 125px; left: 178px; text-align: center; }
 #king h2.second { top: 214px; left: 188px; }
 #king .icon { position: absolute; top: 476px; left: 34%; }
 #king .story { width: 600px; left: 80px; left: 60px; top: 1024px; }
 #king #factoid07 { width: 50%; height: 32px; top: 154px; left: 25%; }
 
-#sin h2 { position: absolute; top: 570px; left: -116px; -webkit-transform: rotate(-90deg); }
+#sin h2 { top: 570px; left: -116px; -webkit-transform: rotate(-90deg); }
 #sin .icon { position: absolute; top: 7%; left: 33%; }
 #sin .story { width: 510px; left: 175px; left: 155px; top: 1024px; }
 #sin #factoid08 { width: 390px; height: 32px; top: 635px; right: 0px; }
 
-#prince h2 { position: absolute; width: 500px; top: 448px; left: 32px; }
+#prince h2 { width: 500px; top: 448px; left: 32px; }
 #prince .icon { position: absolute; top: 15%; left: 32%; -webkit-transform: rotate(-4deg); }
 #prince .story { width: 345px; left: 31px; left: 11px; top: 1024px; }
 #prince #factoid09 { width: 32px; height: 250px; top: 660px; right: 0px; }
 
-#moral h2 { position: absolute; width: 480px; top: 154px; left: -48px; -webkit-transform: rotate(90deg); }
+#moral h2 { width: 480px; top: 154px; left: -48px; -webkit-transform: rotate(90deg); }
 #moral .icon { position: absolute; top: 43%; left: 35%; -webkit-transform: rotate(-4deg); }
 #moral .story { width: 645px; left: 39px; left: 19px; top: 1024px; }
 #moral #factoid10 { width: 380px; height: 32px; top: 685px; right: 0px; }
 
-#end h2 { position: absolute; width: 50%; top: 45%; left: 25%; text-align: center; }
+#end h2 { width: 50%; top: 45%; left: 25%; text-align: center; }
 #end .icon { position: absolute; top: 19%; left: 34%; }
 #end #factoid11 { width: 430px; height: 32px; top: 310px; left: 170px; }
+
+/******** End Page Layout Stylesheet *********************************/

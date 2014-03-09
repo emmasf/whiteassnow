@@ -51,6 +51,8 @@
       <a class="nav-icon center" href="#story-modal-10"><img src="img/nav_text.svg"></a> 
       </div>
     </div>
+  
+  </div><!-- /Page: Moral -->
     
   <div id="story-modal-10" class="modal">
     <div class="inset-story">
@@ -84,8 +86,6 @@
         <a class="nav-icon close" href="#" rel="modal:close"><img src="img/nav_close.svg"></a>
       </div>
       
-  
-  </div><!-- /Page: Moral -->
     	
 <!--------------------------------------------------------------->
 <!--------------------------------------------------------------->    	
@@ -114,25 +114,9 @@
 <script src="scripts/jquery.modal.js" type="text/javascript" charset="utf-8"></script>
 <script type="text/javascript" charset="utf-8">
   $(function() {
-    function log_modal_event(event, modal) {
-      if(typeof console != 'undefined' && console.log) console.log("[event] " + event.type);
-      };
-      
-    $(document).on($.modal.BEFORE_BLOCK, log_modal_event);
-    $(document).on($.modal.BLOCK, log_modal_event);
-    $(document).on($.modal.BEFORE_OPEN, log_modal_event);
-    $(document).on($.modal.OPEN, log_modal_event);
-    $(document).on($.modal.BEFORE_CLOSE, log_modal_event);
-    $(document).on($.modal.CLOSE, log_modal_event);
-
     $('a[href="#story-modal-10"]').click(function(event) {
       event.preventDefault();
       $(this).modal({
-        escapeClose: false,
-        clickClose: false,
-        showClose: false,
-        fadeDuration: 1000,
-        fadeDelay: 0,
       });
     });
   });
