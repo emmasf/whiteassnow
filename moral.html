@@ -2,60 +2,58 @@
 <html>
 <head>
 	<meta charset="utf-8">
-
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
 	<title>White as Snow</title>
-
 	<link href="styles/main.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body>
-	
+<body>	
 
 	<div id="progress" data-0="width:0%;background:hsl(200, 100%, 50%);" data-900="width:100%;background:hsl(920, 100%, 50%);"></div>
 
-  	<div id="moral" class="page"
-      data-0="top:0px"
-      data-500="top:0px">
-      
-    <h2 class="middle"
-      data-0="opacity:1"
-      data-500="opacity:1">
-      We echo our parents&rsquo; mistakes.</h2>
-      
-    <img class="cutout back" src="img/moral.png"      
-        data-0="top:0px"
-        data-500="top:0px">
-        
-    <div class="factoid front" id="factoid10">
-        <p>What have we learned? Vanity is bad, but beauty is good? Revenge is acceptable? The bad guy lost, but there was no real good guy to win.</p>
-       </div>         
-        
-      <div class="story"
-        data-0="top:1024px;"
-        data-500="top:490px;">
-        <p>Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. </p>
-      </div>         
+	<div id="moral" class="page"
+    data-0="top:0px"
+    data-500="top:0px">
+    
+  <h2 class="middle"
+    data-0="opacity:1"
+    data-500="opacity:1">
+    We echo our parents&rsquo; mistakes.</h2>
+    
+  <img class="cutout back" src="img/moral.png"      
+    data-0="top:0px"
+    data-500="top:0px">
 
-    <div class="icon middle"
-      data-0="opacity:1;"
-      data-500="opacity:1;">
-      <img src="img/moral-drawn.svg">
-      </div> 
+  <div id="factoid10" class="factoid hide"    
+    data-0="opacity:1;"
+    data-500="opacity:1;">
+    <p>What have we learned? Vanity is bad, but beauty is good? Revenge is acceptable? The bad guy lost, but there was no real good guy to win.</p>
+    </div>          
       
-      <div class="page-nav"
-      data-0="top:934px"
-      data-500="top:934px">
-      <a class="nav-icon previous" href="prince.html"><img src="img/nav_next.svg"></a>
-      <a class="nav-icon next" href="end.html"><img class="flip-horiz" src="img/nav_next.svg"></a>
-      <div class="story-modal" id="modal-10">   
-        <a class="nav-icon center" href="#story-modal-10"><img src="img/nav_text.svg"></a> 
-        </div>
+  <div class="story"
+    data-0="top:1024px;"
+    data-500="top:490px;">
+    <p>Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. </p>
+    </div>         
+
+  <div class="icon middle"
+    data-0="opacity:1;"
+    data-500="opacity:1;">
+    <img src="img/moral-drawn.svg">
+    </div> 
+    
+  <div class="page-nav"
+    data-0="top:934px"
+    data-500="top:934px">
+    <a class="nav-icon previous" href="prince.html"><img src="img/nav_next.svg"></a>
+    <a class="nav-icon next" href="end.html"><img class="flip-horiz" src="img/nav_next.svg"></a>
+    <div class="story-modal" id="modal-10">   
+      <a class="nav-icon center" href="#story-modal-10"><img src="img/nav_text.svg"></a> 
       </div>
-      
-    <div id="story-modal-10" class="modal">
-      <div class="inset-story">
+    </div>
+    
+  <div id="story-modal-10" class="modal">
+    <div class="inset-story">
         <p>One cold winter's morning, a young Queen was sewing by her window. As she looked out on the snow, she pricked her finger and shed three drops of blood. Taken by the sight, she wished for a child with lips red as blood, skin white as snow, and hair black as the ebony window frame. </p>
         <p>Soon the Queen had her wish, and little Snow White was born. But during her birth the Queen died, and soon a new Queen stood in her place.</p>
         <div class="line-break"></div>
@@ -86,7 +84,8 @@
         <a class="nav-icon close" href="#" rel="modal:close"><img src="img/nav_close.svg"></a>
       </div>
       
-    </div><!-- Cover -->
+  
+  </div><!-- /Page: Moral -->
     	
 <!--------------------------------------------------------------->
 <!--------------------------------------------------------------->    	
@@ -97,6 +96,19 @@
 <!-- JQuery please god don't conflict --------------------->
 <script src="../local-js/jquery-1.11.0.js"></script>
 <script src="../local-js/jquery-ui-1.10.4.custom.js"></script>
+
+<!-- Factoid Toggle Bar -->
+<script>
+  $(document).ready(function(){
+    $("#factoid10").click(function(){
+      if($(this).hasClass('hide')) {
+        $(this).animate({height:200},200).removeClass('hide');
+      } else { 
+        $(this).animate({height:32},200).addClass('hide');
+      }
+    });
+  });
+</script>
 
 <!-- Modal -->
 <script src="scripts/jquery.modal.js" type="text/javascript" charset="utf-8"></script>
@@ -125,39 +137,27 @@
     });
   });
 </script>   
-  <!-- Factoids -->
+   
+   
+<!-- Skrollr ---------------------------->
+<script type="text/javascript" src="scripts/skrollr.min.js"></script>
 <script type="text/javascript">
-document.getElementById('factoid10').onclick = function() {  
-  var className = ' ' + factoid10.className + ' ';  
-  if ( ~className.indexOf(' open ') ) {
-      this.className = className.replace(' open ', ' ');
-    } else {
-      this.className += ' open';
-    }              
-  }
-</script> 
-  
-
-	<script type="text/javascript" src="scripts/skrollr.min.js"></script>
-
-	<!--[if lt IE 9]>
-	<script type="text/javascript" src="scripts/skrollr.ie.min.js"></script>
-	<![endif]-->
-
-	<script type="text/javascript">
-	var s = skrollr.init({
-		edgeStrategy: 'set',
-		easing: {
-			WTF: Math.random,
-			inverted: function(p) {
-				return 1-p;
-			}
+var s = skrollr.init({
+	edgeStrategy: 'set',
+	easing: {
+		WTF: Math.random,
+		inverted: function(p) {
+			return 1-p;
 		}
-	});
-	</script>
-	
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-		
-</body>
+	}
+});
+</script>
 
+
+<!-- Livereload REMOVE BEFORE LAUNCH ---------------------------->	
+<script>
+  document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+</script>
+	
+</body>
 </html>

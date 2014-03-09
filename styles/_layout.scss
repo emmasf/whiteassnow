@@ -46,25 +46,10 @@
     
   #factoid02 {
     width: 340px;
+    height: 32px;
     top: 820px;
     left: 0px;
-    height: 32px;
-    }
-    
- /*
- #factoid02 {
-    width: 340px;
-    top: 860px;
-    left: 0px;
-    height: 32px;
-    }
-
-  div#factoid02.open {
-    top: 772px;
-    height: 120px;
-    -webkit-transition-duration: height 1s;
-    } 
-*/    
+    }   
   
   }
 
@@ -98,22 +83,20 @@
     top:1024px;
     /* border-left: 7px solid $red; */
     
-    p {background-color: rgba(255,255,255,.9);
-    padding: 2px;
-    }
-
+    p {
+      background-color: rgba(255,255,255,.9);
+      padding: 2px;
+      }
 
   }
     
   #factoid03 {
     width: 276px;
+    height: 32px;
     top: 135px;
     right: 0px;
     }
-
-  div#factoid03.open {
-    height: 600px;
-    } 
+ 
   }
 
 #queen {
@@ -137,25 +120,14 @@
       display: block;
       }
     }
-/*
-  .story {
-    width: 660px;
-    left: 30px;
-    left: 10px;
-    top:1024px;
-    }
-*/
     
   #factoid04 {
     width: 32px;
     height: 300px;
     top: 490px;
-    right: 0px;
-    }
-
-  div#factoid04.open {
-    width: 374px;
-    }     
+    right: 0px;   
+    p {width:320px}    
+    }    
   }
 
 #huntsman {
@@ -181,48 +153,13 @@
     }
     
   #factoid05 {
-    width: 380px;
+    width: 374px;
+    height:32px;
     top: 352px;
     left: 0px;
     }
-
-/*
-  div#factoid05.open {
-    height: 200px;
-    } 
-*/  
-  
   }
   
-#break01, #break02, #break03 {
-  
-  h2 {    
-    position: absolute;
-    width: 700px;
-    top:200px;
-    left: 35px;
-    font-size: 60px;
-  	}
-    
-  .story {
-    width: 660px;
-    left: 220px;
-    left: 20px;
-    top:1024px;
-    }
-    
-        
-  .mini-icons {
-    position: absolute;
-    top: 120px;
-    left: 22px;
-    
-    img {margin-right: -20px;}
-
-    }
-    
-  } 
-
 #dwarves {
     
   h2 {    
@@ -248,14 +185,11 @@
     
   #factoid06 {
     width: 32px;
-    height: 377px;
+    height: 237px;
     top: 98px;
     right: 0px;
+    p {width:400px}
     }
-
-  div#factoid06.open {
-    width: 450px;
-    }  
   }
 
 #king {
@@ -288,13 +222,10 @@
     
   #factoid07 {
     width: 50%;
+    height:32px;
     top: 154px;
     left: 25%;
-    }
-
-  div#factoid07.open {
-    height: 1200px;
-    }     
+    }   
   }
 
 
@@ -322,8 +253,9 @@
     
   #factoid08 {
     width: 390px;
-    top: 850px;
-    left: 0px;
+    height:32px;
+    top: 635px;
+    right: 0px;
     }
     
   }
@@ -334,7 +266,7 @@
     position: absolute;
     width: 500px;
     top:448px;
-    left:30px;
+    left:32px;
   	}
   	
   .icon {
@@ -353,14 +285,11 @@
     
   #factoid09 {
     width: 32px;
-    height: 230px;
-    top: 680px;
+    height: 250px;
+    top: 660px;
     right: 0px;
     }
-
-  div#factoid09.open {
-    width: 410px;
-    }     
+    
   }
 
 #moral {
@@ -374,8 +303,8 @@
   	
   .icon {
     position: absolute;
-    top: 52%;
-    left:28%;
+    top: 43%;
+    left:35%;
     -webkit-transform: rotate(-4deg); 
     }
 
@@ -388,17 +317,11 @@
     
   #factoid10 {
     width: 380px;
-    top: 865px;
+    height: 32px;
+    top: 685px;
     right: 0px;
     }
-
-  div#factoid10.open {
-    height: 100px;
-    }     
-    
   }
-
-
 
 #end {
   h2 {    
@@ -417,13 +340,10 @@
 
   #factoid11 {
     width: 430px;
+    height:32px;
     top: 310px;
     left: 170px;
     }
-
-  div#factoid11.open {
-    height: 100px;
-    } 
   }
   
 

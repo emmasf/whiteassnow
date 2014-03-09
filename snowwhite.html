@@ -2,86 +2,83 @@
 <html>
 <head>
 	<meta charset="utf-8">
-
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
 	<title>White as Snow</title>
-
 	<link href="styles/main.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
 	
-
 	<div id="progress" data-0="width:0%;background:hsl(200, 100%, 50%);" data-900="width:100%;background:hsl(920, 100%, 50%);"></div>
 
-  	<div id="snowwhite" class="page"
-      data-0="top:0px"
-      data-500="top:0px">
+	<div id="snowwhite" class="page"
+    data-0="top:0px"
+    data-500="top:0px">
 
     <h2 class="middle"
       data-0="opacity:1"
       data-500="opacity:1">
       Snow White is an empty shell.</h2>
-    
-      <img class="cutout back" src="img/snowwhite.png"      
-        data-0="top:150px"
-        data-500="top:-74px">
-               
-    <div class="factoid front" id="factoid03">
-        <p>Snow White has no characteristics beyond her physical description: her coloration and the fact that she is beautiful and young. She has no personality. She makes no choices.</p>
-       </div> 
+  
+    <img class="cutout back" src="img/snowwhite.png"      
+      data-0="top:150px"
+      data-500="top:-74px">
+             
+    <div id="factoid03" class="factoid hide"    
+      data-0="opacity:1;"
+      data-500="opacity:1;">
+      <p>Snow White has no characteristics beyond her physical description: her coloration and the fact that she is beautiful and young. She has no personality. She makes no choices.</p>
+      </div>
 
-      <div class="story"
-        data-0="top:1024px"
-        data-500="top:260px">
-        <!-- <p>Once upon a time, on a cold winter's morning, a young Queen was sewing by her window. As she looked out on the snow, she pricked her finger and shed three drops of blood. Taken by the sight, she wished for a child with lips red as blood, skin white as snow, and hair black as the ebony window frame. Soon the Queen had her wish, and little Snow White was born.</p> -->
-        <p>The first published version of the Snow White tale was told to Jacob and Wilhelm Grimm by a friend of the family and published in the 1812 book, Kinder-und Hausmaerchen, or Tales of Children and the Home, in 1812. The brothers were not writing for children; they were academic linguists, interested in preserving German language and culture and in strengthening the Germain identity. Along with the old German words themselves, the brothers felt that a lot of traditional values lay in the stories they recorded.<p><div class="line-break"></div>
-        <p>They may have been right, but this story is not uniquely German. Versions of the story appear in Scotland, Ireland, France, Spain, Portugal, Italy, Hungary, Romania, Albania, Greece, Morocco, Algeria, Libya, West Africa, Gabon, Angola and Mozambique. Details vary, but the tale of a young beauty, a jealous older woman, exile, magical poisoning, and a long coma are universal.</p>
-        </div>
-        
-                   
-      <div class="svg-draw front">
-    		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" 
-    		  width="768px" height="400px">		    
+    <div class="story"
+      data-0="top:1024px"
+      data-500="top:260px">
+      <p>The first published version of the Snow White tale was told to Jacob and Wilhelm Grimm by a friend of the family and published in the 1812 book, Kinder-und Hausmaerchen, or Tales of Children and the Home, in 1812. The brothers were not writing for children; they were academic linguists, interested in preserving German language and culture and in strengthening the Germain identity. Along with the old German words themselves, the brothers felt that a lot of traditional values lay in the stories they recorded.<p><div class="line-break"></div>
+      <p>They may have been right, but this story is not uniquely German. Versions of the story appear in Scotland, Ireland, France, Spain, Portugal, Italy, Hungary, Romania, Albania, Greece, Morocco, Algeria, Libya, West Africa, Gabon, Angola and Mozambique. Details vary, but the tale of a young beauty, a jealous older woman, exile, magical poisoning, and a long coma are universal.</p>
+      </div>
+                       
+    <div class="svg-draw front">
+  		<svg xmlns="http://www.w3.org/2000/svg" version="1.1" 
+  		  width="768px" height="400px">		    
         <path
   				data-0=
   				  "stroke-dashoffset:6000;
     				stroke:black;" 
   				data-800=
   				  "stroke-dashoffset:0;"
-          d="M226.823,205.516c9.005,0,18.829,0,27.833,0c29.471,0,76.951,8.187,101.51-9.824
-        		c22.922-17.191-8.186-28.652-14.735-4.912c-4.912,17.191,31.927,43.388,21.285,52.393c-9.824,7.367-36.02-15.555-39.294-22.922
-        		c-13.098-23.74,20.466-19.647,37.657-21.284c4.912,0,35.201,3.274,37.657-5.73c2.456-11.461-19.647-29.471-28.652-31.927
-        		c-13.098,20.466,52.392,87.594,76.132,84.319c9.005-18.011-16.372-94.961-41.75-84.319c-12.279,4.912-9.823,44.206-9.005,52.393
-        		c2.456,18.828,13.917,28.651,18.828,45.843c-12.279,2.456-30.289-13.098-40.113-18.828c-9.823-5.73-26.196-11.461-31.926-20.466
-        		c19.647-14.735,47.48-21.284,69.583-32.745c12.28-7.368,36.839-17.191,44.206-31.927c-22.103-13.917-62.216,56.485-85.956,58.941
-        		c-9.005-18.01-5.73-45.024-5.73-64.672c-0.819-9.823,1.637-22.921-7.368-27.833c-22.103,29.471,37.657,99.054,66.309,107.24
-        		c3.274-38.476-62.215-74.495-79.407-27.833c-10.642,28.651,10.642,48.299,34.382,58.94c11.461,4.912,28.652,5.73,37.657,13.099
-        		c-18.01,10.642-66.309-13.099-68.765-34.383c9.824-8.186,25.377-9.005,36.838-10.642c9.005-1.638,38.476-0.819,45.024-9.005
-        		c5.73-8.187-1.637-22.922-11.461-21.285c-3.274,11.46,40.932,3.275,49.937,2.456c10.643,0,22.104-1.637,32.745-0.819
-        		c13.917,0.819,27.015,6.549,40.932,6.549"
-          /></svg>	
-          </div>
-        
-    <div class="icon middle"
-      data-0="opacity:1;"
-      data-500="opacity:1;">
-      <img src="img/snowwhite_drawn.svg">
-      </div>
-      
-    <div class="page-nav"
-      data-0="top:934px"
-      data-500="top:934px">
-      <a class="nav-icon previous" href="begin.html"><img src="img/nav_next.svg"></a>
-      <a class="nav-icon next" href="queen.html"><img class="flip-horiz" src="img/nav_next.svg"></a>
-      <div class="story-modal" id="modal-02">   
-        <a class="nav-icon center" href="#story-modal-03"><img src="img/nav_text.svg"></a> 
+            d="M226.823,205.516c9.005,0,18.829,0,27.833,0c29.471,0,76.951,8.187,101.51-9.824
+              c22.922-17.191-8.186-28.652-14.735-4.912c-4.912,17.191,31.927,43.388,21.285,52.393c-9.824,7.367-36.02-15.555-39.294-22.922
+              c-13.098-23.74,20.466-19.647,37.657-21.284c4.912,0,35.201,3.274,37.657-5.73c2.456-11.461-19.647-29.471-28.652-31.927
+              c-13.098,20.466,52.392,87.594,76.132,84.319c9.005-18.011-16.372-94.961-41.75-84.319c-12.279,4.912-9.823,44.206-9.005,52.393
+              c2.456,18.828,13.917,28.651,18.828,45.843c-12.279,2.456-30.289-13.098-40.113-18.828c-9.823-5.73-26.196-11.461-31.926-20.466
+              c19.647-14.735,47.48-21.284,69.583-32.745c12.28-7.368,36.839-17.191,44.206-31.927c-22.103-13.917-62.216,56.485-85.956,58.941
+              c-9.005-18.01-5.73-45.024-5.73-64.672c-0.819-9.823,1.637-22.921-7.368-27.833c-22.103,29.471,37.657,99.054,66.309,107.24
+              c3.274-38.476-62.215-74.495-79.407-27.833c-10.642,28.651,10.642,48.299,34.382,58.94c11.461,4.912,28.652,5.73,37.657,13.099
+              c-18.01,10.642-66.309-13.099-68.765-34.383c9.824-8.186,25.377-9.005,36.838-10.642c9.005-1.638,38.476-0.819,45.024-9.005
+              c5.73-8.187-1.637-22.922-11.461-21.285c-3.274,11.46,40.932,3.275,49.937,2.456c10.643,0,22.104-1.637,32.745-0.819
+              c13.917,0.819,27.015,6.549,40.932,6.549"
+              />
+          </svg>	
         </div>
-      </div>
       
-    <div id="story-modal-03" class="modal">
-      <div class="inset-story">
+  <div class="icon middle"
+    data-0="opacity:1;"
+    data-500="opacity:1;">
+    <img src="img/snowwhite_drawn.svg">
+    </div>
+    
+  <div class="page-nav"
+    data-0="top:934px"
+    data-500="top:934px">
+    <a class="nav-icon previous" href="begin.html"><img src="img/nav_next.svg"></a>
+    <a class="nav-icon next" href="queen.html"><img class="flip-horiz" src="img/nav_next.svg"></a>
+    <div class="story-modal" id="modal-03">   
+      <a class="nav-icon center" href="#story-modal-03"><img src="img/nav_text.svg"></a> 
+      </div>
+    </div>
+    
+  <div id="story-modal-03" class="modal">
+    <div class="inset-story">
         <p>One cold winter's morning, a young Queen was sewing by her window. As she looked out on the snow, she pricked her finger and shed three drops of blood. Taken by the sight, she wished for a child with lips red as blood, skin white as snow, and hair black as the ebony window frame. </p>
         <p>Soon the Queen had her wish, and little Snow White was born. But during her birth the Queen died, and soon a new Queen stood in her place.</p>
         <div class="line-break"></div>
@@ -112,7 +109,8 @@
         <a class="nav-icon close" href="#" rel="modal:close"><img src="img/nav_close.svg"></a>
       </div>
       
-    </div><!-- Cover -->
+  
+  </div><!-- /Page: Snow White -->
     	
 <!--------------------------------------------------------------->
 <!--------------------------------------------------------------->    	
@@ -123,6 +121,20 @@
 <!-- JQuery please god don't conflict --------------------->
 <script src="../local-js/jquery-1.11.0.js"></script>
 <script src="../local-js/jquery-ui-1.10.4.custom.js"></script>
+
+   
+<!-- Factoid Toggle Bar -->
+<script>
+  $(document).ready(function(){
+    $("#factoid03").click(function(){
+      if($(this).hasClass('hide')) {
+        $(this).animate({height:340},200).removeClass('hide');
+      } else { 
+        $(this).animate({height:32},200).addClass('hide');
+      }
+    });
+  });
+</script>
 
 <!-- Modal -->
 <script src="scripts/jquery.modal.js" type="text/javascript" charset="utf-8"></script>
@@ -152,39 +164,26 @@
   });
 </script>
    
-  <!-- Factoids -->
+   
+<!-- Skrollr ---------------------------->
+<script type="text/javascript" src="scripts/skrollr.min.js"></script>
 <script type="text/javascript">
-document.getElementById('factoid03').onclick = function() {  
-  var className = ' ' + factoid03.className + ' ';  
-  if ( ~className.indexOf(' open ') ) {
-      this.className = className.replace(' open ', ' ');
-    } else {
-      this.className += ' open';
-    }              
-  }
-</script> 
-  
-
-	<script type="text/javascript" src="scripts/skrollr.min.js"></script>
-
-	<!--[if lt IE 9]>
-	<script type="text/javascript" src="scripts/skrollr.ie.min.js"></script>
-	<![endif]-->
-
-	<script type="text/javascript">
-	var s = skrollr.init({
-		edgeStrategy: 'set',
-		easing: {
-			WTF: Math.random,
-			inverted: function(p) {
-				return 1-p;
-			}
+var s = skrollr.init({
+	edgeStrategy: 'set',
+	easing: {
+		WTF: Math.random,
+		inverted: function(p) {
+			return 1-p;
 		}
-	});
-	</script>
-	
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-		
-</body>
+	}
+});
+</script>
 
+
+<!-- Livereload REMOVE BEFORE LAUNCH ---------------------------->	
+<script>
+  document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+</script>
+	
+</body>
 </html>

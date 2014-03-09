@@ -2,18 +2,13 @@
 <html>
 <head>
 	<meta charset="utf-8">
-
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
 	<title>White as Snow</title>
-
-	<link href="styles/main.css" rel="stylesheet" type="text/css" />
-	
+	<link href="styles/main.css" rel="stylesheet" type="text/css" />	
 </head>
 
 <body>
 	
-
 	<div id="progress" data-0="width:0%;background:hsl(200, 100%, 50%);" data-900="width:100%;background:hsl(920, 100%, 50%);"></div>
 
 	<div id="begin" class="page"
@@ -32,7 +27,7 @@
     	-webkit-transform-origin:100% 0;
     	transform-origin:100% 0;"
     	>
-    
+      
   <h2 class="middle"
     data-0="opacity:1"
     data-500="opacity:1">
@@ -99,11 +94,7 @@
       <a class="nav-icon close" href="#" rel="modal:close"><img src="img/nav_close.svg"></a>
     </div>
     
-
-    
-
-	
-  </div><!-- Cover -->
+  </div><!-- /Page: Begin -->
 
 
 <!--------------------------------------------------------------->
@@ -116,14 +107,14 @@
 <script src="../local-js/jquery-1.11.0.js"></script>
 <script src="../local-js/jquery-ui-1.10.4.custom.js"></script>
 
-<!-- Toggle Bar -->
+<!-- Factoid Toggle Bar -->
 <script>
   $(document).ready(function(){
     $("#factoid02").click(function(){
       if($(this).hasClass('hide')) {
         $(this).animate({height:100},200).removeClass('hide');
       } else { 
-        $(this).animate({height:40},200).addClass('hide');
+        $(this).animate({height:32},200).addClass('hide');
       }
     });
   });
@@ -172,19 +163,6 @@ var s = skrollr.init({
 	}
 });
 </script>
-
-	
-<!-- Factoids: Pure js ---------------------------->
-<script type="text/javascript">
-document.getElementById('factoid02').onclick = function() {  
-  var className = ' ' + factoid02.className + ' ';  
-  if ( ~className.indexOf(' open ') ) {
-    this.className = className.replace(' open ', ' ');
-    } else {
-      this.className += ' open';
-      }          
-  }
-</script> 
 
 
 <!-- Livereload REMOVE BEFORE LAUNCH ---------------------------->	

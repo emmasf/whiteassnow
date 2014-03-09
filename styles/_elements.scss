@@ -86,7 +86,6 @@ body {
 .factoid {
   z-index: 100;
   position: absolute;
-  min-height: 32px;
   /* background-color: $factoid-color; */
   -webkit-animation: textcolormorph 10s infinite ease-in-out;
   animation: textcolormorph 10s infinite ease-in-out;
@@ -95,7 +94,7 @@ body {
   -webkit-animation-play-state:paused;
   
   p { 
-    padding:30px; 
+    padding:26px; 
     padding-bottom: 35px;
     display: block;
     font-family: $sans-type;
@@ -108,7 +107,7 @@ body {
   
   }
   
-#factoid02.hide {
+.factoid.hide {
   p {display: none;}
   animation-play-state:running;
   -webkit-animation-play-state:running;

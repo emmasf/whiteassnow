@@ -2,70 +2,57 @@
 <html>
 <head>
 	<meta charset="utf-8">
-
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
 	<title>White as Snow</title>
-
 	<link href="styles/main.css" rel="stylesheet" type="text/css" />
 </head>
 
-<body>
-	
+<body>	
 
 	<div id="progress" data-0="width:0%;background:hsl(200, 100%, 50%);" data-900="width:100%;background:hsl(920, 100%, 50%);"></div>
 
-  	<div id="queen" class="page"
-      data-0="top:0px"
-      data-500="top:0px">
+	<div id="queen" class="page"
+    data-0="top:0px"
+    data-500="top:0px">
 
-    <h2 class="middle"
-      data-0="opacity:1"
-      data-500="opacity:1">
-      The Queen is a classic narcissist.</h2>
+  <h2 class="middle"
+    data-0="opacity:1"
+    data-500="opacity:1">
+    The Queen is a classic narcissist.</h2>
 
-      <img class="cutout back" src="img/queen.png"      
-        data-0="top:0px"
-        data-500="top:0px">
-        
-    <div class="factoid front" id="factoid04">
-        <p>We know this even before taking a closer look at the Queen. She is the center of her own world, delusional about the importance of her beauty, willing to go to any length to deny her mortality.</p>
-       </div>         
-        
-<!--
-      <div class="story"
-        data-0="top:1024px;"
-        data-500="top:420px;">
-<p>But during her birth the Queen died, and soon a new Queen stood in her place.</p>        <div class="line-break"></div>
-        <p>The new Queen was vain and cruel, as cold as the last was warm. She possessed a magic mirror that could only speak the truth, and she regularly consulted the mirror to ensure that she was the most beautiful creature in the kingdom.</p>        <div class="line-break"></div>
-        <p>Little Snow White grew into a beautiful girl, and a jealous rage filled the Queen’s heart. Looking upon Snow White’s fair face awoke something deep within the Queen, and she could have no peace. One day as she stood before her mirror, the Queen heard the answer she had been dreading: the young princess was more fair than she. Her blood boiling, full of fear, she summoned her faithful servant and ordered him to take the girl into the woods and bring back nothing but her heart and liver.</p>
-        </div>
--->
+  <img class="cutout back" src="img/queen.png"      
+    data-0="top:0px"
+    data-500="top:0px">
+     
+  <div id="factoid04" class="factoid hide"    
+    data-0="opacity:1;"
+    data-500="opacity:1;">
+    <p>We know this even before taking a closer look at the Queen. She is the center of her own world, delusional about the importance of her beauty, willing to go to any length to deny her mortality.</p>
+  </div>        
 
-
-    <div class="icon-positioner middle"           
-      data-0="opacity:1;"
-      data-500="opacity:1;">
-      <div class="icon-field">
-        <div id="drag2" class="icon story middle">
-          <img src="img/queen_drawn.svg">
-          <p>Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. </p>  
-        </div>  
-      </div> 
-    </div>
-      
-    <div class="page-nav"
-      data-0="top:934px"
-      data-500="top:934px">
-      <a class="nav-icon previous" href="snowwhite.html"><img src="img/nav_next.svg"></a>
-      <a class="nav-icon next" href="huntsman.html"><img class="flip-horiz" src="img/nav_next.svg"></a>
-      <div class="story-modal" id="modal-02">   
-        <a class="nav-icon center" href="#story-modal-04"><img src="img/nav_text.svg"></a> 
-        </div>
+  <div class="icon-positioner middle"           
+    data-0="opacity:1;"
+    data-500="opacity:1;">
+    <div class="icon-field">
+      <div id="drag2" class="icon story middle">
+        <img src="img/queen_drawn.svg">
+        <p>Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. </p>  
+      </div>  
+    </div> 
+  </div>
+    
+  <div class="page-nav"
+    data-0="top:934px"
+    data-500="top:934px">
+    <a class="nav-icon previous" href="snowwhite.html"><img src="img/nav_next.svg"></a>
+    <a class="nav-icon next" href="huntsman.html"><img class="flip-horiz" src="img/nav_next.svg"></a>
+    <div class="story-modal" id="modal-04">   
+      <a class="nav-icon center" href="#story-modal-04"><img src="img/nav_text.svg"></a> 
       </div>
-      
-    <div id="story-modal-04" class="modal">
-      <div class="inset-story">
+    </div>
+    
+  <div id="story-modal-04" class="modal">
+    <div class="inset-story">
         <p>One cold winter's morning, a young Queen was sewing by her window. As she looked out on the snow, she pricked her finger and shed three drops of blood. Taken by the sight, she wished for a child with lips red as blood, skin white as snow, and hair black as the ebony window frame. </p>
         <p>Soon the Queen had her wish, and little Snow White was born. But during her birth the Queen died, and soon a new Queen stood in her place.</p>
         <div class="line-break"></div>
@@ -95,8 +82,8 @@
         <div class="story-fader bottom"></div>
         <a class="nav-icon close" href="#" rel="modal:close"><img src="img/nav_close.svg"></a>
       </div>
-      
-    </div><!-- Cover -->
+    
+  </div><!-- /Page: Queen -->
     	
 <!--------------------------------------------------------------->
 <!--------------------------------------------------------------->    	
@@ -107,6 +94,19 @@
 <!-- JQuery please god don't conflict --------------------->
 <script src="../local-js/jquery-1.11.0.js"></script>
 <script src="../local-js/jquery-ui-1.10.4.custom.js"></script>
+  
+<!-- Factoid Toggle Bar -->
+<script>
+  $(document).ready(function(){
+    $("#factoid04").click(function(){
+      if($(this).hasClass('hide')) {
+        $(this).animate({width:374},200).removeClass('hide');
+      } else { 
+        $(this).animate({width:32},200).addClass('hide');
+      }
+    });
+  });
+</script>
 
 <!-- Modal -->
 <script src="scripts/jquery.modal.js" type="text/javascript" charset="utf-8"></script>
@@ -145,40 +145,27 @@
   $('#drag2').udraggable({
   });
 </script>
-  
-    <!-- Factoids -->
+   
+   
+<!-- Skrollr ---------------------------->
+<script type="text/javascript" src="scripts/skrollr.min.js"></script>
 <script type="text/javascript">
-document.getElementById('factoid04').onclick = function() {  
-  var className = ' ' + factoid04.className + ' ';  
-  if ( ~className.indexOf(' open ') ) {
-      this.className = className.replace(' open ', ' ');
-    } else {
-      this.className += ' open';
-    }              
-  }
-</script> 
-  
-
-	<script type="text/javascript" src="scripts/skrollr.min.js"></script>
-
-	<!--[if lt IE 9]>
-	<script type="text/javascript" src="scripts/skrollr.ie.min.js"></script>
-	<![endif]-->
-
-	<script type="text/javascript">
-	var s = skrollr.init({
-		edgeStrategy: 'set',
-		easing: {
-			WTF: Math.random,
-			inverted: function(p) {
-				return 1-p;
-			}
+var s = skrollr.init({
+	edgeStrategy: 'set',
+	easing: {
+		WTF: Math.random,
+		inverted: function(p) {
+			return 1-p;
 		}
-	});
-	</script>
-	
-	<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>
-		
-</body>
+	}
+});
+</script>
 
+
+<!-- Livereload REMOVE BEFORE LAUNCH ---------------------------->	
+<script>
+  document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+</script>
+	
+</body>
 </html>
