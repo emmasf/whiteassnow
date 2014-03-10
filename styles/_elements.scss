@@ -191,13 +191,25 @@ body {
 
 .svg-draw {
   fill:none;
-  stroke-width:7;
+  stroke: black;
+  stroke-dashoffset:0;
+  stroke-width:8;
+/*
   stroke-linecap:round;
   stroke-linejoin:round;
-  stroke-miterlimit:4;
+*/
+  stroke-miterlimit:10;
   stroke-opacity:1;
-  stroke-dasharray:6000;
-  stroke-dashoffset:0;      
+  stroke-dasharray:6000;   
+  width:240px;
+  height: 240px;
+/*       display: inline; */  
+  }
+  
+.svg-draw.fill { 
+  fill: black;
+  stroke: black;
+  stroke-width: 1;
   }
 
 /** Generic modifiers *******/
