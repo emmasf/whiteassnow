@@ -140,7 +140,9 @@ body {
   position: fixed;
   top:40px;
   left: 60px;
-  overflow: scroll;
+  overflow: auto;
+  overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
   padding: 80px 100px 0 0;
   margin: 0;
   

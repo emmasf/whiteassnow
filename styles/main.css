@@ -103,7 +103,7 @@ body { background: #fff; background-attachment: fixed; }
 
 .modal { display: none; width: 708px; height: 956px; background: #f2f0e9; padding: 0; -webkit-border-radius: 5px; border-radius: 5px; }
 
-.inset-story { width: 574px; height: 870px; position: fixed; top: 40px; left: 60px; overflow: scroll; padding: 80px 100px 0 0; margin: 0; }
+.inset-story { width: 574px; height: 870px; position: fixed; top: 40px; left: 60px; overflow: auto; overflow-scrolling: touch; -webkit-overflow-scrolling: touch; padding: 80px 100px 0 0; margin: 0; }
 .inset-story p { font-family: "Arnhem", Georgia, serif; color: black; font-size: 24px; font-weight: 400; line-height: 1.175; line-height: 1.35; margin-bottom: 12px; letter-spacing: 0.0125em; }
 .inset-story p:last-child { margin-bottom: 100px; }
 
