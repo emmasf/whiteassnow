@@ -23,24 +23,29 @@
   <img class="cutout back" src="img/dwarves.png"      
       data-0="top:0px"
       data-500="top:0px"> 
-     
+
+  <div id="hide-show" class="icon"
+    data-0="opacity:1;"
+    data-500="opacity:1;">
+    <div id="icon-button-06">
+      <img src="img/dwarves_drawn.png" class="hideshow">
+      <img src="img/begin_drawn_red.svg" class="hideshow"  style="display: none">
+      </div>
+    </div>
+    
+  <div id="idea06" class="hideshow-text story"
+    data-0="opacity:1;"
+    data-500="opacity:1;">
+        <p class="hideshow"></p>
+        <p class="hideshow" style="display: none">Literal and moral outcasts, the Seven Dwarves don't operate within the societal rules of Snow White and the Queen.</p>
+      </div>     
+  
   <div id="factoid06" class="factoid hide"    
     data-0="opacity:1;"
     data-500="opacity:1;">
-    <p>The Seven Dwarves don’t live in the society with Snow White and the Queen. They also don’t have the same attraction to Snow White, perhaps due to a different value system. Snow White learns how to be a woman while with the dwarves; she cooks, cleans, and otherwise keeps house.</p>
-  </div>      
-      
-  <div class="story"
-    data-0="top:1024px;"
-    data-500="top:40px;">
-    <p>Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. </p>
-  </div>
-  
-  <div class="icon middle"
-    data-0="opacity:1;"
-    data-500="opacity:1;">
-    <img src="img/dwarves_drawn.png">
-    </div> 
+    <p>Beyond the German version of Snow White, the Dwarves are often other sexless bands of men: eunuchs, robbers, gypsies or rogue knights. This band operates as a unit and has no attraction to Snow White. Whether this is a reference to homosexuality or asexuality is unclear, but they are not like the other people in this story who live in awe of her beauty. Walt Disney invented the cute, personable Dwarves we think of today; in the original Snow Whites in most cultures, they are gruff and faceless.
+    Snow White take son traditional female roles while with the dwarves; she learns to cook, clean, and keep house.</p>
+  </div>       
           
   <div class="page-nav"
     data-0="top:934px"
@@ -96,12 +101,19 @@
 <script src="scripts/jquery-1.11.0.js"></script>
 <script src="scripts/jquery-ui-1.10.4.custom.js"></script>
   
+<!-- Icon Fact Toggle -->
+<script>
+  $( "#icon-button-06" ).click(function() {
+    $( "#dwarves .hideshow" ).toggle();
+  });
+</script>
+  
 <!-- Factoid Toggle Bar -->
 <script>
   $(document).ready(function(){
     $("#factoid06").click(function(){
       if($(this).hasClass('hide')) {
-        $(this).animate({width:450},200).removeClass('hide');
+        $(this).animate({width:430},200).removeClass('hide');
       } else { 
         $(this).animate({width:32},200).addClass('hide');
       }

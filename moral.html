@@ -27,20 +27,24 @@
   <div id="factoid10" class="factoid hide"    
     data-0="opacity:1;"
     data-500="opacity:1;">
-    <p>What have we learned? Vanity is bad, but beauty is good? Revenge is acceptable? The bad guy lost, but there was no real good guy to win.</p>
+    <p>WHAT FACTS GO HERE?</p>
     </div>          
       
-  <div class="story"
-    data-0="top:1024px;"
-    data-500="top:490px;">
-    <p>Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. </p>
-    </div>         
-
-  <div class="icon middle"
+  <div id="hide-show" class="icon"
     data-0="opacity:1;"
     data-500="opacity:1;">
-    <img src="img/moral-drawn.svg">
-    </div> 
+    <div id="icon-button-10">
+      <img src="img/moral_drawn.svg" class="hideshow">
+      <img src="img/begin_drawn_red.svg" class="hideshow"  style="display: none">
+      </div>
+    </div>
+    
+  <div id="idea10" class="hideshow-text story"
+    data-0="opacity:1;"
+    data-500="opacity:1;">
+        <p class="hideshow"></p>
+        <p class="hideshow" style="display: none">What have we learned? Vanity is bad, but beauty is good? Revenge is acceptable? The bad guy lost, but there was no real good guy to win.</p>
+      </div>  
     
   <div class="page-nav"
     data-0="top:934px"
@@ -96,6 +100,13 @@
 <!-- JQuery please god don't conflict --------------------->
 <script src="scripts/jquery-1.11.0.js"></script>
 <script src="scripts/jquery-ui-1.10.4.custom.js"></script>
+ 
+<!-- Icon Fact Toggle -->
+<script>
+  $( "#icon-button-10" ).click(function() {
+    $( "#moral .hideshow" ).toggle();
+  });
+</script>
 
 <!-- Factoid Toggle Bar -->
 <script>

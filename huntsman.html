@@ -22,25 +22,29 @@
 
   <img class="cutout back" src="img/huntsman.png"      
     data-0="top:0px"
-    data-500="top:0px">   
+    data-500="top:0px">  
+  
+  <div id="hide-show" class="icon"
+    data-0="opacity:1;"
+    data-500="opacity:1;">
+    <div id="icon-button-05">
+      <img src="img/huntsman_drawn.svg" class="hideshow">
+      <img src="img/begin_drawn_red.svg" class="hideshow"  style="display: none">
+      </div>
+    </div>
+    
+  <div id="idea05" class="hideshow-text story"
+    data-0="opacity:1;"
+    data-500="opacity:1;">
+        <p class="hideshow"></p>
+        <p class="hideshow" style="display: none">Though the Huntsman seems kind, let's not forget that he spares Snow White for her beauty rather than her innocence.</p>
+      </div> 
      
   <div id="factoid05" class="factoid hide"    
     data-0="opacity:1;"
     data-500="opacity:1;">
-    <p>Like most men in the story, the Huntsman plays a small role in the story. We never even learn whether the Queen was angry with him for failing in his task. And though his act seems kind, he spares Snow White not for her innocence or goodness, but for her beauty.</p>
+    <p>Like most men in the story, the Huntsman plays a very small role. For all the Queen's rage, we never even learn of her reaction to his betrayal. </p>
     </div>     
-      
-  <div class="story"
-    data-0="top:1024px;"
-    data-500="top:20px;">
-    <p>Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. </p>
-    </div>
- 
-  <div class="icon middle"
-    data-0="opacity:1;"
-    data-500="opacity:1;">
-    <img src="img/huntsman_drawn.svg">
-    </div>      
     
   <div class="page-nav"
     data-0="top:934px"
@@ -108,7 +112,7 @@
   $(document).ready(function(){
     $("#factoid05").click(function(){
       if($(this).hasClass('hide')) {
-        $(this).animate({height:550},200).removeClass('hide');
+        $(this).animate({height:405},200).removeClass('hide');
       } else { 
         $(this).animate({height:32},200).addClass('hide');
       }

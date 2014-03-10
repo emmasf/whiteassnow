@@ -27,20 +27,24 @@
   <div id="factoid08" class="factoid hide"    
     data-0="opacity:1;"
     data-500="opacity:1;">
-    <p>We can't help it: Eve takes the apple, as does Snow White. Temptation is sweet.</p>
+    <p>SOMETHING ABOUT APPLES AND POMEGRANATES</p>
   </div>         
       
-  <div class="story"
-    data-0="top:1024px;"
-    data-500="top:590px;">
-    <p>Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. </p>
-    </div>        
-  
-  <div class="icon middle"
+  <div id="hide-show" class="icon"
     data-0="opacity:1;"
     data-500="opacity:1;">
-    <img src="img/sin_drawn.svg">
-    </div>       
+    <div id="icon-button-08">
+      <img src="img/sin_drawn.svg" class="hideshow">
+      <img src="img/begin_drawn_red.svg" class="hideshow"  style="display: none">
+      </div>
+    </div>
+    
+  <div id="idea08" class="hideshow-text story"
+    data-0="opacity:1;"
+    data-500="opacity:1;">
+        <p class="hideshow"></p>
+        <p class="hideshow" style="display: none">We can't help it: Eve takes the apple, as does Snow White. Temptation is sweet.</p>
+      </div>        
     
   <div class="page-nav"
     data-0="top:934px"
@@ -95,6 +99,13 @@
 <!-- JQuery please god don't conflict --------------------->
 <script src="scripts/jquery-1.11.0.js"></script>
 <script src="scripts/jquery-ui-1.10.4.custom.js"></script>
+  
+<!-- Icon Fact Toggle -->
+<script>
+  $( "#icon-button-08" ).click(function() {
+    $( "#sin .hideshow" ).toggle();
+  });
+</script>
 
 <!-- Factoid Toggle Bar -->
 <script>

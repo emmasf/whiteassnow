@@ -26,11 +26,21 @@
     <p>About this project.</p>
     </div>         
   
-  <div class="icon middle"
+  <div id="hide-show" class="icon"
     data-0="opacity:1;"
     data-500="opacity:1;">
-    <img src="img/end-drawn.svg">
-    </div> 
+    <div id="icon-button-11">
+      <img src="img/moral_drawn.svg" class="hideshow">
+      <img src="img/begin_drawn_red.svg" class="hideshow"  style="display: none">
+      </div>
+    </div>
+    
+  <div id="idea11" class="hideshow-text story"
+    data-0="opacity:1;"
+    data-500="opacity:1;">
+        <p class="hideshow"></p>
+        <p class="hideshow" style="display: none">What do I have to say? Maybe we axe the last page.</p>
+      </div> 
          
   <div class="page-nav"
     data-0="top:934px"
@@ -85,6 +95,13 @@
 <!-- JQuery please god don't conflict --------------------->
 <script src="scripts/jquery-1.11.0.js"></script>
 <script src="scripts/jquery-ui-1.10.4.custom.js"></script>
+
+<!-- Icon Fact Toggle -->
+<script>
+  $( "#icon-button-11" ).click(function() {
+    $( "#end .hideshow" ).toggle();
+  });
+</script>
 
 <!-- Factoid Toggle Bar -->
 <script>

@@ -30,20 +30,25 @@
   <div id="factoid07" class="factoid hide"    
     data-0="opacity:1;"
     data-500="opacity:1;">
-    <p>The male characters in Snow White play small roles. This is mostly a story about women passing through phases of life: a maiden becomes a mother, a child becomes a maiden, and a mother becomes a crone. The King is especially silent. He appears only once in the Grimm story and not at all in the Disney version. You would think he might notice that his wife is psychotic and his daughter is missing.</p>
+    <p>The King appears only once in the Grimm story and not at all in the Disney film. Snow White is mostly a story about women passing through phases of life: a maiden becomes a mother, a child becomes a maiden, and a mother becomes a crone.</p>
+    <p>It is tempting to think that this is because oral fairy tales are often the domain of women and children. In the case of the Grimm tales, it may be due to the authors' childhood: their father left when they were very young, leaving the brothers and their sibling to depend heavily on their mother.</p>
     </div>        
-      
-  <div class="story"
-    data-0="top:1024px;"
-    data-500="top:30px;">
-    <p>Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. </p>
-    </div>
 
-  <div class="icon middle"
+  <div id="hide-show" class="icon"
     data-0="opacity:1;"
     data-500="opacity:1;">
-    <img src="img/king_drawn.svg">
-    </div> 
+    <div id="icon-button-07">
+      <img src="img/king_drawn.svg" class="hideshow">
+      <img src="img/begin_drawn_red.svg" class="hideshow"  style="display: none">
+      </div>
+    </div>
+    
+  <div id="idea07" class="hideshow-text story"
+    data-0="opacity:1;"
+    data-500="opacity:1;">
+        <p class="hideshow"></p>
+        <p class="hideshow" style="display: none">You would think he might notice that his wife is psychotic and his daughter is missing.</p>
+      </div> 
     
     <div class="page-nav"
     data-0="top:934px"
@@ -97,8 +102,15 @@
 
 <!-- JQuery please god don't conflict --------------------->
 <script src="scripts/jquery-1.11.0.js"></script>
-<script src="scripts/jquery-ui-1.10.4.custom.js"></script>
+<script src="scripts/jquery-ui-1.10.4.custom.js"></script>  
   
+<!-- Icon Fact Toggle -->
+<script>
+  $( "#icon-button-07" ).click(function() {
+    $( "#king .hideshow" ).toggle();
+  });
+</script>
+
 <!-- Factoid Toggle Bar -->
 <script>
   $(document).ready(function(){
