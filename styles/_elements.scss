@@ -48,8 +48,8 @@ body {
 /** Bottom Nav ****************************/   	
 
 .page-nav {
-  top:0px;
-  position: relative;
+  bottom: 20px;
+  position: fixed;
   height: 60px;
   width: 100%;  
   }
