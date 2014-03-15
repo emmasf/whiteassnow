@@ -5,8 +5,10 @@
 	 width="240px" height="240px" viewBox="0 0 240 240" enable-background="new 0 0 240 240" xml:space="preserve">
 <g>
 	
-		<rect x="79.513" y="52.562" fill="none" stroke="#010101" stroke-width="7" stroke-miterlimit="10" width="84.084" height="126.366"/>
-	<line fill="none" stroke="#010101" stroke-width="7" stroke-miterlimit="10" x1="121.555" y1="50.366" x2="121.555" y2="181.125"/>
-	<line fill="none" stroke="#010101" stroke-width="7" stroke-miterlimit="10" x1="77.717" y1="115.744" x2="164.311" y2="115.744"/>
+		<rect x="79.138" y="52.64" fill="none" stroke="#010101" stroke-width="7" stroke-miterlimit="10" width="85.146" height="118.323"/>
+	<line fill="none" stroke="#010101" stroke-width="7" stroke-miterlimit="10" x1="121.711" y1="50.417" x2="121.711" y2="173.188"/>
+	<line fill="none" stroke="#010101" stroke-width="7" stroke-miterlimit="10" x1="77.32" y1="111.801" x2="165.005" y2="111.801"/>
 </g>
+<polyline fill="none" stroke="#010101" stroke-width="7" stroke-miterlimit="10" points="79.138,170.963 64.663,186.759 
+	178.5,186.759 164.284,170.963 "/>
 </svg>

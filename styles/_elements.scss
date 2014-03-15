@@ -198,18 +198,22 @@ body {
   stroke: black;
   stroke-dashoffset:0;
   stroke-width:8;
+/*
+  stroke-linejoin:miter;
+  stroke-linecap:square;
+*/
   width:240px;
-  height: 240px;
+  height:240px;
 /*
   stroke-linecap:round;
   stroke-linejoin:round;
 */
   stroke-miterlimit:10;
   stroke-opacity:1;
-  stroke-dasharray:6000;   
+/*   stroke-dasharray:6000;   */ 
   width:240px;
   height: 240px;
-/*       display: inline; */  
+/* display: inline; */  
   }
   
 .svg-draw.fill { 
@@ -219,7 +223,14 @@ body {
   }
   
 .svg-draw .red { 
-  stroke: rgba($red, 0.5);
+  stroke: $red;
+  opacity: 0.5;
+  }
+  
+.svg-draw.fill .red { 
+  stroke: $red;
+  fill: $red;
+  opacity: 0.5;
   }
 
 
