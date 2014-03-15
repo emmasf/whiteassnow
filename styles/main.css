@@ -86,8 +86,6 @@ body { background: #fff; background-attachment: fixed; }
 
 .beginning { left: 100px; }
 
-.anchor { height: 10px; background-color: aqua; }
-
 /** Cutout Images ****************************/
 .cutout { width: 100%; position: relative; top: 0px; }
 
