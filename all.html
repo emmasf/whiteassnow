@@ -274,14 +274,25 @@
 
 <!-- Icon Fact Toggle -->
 <script>
+$(document).ready(function(){
+  
+  $( "#icon-button-02" ).click(function() {
+    $( "#begin-tap .hideshow" ).toggle();
+  });  
   $( "#icon-button-03" ).click(function() {
     $( "#snowwhite .hideshow" ).toggle();
   });
+  $( "#icon-button-04" ).click(function() {
+    $( "#queen .hideshow" ).toggle();
+  }); 
+   
+});
 </script>
    
 <!-- Factoid Toggle Bar -->
 <script>
   $(document).ready(function(){
+  
     $("#factoid03").click(function(){
       if($(this).hasClass('hide')) {
         $(this).animate({height:222},200).removeClass('hide');
@@ -289,6 +300,21 @@
         $(this).animate({height:32},200).addClass('hide');
       }
     });
+    $("#factoid02").click(function(){
+      if($(this).hasClass('hide')) {
+        $(this).animate({height:580},200).removeClass('hide');
+      } else { 
+        $(this).animate({height:32},200).addClass('hide');
+      }
+    });
+    $("#factoid04").click(function(){
+      if($(this).hasClass('hide')) {
+        $(this).animate({width:374},200).removeClass('hide');
+      } else { 
+        $(this).animate({width:32},200).addClass('hide');
+      }
+    });
+    
   });
 </script>
 
