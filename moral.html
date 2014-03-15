@@ -27,7 +27,7 @@
   <div id="factoid10" class="factoid hide"    
     data-0="opacity:1;"
     data-500="opacity:1;">
-    <p>WHAT FACTS GO HERE?</p>
+    <p>What do we learn? Vanity is bad, but beauty is good? Revenge is sweet? Don't ever grow old?</p>
     </div>          
       
   <div id="hide-show" class="icon"
@@ -43,7 +43,8 @@
     data-0="opacity:1;"
     data-500="opacity:1;">
         <p class="hideshow"></p>
-        <p class="hideshow" style="display: none">What have we learned? Vanity is bad, but beauty is good? Revenge is acceptable? The bad guy lost, but there was no real good guy to win.</p>
+        <p class="hideshow" style="display: none">In a classic Western fashion, we think of Disney's Snow White and her Prince riding off into the sunset. Snow White will soon become the Queen, and since her only value is her beauty the cycle may simply begin again.<br/>
+         Unlike Disney, the Grimms did not preserve the moral innocence of the young couple. Like most versions from around the world, their more gruesome ending has the couple exact revenge. They invite the old Queen to their wedding, then force her to dance to her death in burning coal shoes. </p>
       </div>  
     
   <div class="page-nav"
@@ -113,7 +114,7 @@
   $(document).ready(function(){
     $("#factoid10").click(function(){
       if($(this).hasClass('hide')) {
-        $(this).animate({height:200},200).removeClass('hide');
+        $(this).animate({height:160},200).removeClass('hide');
       } else { 
         $(this).animate({height:32},200).addClass('hide');
       }
