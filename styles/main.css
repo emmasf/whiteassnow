@@ -88,6 +88,10 @@ body { background: #fff; background-attachment: fixed; }
 
 .beginning { left: 100px; }
 
+.ending { right: 100px; }
+
+.inactive { opacity: 0.25; }
+
 /** Cutout Images ****************************/
 .cutout { width: 100%; position: relative; top: 0px; }
 

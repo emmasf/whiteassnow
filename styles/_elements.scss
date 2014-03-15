@@ -76,10 +76,19 @@ body {
    background-color: rgba(0,0,0,0.75);
    }
   
-.previous { left: 30px; }    
+.previous { 
+  left: 30px; 
+  }    
 .next { right: 30px; }  
 .center { right: 354px; }    
-.beginning { left: 100px; } 
+.beginning { 
+  left: 100px; 
+  } 
+.ending { 
+  right: 100px; 
+  } 
+  
+.inactive {opacity: 0.25}
 
 
 
