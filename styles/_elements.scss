@@ -31,9 +31,9 @@ body {
 
 .page {
   width:768px;
-	height:1024px;
+	height:1021px;
 	top:0px;
-	border-bottom: 2px solid $light-gray;	
+	border-bottom: 4px solid $light-gray;	
   h1 {
     top:100px;
     padding:50px;
@@ -48,10 +48,11 @@ body {
 /** Bottom Nav ****************************/   	
 
 .page-nav {
-  top:0px;
-  position: relative;
+  bottom:20px;
+  position: fixed;
   height: 60px;
   width: 100%;  
+  opacity: 1;
   }
   
 .nav-icon {
@@ -59,8 +60,8 @@ body {
    height:60px;
    width: 60px;
    border-radius: 30px;
-   position: absolute;
-   }
+   position: absolute !important;
+   top:0px;}
    
 .nav-icon:hover, .nav-icon:active {
    background-color: rgba(0,255,0,0.15);
@@ -70,7 +71,13 @@ body {
 .previous { left: 30px; }    
 .next { right: 30px; }  
 .center { right: 354px; }    
-.beginning { left: 100px; }    
+.beginning { left: 100px; } 
+
+#snowwhite-anchor {}   
+
+.anchor {
+  height:10px;
+  background-color: aqua;}
 
 
 /** Cutout Images ****************************/   	

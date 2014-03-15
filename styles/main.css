@@ -68,13 +68,13 @@ html, body { min-height: 100%; background-color: #000; text-align: left; width: 
 body { background: #fff; background-attachment: fixed; }
 
 /** Each Page ****************************/
-.page { width: 768px; height: 1024px; top: 0px; border-bottom: 2px solid #cccccc; }
+.page { width: 768px; height: 1021px; top: 0px; border-bottom: 4px solid #cccccc; }
 .page h1 { top: 100px; padding: 50px; -webkit-transform-origin: 0 0; -moz-transform-origin: 0 0; -ms-transform-origin: 0 0; -o-transform-origin: 0 0; transform-origin: 0 0; }
 
 /** Bottom Nav ****************************/
-.page-nav { top: 0px; position: relative; height: 60px; width: 100%; }
+.page-nav { bottom: 20px; position: fixed; height: 60px; width: 100%; opacity: 1; }
 
-.nav-icon { background-color: rgba(0, 0, 0, 0.25); height: 60px; width: 60px; border-radius: 30px; position: absolute; }
+.nav-icon { background-color: rgba(0, 0, 0, 0.25); height: 60px; width: 60px; border-radius: 30px; position: absolute !important; top: 0px; }
 
 .nav-icon:hover, .nav-icon:active { background-color: rgba(0, 255, 0, 0.15); background-color: rgba(0, 0, 0, 0.75); }
 
@@ -85,6 +85,8 @@ body { background: #fff; background-attachment: fixed; }
 .center { right: 354px; }
 
 .beginning { left: 100px; }
+
+.anchor { height: 10px; background-color: aqua; }
 
 /** Cutout Images ****************************/
 .cutout { width: 100%; position: relative; top: 0px; }
@@ -170,13 +172,6 @@ h2:first-child { margin-top: 0; }
 /***********************************************************************************/
 #progress {   /*width: 6px;
 	height:1024px; right:0;*/ width: 768px; height: 12px; bottom: 0; background: #444; z-index: 51; }
-
-#begin h2 { top: 140px; left: 60px; -webkit-transform-origin: 0 0; transform-origin: 0 0; }
-#begin .cutout { -webkit-transform: rotate(0deg); transform: rotate(0deg); -webkit-transform-origin: 0 0; transform-origin: 0 0; top: -70px; }
-#begin .icon { position: absolute; top: 560px; right: 56px; }
-#begin .story { width: 600px; left: 43px; top: 1024px; opacity: 1; }
-#begin #instructions { width: 600px; left: 43px; top: 250px; opacity: 0; }
-#begin #factoid02 { width: 340px; height: 32px; top: 820px; left: 0px; }
 
 #begin-tap h2 { top: 140px; left: 60px; -webkit-transform-origin: 0 0; transform-origin: 0 0; }
 #begin-tap .cutout { -webkit-transform: rotate(0deg); transform: rotate(0deg); -webkit-transform-origin: 0 0; transform-origin: 0 0; top: -70px; }

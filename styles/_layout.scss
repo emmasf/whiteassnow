@@ -16,45 +16,6 @@
 	
 #cover {
   }
-
-#begin {
-  h2 {    
-    top:140px;
-    left: 60px;
-  	-webkit-transform-origin:0 0;
-  	transform-origin:0 0;
-  	}  	
-  .cutout {
-    -webkit-transform:rotate(0deg);
-  	transform:rotate(0deg); 
-  	-webkit-transform-origin:0 0;
-  	transform-origin:0 0; 
-  	top: -70px; 
-    }  	
-  .icon {
-    position: absolute;
-    top:560px;
-    right:56px;
-    }    
-  .story {
-    width: 600px;
-    left: 43px;
-    top:1024px;
-    opacity: 1;
-    }        
-  #instructions {
-    width: 600px;
-    left: 43px;
-    top:250px;
-    opacity: 0;
-    }     
-  #factoid02 {
-    width: 340px;
-    height: 32px;
-    top: 820px;
-    left: 0px;
-    }     
-  }
   
 #begin-tap {
   h2 {    
