@@ -33,20 +33,28 @@
     data-500="opacity:1">
     Let's begin.</h2>
         
-  <div id="instructions" class="story"
+  <div id="instructions" class="history hideshow"
     data-0="opacity:1;"
     data-500="opacity:0;">
-        <p>Tap on colored bars to dig into the characters.</p><div class="line-break"></div>
-        <p>Tap on icons to follow the tale through time and place.</p><div class="line-break"></div>
+        <p>Tap on colored bars to dig into the characters.</p>
+        <p>Tap on icons to follow the tale through time and place.</p>        
         <p>Mimic the red gestures to play and explore.</p>
     </div>
+  <div id="instructions" class="history hideshow" style="display: none"
+    data-0="opacity:1;"
+    data-500="opacity:0;">
+        <p></p>
+    </div>
     
-    <div id="idea02" class="hideshow-text story"
+    <div id="idea02" class="hideshow-text"
     data-0="opacity:1;"
     data-500="opacity:1;">
-        <p class="hideshow"></p>
-        <p class="hideshow" style="display: none">When you think of Snow White, you probably think of the film that started the Disney empire. The story was first published by Jacob and Wilhelm Grimm in their 1812 book, <i>Kinder-und Hausmaerchen</i>, or <i>Tales of Children and the Home</i>. The brothers were not writing for children; they were academic linguists, interested in preserving German language and culture and in strengthening the Germain identity. They set out to collect German oral traditions and capture them for the ages. Along with the old German words themselves, the brothers felt that a lot of traditional values lay in the stories they recorded.<br/>
-        They may have been right, but this story is not uniquely German. Versions of the story appear in Scotland, Ireland, France, Spain, Portugal, Italy, Hungary, Romania, Albania, Greece, Morocco, Algeria, Libya, West Africa, Gabon, Angola and Mozambique. Details vary, but the tale of a young beauty, a jealous older woman, exile, magical poisoning, and a long coma are universal.</p>
+        <div class="hideshow"></div>
+        <div class="hideshow history" style="display: none">
+        <p>When you think of Snow White, you probably picture the film that started the Disney empire. The tale was first published by Jacob and Wilhelm Grimm in their 1812 book, <i>Kinder-und Hausmaerchen</i>, or <i>Tales of Children and the Home</i>.</p>
+        <p>The brothers were not writing for children; they were academic linguists, interested in preserving German language and culture and in strengthening the German identity. They set out to collect German oral traditions and capture them for the ages. Along with the old German words themselves, the brothers felt that a lot of traditional values lay in the stories they recorded.</p>
+        <p>They may have been right, but this story is not uniquely German. Versions of the story appear in Scotland, Ireland, France, Spain, Portugal, Italy, Hungary, Romania, Albania, Greece, Morocco, Algeria, Libya, West Africa, Gabon, Angola and Mozambique. Details vary, but the tale of a young beauty, a jealous older woman, exile, magical poisoning, and a long coma are universal.</p>
+        </div>
       </div>
     
         
@@ -79,7 +87,8 @@
       </div>
     </div>
     
-    <div id="factoid02" class="factoid hide"    
+    
+  <div id="factoid02" class="factoid hide"    
     data-0="opacity:1;"
     data-500="opacity:1;">
     <p>Let go of the Snow White you hold in your mind.</p>
@@ -152,7 +161,7 @@
   $(document).ready(function(){
     $("#factoid02").click(function(){
       if($(this).hasClass('hide')) {
-        $(this).animate({height:140},200).removeClass('hide');
+        $(this).animate({height:205},200).removeClass('hide');
       } else { 
         $(this).animate({height:32},200).addClass('hide');
       }
@@ -190,11 +199,9 @@ var s = skrollr.init({
 
 
 <!-- Livereload REMOVE BEFORE LAUNCH ---------------------------->	
-<!--
 <script>
   document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
 </script>
--->
 	
 </body>
 </html>

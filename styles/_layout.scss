@@ -19,7 +19,7 @@
   
 #begin {
   h2 {    
-    top:140px;
+    top:120px;
     left: 60px;
   	-webkit-transform-origin:0 0;
   	transform-origin:0 0;
@@ -38,27 +38,24 @@
     }        
   #instructions {
     width: 600px;
-    left: 43px;
-    top:250px;
+    left: 41px;
+    top:195px;
     opacity: 0;
     }     
   #factoid02 {
-    width: 480px;
-    width: 540px;
+    width: 670px;
     height: 32px;
-    top: 258px;
-    top: 426px;
-    top: 184px;
+    top: 164px;
     left: 0px;    
-    p:first-child {
-      padding-top: 116px;
-      padding-top: 46px;
+    p {
+      padding-top: 72px;
       margin-left: 36px}
     } 
-  .hideshow-text {
-    width: 660px;
-    left: 4px;
-    top:250px;
+  .history {
+    width: 615px;
+    left: 42px;
+    top:195px;
+/*     p:first-child {background-color: #fff} */
    }
   
   }
@@ -91,9 +88,9 @@
     right: 0px;
     }   
   .hideshow-text {
-    width: 570px;
-    left: 151px;
-    top:570px;
+    width: 520px;
+    left: 149px;
+    top: 562px;
    }
   }
 
@@ -137,9 +134,9 @@
     p {width:320px}    
     }   
   .hideshow-text {
-    width: 620px;
+    width: 680px;
     left: 59px;
-    top:380px;
+    top: 400px;
    } 
   }
   
@@ -161,9 +158,8 @@
     left: 0px;
     }
   .hideshow-text {
-    width: 490px;
+    width: 500px;
     left: 44px;
-    left: 210px;
     top:450px;
    } 
   }
@@ -189,9 +185,9 @@
     p {width:360px}
     }
   .hideshow-text {
-    width: 500px;
-    left: 230px;
-    top:660px;
+    width: 620px;
+    left: 133px;
+    top:650px;
    } 
   }
 
@@ -219,9 +215,9 @@
     p {padding-top: 180px;}
     } 
   .hideshow-text {
-    width: 640px;
-    left: 10px;
-    top:70px;
+    width: 740px;
+    left: 20px;
+    top:40px;
    }   
   }
 
@@ -250,8 +246,10 @@
     } 
   .hideshow-text {
     width: 366px;
-    left: 10px;
-    top:260px;
+    width: 440px;
+    width: 680px;
+    left: 20px;
+    top:196px;
    }   
   }
 
@@ -275,7 +273,7 @@
     p {width:550px;}
     }
   .hideshow-text {
-    width: 638px;
+    width: 658px;
     left: 12px;
     top:410px;
    }      
@@ -290,9 +288,9 @@
   	}
   .icon {
     position: absolute;
-    top: 43%;
-    left:35%;
-    -webkit-transform: rotate(-4deg); 
+    top: 52%;
+    left:31%;
+    -webkit-transform: rotate(0deg); 
     }
   .story {
     width: 645px;
@@ -301,15 +299,16 @@
     top:1024px;
     }   
   #factoid10 {
-    width: 390px;
+    width: 300px;
     height: 32px;
-    top: 695px;
+    top: 693px;
     right: 0px;
     }
   .hideshow-text {
-    width: 430px;
-    left: 136px;
-    top:36px;
+    width: 460px;
+    left: 146px;
+    left: 236px;
+    top:20px;
    }  
   }
 

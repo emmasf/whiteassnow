@@ -27,6 +27,7 @@ p {
   letter-spacing: 0.0125em;
   }  
   
+/*Cover drek*/
 .button p {
   font-family: $sans-type;
   text-align: center;
@@ -37,34 +38,7 @@ p {
   line-height: 30px;
   }
   
-.story p {
-  display: inline; /* To make white hug text */
-  background-color: $story-bg-color;
-  background-color: rgba(255,255,255,0.75);
-  &:first-child {
-    margin-top: 12px;
-    }
-  }
 
-p.hideshow {
-  color: rgba($red,0.8);
-  color: $story-color;
-  opacity: 1;
-  background-color: #fff;
-  }
-  
-p.hideshow:first-child {background-color: rgba(0,0,0,0)}
-  
-div.story {  
-  padding: 9px;
-  padding-left: 20px;
-/*   background-color: $story-bg-color; */
-
-  .line-break {
-    height: 12px;  
-    }
-
-  }
   
   
 h1, h2 {

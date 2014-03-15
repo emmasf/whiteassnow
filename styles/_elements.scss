@@ -25,6 +25,14 @@ body {
 	background:#fff;
 	background-attachment:fixed;
   }
+  
+.button .closed {
+  background-color: $button-color;
+  width:20%;
+  height:90px;
+  left:40%;
+  top:550px;
+  } 
 
 
 /** Each Page ****************************/   	
@@ -119,6 +127,62 @@ body {
   animation-play-state:running;
   -webkit-animation-play-state:running;
   }
+    
+
+/** History *******/
+  
+.svg-draw {
+  fill:none;
+  stroke: black;
+  stroke-dashoffset:0;
+  stroke-width:8;
+/*
+  stroke-linejoin:miter;
+  stroke-linecap:square;
+  display:inline;
+  stroke-dasharray:6000;
+*/
+  width:240px;
+  height:240px;
+  stroke-miterlimit:10;
+  stroke-opacity:1; 
+  width:240px;
+  height: 240px;
+  }
+  
+.svg-draw.fill { 
+  fill: black;
+  stroke: black;
+  stroke-width: 1;
+  }
+  
+.svg-draw .red { 
+  stroke: $red;
+  opacity: 0.5;
+  }
+  
+.svg-draw.fill .red { 
+  stroke: $red;
+  fill: $red;
+  opacity: 0.5;
+  }
+  
+.history p {
+  /* display: inline; */ /* To make white hug text */
+  margin-top: 12px; 
+  margin-right: 9px;
+  &:first-child {
+    margin-top: 0px;
+    }
+  }
+  
+.history {
+  position: absolute;
+  background-color: $history-bg-color;  
+  padding: 24px;
+  }
+  
+  
 
 /** Story Modal ****************************/    
 
@@ -183,55 +247,6 @@ body {
     background: linear-gradient(to top, rgba($paper-color,1) 50%,rgba($paper-color,0) 100%);
     }
 
-/** Page-specific *******/
-  
-.button .closed {
-  background-color: $button-color;
-  width:20%;
-  height:90px;
-  left:40%;
-  top:550px;
-  }  
-
-.svg-draw {
-  fill:none;
-  stroke: black;
-  stroke-dashoffset:0;
-  stroke-width:8;
-/*
-  stroke-linejoin:miter;
-  stroke-linecap:square;
-*/
-  width:240px;
-  height:240px;
-/*
-  stroke-linecap:round;
-  stroke-linejoin:round;
-*/
-  stroke-miterlimit:10;
-  stroke-opacity:1;
-/*   stroke-dasharray:6000;   */ 
-  width:240px;
-  height: 240px;
-/* display: inline; */  
-  }
-  
-.svg-draw.fill { 
-  fill: black;
-  stroke: black;
-  stroke-width: 1;
-  }
-  
-.svg-draw .red { 
-  stroke: $red;
-  opacity: 0.5;
-  }
-  
-.svg-draw.fill .red { 
-  stroke: $red;
-  fill: $red;
-  opacity: 0.5;
-  }
 
 
 /** Generic modifiers *******/
