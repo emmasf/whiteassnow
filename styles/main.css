@@ -116,10 +116,12 @@ body { background: #fff; background-attachment: fixed; }
 /** Page-specific *******/
 .button .closed { background-color: #e72900; width: 20%; height: 90px; left: 40%; top: 550px; }
 
-.svg-draw { fill: none; stroke: black; stroke-dashoffset: 0; stroke-width: 8; /* stroke-linecap:round; stroke-linejoin:round;
+.svg-draw { fill: none; stroke: black; stroke-dashoffset: 0; stroke-width: 8; width: 240px; height: 240px; /* stroke-linecap:round; stroke-linejoin:round;
 */ stroke-miterlimit: 10; stroke-opacity: 1; stroke-dasharray: 6000; width: 240px; height: 240px; /*       display: inline; */ }
 
 .svg-draw.fill { fill: black; stroke: black; stroke-width: 1; }
+
+.svg-draw .red { stroke: rgba(231, 41, 0, 0.5); }
 
 /** Generic modifiers *******/
 .back { z-index: 1 !important; }
@@ -147,7 +149,7 @@ p { font-family: "Arnhem", Georgia, serif; color: black; font-size: 24px; font-w
 .story p { display: inline; /* To make white hug text */ background-color: rgba(233, 197, 129, 0.35); background-color: rgba(255, 255, 255, 0.75); }
 .story p:first-child { margin-top: 12px; }
 
-p.hideshow { color: rgba(231, 41, 0, 0.8); opacity: 1; background-color: #fff; }
+p.hideshow { color: rgba(231, 41, 0, 0.8); color: black; opacity: 1; background-color: #fff; }
 
 p.hideshow:first-child { background-color: rgba(0, 0, 0, 0); }
 
@@ -171,13 +173,13 @@ h2:first-child { margin-top: 0; }
 #progress {   /*width: 6px;
 	height:1024px; right:0;*/ width: 768px; height: 12px; bottom: 0; background: #444; z-index: 51; }
 
-#begin-tap h2 { top: 140px; left: 60px; -webkit-transform-origin: 0 0; transform-origin: 0 0; }
-#begin-tap .cutout { -webkit-transform: rotate(0deg); transform: rotate(0deg); -webkit-transform-origin: 0 0; transform-origin: 0 0; top: -70px; }
-#begin-tap .icon { position: absolute; top: 560px; right: 56px; }
-#begin-tap #instructions { width: 600px; left: 43px; top: 250px; opacity: 0; }
-#begin-tap #factoid02 { width: 560px; height: 32px; top: 184px; left: 0px; }
-#begin-tap #factoid02 p:first-child { padding-top: 196px; }
-#begin-tap .hideshow-text { width: 600px; left: 43px; top: 339px; top: 839px; }
+#begin h2 { top: 140px; left: 60px; -webkit-transform-origin: 0 0; transform-origin: 0 0; }
+#begin .cutout { -webkit-transform: rotate(0deg); transform: rotate(0deg); -webkit-transform-origin: 0 0; transform-origin: 0 0; top: -70px; }
+#begin .icon { position: absolute; top: 560px; right: 56px; }
+#begin #instructions { width: 600px; left: 43px; top: 250px; opacity: 0; }
+#begin #factoid02 { width: 480px; width: 540px; height: 32px; top: 258px; top: 426px; top: 184px; left: 0px; }
+#begin #factoid02 p:first-child { padding-top: 116px; padding-top: 46px; margin-left: 36px; }
+#begin .hideshow-text { width: 660px; left: 4px; top: 250px; }
 
 #snowwhite .svg-draw { position: absolute; top: 720px; }
 #snowwhite h2 { width: 600px; top: 682px; left: 60px; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: rotate(-90deg); transform: rotate(-90deg); }

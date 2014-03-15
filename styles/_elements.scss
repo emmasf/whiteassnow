@@ -198,6 +198,8 @@ body {
   stroke: black;
   stroke-dashoffset:0;
   stroke-width:8;
+  width:240px;
+  height: 240px;
 /*
   stroke-linecap:round;
   stroke-linejoin:round;
@@ -215,6 +217,11 @@ body {
   stroke: black;
   stroke-width: 1;
   }
+  
+.svg-draw .red { 
+  stroke: rgba($red, 0.5);
+  }
+
 
 /** Generic modifiers *******/
 

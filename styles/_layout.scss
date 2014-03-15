@@ -17,7 +17,7 @@
 #cover {
   }
   
-#begin-tap {
+#begin {
   h2 {    
     top:140px;
     left: 60px;
@@ -43,17 +43,22 @@
     opacity: 0;
     }     
   #factoid02 {
-    width: 560px;
+    width: 480px;
+    width: 540px;
     height: 32px;
+    top: 258px;
+    top: 426px;
     top: 184px;
     left: 0px;    
-    p:first-child {padding-top: 196px;}
+    p:first-child {
+      padding-top: 116px;
+      padding-top: 46px;
+      margin-left: 36px}
     } 
   .hideshow-text {
-    width: 600px;
-    left: 43px;
-    top:339px;
-    top:839px;
+    width: 660px;
+    left: 4px;
+    top:250px;
    }
   
   }
