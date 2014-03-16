@@ -214,9 +214,6 @@
 <script type="text/javascript" src="scripts/skrollr.min.js"></script>
 <script type="text/javascript">
 var s = skrollr.init({
-    constants: {
-        btm: 500
-    }
 	edgeStrategy: 'set',
 	easing: {
 		WTF: Math.random,
@@ -225,6 +222,12 @@ var s = skrollr.init({
 		}
 	}
 });
+
+skrollr.init({
+    constants: {
+        btm: 500
+    }
+  });
 </script>
 
 
