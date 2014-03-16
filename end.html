@@ -47,6 +47,8 @@
     <p>Did you give in to the seductive emptiness of fashion, fairy tales and iPads? <br/>
     I hope you enjoyed exploring this interactive narrative book and exposing the history, psychology, and cultural ideas behind Snow White before it was softened by Disney. Keep tabs on this project by following white-as-snow-book on tumblr.</p>
     </div>
+      
+  </div><!-- /Page: End -->
     
   <div class="page-nav"
     data-0="top:934px"
@@ -59,8 +61,6 @@
       <a class="nav-icon center" href="#story-modal-11"><img src="img/nav_text.svg"></a> 
       </div>
     </div>
-  
-  </div><!-- /Page: End -->
       
   <div id="story-modal-11" class="modal">
     <div class="inset-story">
@@ -103,6 +103,23 @@
 <!-- JQuery please god don't conflict --------------------->
 <script src="scripts/jquery-1.11.0.js"></script>
 <script src="scripts/jquery-ui-1.10.4.custom.js"></script>
+
+<!-- Page transition fader  -->
+<script type="text/javascript">
+$(document).ready(function() {
+    $("html").css("background-color", "#fff");
+    $(".page").css("display", "none"); 
+    $(".page").fadeIn(1000); 
+    $("a.transition").click(function(event){
+        event.preventDefault();
+        linkLocation = this.href;
+        $(".page").fadeOut(1000, redirectPage);      
+    });         
+    function redirectPage() {
+        window.location = linkLocation;
+    }
+});
+</script>
 
 <!-- Icon Fact Toggle -->
 <script>
@@ -153,9 +170,11 @@ var s = skrollr.init({
 
 
 <!-- Livereload REMOVE BEFORE LAUNCH ---------------------------->	
+<!--
 <script>
   document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
 </script>
+-->
 	
 </body>
 </html>

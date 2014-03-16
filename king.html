@@ -60,7 +60,9 @@
           <p>It may be tempting to trace the lack of men to the idea that bedtime tales are the domain of women and children, but the father is more involved in many versions of the tale. In the case of the Grimm tales, this recurring lack of men may be due to the authors' childhood: their father left when they were very young, leaving the brothers without a prominent male figure. </p>
         </div>
       </div>       
-    
+      
+  </div><!-- /Page: King -->
+
   <div class="page-nav"
     data-0="top:934px"
     data-500="top:934px">
@@ -72,8 +74,6 @@
       <a class="nav-icon center" href="#story-modal-07"><img src="img/nav_text.svg"></a> 
       </div>
     </div>
-      
-  </div><!-- /Page: King -->
 
   <div id="story-modal-07" class="modal">
     <div class="inset-story">
@@ -117,6 +117,23 @@
 <script src="scripts/jquery-1.11.0.js"></script>
 <script src="scripts/jquery-ui-1.10.4.custom.js"></script>  
   
+<!-- Page transition fader  -->
+<script type="text/javascript">
+$(document).ready(function() {
+    $("html").css("background-color", "#fff");
+    $(".page").css("display", "none"); 
+    $(".page").fadeIn(1000); 
+    $("a.transition").click(function(event){
+        event.preventDefault();
+        linkLocation = this.href;
+        $(".page").fadeOut(1000, redirectPage);      
+    });         
+    function redirectPage() {
+        window.location = linkLocation;
+    }
+});
+</script>
+
 <!-- Icon Fact Toggle -->
 <script>
   $( "#icon-button-07" ).click(function() {
