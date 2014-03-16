@@ -86,7 +86,7 @@ html, body, div, span, p, a, del, em, img, ol, ul, li, fieldset, form, label { m
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
 
-html, body { min-height: 100%; background-color: #000; text-align: left; width: 768px; line-height: 1.2em; font-family: "Helvetica Neue", Helvetica, Arial, serif; text-align: left; }
+html, body { background-color: #000; text-align: left; width: 768px; line-height: 1.2em; font-family: "Helvetica Neue", Helvetica, Arial, serif; text-align: left; }
 
 body { background: #fff; background-attachment: fixed; }
 
@@ -120,6 +120,13 @@ h2 { font-size: 5em; }
 
 /** Cutout Images ****************************/
 .cutout { width: 100%; position: relative; top: 0px; }
+
+/** Page Slider ****************************/
+.slider { position: absolute; }
+
+.bar { width: 6px; height: 300px; background-color: #cccccc; -webkit-border-radius: 6px; border-radius: 8px; margin-left: 10px; position: absolute; /* box-shadow: inset 0px 0px 2px 2px  darken($light-gray, 10%); */ }
+
+.handle { width: 25px; height: 24px; background-color: #4d4d4d; background-color: #e72900; background-color: #026fc3; -webkit-border-radius: 25px; border-radius: 25px; /* border: 4px solid #fff; */ box-shadow: 0px 0px 7px white; }
 
 /** Factoid Slider ****************************/
 .factoid { z-index: 100; position: absolute; /* background-color: $factoid-color; */ -webkit-animation: textcolormorph 3s infinite ease-in-out; animation: textcolormorph 3s infinite ease-in-out; animation-duration: 3s; animation-play-state: paused; -webkit-animation-play-state: paused; }
@@ -183,6 +190,7 @@ h2 { font-size: 5em; }
 #cover .button p a { font-family: "Helvetica Neue", Helvetica, Arial, serif; color: #fff; text-decoration: none; }
 
 #begin h2 { top: 120px; left: 60px; -webkit-transform-origin: 0 0; transform-origin: 0 0; }
+#begin .slider { top: 400px; left: 64px; }
 #begin .cutout { -webkit-transform: rotate(0deg); transform: rotate(0deg); -webkit-transform-origin: 0 0; transform-origin: 0 0; top: -70px; }
 #begin .icon { position: absolute; top: 560px; right: 56px; }
 #begin #instructions { width: 600px; left: 41px; top: 195px; opacity: 0; background-color: rgba(0, 0, 0, 0); }

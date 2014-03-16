@@ -25,6 +25,14 @@
       -webkit-transform:rotate(0deg);
     	transform:rotate(0deg); "
     	>
+    	
+  <div class="slider">
+    <div class="bar"></div>
+    <div class="handle"      
+      data-0="top:10px"
+      data-end="top:260px">
+    </div>
+  </div>
       
 <!--
   <h2 class="middle"
@@ -188,6 +196,20 @@
   });
 </script>
 
+
+<!-- Modal -->
+<script src="scripts/jquery.modal.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript" charset="utf-8">
+  $(function() {
+    $('a[href="#story-modal-02"]').click(function(event) {
+      event.preventDefault();
+      $(this).modal({
+      });
+    });
+  });
+</script>
+   
+   
 <!-- Skrollr ---------------------------->
 <script type="text/javascript" src="scripts/skrollr.min.js"></script>
 <script type="text/javascript">
@@ -203,27 +225,10 @@ var s = skrollr.init({
 </script>
 
 
-<!-- Modal -->
-<script src="scripts/jquery.modal.js" type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript" charset="utf-8">
-  $(function() {
-    $('a[href="#story-modal-02"]').click(function(event) {
-      event.preventDefault();
-      $(this).modal({
-      });
-    });
-  });
-</script>
-   
-   
-
-
 <!-- Livereload REMOVE BEFORE LAUNCH ---------------------------->	
-<!--
 <script>
   document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
 </script>
--->
 	
 </body>
 </html>
