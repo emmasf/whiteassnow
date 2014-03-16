@@ -50,23 +50,6 @@
 <!-- JQuery please god don't conflict --------------------->
 <script src="scripts/jquery-1.11.0.js"></script>
 <script src="scripts/jquery-ui-1.10.4.custom.js"></script> 
-   
-<!-- Page transition fader  -->
-<script type="text/javascript">
-$(document).ready(function() {
-    $("html").css("background-color", "#fff");
-    $(".page").css("display", "none"); 
-    $(".page").fadeIn(1000); 
-    $("a.transition").click(function(event){
-        event.preventDefault();
-        linkLocation = this.href;
-        $(".page").fadeOut(1000, redirectPage);      
-    });         
-    function redirectPage() {
-        window.location = linkLocation;
-    }
-});
-</script>
 
 <!-- Skrollr ---------------------------->
 <script type="text/javascript" src="scripts/skrollr.min.js"></script>

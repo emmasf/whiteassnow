@@ -166,23 +166,6 @@
 <!-- JQuery please god don't conflict --------------------->
 <script src="scripts/jquery-1.11.0-min.js"></script>
 
-<!-- Page transition fader  -->
-<script type="text/javascript">
-$(document).ready(function() {
-    $("html").css("background-color", "#fff");
-    $(".page").css("display", "none"); 
-    $(".page").fadeIn(1000); 
-    $("a.transition").click(function(event){
-        event.preventDefault();
-        linkLocation = this.href;
-        $(".page").fadeOut(1000, redirectPage);      
-    });         
-    function redirectPage() {
-        window.location = linkLocation;
-    }
-});
-</script>
-
 <!-- Hide / Show via button -->
 <script>
   $( "#icon-button-02" ).click(function() {
