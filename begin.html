@@ -178,9 +178,15 @@
 
 <!-- Page delay, maybeee --->
 <script>
-  function delay ('snowwhite.html') {
-    setTimeout( function() { window.location = 'snowwhite.html' }, 500 );
+function delay (URL) {
+  setTimeout( function() { window.location = URL }, 1000 );
 }
+
+  $(document).ready(function(){
+    $(".next").click(function(){
+      $(".page").animate({right:786},500);    
+      });
+  });
 </script>
 
 <!-- Hide / Show via button -->
