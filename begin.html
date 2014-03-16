@@ -188,6 +188,20 @@
   });
 </script>
 
+<!-- Skrollr ---------------------------->
+<script type="text/javascript" src="scripts/skrollr.min.js"></script>
+<script type="text/javascript">
+var s = skrollr.init({
+	edgeStrategy: 'set',
+	easing: {
+		WTF: Math.random,
+		inverted: function(p) {
+			return 1-p;
+		}
+	}
+});
+</script>
+
 
 <!-- Modal -->
 <script src="scripts/jquery.modal.js" type="text/javascript" charset="utf-8"></script>
@@ -202,19 +216,6 @@
 </script>
    
    
-<!-- Skrollr ---------------------------->
-<script type="text/javascript" src="scripts/skrollr.min.js"></script>
-<script type="text/javascript">
-var s = skrollr.init({
-	edgeStrategy: 'set',
-	easing: {
-		WTF: Math.random,
-		inverted: function(p) {
-			return 1-p;
-		}
-	}
-});
-</script>
 
 
 <!-- Livereload REMOVE BEFORE LAUNCH ---------------------------->	
