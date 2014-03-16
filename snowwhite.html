@@ -88,8 +88,8 @@
   <div class="page-nav"
     data-0="top:934px"
     data-500="top:934px">
-    <a class="nav-icon previous" href="begin.html"><img src="img/nav_next.svg"></a>
-    <a class="nav-icon next" href="queen.html"><img class="flip-horiz" src="img/nav_next.svg"></a>
+    <a class="nav-icon previous" href="javascript:delay('begin.html')"><img src="img/nav_next.svg"></a>
+    <a class="nav-icon next" href="javascript:delay('queen.html')"><img class="flip-horiz" src="img/nav_next.svg"></a>
     <a class="nav-icon beginning" href="begin.html"><img src="img/nav_skip.svg"></a>
     <a class="nav-icon ending" href="end.html"><img class="flip-horiz" src="img/nav_skip.svg"></a>
     <div class="story-modal" id="modal-03">   
@@ -141,6 +141,21 @@
 <script src="scripts/jquery-1.11.0.js"></script>
 <script src="scripts/jquery-ui-1.10.4.custom.js"></script>
 
+<!-- Page delay, maybeee --->
+<script>
+function delay (URL) {
+  setTimeout( function() { window.location = URL }, 150 );
+}
+
+  $(document).ready(function(){
+    $(".next").click(function(){
+      $(".page").animate({right:768}, 150);    
+      });
+    $(".previous").click(function(){
+      $(".page").animate({left:768}, 150);    
+      });
+  });
+</script>
 
 <!-- Icon Fact Toggle -->
 <script>

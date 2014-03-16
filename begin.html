@@ -122,7 +122,7 @@
     <div class="page-nav"
     data-0="top:934px"
     data-300="top:934px">
-    <a class="nav-icon previous" href="index.html"><img src="img/nav_next.svg"></a>
+    <a class="nav-icon previous" href="javascript:delay('index.html')"><img src="img/nav_next.svg"></a>
     <a class="nav-icon next" href="javascript:delay('snowwhite.html')"><img class="flip-horiz" src="img/nav_next.svg"></a>
     <a class="nav-icon beginning inactive" href="#"><img src="img/nav_skip.svg"></a>
     <a class="nav-icon ending" href="end.html"><img class="flip-horiz" src="img/nav_skip.svg"></a>
@@ -179,12 +179,15 @@
 <!-- Page delay, maybeee --->
 <script>
 function delay (URL) {
-  setTimeout( function() { window.location = URL }, 1000 );
+  setTimeout( function() { window.location = URL }, 150 );
 }
 
   $(document).ready(function(){
     $(".next").click(function(){
-      $(".page").animate({right:786},500);    
+      $(".page").animate({right:768}, 150);    
+      });
+    $(".previous").click(function(){
+      $(".page").animate({left:768}, 150);    
       });
   });
 </script>

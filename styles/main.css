@@ -96,7 +96,7 @@ h1, h2 { font-family: "Helvetica Neue", Helvetica, Arial, serif; color: black; f
 
 h2 { font-size: 5em; }
 
-.page { width: 768px; height: 1024px; top: 0px; border-bottom: 4px solid #cccccc; }
+.page { width: 768px; height: 1024px; top: 0px; border-bottom: 4px solid #cccccc; overflow: hidden; -webkit-transition: all cubic-bezier(0.68, -0.55, 0.265, 1.55); transition: all cubic-bezier(0.68, -0.55, 0.265, 1.55); }
 
 /** Bottom Nav ****************************/
 .page-nav { bottom: 20px; position: fixed; height: 60px; width: 100%; opacity: 1; }
