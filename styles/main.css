@@ -135,9 +135,9 @@ h2 { font-size: 5em; }
 
 .svg-draw.fill { fill: black; stroke: black; stroke-width: 1; }
 
-.svg-draw .red { stroke: #e72900; opacity: 0.5; }
+.svg-draw .red { stroke: #e72900; opacity: 0.85; }
 
-.svg-draw.fill .red { stroke: #e72900; fill: #e72900; opacity: 0.5; }
+.svg-draw.fill .red { stroke: #e72900; fill: #e72900; opacity: 0.85; }
 
 .history p { /* display: inline; */ /* To make white hug text */ margin-right: 9px; }
 .history p:last-child { margin-bottom: 0px; }

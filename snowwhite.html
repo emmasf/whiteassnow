@@ -83,6 +83,8 @@
     <p>She has no characteristics beyond her physicality: her coloration, her beauty, her youth. She has no personality. She makes no choices.</p>
     </div>
     
+    </div><!-- /Page: Snow White -->
+    
   <div class="page-nav"
     data-0="top:934px"
     data-500="top:934px">
@@ -94,8 +96,7 @@
       <a class="nav-icon center" href="#story-modal-03"><img src="img/nav_text.svg"></a> 
       </div>
     </div>     
-  
-  </div><!-- /Page: Snow White -->
+
   
   <div id="story-modal-03" class="modal">
     <div class="inset-story">
@@ -139,6 +140,24 @@
 <!-- JQuery please god don't conflict --------------------->
 <script src="scripts/jquery-1.11.0.js"></script>
 <script src="scripts/jquery-ui-1.10.4.custom.js"></script>
+
+<!-- Page transition fader  -->
+<script type="text/javascript">
+$(document).ready(function() {
+    $("html").css("background-color", "#fff");
+    $(".page").css("display", "none"); 
+    $(".page").fadeIn(1000); 
+    $("a.transition").click(function(event){
+        event.preventDefault();
+        linkLocation = this.href;
+        $(".page").fadeOut(1000, redirectPage);      
+    });         
+    function redirectPage() {
+        window.location = linkLocation;
+    }
+});
+</script>
+
 
 <!-- Icon Fact Toggle -->
 <script>
