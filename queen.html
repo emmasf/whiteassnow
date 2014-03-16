@@ -85,8 +85,6 @@
       </div> 
     </div>
   -->
-
-  </div><!-- /Page: Queen -->
       
   <div class="page-nav"
     data-0="top:934px"
@@ -99,6 +97,8 @@
       <a class="nav-icon center" href="#story-modal-04"><img src="img/nav_text.svg"></a> 
       </div>
     </div>   
+</div><!-- /Page: Queen -->
+  
         
     <div id="story-modal-04" class="modal">
       <div class="inset-story">
@@ -142,23 +142,6 @@
 <script src="scripts/jquery-1.11.0.js"></script>
 <script src="scripts/jquery-ui-1.10.4.custom.js"></script>
   
-<!-- Page transition fader  -->
-<script type="text/javascript">
-$(document).ready(function() {
-    $("html").css("background-color", "#fff");
-    $(".page").css("display", "none"); 
-    $(".page").fadeIn(1000); 
-    $("a.transition").click(function(event){
-        event.preventDefault();
-        linkLocation = this.href;
-        $(".page").fadeOut(1000, redirectPage);      
-    });         
-    function redirectPage() {
-        window.location = linkLocation;
-    }
-});
-</script>
-
 <!-- Icon Fact Toggle -->
 <script>
   $( "#icon-button-04" ).click(function() {

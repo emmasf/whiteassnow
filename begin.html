@@ -23,29 +23,14 @@
     	transform-origin:100% 0;"
     data-500="
       -webkit-transform:rotate(0deg);
-    	transform:rotate(0deg); "
+    	transform:rotate(0deg); 
+    	-webkit-transform-origin:100% 0;
+    	transform-origin:100% 0;"
     	>
       
-<!--
   <h2 class="middle"
-    data-0="
-      -webkit-transform:rotate(0deg);
-    	transform:rotate(0deg); 
-    	-webkit-transform-origin:0 100%;
-    	transform-origin:0 100%;"
-    data-500="
-      -webkit-transform:rotate(-90deg);
-    	transform:rotate(-90deg);" >
-    Let's begin.</h2>
--->
-
-  <h2 class="middle"
-    data-0="
-      font-size: 5em;
-      top:120px"
-    data-500="
-      font-size: 6em;
-      top:108px" >
+    data-0="opacity:1"
+    data-500="opacity:1">
     Let's begin.</h2>
         
   <div id="instructions" class="history hideshow"
@@ -108,10 +93,8 @@
     data-500="opacity:1;">
     <p>Let go of the Snow White you hold in your mind.</p>
     </div>
-    
-  </div><!-- /Page: Begin -->
-  
-    <div class="page-nav"
+      
+  <div class="page-nav"
     data-0="top:934px"
     data-500="top:934px">
     <a class="nav-icon previous" href="index.html"><img src="img/nav_next.svg"></a>
@@ -122,6 +105,8 @@
       <a class="nav-icon center" href="#story-modal-02"><img src="img/nav_text.svg"></a> 
       </div>
     </div>
+    
+  </div><!-- /Page: Begin -->
     
   <div id="story-modal-02" class="modal">
     <div class="inset-story">
@@ -165,23 +150,6 @@
 
 <!-- JQuery please god don't conflict --------------------->
 <script src="scripts/jquery-1.11.0-min.js"></script>
-
-<!-- Page transition fader  -->
-<script type="text/javascript">
-$(document).ready(function() {
-    $("html").css("background-color", "#fff");
-    $(".page").css("display", "none"); 
-    $(".page").fadeIn(1000); 
-    $("a.transition").click(function(event){
-        event.preventDefault();
-        linkLocation = this.href;
-        $(".page").fadeOut(1000, redirectPage);      
-    });         
-    function redirectPage() {
-        window.location = linkLocation;
-    }
-});
-</script>
 
 <!-- Hide / Show via button -->
 <script>
@@ -233,11 +201,9 @@ var s = skrollr.init({
 
 
 <!-- Livereload REMOVE BEFORE LAUNCH ---------------------------->	
-<!--
 <script>
   document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
 </script>
--->
 	
 </body>
 </html>
