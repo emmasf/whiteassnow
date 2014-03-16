@@ -102,8 +102,9 @@ h2 { font-size: 5em; }
 .page-nav { bottom: 20px; position: fixed; height: 60px; width: 100%; opacity: 1; }
 
 .nav-icon { background-color: rgba(0, 0, 0, 0.25); height: 60px; width: 60px; border-radius: 30px; position: absolute !important; top: 0px; }
+.nav-icon a { transition-delay: 5s; -webkit-transition-delay: 5s; /* Safari */ }
 
-.nav-icon:hover, .nav-icon:active { background-color: rgba(0, 255, 0, 0.15); background-color: rgba(0, 0, 0, 0.75); }
+.nav-icon:hover, .nav-icon:active { background-color: rgba(0, 255, 0, 0.15); background-color: rgba(0, 0, 0, 0.75); transition: background-color 0.25s ease-in; -webkit-transition: background-color 0.25s ease-in; }
 
 .previous { left: 30px; }
 

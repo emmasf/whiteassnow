@@ -84,11 +84,17 @@ h2 {
    width: 60px;
    border-radius: 30px;
    position: absolute !important;
-   top:0px;}
+   top:0px;
+   a {
+   transition-delay: 5s;
+   -webkit-transition-delay: 5s; /* Safari */}
+   }
    
 .nav-icon:hover, .nav-icon:active {
    background-color: rgba(0,255,0,0.15);
    background-color: rgba(0,0,0,0.75);
+    transition: background-color 0.25s ease-in; 
+   -webkit-transition: background-color 0.25s ease-in; 
    }
   
 .previous { 

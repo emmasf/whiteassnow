@@ -8,64 +8,16 @@
 </head>
 
 <body>
-	
-	<div id="progress" data-0="width:0%;background:hsl(200, 100%, 50%);" data-900="width:100%;background:hsl(920, 100%, 50%);"></div>
 
-	<div id="begin" class="page"
-    data-0="top:0px"
-    data-500="top:0px">
+	<div id="begin" class="page" style"height: ">
 
-  <img class="cutout back" src="img/begin.png"      
-    data-0="
-      -webkit-transform:rotate(-60deg);
-    	transform:rotate(-60deg); 
-    	-webkit-transform-origin:100% 0;
-    	transform-origin:100% 0;"
-    data-500="
-      -webkit-transform:rotate(0deg);
-    	transform:rotate(0deg); "
-    	>
-      
-<!--
-  <h2 class="middle"
-    data-0="
-      -webkit-transform:rotate(0deg);
-    	transform:rotate(0deg); 
-    	-webkit-transform-origin:0 100%;
-    	transform-origin:0 100%;"
-    data-500="
-      -webkit-transform:rotate(-90deg);
-    	transform:rotate(-90deg);" >
-    Let's begin.</h2>
--->
+  <img class="cutout back" src="img/begin.png">
 
-  <h2 class="middle"
-    data-0="
-      font-size: 5em;
-      top:120px"
-    data-500="
-      font-size: 6em;
-      top:108px" >
-    Let's begin.</h2>
-        
-  <div id="instructions" class="history hideshow"
-    data-0="opacity:1;"
-    data-500="opacity:0;">
-        <p>Tap on colored bars to dig into the characters.</p>
-        <p>Tap on icons to follow the tale through time and place.</p>        
-        <p>Mimic the red gestures to play and explore.</p>
-    </div>
-  <div id="instructions" class="history hideshow" style="display: none"
-    data-0="opacity:1;"
-    data-500="opacity:0;">
-        <p></p>
-    </div>
+  <h2 class="middle">Let's begin.</h2>
     
-    <div id="idea02" class="hideshow-text"
-    data-0="opacity:1;"
-    data-500="opacity:1;">
+    <div id="idea02" class="hideshow-text front">
         <div class="hideshow"></div>
-        <div class="hideshow history" style="display: none">
+        <div class="hideshow history front" style="display: none">
         <p>When you think of Snow White, you probably picture the film that started the Disney empire. The tale was first published by Jacob and Wilhelm Grimm in their 1812 book, <i>Kinder-und Hausmaerchen</i>, or <i>Tales of Children and the Home</i>.</p>
         <p>The brothers were not writing for children; they were academic linguists, interested in preserving German language and culture and in strengthening the German identity. They set out to collect German oral traditions and capture them for the ages. Along with the old German words themselves, the brothers felt that a lot of traditional values lay in the stories they recorded.</p>
         <p>They may have been right, but this story is not uniquely German. Versions of the story appear all over the globe: Scotland, Ireland, France, Spain, Portugal, Italy, Hungary, Romania, Albania, Greece, Morocco, Algeria, Libya, West Africa, Gabon, Angola and Mozambique, to name a few. Details vary, but the tale of a young beauty, a jealous older woman, exile, magical poisoning, and a long coma are universal.</p>
@@ -73,9 +25,7 @@
       </div>
     
         
-  <div id="hide-show" class="icon"
-    data-0="opacity:1;"
-    data-500="opacity:1;">
+  <div id="hide-show" class="icon front">
     <div id="icon-button-02" class="svg-draw">
     	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="hideshow">	    
         <polyline points="194.021,80.694 211.479,77.796 
@@ -103,17 +53,13 @@
     </div>
     
     
-  <div id="factoid02" class="factoid hide"    
-    data-0="opacity:1;"
-    data-500="opacity:1;">
+  <div id="factoid02" class="factoid hide" >
     <p>Let go of the Snow White you hold in your mind.</p>
     </div>
     
   </div><!-- /Page: Begin -->
   
-    <div class="page-nav"
-    data-0="top:934px"
-    data-500="top:934px">
+    <div class="page-nav">
     <a class="nav-icon previous" href="index.html"><img src="img/nav_next.svg"></a>
     <a class="nav-icon next" http-equiv="refresh" content="2; snowwhite.html"><img class="flip-horiz" src="img/nav_next.svg"></a>
     <a class="nav-icon beginning inactive" href="#"><img src="img/nav_skip.svg"></a>
@@ -199,20 +145,6 @@
   });
 </script>
    
-   
-<!-- Skrollr ---------------------------->
-<script type="text/javascript" src="scripts/skrollr.min.js"></script>
-<script type="text/javascript">
-var s = skrollr.init({
-	edgeStrategy: 'set',
-	easing: {
-		WTF: Math.random,
-		inverted: function(p) {
-			return 1-p;
-		}
-	}
-});
-</script>
 
 
 <!-- Livereload REMOVE BEFORE LAUNCH ---------------------------->	
