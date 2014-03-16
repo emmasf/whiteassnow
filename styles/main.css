@@ -5,39 +5,62 @@
 /***********************************************************************************/
 /******** Begin Variables **********************************************************/
 /***********************************************************************************/
+@keyframes textcolormorph { 0% { background-color: rgba(2, 111, 195, 0.8); }
+  20% { background-color: rgba(2, 111, 195, 0.8); }
+  50% { background-color: rgba(102, 15, 255, 0.8); }
+  80% { background-color: rgba(2, 111, 195, 0.8); }
+  100% { background-color: rgba(2, 111, 195, 0.8); } }
+
+@-webkit-keyframes textcolormorph { 0% { background-color: rgba(2, 111, 195, 0.8); }
+  20% { background-color: rgba(2, 111, 195, 0.8); }
+  50% { background-color: rgba(102, 15, 255, 0.8); }
+  80% { background-color: rgba(2, 111, 195, 0.8); }
+  100% { background-color: rgba(2, 111, 195, 0.8); } }
+
 /*
 @keyframes textcolormorph
 {
-0%     {background-color: #000;}
-20%    {background-color: #096;}
-40%    {background-color: #66F;}
-60%    {background-color: #CC3;}
-80%    {background-color: #C3C;}
-100%   {background-color: #000;}
+0%    {background-color: rgba($blue,0.8);}
+10%   {background-color: rgba($blue,0.8);}
+25%   {background-color: rgba(102,15,255,0.8);}
+40%   {background-color: rgba($blue,0.8);}
+60%   {background-color: rgba($blue,0.8);}
+75%   {background-color: rgba(9,6,255,0.8);}
+90%   {background-color: rgba($blue,0.8)}
+100%  {background-color: rgba($blue,0.8)}
 }
 
 @-webkit-keyframes textcolormorph
 {
-0%     {background-color: #000;}
-20%    {background-color: #096;}
-40%    {background-color: #66F;}
-60%    {background-color: #CC3;}
-80%    {background-color: #C3C;}
-100%   {background-color: #000;}
+0%    {background-color: rgba($blue,0.8);}
+10%   {background-color: rgba($blue,0.8);}
+25%   {background-color: rgba(102,15,255,0.8);}
+40%   {background-color: rgba($blue,0.8);}
+60%   {background-color: rgba($blue,0.8);}
+75%   {background-color: rgba(9,6,255,0.8);}
+90%   {background-color: rgba($blue,0.8)}
+100%  {background-color: rgba($blue,0.8)}
 }
 */
-@keyframes textcolormorph { 0% { background-color: rgba(2, 111, 195, 0.8); }
-  25% { background-color: rgba(102, 15, 255, 0.8); }
-  50% { background-color: rgba(2, 111, 195, 0.8); }
-  75% { background-color: rgba(9, 6, 255, 0.8); }
-  100% { background-color: rgba(2, 111, 195, 0.8); } }
+/*
+@keyframes textcolormorph
+{
+0%     {background-color: rgba($blue,0.8);}
+25%    {background-color: rgba(102,15,255,0.8);}
+50%    {background-color: rgba($blue,0.8);}
+75%    {background-color: rgba(9,6,255,0.8);}
+100%   {background-color: rgba($blue,0.8)}
+}
 
-@-webkit-keyframes textcolormorph { 0% { background-color: rgba(2, 111, 195, 0.8); }
-  25% { background-color: rgba(102, 15, 255, 0.8); }
-  50% { background-color: rgba(2, 111, 195, 0.8); }
-  75% { background-color: rgba(9, 6, 255, 0.8); }
-  100% { background-color: rgba(2, 111, 195, 0.8); } }
-
+@-webkit-keyframes textcolormorph
+{
+0%     {background-color: rgba($blue,0.8);}
+25%    {background-color: rgba(102,15,255,0.8);}
+50%    {background-color: rgba($blue,0.8);}
+75%    {background-color: rgba(9,6,255,0.8);}
+100%   {background-color: rgba($blue,0.8);}
+}
+*/
 /******** End Variables **********************************************/
 /***********************************************************************************/
 /******** Begin Fixed Positition Stylesheet ****************************************/
@@ -58,20 +81,22 @@ html, body { width: 100%; height: 100%; padding: 0; margin: 0; overflow-x: hidde
 /***********************************************************************************/
 /******** Begin Elements Stylesheet ************************************************/
 /***********************************************************************************/
-/** General ****************************/
-html, body, div, span, p, a, del, em, img, ol, ul, li, fieldset, form, label { margin: 0; padding: 0; border: 0; }
+/** General, Resets ****************************/
+html, body, div, span, p, a, del, em, img, ol, ul, li, fieldset, form, label { margin: 0; padding: 0; border: 0; font-size: 100%; vertical-align: baseline; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
 
-html, body { min-height: 100%; background-color: #000; text-align: left; width: 768px; }
+html, body { min-height: 100%; background-color: #000; text-align: left; width: 768px; line-height: 1.2em; font-family: "Helvetica Neue", Helvetica, Arial, serif; text-align: left; }
 
 body { background: #fff; background-attachment: fixed; }
 
-.button .closed { background-color: #e72900; width: 20%; height: 90px; left: 40%; top: 550px; }
+p { font-family: "Arnhem", Georgia, serif; color: black; font-size: 24px; font-weight: 400; line-height: 1.3em; letter-spacing: 0.0125em; padding: 0; margin: 0; margin-bottom: 12px; }
 
-/** Each Page ****************************/
-.page { width: 768px; height: 1021px; top: 0px; border-bottom: 4px solid #cccccc; }
-.page h1 { top: 100px; padding: 50px; -webkit-transform-origin: 0 0; -moz-transform-origin: 0 0; -ms-transform-origin: 0 0; -o-transform-origin: 0 0; transform-origin: 0 0; }
+h1, h2 { font-family: "Helvetica Neue", Helvetica, Arial, serif; color: black; font-weight: 400; letter-spacing: 0.009em; line-height: 1.125em; padding: 0; margin: 0; font-size: 6em; position: absolute; }
+
+h2 { font-size: 5em; }
+
+.page { width: 768px; height: 1024px; top: 0px; border-bottom: 4px solid #cccccc; }
 
 /** Bottom Nav ****************************/
 .page-nav { bottom: 20px; position: fixed; height: 60px; width: 100%; opacity: 1; }
@@ -96,8 +121,8 @@ body { background: #fff; background-attachment: fixed; }
 .cutout { width: 100%; position: relative; top: 0px; }
 
 /** Factoid Slider ****************************/
-.factoid { z-index: 100; position: absolute; /* background-color: $factoid-color; */ -webkit-animation: textcolormorph 10s infinite ease-in-out; animation: textcolormorph 10s infinite ease-in-out; animation-duration: 5s; animation-play-state: paused; -webkit-animation-play-state: paused; }
-.factoid p { padding: 0 45px 0 30px; display: block; font-family: "Helvetica Neue", Helvetica, Arial, serif; font-weight: 700; color: #fff; font-size: 17px; letter-spacing: 0.025em; line-height: 1.25em; margin: 0; margin-bottom: 12px; }
+.factoid { z-index: 100; position: absolute; /* background-color: $factoid-color; */ -webkit-animation: textcolormorph 3s infinite ease-in-out; animation: textcolormorph 3s infinite ease-in-out; animation-duration: 3s; animation-play-state: paused; -webkit-animation-play-state: paused; }
+.factoid p { font-family: "Helvetica Neue", Helvetica, Arial, serif; color: #fff; font-weight: 700; font-size: 17px; letter-spacing: 0.025em; line-height: 1.25em; display: block; margin: 0; margin-bottom: 12px; padding: 0 45px 0 30px; }
 .factoid p:first-child { padding-top: 30px; }
 .factoid p:last-child { padding-bottom: 45px; }
 
@@ -114,8 +139,8 @@ body { background: #fff; background-attachment: fixed; }
 
 .svg-draw.fill .red { stroke: #e72900; fill: #e72900; opacity: 0.5; }
 
-.history p { /* display: inline; */ /* To make white hug text */ margin-top: 12px; margin-right: 9px; }
-.history p:first-child { margin-top: 0px; }
+.history p { /* display: inline; */ /* To make white hug text */ margin-right: 9px; }
+.history p:last-child { margin-bottom: 0px; }
 
 .history { position: absolute; background-color: rgba(255, 255, 255, 0.75); padding: 24px; }
 
@@ -125,7 +150,6 @@ body { background: #fff; background-attachment: fixed; }
 .modal { display: none; width: 708px; height: 956px; background: #f2f0e9; padding: 0; -webkit-border-radius: 5px; border-radius: 5px; }
 
 .inset-story { width: 574px; height: 870px; position: fixed; top: 40px; left: 60px; overflow: auto; overflow-scrolling: touch; -webkit-overflow-scrolling: touch; padding: 80px 100px 0 0; margin: 0; }
-.inset-story p { font-family: "Arnhem", Georgia, serif; color: black; font-size: 24px; font-weight: 400; line-height: 1.175; line-height: 1.35; margin-bottom: 12px; letter-spacing: 0.0125em; }
 .inset-story p:last-child { margin-bottom: 100px; }
 
 .story-fader { width: 620px; height: 80px; position: absolute; left: 20px; }
@@ -134,7 +158,7 @@ body { background: #fff; background-attachment: fixed; }
 
 .story-fader.bottom { bottom: 0; background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f2f0e9), color-stop(100%, rgba(242, 240, 233, 0))); background: -webkit-linear-gradient(bottom, #f2f0e9 50%, rgba(242, 240, 233, 0) 100%); background: linear-gradient(to top, #f2f0e9 50%, rgba(242, 240, 233, 0) 100%); }
 
-/** Generic modifiers *******/
+/** Generic Modifiers ****************************/
 .back { z-index: 1 !important; }
 
 .middle { z-index: 25 !important; }
@@ -145,35 +169,17 @@ body { background: #fff; background-attachment: fixed; }
 
 .flip-vert { -webkit-transform: scaleY(-1); transform: scaleY(-1); }
 
-/******** End Type Stylesheet ****************************************/
-/***********************************************************************************/
-/******** Begin Type Stylesheet ****************************************************/
-/***********************************************************************************/
-html, body, div, span, p, a, del, em, img, ol, ul, li, fieldset, form, label { font-size: 100%; vertical-align: baseline; }
-
-html, body { line-height: 1.2em; font-family: "Helvetica Neue", Helvetica, Arial, serif; text-align: left; }
-
-p { font-family: "Arnhem", Georgia, serif; color: black; font-size: 24px; font-weight: 400; line-height: 1.35; margin: 0; margin-bottom: 12px; letter-spacing: 0.0125em; }
-
-/*Cover drek*/
-.button p { font-family: "Helvetica Neue", Helvetica, Arial, serif; text-align: center; padding: 30px; color: white; font-size: 16px; font-weight: 700; line-height: 30px; }
-
-h1, h2 { font-family: "Helvetica Neue", Helvetica, Arial, serif; color: black; font-weight: 400; padding: 0; margin: 0; }
-
-h1 { font-size: 6em; margin: 0; }
-
-h2 { color: inherit; font-size: 5em; line-height: 1.125em; letter-spacing: 0.009em; position: absolute; }
-
-h2:first-child { margin-top: 0; }
-
-.button p a { font-family: "Helvetica Neue", Helvetica, Arial, serif; color: #fff; text-decoration: none; }
-
-/******** End Type Stylesheet ****************************************/
+/******** End Elements Stylesheet ************************************/
 /***********************************************************************************/
 /******** Begin Page Layout Stylesheet *********************************************/
 /***********************************************************************************/
 #progress {   /*width: 6px;
 	height:1024px; right:0;*/ width: 768px; height: 12px; bottom: 0; background: #444; z-index: 51; }
+
+#cover h1 { top: 100px; padding: 50px; -webkit-transform-origin: 0 0; -moz-transform-origin: 0 0; -ms-transform-origin: 0 0; -o-transform-origin: 0 0; transform-origin: 0 0; }
+#cover .button { width: 20%; left: 40%; top: 550px; }
+#cover .button p { text-align: center; padding: 30px !important; margin: 0px !important; color: white; }
+#cover .button p a { font-family: "Helvetica Neue", Helvetica, Arial, serif; color: #fff; text-decoration: none; }
 
 #begin h2 { top: 120px; left: 60px; -webkit-transform-origin: 0 0; transform-origin: 0 0; }
 #begin .cutout { -webkit-transform: rotate(0deg); transform: rotate(0deg); -webkit-transform-origin: 0 0; transform-origin: 0 0; top: -70px; }
@@ -224,17 +230,16 @@ h2:first-child { margin-top: 0; }
 #sin #factoid08 { width: 330px; height: 32px; top: 635px; right: 0px; }
 #sin .hideshow-text { width: 366px; width: 440px; width: 680px; left: 20px; top: 196px; }
 
-#prince h2 { width: 500px; top: 448px; left: 32px; }
-#prince .icon { position: absolute; top: 15%; left: 32%; -webkit-transform: rotate(-4deg); }
-#prince #factoid09 { width: 32px; height: 133px; top: 724px; right: 0px; }
-#prince #factoid09 p { width: 550px; }
-#prince .hideshow-text { width: 658px; left: 12px; top: 410px; }
+#prince h2 { width: 700px; top: 448px; top: 688px; left: 58px; }
+#prince .icon { position: absolute; top: 15%; left: 32%; top: 198px; left: 295px; -webkit-transform: rotate(260deg); }
+#prince #factoid09 { width: 32px; height: 223px; top: 434px; right: 0px; }
+#prince #factoid09 p { width: 510px; }
+#prince .hideshow-text { width: 728px; left: 0px; top: 449px; }
 
 #moral h2 { width: 480px; top: 154px; left: -48px; -webkit-transform: rotate(90deg); }
-#moral .icon { position: absolute; top: 52%; left: 31%; -webkit-transform: rotate(0deg); }
-#moral .story { width: 645px; left: 39px; left: 19px; top: 1024px; }
-#moral #factoid10 { width: 300px; height: 32px; top: 693px; right: 0px; }
-#moral .hideshow-text { width: 460px; left: 146px; left: 236px; top: 20px; }
+#moral .icon { position: absolute; left: 31%; top: 532px; left: 174px; -webkit-transform: rotate(0deg); }
+#moral #factoid10 { width: 300px; height: 32px; top: 693px; top: 493px; right: 0px; }
+#moral .hideshow-text { width: 460px; left: 146px; left: 236px; top: 30px; width: 700px; left: 146px; left: 236px; left: 26px; top: 30px; }
 
 #end h2 { width: 50%; top: 45%; left: 25%; text-align: center; }
 #end .icon { position: absolute; top: 19%; left: 34%; }

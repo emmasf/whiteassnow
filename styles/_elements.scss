@@ -2,12 +2,14 @@
 /******** Begin Elements Stylesheet ************************************************/
 /***********************************************************************************/
 
-/** General ****************************/   
+/** General, Resets ****************************/   
 
 html, body, div, span, p, a, del, em, img, ol, ul, li, fieldset, form, label {
 	margin: 0;
 	padding: 0;
 	border: 0;
+  font-size: 100%;
+	vertical-align: baseline;
   }
 
 article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, section {
@@ -19,6 +21,9 @@ html, body {
   background-color: #000;
   text-align: left;
   width:768px;
+  line-height: 1.2em;
+	font-family: $sans-type;
+  text-align: left;
   }
 
 body {
@@ -26,31 +31,41 @@ body {
 	background-attachment:fixed;
   }
   
-.button .closed {
-  background-color: $button-color;
-  width:20%;
-  height:90px;
-  left:40%;
-  top:550px;
+p {
+  font-family: $serif-type;
+  color:$story-color;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.3em;
+  letter-spacing: 0.0125em;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 12px;
+
   } 
+  
+  
+h1, h2 {
+  font-family: $sans-type;
+  color:$text-color;
+  font-weight: 400;
+  letter-spacing: 0.009em;
+  line-height: 1.125em;
+  padding: 0;
+  margin: 0;
+  font-size:6em;
+  position: absolute;
+  }
 
-
-/** Each Page ****************************/   	
+h2 {
+	font-size:5em;
+  }	
 
 .page {
   width:768px;
-	height:1021px;
+	height:1024px;
 	top:0px;
-	border-bottom: 4px solid $light-gray;	
-  h1 {
-    top:100px;
-    padding:50px;
-  	-webkit-transform-origin:0 0;
-  	-moz-transform-origin:0 0;
-  	-ms-transform-origin:0 0;
-  	-o-transform-origin:0 0;
-  	transform-origin:0 0;
-  	}  	
+	border-bottom: 4px solid $light-gray;	  	
 	}
 	
 /** Bottom Nav ****************************/   	
@@ -107,23 +122,23 @@ body {
   z-index: 100;
   position: absolute;
   /* background-color: $factoid-color; */
-  -webkit-animation: textcolormorph 10s infinite ease-in-out;
-  animation: textcolormorph 10s infinite ease-in-out;
-  animation-duration: 5s;
+  -webkit-animation: textcolormorph 3s infinite ease-in-out;
+  animation: textcolormorph 3s infinite ease-in-out;
+  animation-duration: 3s;
   animation-play-state:paused;
   -webkit-animation-play-state:paused;
   
   p { 
-    padding:0 45px 0 30px; 
-    display: block;
     font-family: $sans-type;
-    font-weight: 700;
     color:#fff;
+    font-weight: 700;
     font-size: 17px;
     letter-spacing: 0.025em;
     line-height: 1.25em;
+    display: block;
     margin: 0;
     margin-bottom: 12px;
+    padding:0 45px 0 30px;
     }
     
   p:first-child {padding-top: 30px;}
@@ -178,10 +193,9 @@ body {
   
 .history p {
   /* display: inline; */ /* To make white hug text */
-  margin-top: 12px; 
   margin-right: 9px;
-  &:first-child {
-    margin-top: 0px;
+  &:last-child {
+    margin-bottom: 0px;
     }
   }
   
@@ -220,18 +234,6 @@ body {
   -webkit-overflow-scrolling: touch;
   padding: 80px 100px 0 0;
   margin: 0;
-  
-  p {  
-    font-family: $serif-type;
-    color:$story-color;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 1.175;
-    line-height: 1.35;
-    margin-bottom: 12px;
-    letter-spacing: 0.0125em;
-    }  
-    
   p:last-child {margin-bottom: 100px}
   }
   
@@ -258,7 +260,7 @@ body {
 
 
 
-/** Generic modifiers *******/
+/** Generic Modifiers ****************************/  
 
 .back {z-index:1 !important;}
 .middle {z-index:25 !important;}
@@ -273,7 +275,7 @@ body {
   -webkit-transform: scaleY(-1);
   transform: scaleY(-1); 
   }
-
-
-/******** End Type Stylesheet ****************************************/
   
+
+
+/******** End Elements Stylesheet ************************************/

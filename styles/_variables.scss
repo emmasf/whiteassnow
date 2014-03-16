@@ -29,35 +29,55 @@ $serif-type: "Arnhem", Georgia, serif;
 $text-color: rgba(0,0,0,1);
 
 
-
-/*
 @keyframes textcolormorph
 {
-0%     {background-color: #000;}
-20%    {background-color: #096;}
-40%    {background-color: #66F;}
-60%    {background-color: #CC3;}
-80%    {background-color: #C3C;}
-100%   {background-color: #000;}
+0%    {background-color: rgba($blue,0.8);}
+20%   {background-color: rgba($blue,0.8);}
+50%   {background-color: rgba(102,15,255,0.8);}
+80%   {background-color: rgba($blue,0.8)}
+100%  {background-color: rgba($blue,0.8);}
 }
 
 @-webkit-keyframes textcolormorph
 {
-0%     {background-color: #000;}
-20%    {background-color: #096;}
-40%    {background-color: #66F;}
-60%    {background-color: #CC3;}
-80%    {background-color: #C3C;}
-100%   {background-color: #000;}
+0%    {background-color: rgba($blue,0.8);}
+20%   {background-color: rgba($blue,0.8);}
+50%   {background-color: rgba(102,15,255,0.8);}
+80%   {background-color: rgba($blue,0.8)}
+100%  {background-color: rgba($blue,0.8);}
+}
+
+/*
+@keyframes textcolormorph
+{
+0%    {background-color: rgba($blue,0.8);}
+10%   {background-color: rgba($blue,0.8);}
+25%   {background-color: rgba(102,15,255,0.8);}
+40%   {background-color: rgba($blue,0.8);}
+60%   {background-color: rgba($blue,0.8);}
+75%   {background-color: rgba(9,6,255,0.8);}
+90%   {background-color: rgba($blue,0.8)}
+100%  {background-color: rgba($blue,0.8)}
+}
+
+@-webkit-keyframes textcolormorph
+{
+0%    {background-color: rgba($blue,0.8);}
+10%   {background-color: rgba($blue,0.8);}
+25%   {background-color: rgba(102,15,255,0.8);}
+40%   {background-color: rgba($blue,0.8);}
+60%   {background-color: rgba($blue,0.8);}
+75%   {background-color: rgba(9,6,255,0.8);}
+90%   {background-color: rgba($blue,0.8)}
+100%  {background-color: rgba($blue,0.8)}
 }
 */
-
-
+/*
 @keyframes textcolormorph
 {
 0%     {background-color: rgba($blue,0.8);}
 25%    {background-color: rgba(102,15,255,0.8);}
-50%     {background-color: rgba($blue,0.8);}
+50%    {background-color: rgba($blue,0.8);}
 75%    {background-color: rgba(9,6,255,0.8);}
 100%   {background-color: rgba($blue,0.8)}
 }
@@ -66,10 +86,13 @@ $text-color: rgba(0,0,0,1);
 {
 0%     {background-color: rgba($blue,0.8);}
 25%    {background-color: rgba(102,15,255,0.8);}
-50%     {background-color: rgba($blue,0.8);}
+50%    {background-color: rgba($blue,0.8);}
 75%    {background-color: rgba(9,6,255,0.8);}
 100%   {background-color: rgba($blue,0.8);}
 }
+*/
+
+
 
 /******** End Variables **********************************************/
 

@@ -12,9 +12,33 @@
 	background:#444;
 	z-index:51;
   }
-
 	
 #cover {
+  h1 {
+    top:100px;
+    padding:50px;
+  	-webkit-transform-origin:0 0;
+  	-moz-transform-origin:0 0;
+  	-ms-transform-origin:0 0;
+  	-o-transform-origin:0 0;
+  	transform-origin:0 0;
+  	}
+  .button {
+    width:20%;
+    left:40%;
+    top:550px;
+    p {
+      text-align: center;
+      padding:30px !important;
+      margin: 0px !important;
+    	color:white;
+    	a {
+        font-family: $sans-type;
+        color: #fff;
+        text-decoration: none;
+        }
+      }
+    }    
   }
   
 #begin {
@@ -255,27 +279,30 @@
 
 #prince {    
   h2 {    
-    width: 500px;
+    width: 700px;
     top:448px;
-    left:32px;
+    top:688px;
+    left:58px;
   	}  	
   .icon {
     position: absolute;
     top: 15%;
     left:32%;
-    -webkit-transform: rotate(-4deg); 
+    top:198px;
+    left:295px;
+    -webkit-transform: rotate(260deg); 
     }     
   #factoid09 {
     width: 32px;
-    height: 133px;
-    top: 724px;
+    height: 223px;
+    top: 434px;
     right: 0px;
-    p {width:550px;}
+    p {width:510px;}
     }
   .hideshow-text {
-    width: 658px;
-    left: 12px;
-    top:410px;
+    width: 728px;
+    left: 0px;
+    top: 449px;
    }      
   }
 
@@ -288,27 +315,28 @@
   	}
   .icon {
     position: absolute;
-    top: 52%;
     left:31%;
+    top: 532px;
+    left:174px;
     -webkit-transform: rotate(0deg); 
-    }
-  .story {
-    width: 645px;
-    left: 39px;
-    left: 19px;
-    top:1024px;
-    }   
+    } 
   #factoid10 {
     width: 300px;
     height: 32px;
     top: 693px;
+    top: 493px;
     right: 0px;
     }
   .hideshow-text {
     width: 460px;
     left: 146px;
     left: 236px;
-    top:20px;
+    top:30px;
+    width: 700px;
+    left: 146px;
+    left: 236px;
+    left: 26px;
+    top:30px;
    }  
   }
 

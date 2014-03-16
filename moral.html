@@ -27,7 +27,7 @@
   <div id="factoid10" class="factoid hide"    
     data-0="opacity:1;"
     data-500="opacity:1;">
-    <p>What do we learn? Vanity is bad, but beauty is good? Revenge is sweet? Don't ever grow old?</p>
+    <p>What do we learn? Revenge is sweet? Don't ever grow old? Can we really condemn vanity and worship beauty in the same breath?</p>
     </div> 
     
   <div id="idea10" class="hideshow-text"
@@ -136,7 +136,7 @@
   $(document).ready(function(){
     $("#factoid10").click(function(){
       if($(this).hasClass('hide')) {
-        $(this).animate({height:160},200).removeClass('hide');
+        $(this).animate({height:232},200).removeClass('hide');
       } else { 
         $(this).animate({height:32},200).addClass('hide');
       }
@@ -173,11 +173,9 @@ var s = skrollr.init({
 
 
 <!-- Livereload REMOVE BEFORE LAUNCH ---------------------------->	
-<!--
 <script>
   document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
 </script>
--->
 	
 </body>
 </html>
