@@ -141,7 +141,8 @@ h2 {
   height: 24px; 
   background-color: darken($light-gray, 50%); 
   background-color: $red; 
-  background-color: $blue; 
+  background-color: $blue;
+  background:hsl(920, 100%, 50%);
   -webkit-border-radius: 25px;
   border-radius: 25px; 
   /* border: 4px solid #fff; */
