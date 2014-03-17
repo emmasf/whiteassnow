@@ -129,6 +129,7 @@ h2 {
 
 .slider {
   position: absolute;
+  pointer-events: none;
   }
 .bar {
   width: 7px;

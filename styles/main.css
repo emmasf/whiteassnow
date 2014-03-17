@@ -122,7 +122,7 @@ h2 { font-size: 5em; }
 .cutout { width: 100%; position: relative; top: 0px; }
 
 /** Page Slider ****************************/
-.slider { position: absolute; }
+.slider { position: absolute; pointer-events: none; }
 
 .bar { width: 7px; height: 300px; background-color: rgba(0, 0, 0, 0.25); -webkit-border-radius: 6px; border-radius: 6px; margin-left: 4px; /* box-shadow: inset 0px 0px 2px 2px  darken($light-gray, 10%); */ }
 
@@ -246,6 +246,8 @@ width: 600px; top:309px; left: 300px; -webkit-transform: rotate(90deg);
 #sin .hideshow-text { width: 366px; width: 440px; width: 659px; left: 6px; top: 206px; }
 
 #prince h2 { width: 700px; top: 448px; top: 688px; left: 58px; }
+#prince .slider { bottom: 120px; left: 730px; transform: rotate(90deg); -webkit-transform: rotate(90deg); }
+#prince .slider .bar { height: 390px; }
 #prince .icon { position: absolute; top: 15%; left: 32%; top: 198px; left: 295px; -webkit-transform: rotate(260deg); }
 #prince #factoid09 { width: 32px; height: 223px; top: 434px; right: 0px; }
 #prince #factoid09 p { width: 510px; }

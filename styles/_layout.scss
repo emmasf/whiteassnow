@@ -325,6 +325,13 @@ width: 600px;
     top:688px;
     left:58px;
   	}  	
+  .slider {
+    bottom: 120px;
+    left:730px;
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    .bar {height:390px;}
+    }
   .icon {
     position: absolute;
     top: 15%;
