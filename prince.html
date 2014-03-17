@@ -14,11 +14,17 @@
 	<div id="prince" class="page"
     data-0="top:0px"
     data-500="top:0px">
+  
+  
     
   <h2 class="middle"
     data-0="opacity:1"
     data-500="opacity:1">
     The Prince likes an easy target.</h2>
+    
+  <div id="spin" class="interactive_3d">
+    <img src="img/spin/model_1.jpg">
+  </div>
   
   <img class="cutout back" src="img/prince.png"      
       data-0="top:0px"
@@ -121,6 +127,7 @@
 <!--------------------------------------------------------------->
 <!--------------------------------------------------------------->
 
+	
 <!-- JQuery please god don't conflict --------------------->
 <script src="scripts/jquery-1.11.0.js"></script>
 <script src="scripts/jquery-ui-1.10.4.custom.js"></script>
@@ -143,6 +150,23 @@
       }
     });
   });
+</script>
+
+<!-- Spinner --------------------->
+<script type="text/javascript" src="scripts/jquery.interactive_3d.js"></script>
+<script>
+  $(document).ready( function() {
+    $("#spin").interactive_3d({
+      frames: 80,
+      cursor: "move",
+      speed: 10,
+      entrance: true,
+      preloadImages: true,
+      touchSupport: true,
+      loading: "",
+      autoPlay: false, 
+    });
+  });		
 </script>
  
 <!-- Modal -->

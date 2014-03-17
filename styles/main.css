@@ -202,8 +202,9 @@ h2 { font-size: 5em; }
 .svg-draw { position: absolute; top: 720px; }
 */ }
 #snowwhite h2 { width: 600px; top: 686px; left: 55px; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: rotate(-90deg); transform: rotate(-90deg); }
+#snowwhite .cutout { -webkit-filter: blur(5px); filter: blur(5px); }
 #snowwhite .icon { position: absolute; top: 342px; right: 14px; }
-#snowwhite #factoid03 { width: 436px; height: 32px; top: 170px; right: 0px; }
+#snowwhite #factoid03 { width: 436px; height: 32px; top: 154px; right: 0px; }
 #snowwhite .hideshow-text { width: 530px; left: 20px; top: 562px; }
 
 #queen { /* #drag2 { position: absolute; top:780px; left:70px; width:580px; img { -webkit-transform: rotate(-15deg); display: block; }
@@ -229,6 +230,8 @@ width: 600px; top:309px; left: 300px; -webkit-transform: rotate(90deg);
 
 #king h2 { width: 400px; top: 125px; left: 178px; text-align: center; }
 #king h2.second { top: 214px; left: 188px; }
+#king .cutout { -webkit-filter: saturate(0) brightness(90) contrast(0.1); filter: saturate(0) brightness(90) contrast(0.1); }
+#king #king-rectangle { background-color: #fff; width: 174px; height: 29px; position: absolute; top: 717px; left: 298px; z-index: 5000; }
 #king .icon { position: absolute; top: 461px; left: 34.5%; }
 #king #factoid07 { width: 65%; left: 17.5%; width: 57%; left: 21.5%; height: 32px; top: 154px; }
 #king #factoid07 p { margin: 170px 20px 0 10px; }
@@ -245,6 +248,7 @@ width: 600px; top:309px; left: 300px; -webkit-transform: rotate(90deg);
 #prince #factoid09 { width: 32px; height: 223px; top: 434px; right: 0px; }
 #prince #factoid09 p { width: 510px; }
 #prince .hideshow-text { width: 728px; left: 0px; top: 449px; }
+#prince #spin { position: absolute; right: 40px; bottom: -400px; }
 
 #moral h2 { width: 480px; top: 154px; left: -48px; -webkit-transform: rotate(90deg); }
 #moral .icon { position: absolute; left: 31%; top: 689px; left: 219px; -webkit-transform: rotate(0deg); }

@@ -104,7 +104,10 @@
   	transform-origin:0 0;
     -webkit-transform:rotate(-90deg);
   	transform:rotate(-90deg);
-  	}  	
+  	} 
+  .cutout {    
+    -webkit-filter: blur(5px);
+    filter: blur(5px)} 	
   .icon {
     position: absolute;
     top:342px;
@@ -113,7 +116,7 @@
   #factoid03 {
     width: 436px;
     height: 32px;
-    top: 170px;
+    top: 154px;
     right: 0px;
     }   
   .hideshow-text {
@@ -237,10 +240,23 @@ width: 600px;
     left:178px;
     text-align: center;
   	}  	
-    h2.second { 
+  h2.second { 
     top:214px;   
     left:188px;
-  	}  	
+  	} 
+  .cutout {
+    -webkit-filter: saturate(0) brightness(90) contrast(.1);
+    filter: saturate(0) brightness(90) contrast(.1); 
+    } 
+  #king-rectangle {
+    background-color: #fff;
+    width:174px;
+    height:29px;
+    position: absolute;
+    top: 717px;
+    left:298px;
+    z-index: 5000;
+    }	
   .icon {
     position: absolute;
     top:461px;
@@ -320,7 +336,12 @@ width: 600px;
     width: 728px;
     left: 0px;
     top: 449px;
-   }      
+   }   
+  #spin {
+    position: absolute;
+    right:40px;
+    bottom: -400px;
+    }   
   }
 
 #moral {

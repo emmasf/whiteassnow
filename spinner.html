@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+</head>
+<body>
+
+          <div id="spin" class="interactive_3d">
+            <img src="img/spin/model_1.jpg">
+          </div>
+        </div>
+
+  
+  	<script type="text/javascript" src="scripts/jquery-1.11.0.js"></script>
+  <script type="text/javascript" src="scripts/jquery.interactive_3d.js"></script>
+	<script>
+	  $(document).ready( function() {
+	    $("#spin").interactive_3d({
+	      frames: 80,
+        cursor: "move",
+        speed: 10,
+        entrance: true,
+        preloadImages: true,
+        touchSupport: true,
+        loading: "",
+        autoPlay: false, 
+	    });
+	  });		
+	</script>
+</body>
+</html>
