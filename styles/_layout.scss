@@ -49,8 +49,8 @@
   	transform-origin:0 0;
   	}  	
   .slider {
-    top: 400px;
-    left:64px;
+    top: 620px;
+    left:50px;
     }
   .cutout {
     -webkit-transform:rotate(0deg);
@@ -62,7 +62,7 @@
   .icon {
     position: absolute;
     top:560px;
-    right:56px;
+    right:50px;
     }        
   #instructions {
     width: 600px;
@@ -104,7 +104,11 @@
   	transform-origin:0 0;
     -webkit-transform:rotate(-90deg);
   	transform:rotate(-90deg);
-  	} 
+  	}   	
+  .slider {
+    top: 620px;
+    right:54px;
+    }
   .cutout {    
     -webkit-filter: blur(5px);
     filter: blur(5px)} 	
@@ -244,6 +248,10 @@ width: 600px;
     top:214px;   
     left:188px;
   	} 
+  .slider {
+    top: 620px;
+    right:54px;
+    }
   .cutout {
     -webkit-filter: saturate(0) brightness(90) contrast(.1);
     filter: saturate(0) brightness(90) contrast(.1); 

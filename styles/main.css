@@ -124,9 +124,9 @@ h2 { font-size: 5em; }
 /** Page Slider ****************************/
 .slider { position: absolute; }
 
-.bar { width: 6px; height: 300px; background-color: #cccccc; -webkit-border-radius: 6px; border-radius: 8px; margin-left: 10px; position: absolute; /* box-shadow: inset 0px 0px 2px 2px  darken($light-gray, 10%); */ }
+.bar { width: 7px; height: 300px; background-color: rgba(0, 0, 0, 0.25); -webkit-border-radius: 6px; border-radius: 6px; margin-left: 4px; /* box-shadow: inset 0px 0px 2px 2px  darken($light-gray, 10%); */ }
 
-.handle { width: 25px; height: 24px; background-color: #4d4d4d; background-color: #e72900; background-color: #026fc3; background: #00aaff; -webkit-border-radius: 25px; border-radius: 25px; /* border: 4px solid #fff; */ box-shadow: 0px 0px 7px white; }
+.handle { width: 16px; height: 16px; background-color: #4d4d4d; background-color: #e72900; background-color: #026fc3; background: #00aaff; background-color: #000; -webkit-border-radius: 25px; border-radius: 25px; /* border: 4px solid #fff; */ box-shadow: 0px 0px 7px white; }
 
 /** Factoid Slider ****************************/
 .factoid { z-index: 100; position: absolute; /* background-color: $factoid-color; */ -webkit-animation: textcolormorph 3s infinite ease-in-out; animation: textcolormorph 3s infinite ease-in-out; animation-duration: 3s; animation-play-state: paused; -webkit-animation-play-state: paused; }
@@ -190,9 +190,9 @@ h2 { font-size: 5em; }
 #cover .button p a { font-family: "Helvetica Neue", Helvetica, Arial, serif; color: #fff; text-decoration: none; }
 
 #begin h2 { top: 120px; left: 60px; -webkit-transform-origin: 0 0; transform-origin: 0 0; }
-#begin .slider { top: 400px; left: 64px; }
+#begin .slider { top: 620px; left: 50px; }
 #begin .cutout { -webkit-transform: rotate(0deg); transform: rotate(0deg); -webkit-transform-origin: 0 0; transform-origin: 0 0; top: -70px; }
-#begin .icon { position: absolute; top: 560px; right: 56px; }
+#begin .icon { position: absolute; top: 560px; right: 50px; }
 #begin #instructions { width: 600px; left: 41px; top: 195px; opacity: 0; background-color: rgba(0, 0, 0, 0); }
 #begin #factoid02 { width: 670px; height: 32px; top: 164px; left: 0px; }
 #begin #factoid02 p { padding-top: 72px; margin-left: 36px; }
@@ -202,6 +202,7 @@ h2 { font-size: 5em; }
 .svg-draw { position: absolute; top: 720px; }
 */ }
 #snowwhite h2 { width: 600px; top: 686px; left: 55px; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: rotate(-90deg); transform: rotate(-90deg); }
+#snowwhite .slider { top: 620px; right: 54px; }
 #snowwhite .cutout { -webkit-filter: blur(5px); filter: blur(5px); }
 #snowwhite .icon { position: absolute; top: 342px; right: 14px; }
 #snowwhite #factoid03 { width: 436px; height: 32px; top: 154px; right: 0px; }
@@ -230,6 +231,7 @@ width: 600px; top:309px; left: 300px; -webkit-transform: rotate(90deg);
 
 #king h2 { width: 400px; top: 125px; left: 178px; text-align: center; }
 #king h2.second { top: 214px; left: 188px; }
+#king .slider { top: 620px; right: 54px; }
 #king .cutout { -webkit-filter: saturate(0) brightness(90) contrast(0.1); filter: saturate(0) brightness(90) contrast(0.1); }
 #king #king-rectangle { background-color: #fff; width: 174px; height: 29px; position: absolute; top: 717px; left: 298px; z-index: 5000; }
 #king .icon { position: absolute; top: 461px; left: 34.5%; }
