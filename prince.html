@@ -13,23 +13,25 @@
 	<div id="progress" data-0="width:0%;background:hsl(200, 100%, 50%);" data-900="width:100%;background:hsl(920, 100%, 50%);"></div>
 
 	<div id="prince" class="page"
-    data-0="top:0px"
-    data-500="top:0px">
-  
-  
-    
-  <h2 class="middle"
-    data-0="opacity:1"
-    data-500="opacity:1">
-    The Prince likes an easy target.</h2>
-    
-  <div id="spin" class="interactive_3d">
-    <img src="img/spin/model_1.jpg">
-  </div>
+    data-0="opacity:1;"
+    data-500="opacity:1;">
   
   <img class="cutout back" src="img/prince.png"      
       data-0="top:0px"
       data-500="top:0px">
+      
+      
+  <div id="spin" class="interactive_3d middle"
+    data-0="opacity:1;"
+    data-500="opacity:1;">
+    <img src="img/spin/model_1.jpg">
+  </div>
+  
+  <h2 class="front"
+    data-0="opacity:1"
+    data-500="opacity:1">
+    The Prince likes an easy target.</h2>
+  
     
   <div id="idea09" class="hideshow-text"
     data-0="opacity:1;"
@@ -160,7 +162,7 @@
     $("#spin").interactive_3d({
       frames: 80,
       cursor: "move",
-      speed: 10,
+      speed: 0,
       entrance: true,
       preloadImages: true,
       touchSupport: true,
