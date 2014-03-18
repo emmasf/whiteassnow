@@ -110,8 +110,10 @@
     right:54px;
     }
   .cutout {    
-    -webkit-filter: blur(5px);
-    filter: blur(5px)} 	
+    /*
+-webkit-filter: blur(5px);
+    filter: blur(5px) 	
+*/}
   .icon {
     position: absolute;
     top:342px;
