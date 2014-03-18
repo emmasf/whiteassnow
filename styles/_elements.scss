@@ -277,6 +277,11 @@ h2 {
   p:last-child {margin-bottom: 100px}
   }
   
+#story-queen, #story-hunstman, #story-dwarves, #story-king, #story-sin, #story-prince, #story-moral
+  { margin-top: 70px;}
+
+
+  
 .story-fader  {
   width: 620px;
   height: 80px;
@@ -303,8 +308,10 @@ h2 {
   padding: 0;
   -webkit-border-radius: 5px;
   border-radius: 5px;
-  width: 100%;
-  height: 100%;
+  width: 708px;;
+  height: 964px;
+  position: fixed;
+  top:30px;
   }
 
 .modal-bg {
@@ -315,13 +322,18 @@ h2 {
     padding: 60px 100px 0 0;
     top:35px;
     left: 60px;
-    height:955px;
+    height:895px;
     }
   .close { right: 45px; top: 45px;} 
-  .story-fader  { left:40px;}
-  .story-fader.top { top:30px; }  
-  .story-fader.bottom { bottom:30px; }
   }
+  
+#coverup {
+ z-index: 6000;
+ background-color: #ccc;
+ width: 768px;
+ height: 1024px; 
+ }
+
 
 
 

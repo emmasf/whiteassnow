@@ -80,9 +80,13 @@
     <a class="nav-icon beginning" href="begin.html"><img src="img/nav_skip.svg"></a>
     <a class="nav-icon ending" href="end.html"><img class="flip-horiz" src="img/nav_skip.svg"></a>
     <div class="story-modal" id="modal-03">   
-      <a class="nav-icon center" href="javascript:delayModal('story.html')"><img src="img/nav_text.svg"></a> 
+      <a class="nav-icon center" href="story.html#story-queen"><img src="img/nav_text.svg"></a> 
       </div>
-    </div>         	
+    </div>     
+    
+  <div id="coverup"   
+    data-0="opacity:1"
+    data-end="opacity:1"></div>    	
 <!--------------------------------------------------------------->
 <!--------------------------------------------------------------->    	
 <!- Begin Javascript -------------------------------------------->
@@ -110,18 +114,21 @@ function delay (URL) {
 
 <!-- Page transition fader  -->
  <script type="text/javascript">
- function delayModal (URL) {
-  setTimeout( function() { window.location = URL }, 200 );
-  }
 
- $(document).ready(function() {
-     $("html").css("background-color", "#fff");
-     $(".page").css("display", "none"); 
-     $(".page").fadeIn(200); 
-     $("a.transition").click(function(event){
+ /*
+function delayModal (URL) {
+  setTimeout( function() { window.location = URL }, 600 );
+  }
+*/
+
+
+ $(document).ready(function() { 
+     $("#coverup").css("display","none");
+     $(".page").fadeIn(0); 
+     $("a.center").click(function(event){
          event.preventDefault();
-         linkLocation = this.href;
-         $(".page").fadeOut(200, redirectPage);      
+         linkLocation = this.href; 
+         $("#coverup").fadeIn(200, redirectPage);  
       });         
      function redirectPage() {
          window.location = linkLocation;
