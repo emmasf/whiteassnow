@@ -262,6 +262,7 @@ h2 {
   border-radius: 5px;
   }
   
+  
 .inset-story {
   width:574px;
   height:870px;
@@ -296,6 +297,31 @@ h2 {
     background: -webkit-linear-gradient(bottom, rgba($paper-color,1) 50%,rgba($paper-color,0) 100%);
     background: linear-gradient(to top, rgba($paper-color,1) 50%,rgba($paper-color,0) 100%);
     }
+    
+.modal-page {
+  background: $paper-color;
+  padding: 0;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  width: 100%;
+  height: 100%;
+  }
+
+.modal-bg {
+  background-color: $light-gray;
+  padding: 30px;
+  height:1024px;
+  .inset-story {
+    padding: 60px 100px 0 0;
+    top:35px;
+    left: 60px;
+    height:955px;
+    }
+  .close { right: 45px; top: 45px;} 
+  .story-fader  { left:40px;}
+  .story-fader.top { top:30px; }  
+  .story-fader.bottom { bottom:30px; }
+  }
 
 
 

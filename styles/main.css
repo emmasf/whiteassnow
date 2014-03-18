@@ -166,6 +166,15 @@ h2 { font-size: 5em; }
 
 .story-fader.bottom { bottom: 0; background: -webkit-gradient(linear, left bottom, left top, color-stop(50%, #f2f0e9), color-stop(100%, rgba(242, 240, 233, 0))); background: -webkit-linear-gradient(bottom, #f2f0e9 50%, rgba(242, 240, 233, 0) 100%); background: linear-gradient(to top, #f2f0e9 50%, rgba(242, 240, 233, 0) 100%); }
 
+.modal-page { background: #f2f0e9; padding: 0; -webkit-border-radius: 5px; border-radius: 5px; width: 100%; height: 100%; }
+
+.modal-bg { background-color: #cccccc; padding: 30px; height: 1024px; }
+.modal-bg .inset-story { padding: 60px 100px 0 0; top: 35px; left: 60px; height: 955px; }
+.modal-bg .close { right: 45px; top: 45px; }
+.modal-bg .story-fader { left: 40px; }
+.modal-bg .story-fader.top { top: 30px; }
+.modal-bg .story-fader.bottom { bottom: 30px; }
+
 /** Generic Modifiers ****************************/
 .back { z-index: 1 !important; }
 
