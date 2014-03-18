@@ -139,7 +139,7 @@
     <a class="nav-icon beginning" href="begin.html"><img src="img/nav_skip.svg"></a>
     <a class="nav-icon ending" href="end.html"><img class="flip-horiz" src="img/nav_skip.svg"></a>
     <div class="story-modal" id="modal-05">   
-      <a class="nav-icon center" href="javascript:delay('story.html#story-huntsman')"><img src="img/nav_text.svg"></a> 
+      <a class="nav-icon center" href="javascript:delayModal('story.html#story-huntsman')"><img src="img/nav_text.svg"></a> 
       </div>
     </div>
 
@@ -158,6 +158,7 @@
 <script src="scripts/jquery-ui-1.10.4.custom.js"></script>
 
 <!-- Page delay, maybeee --->
+<!--
 <script>
 function delay (URL) {
   setTimeout( function() { window.location = URL }, 500 );
@@ -172,6 +173,26 @@ function delay (URL) {
       });
   });
 </script>
+-->
+
+<!-- Page transition fader  -->
+<!--
+<script type="text/javascript">
+$(document).ready(function() {
+    $("html").css("background-color", "#fff");
+    $(".page").css("display", "none"); 
+    $(".page").fadeIn(1000); 
+    $("a.transition").click(function(event){
+        event.preventDefault();
+        linkLocation = this.href;
+        $(".page").fadeOut(1000, redirectPage);      
+    });         
+    function redirectPage() {
+        window.location = linkLocation;
+    }
+});
+</script>
+-->
 
 <!-- Page transition fader  -->
  <script type="text/javascript">
@@ -182,8 +203,9 @@ function delay (URL) {
 
  $(document).ready(function() { 
      $("#coverup").css("display","none");
-     $(".page").fadeIn(0); 
-     $("a.center").click(function(event){
+     $(".page").css("display", "none");  
+     $(".page").fadeIn(600); 
+      $("a.center").click(function(event){
          $("#coverup").fadeIn(500);  
       });         
  });
