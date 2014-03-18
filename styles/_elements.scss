@@ -274,11 +274,13 @@ h2 {
   -webkit-overflow-scrolling: touch;
   padding: 80px 100px 0 0;
   margin: 0;
-  p:last-child {margin-bottom: 100px}
+  p:last-child {margin-bottom: 8X0px}
   }
   
 #story-queen, #story-hunstman, #story-dwarves, #story-king, #story-sin, #story-prince, #story-moral
-  { margin-top: 70px;}
+  { margin-top: -70px;
+    padding-top: 70px;
+  }
 
 
   
