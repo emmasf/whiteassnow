@@ -271,7 +271,7 @@ width: 600px; top:309px; left: 300px; -webkit-transform: rotate(90deg);
 
 #end h2 { width: 50%; top: 45%; left: 25%; text-align: center; }
 #end .icon { position: absolute; top: 197px; left: 34%; }
-#end #factoid11 { width: 430px; height: 32px; top: 310px; left: 170px; }
+#end #factoid { width: 430px; height: 32px; top: 310px; left: 170px; }
 #end .hideshow-text { width: 390px; left: 10px; top: 360px; }
 
 /******** End Page Layout Stylesheet *********************************/
