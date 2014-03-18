@@ -135,7 +135,7 @@
   <div id="story-modal-02" class="modal"
     data-0="opacity:1"
     data-end="opacity:1">
-    <div class="inset-story">
+    <div class="inset-story scrollable">
       <p>One cold winter's morning, a young Queen was sewing by her window. As she looked out on the snow, she pricked her finger and shed three drops of blood. Taken by the sight, she wished for a child with lips red as blood, skin white as snow, and hair black as the ebony window frame. </p>
       <p>Soon the Queen had her wish, and little Snow White was born. But during her birth the Queen died, and soon a new Queen stood in her place.</p>
       <div class="line-break"></div>
@@ -176,6 +176,31 @@
 
 <!-- JQuery please god don't conflict --------------------->
 <script src="scripts/jquery-1.11.0-min.js"></script>
+
+<script>
+//uses document because document will be topmost level in bubbling
+$(document).on('touchmove', function (e) {
+    e.preventDefault();
+});
+//uses body because jquery on events are called off of the element they are
+//added to, so bubbling would not work if we used document instead.
+$('body').on('touchstart', '.scrollable', function (e) {
+    if (e.currentTarget.scrollTop === 0) {
+        e.currentTarget.scrollTop = 1;
+    } else if (e.currentTarget.scrollHeight === e.currentTarget.scrollTop + e.currentTarget.offsetHeight) {
+        e.currentTarget.scrollTop -= 1;
+    }
+});
+//prevents preventDefault from being called on document if it sees a scrollable div
+$('body').on('touchmove', '.scrollable', function (e) {
+    e.stopPropagation();
+});
+
+
+$(document).off('touchmove');
+$('body').off('touchstart', '.scrollable');
+$('body').off('touchmove', '.scrollable');
+</script>
 
 <!-- Page delay, maybeee --->
 <script>
