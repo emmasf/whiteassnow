@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+
+</head>
+<body>
+
+<div id="spin" class="interactive_3d"
+  data-0="top:0px"
+    data-300="top:0px">
+  <img src="img/spin/model_1.jpg">
+</div>
+  
+<script type="text/javascript" src="scripts/jquery-1.11.0.js"></script>
+<script type="text/javascript" src="scripts/jquery.interactive_3d.js"></script>
+<script>
+  $(document).ready( function() {
+    $("#spin").interactive_3d({
+      frames: 80,
+      cursor: "move",
+      speed: 10,
+      entrance: false,
+      preloadImages: true,
+      touchSupport: true,
+      loading: "",
+      autoPlay: false, 
+    });
+  });		
+</script>
+	
+	<!-- Skrollr ---------------------------->
+<script type="text/javascript" src="scripts/skrollr.min.js"></script>
+<script type="text/javascript">
+var s = skrollr.init({
+	edgeStrategy: 'set',
+	easing: {
+		WTF: Math.random,
+		inverted: function(p) {
+			return 1-p;
+		}
+	}
+});
+
+
+</script>
+</body>
+</html>
