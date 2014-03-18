@@ -88,9 +88,6 @@ h2 {
    border-radius: 30px;
    position: absolute !important;
    top:0px;
-   img {   
-   height:60px;
-   width: 60px;}
    a {
    transition-delay: 5s;
    -webkit-transition-delay: 5s; /* Safari */}
@@ -252,8 +249,8 @@ h2 {
 /** Story Modal ****************************/    
 
 .close { 
-  right: 10px; 
-  top: 10px;} 
+  right: 20px; 
+  top: 20px;} 
 
 .modal {
   display: none;
@@ -264,7 +261,6 @@ h2 {
   -webkit-border-radius: 5px;
   border-radius: 5px;
   }
-  
   
 .inset-story {
   width:574px;
@@ -277,15 +273,8 @@ h2 {
   -webkit-overflow-scrolling: touch;
   padding: 80px 100px 0 0;
   margin: 0;
-  p:last-child {margin-bottom: 8X0px}
+  p:last-child {margin-bottom: 100px}
   }
-  
-#story-queen, #story-hunstman, #story-dwarves, #story-king, #story-sin, #story-prince, #story-moral
-  { margin-top: -70px;
-    padding-top: 70px;
-  }
-
-
   
 .story-fader  {
   width: 620px;
@@ -307,38 +296,6 @@ h2 {
     background: -webkit-linear-gradient(bottom, rgba($paper-color,1) 50%,rgba($paper-color,0) 100%);
     background: linear-gradient(to top, rgba($paper-color,1) 50%,rgba($paper-color,0) 100%);
     }
-    
-.modal-page {
-  background: $paper-color;
-  padding: 0;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  width: 708px;;
-  height: 964px;
-  position: fixed;
-  top:30px;
-  }
-
-.modal-bg {
-  background-color: $light-gray;
-  padding: 30px;
-  height:1024px;
-  .inset-story {
-    padding: 60px 100px 0 0;
-    top:35px;
-    left: 60px;
-    height:895px;
-    }
-  .close { right: 45px; top: 45px;} 
-  }
-  
-#coverup {
- z-index: 6000;
- background-color: #ccc;
- width: 768px;
- height: 1024px; 
- }
-
 
 
 
