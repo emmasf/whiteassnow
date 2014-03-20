@@ -64,6 +64,30 @@
     } 
   }
   
+#story {
+  .icons {
+    height: 0px;
+    width: 600px;
+    -webkit-transform:scale(0.8);
+    margin-top: 130px;
+    }
+   .svg-draw {
+      -webkit-transform:scale(0.25);
+     float: left;
+     margin: -90px 0 -90px -180px; 
+     opacity: 0.33; 
+     }
+  .svg-draw.heart {
+    -webkit-transform:scale(0.2);
+      stroke-width: 2;
+      }
+  .svg-draw.coffin {
+    -webkit-transform:scale(0.175) rotate(-95deg);
+      stroke-width: 12;
+      }
+   p {clear:both;}
+  }
+  
 #begin {
   h2 {    
     top:120px;

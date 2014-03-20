@@ -119,6 +119,83 @@ h2 {
   
 .inactive {opacity: 0.25}
 
+  
+
+/** Story Modal ****************************/    
+  
+.inset-story {
+  width:560px;
+  height:895px;
+  position: fixed;
+  top:35px;
+  left: 75px;
+  margin: 0;
+  padding: 60px 100px 0 0;
+  overflow: auto;
+  overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
+  p:last-child {margin-bottom: 80px}
+  }
+  
+   
+.story-title {  font-size: 70px;
+  margin: 45px 0 20px 0;
+  }
+.story-byline {
+  font-style: italic;
+  color: darken($light-gray, 25);
+  }
+  
+#story-queen, #story-hunstman, #story-dwarves, #story-king, #story-sin, #story-prince, #story-moral
+  { margin-top: -70px;
+    padding-top: 70px;
+  }
+  
+.story-fader  {
+  width: 620px;
+  height: 80px;
+  position: absolute;
+  left:20px;
+  }
+  
+.story-fader.top {
+    top:0;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,rgba($paper-color,1)), color-stop(100%,rgba($paper-color,0)));
+    background: -webkit-linear-gradient(top, rgba($paper-color,1) 50%,rgba($paper-color,0) 100%);
+    background: linear-gradient(to bottom, rgba($paper-color,1) 50%,rgba($paper-color,0) 100%);
+    }
+  
+.story-fader.bottom {
+    bottom:0;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(50%,rgba($paper-color,1)), color-stop(100%,rgba($paper-color,0)));
+    background: -webkit-linear-gradient(bottom, rgba($paper-color,1) 50%,rgba($paper-color,0) 100%);
+    background: linear-gradient(to top, rgba($paper-color,1) 50%,rgba($paper-color,0) 100%);
+    }
+    
+.modal-page {
+  background: $paper-color;
+  padding: 0;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  width: 708px;;
+  height: 964px;
+  position: fixed;
+  top:30px;
+  }
+
+.modal-bg {
+  background-color: $light-gray;
+  padding: 30px;
+  height:1024px;
+  .close { right: 20px; top: 20px;} 
+  }
+  
+#coverup {
+ z-index: 6000;
+ background-color: #ccc;
+ width: 768px;
+ height: 1024px; 
+ }
 
 
 /** Cutout Images ****************************/   	
@@ -248,100 +325,6 @@ h2 {
   background-color: $history-bg-color;  
   padding: 24px;
   }
-  
-  
-
-/** Story Modal ****************************/    
-
-.close { 
-  right: 0px; 
-  top: 0px;} 
-
-.modal {
-  display: none;
-  width: 708px;
-  height: 956px;
-  background: $paper-color;
-  padding: 0;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  }
-  
-  
-.inset-story {
-  width:574px;
-  height:870px;
-  position: fixed;
-  top:40px;
-  left: 60px;
-  overflow: auto;
-  overflow-scrolling: touch;
-  -webkit-overflow-scrolling: touch;
-  padding: 80px 100px 0 0;
-  margin: 0;
-  p:last-child {margin-bottom: 8X0px}
-  }
-  
-#story-queen, #story-hunstman, #story-dwarves, #story-king, #story-sin, #story-prince, #story-moral
-  { margin-top: -70px;
-    padding-top: 70px;
-  }
-
-
-  
-.story-fader  {
-  width: 620px;
-  height: 80px;
-  position: absolute;
-  left:20px;
-  }
-  
-.story-fader.top {
-    top:0;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,rgba($paper-color,1)), color-stop(100%,rgba($paper-color,0)));
-    background: -webkit-linear-gradient(top, rgba($paper-color,1) 50%,rgba($paper-color,0) 100%);
-    background: linear-gradient(to bottom, rgba($paper-color,1) 50%,rgba($paper-color,0) 100%);
-    }
-  
-.story-fader.bottom {
-    bottom:0;
-    background: -webkit-gradient(linear, left bottom, left top, color-stop(50%,rgba($paper-color,1)), color-stop(100%,rgba($paper-color,0)));
-    background: -webkit-linear-gradient(bottom, rgba($paper-color,1) 50%,rgba($paper-color,0) 100%);
-    background: linear-gradient(to top, rgba($paper-color,1) 50%,rgba($paper-color,0) 100%);
-    }
-    
-.modal-page {
-  background: $paper-color;
-  padding: 0;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  width: 708px;;
-  height: 964px;
-  position: fixed;
-  top:30px;
-  }
-
-.modal-bg {
-  background-color: $light-gray;
-  padding: 30px;
-  height:1024px;
-  .inset-story {
-    padding: 60px 100px 0 0;
-    top:35px;
-    left: 60px;
-    height:895px;
-    }
-  .close { right: 45px; top: 45px;} 
-  }
-  
-#coverup {
- z-index: 6000;
- background-color: #ccc;
- width: 768px;
- height: 1024px; 
- }
-
-
 
 
 /** Generic Modifiers ****************************/  
