@@ -227,7 +227,7 @@ h2 { font-size: 5em; color: black; line-height: 1.125em; letter-spacing: 0.009em
 #begin #instructions p { font-family: "Helvetica Neue", Helvetica, Arial, serif; font-weight: 700; font-size: 17px; letter-spacing: 0.025em; line-height: 1.25em; display: block; margin: 0; margin-bottom: 12px; }
 #begin #factoid02 { width: 670px; height: 32px; top: 164px; left: 0px; }
 #begin #factoid02 p { padding-top: 72px; margin-left: 36px; }
-#begin .history { width: 615px; left: 42px; top: 195px; /*     p:first-child {background-color: #fff} */ }
+#begin .history { width: 615px; left: 42px; top: 206px; /*     p:first-child {background-color: #fff} */ }
 
 #snowwhite {   /*
 .svg-draw { position: absolute; top: 720px; }
