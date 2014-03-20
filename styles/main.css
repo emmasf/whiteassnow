@@ -92,9 +92,9 @@ body { background-attachment: fixed; }
 
 p { font-family: "Arnhem", Georgia, serif; color: black; font-size: 24px; font-weight: 400; line-height: 1.3em; letter-spacing: 0.0125em; padding: 0; margin: 0; margin-bottom: 12px; }
 
-h1, h2 { font-family: "Helvetica Neue", Helvetica, Arial, serif; color: white; font-weight: 400; letter-spacing: 0.009em; line-height: 1.05em; padding: 0; margin: 0; font-size: 6.5em; position: absolute; pointer-events: none; }
+h1, h2 { font-family: "Helvetica Neue", Helvetica, Arial, serif; color: white; font-weight: 400; letter-spacing: 0; line-height: 1.05em; padding: 0; margin: 0; font-size: 6.5em; position: absolute; pointer-events: none; }
 
-h2 { font-size: 5em; color: black; line-height: 1.125em; }
+h2 { font-size: 5em; color: black; line-height: 1.125em; letter-spacing: 0.009em; }
 
 .page { width: 768px; height: 1024px; top: 0px; border-bottom: 4px solid #cccccc; overflow: hidden; -webkit-transition: all cubic-bezier(0.68, -0.55, 0.265, 1.55); transition: all cubic-bezier(0.68, -0.55, 0.265, 1.55); }
 
@@ -206,7 +206,7 @@ h2 { font-size: 5em; color: black; line-height: 1.125em; }
   to { -webkit-transform: scale3d(2, 2, 1) rotateZ(360deg); } }
 
 #cover h1 { position: absolute; left: 60px; top: 583px; -webkit-transform-origin: 0 0; -moz-transform-origin: 0 0; -ms-transform-origin: 0 0; -o-transform-origin: 0 0; transform-origin: 0 0; }
-#cover p { color: white; letter-spacing: 0.025em; font-size: 28px; font-weight: 200; position: absolute; left: 60px; top: 825px; }
+#cover p { color: white; font-size: 29px; font-weight: 200; position: absolute; left: 60px; top: 825px; }
 
 #begin h2 { top: 120px; left: 60px; -webkit-transform-origin: 0 0; transform-origin: 0 0; }
 #begin .slider { top: 620px; left: 50px; }
