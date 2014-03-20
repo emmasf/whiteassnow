@@ -57,7 +57,7 @@
   p {
     color:rgba(255,255,255,1);
     font-size: 29px;
-    font-weight: 200;
+    font-weight: 700;
     position: absolute;
     left: 60px;
     top: 825px;
@@ -112,11 +112,21 @@
     right:50px;
     }        
   #instructions {
-    width: 600px;
+    width: 580px;
     left: 41px;
-    top:195px;
+    top:213px;
     opacity: 0;
     background-color: rgba(0,0,0,0);
+      p { 
+    font-family: $sans-type;
+    font-weight: 700;
+    font-size: 17px;
+    letter-spacing: 0.025em;
+    line-height: 1.25em;
+    display: block;
+    margin: 0;
+    margin-bottom: 12px;
+    }
     }     
   #factoid02 {
     width: 670px;

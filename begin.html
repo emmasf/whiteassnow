@@ -47,9 +47,9 @@
   <div id="instructions" class="history hideshow"
     data-0="opacity:1;"
     data-300="opacity:0;">
-        <p>Tap on colored bars to dig into the characters.</p>
-        <p>Tap on icons to follow the tale through time and place.</p>        
-        <p>Mimic the red gestures to play and explore.</p>
+        <p>Tap on colored bars to reveal the characters' inner workings.</p>
+        <p>Tap on icons to learn about Snow White's history and global manifestations.</p>
+        <p>Tap on the buttons at the bottom to read the full story or move between pages.</p>        
     </div>
   <div id="instructions" class="history hideshow" style="display: none"
     data-0="opacity:1;"
@@ -57,7 +57,7 @@
         <p></p>
     </div>
     
-    <div id="idea02" class="hideshow-text"
+    <div id="idea" class="hideshow-text"
     data-0="opacity:1;"
     data-end="opacity:1;">
         <div class="hideshow"></div>
@@ -72,7 +72,7 @@
   <div id="hide-show" class="icon"
     data-0="opacity:1;"
     data-end="opacity:1;">
-    <div id="icon-button-02" class="svg-draw">
+    <div id="icon-button" class="svg-draw">
     	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="hideshow">	    
         <polyline points="194.021,80.694 211.479,77.796 
           221.479,167.297 121.146,167.297 	"/>		
@@ -167,9 +167,14 @@ function delay (URL) {
 
 <!-- Hide / Show via button -->
 <script>
-  $( "#icon-button-02" ).click(function() {
-    $( "#begin .hideshow" ).toggle();
+  $( "#icon-button" ).click(function() {
+    $( ".hideshow" ).toggle();
   });
+  
+  $( "#idea .hideshow.history" ).click(function() {
+    $( ".hideshow" ).toggle();
+  });
+  
 </script>
 
 <!-- Factoid Toggle Bar -->
@@ -177,7 +182,7 @@ function delay (URL) {
   $(document).ready(function(){
     $("#factoid02").click(function(){
       if($(this).hasClass('hide')) {
-        $(this).animate({height:205},200).removeClass('hide');
+        $(this).animate({height:305},200).removeClass('hide');
       } else { 
         $(this).animate({height:32},200).addClass('hide');
       }
@@ -200,12 +205,10 @@ var s = skrollr.init({
 </script>
 
 
-<!-- Livereload REMOVE BEFORE LAUNCH ---------------------------->	
-<!--
+<!-- Livereload REMOVE BEFORE LAUNCH ---------------------------->
 <script>
   document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
 </script>
--->
 
 </body>
 </html>
