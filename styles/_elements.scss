@@ -17,7 +17,7 @@ article, aside, details, figcaption, figure,footer, header, hgroup, menu, nav, s
   }
 
 html, body {
-  background-color: #000;
+  background-color: #fff;
   text-align: left;
   width:768px;
   line-height: 1.2em;
@@ -26,7 +26,6 @@ html, body {
   }
 
 body {
-	background:#fff;
 	background-attachment:fixed;
   }
   
@@ -40,25 +39,27 @@ p {
   padding: 0;
   margin: 0;
   margin-bottom: 12px;
-
   } 
+  
   
   
 h1, h2 {
   font-family: $sans-type;
-  color:$text-color;
+  color:rgba(255,255,255,1);
   font-weight: 400;
   letter-spacing: 0.009em;
-  line-height: 1.125em;
+  line-height: 1.05em;
   padding: 0;
   margin: 0;
-  font-size:6em;
+  font-size:6.5em;
   position: absolute;
   pointer-events: none;
   }
 
 h2 {
 	font-size:5em;
+  color:$text-color;
+  line-height: 1.125em;
   }	
 
 .page {

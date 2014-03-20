@@ -9,8 +9,9 @@ $paper-color: rgb(247,246,242);
 $paper-color: rgb(242,240,233);
 
 $red: rgb(231,41,0);
-$blue: rgb(36,148,209);
+$light-blue: rgb(49,155,253);
 $blue: rgb(2,111,195);
+$purple: rgb(102,15,255);
 $light-gray: #ccc;
 
 $button-color: rgba($red,1);
@@ -33,7 +34,7 @@ $text-color: rgba(0,0,0,1);
 {
 0%    {background-color: rgba($blue,0.8);}
 20%   {background-color: rgba($blue,0.8);}
-50%   {background-color: rgba(102,15,255,0.8);}
+50%   {background-color: rgba($purple,0.8);}
 80%   {background-color: rgba($blue,0.8)}
 100%  {background-color: rgba($blue,0.8);}
 }
