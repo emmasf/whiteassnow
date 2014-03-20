@@ -154,7 +154,7 @@ h2 { font-size: 5em; color: black; line-height: 1.125em; letter-spacing: 0.009em
 .history { position: absolute; background-color: rgba(255, 255, 255, 0.75); padding: 24px; }
 
 /** Story Modal ****************************/
-.close { right: 10px; top: 10px; }
+.close { right: 0px; top: 0px; }
 
 .modal { display: none; width: 708px; height: 956px; background: #f2f0e9; padding: 0; -webkit-border-radius: 5px; border-radius: 5px; }
 
