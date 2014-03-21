@@ -22,11 +22,12 @@
       Snow White is an empty shell.</h2>
   
     <img class="cutout back" src="img/snowwhite.png"      
-      data-0="top:200px;"
-      data-300="top:-40px;">
+      data-0="top:-40px;"
+      data-1024="top:200px;">
       
     <div class="slider">
-      <div class="bar"      data-0="opacity:1"
+      <div class="bar"      
+      data-0="opacity:1"
       data-end="opacity:1"></div>
       <div class="handle"      
         data-0="top:275px;"
@@ -96,29 +97,11 @@
 <!--------------------------------------------------------------->
 <!--------------------------------------------------------------->
 
-<!--
-<script>
-function pageScroll() {
-    	window.scrollBy(0,1); // horizontal and vertical scroll increments
-    	scrolldelay = setTimeout('pageScroll()',100); // scrolls every 100 milliseconds
-}
-</script>
--->
 
 <!-- JQuery please god don't conflict --------------------->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 
-
-<!--
-<script>
-$(document).ready(function(){
-    $(window.opera ? 'html' : 'html, body').animate({
-        scrollTop: 0
-    }, 1000); // scroll takes 1 second
-});
-</script>
--->
 
 <!-- Page slider --->
 <script>
@@ -150,27 +133,13 @@ function delay (URL) {
       });         
  });
  
- /*
-(document).ready(function() { 
-     $("#coverup").css("display","none");
-     $(".page").fadeIn(0); 
-     $("a.center").click(function(event){
-         event.preventDefault();
-         linkLocation = this.href; 
-         $("#coverup").fadeIn(500, redirectPage);  
-      });         
-     function redirectPage() {
-         window.location = linkLocation;
-     }
- });
-*/
  </script>
 
 <!-- Icon Fact Toggle -->
 <script>
   $( "#icon-button-03" ).click(function() {
     $( "#snowwhite .hideshow" ).toggle();
-    skrollr.animateTo(top,1200);
+    /* skrollr.animateTo(top,1200); */
   });
 </script>
    
@@ -201,6 +170,9 @@ var s = skrollr.init({
 		}
 	}
 });
+
+skrollr.init().animateTo(1024, 1000, sqrt);
+
 </script>
 
 <!-- Animate Skrollr? -->
