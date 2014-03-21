@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<title>White as Snow</title>
+	<link href="styles/main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body onLoad="pageScroll()">
+
+	<div id="progress" data-0="width:0%;background:hsl(200, 100%, 50%);" data-900="width:100%;background:hsl(920, 100%, 50%);"></div>
+
+	<div id="snowwhite" class="page"
+    data-0="opacity:1"
+    data-end="opacity:1">
+
+    <h2 class="middle"
+      data-0="opacity:1"
+      data-end="opacity:1">
+      Snow White is an empty shell.</h2>
+  
+    <img class="cutout back" src="img/snowwhite.png"      
+      data-0="top:200px;"
+      data-300="top:-40px;">
+      
+    <div class="slider">
+      <div class="bar"      data-0="opacity:1"
+      data-end="opacity:1"></div>
+      <div class="handle"      
+        data-0="top:275px;"
+        data-end="top:8px;">
+      </div>
+    </div>
+
+    <div id="idea03" class="hideshow-text"
+      data-0="opacity:1;"
+      data-end="opacity:1;">
+      <div class="hideshow"></div>
+      <div class="hideshow history" style="display: none">
+        <p>Snow White is not alone in this; characters in Fairy Tale are often painted in very general terms. They become containers for our imagination, frameworks to be adapted to the time and place of the telling. This is why these stories work across the globe, and why they can be broken down so easily into archetypes. Where the essence of these stories originated, we cannot know.</p>
+        </div>
+      </div>
+          
+    <div id="hide-show" class="icon"
+      data-0="opacity:1;"
+      data-end="opacity:1;">
+      <div id="icon-button-03" class="svg-draw">
+        	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="hideshow"> 	  	    
+            <rect x="79.138" y="52.64" fill="none" width="85.146" height="118.323"/>
+            <line x1="121.711" y1="53.417" x2="121.711" y2="170.188"/>
+            <line x1="80.32" y1="111.801" x2="163.005" y2="111.801"/>
+            <polyline points="79.138,170.963 64.663,186.759 
+            178.5,186.759 164.284,170.963 "/>
+        		</svg>
+          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="red hideshow" style="display: none"> 	  		    
+            <rect x="79.138" y="52.64" fill="none" width="85.146" height="118.323"/>
+            <line x1="121.711" y1="53.417" x2="121.711" y2="170.188"/>
+            <line x1="80.32" y1="111.801" x2="163.005" y2="111.801"/>
+            <polyline points="79.138,170.963 64.663,186.759 
+            178.5,186.759 164.284,170.963 "/>
+        		</svg>	
+        </div>
+      </div>     
+      
+  <div id="factoid03" class="factoid hide"    
+    data-0="opacity:1;"
+    data-end="opacity:1;">
+    <p>She has no characteristics beyond her physicality: her coloration, her beauty, her youth. She has no personality. She makes no choices.</p>
+    </div>
+    
+          
+    <!-- <a href="#" id="auto-skroll">skrollllr</a> -->
+    
+    </div><!-- /Page: Snow White -->
+    
+  <div class="page-nav"
+    data-0="opacity:1"
+    data-end="opacity:1">
+    <a class="nav-icon previous" href="javascript:delay('begin.html')"><img src="img/nav_next.svg"></a>
+    <a class="nav-icon next" href="javascript:delay('queen.html')"><img class="flip-horiz" src="img/nav_next.svg"></a>
+    <a class="nav-icon beginning" href="begin.html"><img src="img/nav_skip.svg"></a>
+    <a class="nav-icon ending" href="end.html"><img class="flip-horiz" src="img/nav_skip.svg"></a>
+    <div class="story-modal" id="modal-03">   
+      <a class="nav-icon center" href="javascript:delayModal('story.html')"><img src="img/nav_text.svg"></a> 
+      </div>
+    </div>     
+    
+  <div id="coverup"   
+    data-0="opacity:1"
+    data-end="opacity:1"></div>    	
+<!--------------------------------------------------------------->
+<!--------------------------------------------------------------->    	
+<!- Begin Javascript -------------------------------------------->
+<!--------------------------------------------------------------->
+<!--------------------------------------------------------------->
+
+<!--
+<script>
+function pageScroll() {
+    	window.scrollBy(0,1); // horizontal and vertical scroll increments
+    	scrolldelay = setTimeout('pageScroll()',100); // scrolls every 100 milliseconds
+}
+</script>
+-->
+
+<!-- JQuery please god don't conflict --------------------->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+
+
+<!--
+<script>
+$(document).ready(function(){
+    $(window.opera ? 'html' : 'html, body').animate({
+        scrollTop: 0
+    }, 1000); // scroll takes 1 second
+});
+</script>
+-->
+
+<!-- Page slider --->
+<script>
+function delay (URL) {
+  setTimeout( function() { window.location = URL }, 500 );
+  }
+  $(document).ready(function(){
+    $(".next").click(function(){
+      $(".page").animate({right:768}, 500);    
+      });
+    $(".previous").click(function(){
+      $(".page").animate({left:768}, 500);    
+      });
+  });
+</script>
+
+<!-- Page transition fader  -->
+ <script type="text/javascript">
+
+ function delayModal (URL) {
+  setTimeout( function() { window.location = URL }, 500 );
+  }
+
+ $(document).ready(function() { 
+     $("#coverup").css("display","none");
+     $(".page").fadeIn(0); 
+     $("a.center").click(function(event){
+         $("#coverup").fadeIn(500);  
+      });         
+ });
+ 
+ /*
+(document).ready(function() { 
+     $("#coverup").css("display","none");
+     $(".page").fadeIn(0); 
+     $("a.center").click(function(event){
+         event.preventDefault();
+         linkLocation = this.href; 
+         $("#coverup").fadeIn(500, redirectPage);  
+      });         
+     function redirectPage() {
+         window.location = linkLocation;
+     }
+ });
+*/
+ </script>
+
+<!-- Icon Fact Toggle -->
+<script>
+  $( "#icon-button-03" ).click(function() {
+    $( "#snowwhite .hideshow" ).toggle();
+    skrollr.animateTo(top,1200);
+  });
+</script>
+   
+<!-- Factoid Toggle Bar -->
+<script>
+  $(document).ready(function(){
+    $("#factoid03").click(function(){
+      if($(this).hasClass('hide')) {
+        $(this).animate({height:270},200).removeClass('hide');
+      } else { 
+        $(this).animate({height:32},200).addClass('hide');
+      }
+    });
+  });
+</script>
+
+
+   
+<!-- Skrollr ---------------------------->
+<script type="text/javascript" src="scripts/skrollr.min.js"></script>
+<script type="text/javascript">
+var s = skrollr.init({
+	edgeStrategy: 'set',
+	easing: {
+		WTF: Math.random,
+		inverted: function(p) {
+			return 1-p;
+		}
+	}
+});
+</script>
+
+<!-- Animate Skrollr? -->
+<!--
+<script>
+  $( "#auto-skroll" ).click(function() {
+    skrollr.animateTo(top,1200);
+  });
+</script>
+-->
+
+
+
+<!-- Livereload REMOVE BEFORE LAUNCH ---------------------------->	
+<!--
+<script>
+  document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+</script>
+-->
+
+</body>
+</html>
