@@ -12,6 +12,9 @@
 /******** Begin Variables **********************************************************/
 /***********************************************************************************/
 /******** End Variables **********************************************/
+/***********************************************************************************/
+/******** Begin CSS Animation Stylesheet *******************************************/
+/***********************************************************************************/
 /** Cover Page ****************************/
 /** BG Rotate ********/
 @keyframes spin { from { transform: scale3d(2, 2, 1) rotateZ(0deg); }
@@ -21,7 +24,7 @@
   to { -webkit-transform: scale3d(2, 2, 1) rotateZ(360deg); } }
 
 /** Begin Page ****************************/
-/** Title Grow ***********/
+/** Title ***********/
 /*
 @-webkit-keyframes scale_title {
 0% {font-size:92px; top:162px;}
@@ -38,7 +41,7 @@
 @-webkit-keyframes unscale_title { 0% { -webkit-transform: scale(1, 1); }
   100% { -webkit-transform: scale(1.2, 1.2); } }
 
-/** Hand In ***********/
+/** Cutout ***********/
 @-webkit-keyframes rotate_in_right { 0% { -webkit-transform: rotate(-60deg); }
   100% { -webkit-transform: rotate(0deg); } }
 
@@ -49,6 +52,59 @@
 @-webkit-keyframes fade_out { 0% { opacity: 1; }
   100% { opacity: 0; } }
 
+/** SW Page ****************************/
+/** Title ***********/
+@-webkit-keyframes unfade_title { 0% { opacity: 1; }
+  100% { opacity: 0.25; } }
+
+@-webkit-keyframes fade_title { 0% { opacity: 0.25; }
+  100% { opacity: 1; } }
+
+/** Cutout ***********/
+@-webkit-keyframes unslide_in { 0% { margin-top: 200px; }
+  100% { margin-top: -40px; } }
+
+@-webkit-keyframes slide_in { 0% { margin-top: -40px; }
+  100% { margin-top: 200px; } }
+
+/** Queen Page ****************************/
+/** Title ***********/
+@-webkit-keyframes skew_title { 0% { -webkit-transform: skewX(1deg); }
+  100% { -webkit-transform: skewX(0deg); } }
+
+@-webkit-keyframes unskew_title { 0% { -webkit-transform: skewX(0deg); }
+  100% { -webkit-transform: skewX(1deg); } }
+
+/** Cutout ***********/
+/*
+@-webkit-keyframes reflect {
+0% { -webkit-transform:rotateY(180deg)}
+100% { -webkit-transform:rotateY(0deg)}  }
+*/
+/*
+@-webkit-keyframes skew_cutout {
+0% { -webkit-transform:skewX(4deg);}
+100% { -webkit-transform:skewX(0deg);} }
+@-webkit-keyframes unskew_cutout {
+0% { -webkit-transform:skewX(0deg);}
+100% { -webkit-transform:skewX(4deg);} }
+*/
+@-webkit-keyframes fatten { 0% { -webkit-transform: scale(1.05, 1); }
+  100% { -webkit-transform: scale(1, 1); } }
+
+@-webkit-keyframes unfatten { 0% { -webkit-transform: scale(1, 1); }
+  100% { -webkit-transform: scale(1.05, 1); } }
+
+/** Huntsman Page ****************************/
+/** Title ***********/
+/** Cutout ***********/
+@-webkit-keyframes slide_up { 0% { margin-top: 450px; }
+  100% { margin-top: 0px; } }
+
+@-webkit-keyframes unslide_up { 0% { margin-top: 0px; }
+  100% { margin-top: 450px; } }
+
+/** General ****************************/
 /** Factoid Bar Glow ****************************/
 @-webkit-keyframes textcolormorph { 0% { background-color: rgba(2, 111, 195, 0.8); }
   20% { background-color: rgba(2, 111, 195, 0.8); }
@@ -79,6 +135,7 @@
 100%   {background-color: rgba($blue,0.8);}
 }
 */
+/******** End CSS Animation Stylesheet *******************************/
 /***********************************************************************************/
 /******** Begin Fixed Positition Stylesheet ****************************************/
 /***********************************************************************************/
@@ -116,6 +173,9 @@ h2 { font-size: 5em; color: black; line-height: 1.125em; letter-spacing: 0.009em
 .page { width: 768px; height: 1020px; top: 0px; border-bottom: 4px solid #cccccc; overflow: hidden; /*
 	-webkit-transition: all cubic-bezier(0.68, -0.55, 0.265, 1.55); transition:         all cubic-bezier(0.68, -0.55, 0.265, 1.55); 
 */ }
+
+/** Cutout Images ****************************/
+.cutout { width: 100%; }
 
 /** Bottom Nav ****************************/
 .page-nav { bottom: 20px; position: fixed; height: 60px; width: 100%; opacity: 1; }
@@ -160,10 +220,6 @@ h2 { font-size: 5em; color: black; line-height: 1.125em; letter-spacing: 0.009em
 .modal-bg .close { right: 20px; top: 20px; }
 
 #coverup { z-index: 6000; background-color: #ccc; width: 768px; height: 1024px; }
-
-/** Cutout Images ****************************/
-.cutout { width: 100%; /* top:0px; position: relative;
-*/ margin-top: -80px; padding-top: 0px; }
 
 /** Page Slider ****************************/
 .slider { position: absolute; pointer-events: none; }
@@ -244,24 +300,39 @@ h2 { font-size: 5em; color: black; line-height: 1.125em; letter-spacing: 0.009em
 .svg-draw { position: absolute; top: 720px; }
 */ }
 #snowwhite h2 { width: 600px; top: 686px; left: 55px; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: rotate(-90deg); transform: rotate(-90deg); }
-#snowwhite .slider { top: 620px; right: 54px; }
+#snowwhite h2.animate { -webkit-animation: fade_title 1s ease 1s both; }
+#snowwhite h2.unanimate { -webkit-animation: unfade_title 1s ease 0s both; }
+#snowwhite h2.reanimate { -webkit-animation: fade_title 1s ease 0s both; }
 #snowwhite .cutout {     /*
 -webkit-filter: blur(5px); filter: blur(5px) 	
 */ }
+#snowwhite .cutout.animate { -webkit-animation: slide_in 1s ease 1s both; }
+#snowwhite .cutout.unanimate { -webkit-animation: unslide_in 1s ease 0s both; }
+#snowwhite .cutout.reanimate { -webkit-animation: slide_in 1s ease 0s both; }
 #snowwhite .icon { position: absolute; top: 342px; right: 14px; }
-#snowwhite #factoid03 { width: 436px; height: 32px; top: 154px; right: 0px; }
+#snowwhite #factoid03 { width: 408px; height: 32px; top: 154px; right: 0px; }
 #snowwhite .hideshow-text { width: 530px; left: 20px; top: 562px; }
 
 #queen { /* #drag2 { position: absolute; top:780px; left:70px; width:580px; img { -webkit-transform: rotate(-15deg); display: block; }
 */ }
 #queen h2 { width: 500px; top: 82px; left: 256px; left: 350px; top: 84px; left: 226px; }
+#queen h2.animate { -webkit-animation: fatten 1s ease 1s both; }
+#queen h2.unanimate { -webkit-animation: unfatten 1s ease 0s both; }
+#queen h2.reanimate { -webkit-animation: fatten 1s ease 0s both; }
 #queen .icon { position: absolute; top: 770px; left: 90px; top: 670px; left: 475px; width: 580px; }
 #queen .icon svg { -webkit-transform: rotate(-36deg); display: block; }
 #queen #factoid04 { width: 32px; height: 260px; top: 488px; left: 0px; }
 #queen #factoid04 p { width: 320px; }
 #queen .hideshow-text { width: 680px; left: 59px; top: 400px; }
+#queen .cutout { margin-top: 0px; }
+#queen .cutout.animate { -webkit-animation: fatten 1s ease 1s both; }
+#queen .cutout.unanimate { -webkit-animation: unfatten 1s ease 0s both; }
+#queen .cutout.reanimate { -webkit-animation: fatten 1s ease 0s both; }
 
 #huntsman h2 { width: 650px; top: 103px; left: 60px; }
+#huntsman .cutout.animate { -webkit-animation: slide_up 1s ease 1s both; }
+#huntsman .cutout.unanimate { -webkit-animation: unslide_up 1s ease 0s both; }
+#huntsman .cutout.reanimate { -webkit-animation: slide_up 1s ease 0s both; }
 #huntsman .icon { position: absolute; top: 644px; left: 267px; }
 #huntsman #factoid05 { width: 386px; height: 32px; top: 312px; left: 0px; }
 #huntsman .hideshow-text { width: 500px; left: 12px; left: 90px; top: 404px; }

@@ -10,33 +10,21 @@
 
 <body>
 
-	<div id="progress" data-0="width:0%;background:hsl(200, 100%, 50%);" data-900="width:100%;background:hsl(920, 100%, 50%);"></div>
+	<div id="huntsman" class="page">
 
-	<div id="huntsman" class="page"
-    data-0="opacity:1"
-    data-end="opacity:1">
-
-  <h2 class="middle"
-    data-0="opacity:1"
-    data-end="opacity:1">
+  <h2 class="middle animate">
     The Huntsman is a total failure.</h2>
 
-  <img class="cutout back" src="img/huntsman.png"      
-    data-0="opacity:1"
-    data-end="opacity:1">  
+  <img class="cutout back animate" src="img/huntsman.png">  
     
-  <div id="idea05" class="hideshow-text"
-    data-0="opacity:1;"
-    data-end="opacity:1;">
+  <div id="idea05" class="hideshow-text">
         <div class="hideshow"></div>
         <div class="hideshow history" style="display: none">
           <p>The Disney film glosses over the gorier bits of Snow White's exodus, even compared to the Grimms’ softer second edition. In the Grimms’ version and most appearances around the world, the servant figure returns with some type of organ meat&mdash;a heart, lung, liver, or kidney&mdash;as proof of the girl's demise. In a classic warrior move, the Queen then eats these pieces of her enemy.</p>
           </div>
       </div> 
   
-    <div id="hide-show" class="icon"
-      data-0="opacity:1;"
-      data-end="opacity:1;">
+    <div id="hide-show" class="icon">
       <div id="icon-button-05" class="svg-draw fill">
         	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="hideshow"> 	  		    
             <path d="M179.414,111.655c-2.641-2.362-5.22-4.265-7.725-5.803c-0.031-3.94,0.467-6.271,4.5-10.553l1.528-1.207l-15.966-20.22
@@ -123,17 +111,13 @@
         </div>
       </div>
      
-  <div id="factoid05" class="factoid hide"    
-    data-0="opacity:1;"
-    data-end="opacity:1;">
+  <div id="factoid05" class="factoid hide">
     <p>He disobeys his master and abandons a child in the woods. He's not even good at being good: he spares Snow White for her beauty, not for her innocence.</p>
     </div> 
         
   </div><!-- /Page: Huntsman -->    
     
-  <div class="page-nav"
-    data-0="opacity:1"
-    data-end="opacity:1">
+  <div class="page-nav">
     <a class="nav-icon previous" href="queen.html"><img src="img/nav_next.svg"></a>
     <a class="nav-icon next" href="dwarves.html"><img class="flip-horiz" src="img/nav_next.svg"></a>
     <a class="nav-icon beginning" href="begin.html"><img src="img/nav_skip.svg"></a>
@@ -143,9 +127,7 @@
       </div>
     </div>
 
-  <div id="coverup"   
-    data-0="opacity:1"
-    data-end="opacity:1"></div> 
+  <div id="coverup"></div> 
     	
 <!--------------------------------------------------------------->
 <!--------------------------------------------------------------->    	
@@ -210,6 +192,7 @@ $(document).ready(function() {
       });         
  });
  </script>
+ 
 
 <!-- Icon Fact Toggle -->
 <script>
@@ -232,27 +215,36 @@ $(document).ready(function() {
 </script>
    
    
-<!-- Skrollr ---------------------------->
-<script type="text/javascript" src="scripts/skrollr.min.js"></script>
-<script type="text/javascript">
-var s = skrollr.init({
-	edgeStrategy: 'set',
-	easing: {
-		WTF: Math.random,
-		inverted: function(p) {
-			return 1-p;
-		}
-	}
-});
+<!-- Tap image to play animation -->
+<script>
+  $( "h2" ).click(function() {
+    if ($('h2').hasClass( "animate" )) {
+      $('h2').removeClass('animate');
+      $('h2').addClass('unanimate');
+      $('.cutout').removeClass('animate');
+      $('.cutout').addClass('unanimate');
+      } 
+    else if ($('h2').hasClass( "unanimate" )) {	
+      $('h2').removeClass('unanimate');
+      $('h2').addClass('reanimate');
+      $('.cutout').removeClass('unanimate');
+      $('.cutout').addClass('reanimate');
+      }
+    else {	
+      $('h2').removeClass('reanimate');
+      $('h2').addClass('unanimate');
+      $('.cutout').removeClass('reanimate');
+      $('.cutout').addClass('unanimate');
+      }
+  });  
+  
 </script>
 
 
 <!-- Livereload REMOVE BEFORE LAUNCH ---------------------------->	
-<!--
 <script>
   document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
 </script>
--->
 
 </body>
 </html>

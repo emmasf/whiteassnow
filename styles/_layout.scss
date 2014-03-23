@@ -152,23 +152,26 @@
   	transform-origin:0 0;
     -webkit-transform:rotate(-90deg);
   	transform:rotate(-90deg);
+    &.animate { -webkit-animation: fade_title $animate-in;}
+    &.unanimate { -webkit-animation: unfade_title $animate-out;}
+    &.reanimate { -webkit-animation: fade_title $animate-out;}
   	}   	
-  .slider {
-    top: 620px;
-    right:54px;
-    }
   .cutout {    
     /*
 -webkit-filter: blur(5px);
     filter: blur(5px) 	
-*/}
+*/
+    &.animate { -webkit-animation: slide_in $animate-in;}
+    &.unanimate { -webkit-animation: unslide_in $animate-out;}
+    &.reanimate { -webkit-animation: slide_in $animate-out;}   
+    }
   .icon {
     position: absolute;
     top:342px;
     right:14px;
     }       
   #factoid03 {
-    width: 436px;
+    width: 408px;
     height: 32px;
     top: 154px;
     right: 0px;
@@ -188,6 +191,9 @@
     left: 350px;
     top: 84px;
     left: 226px;
+    &.animate { -webkit-animation: fatten $animate-in;}
+    &.unanimate { -webkit-animation: unfatten $animate-out;}
+    &.reanimate { -webkit-animation: fatten $animate-out;}
   	}  	
 /*
   #drag2 {
@@ -224,6 +230,12 @@
     left: 59px;
     top: 400px;
    } 
+   .cutout {
+    margin-top:0px; 
+    &.animate { -webkit-animation: fatten $animate-in;}
+    &.unanimate { -webkit-animation: unfatten $animate-out;}
+    &.reanimate { -webkit-animation: fatten $animate-out;}  
+     }
   }
   
 #huntsman {  
@@ -231,6 +243,11 @@
     width: 650px;
     top:103px;
     left: 60px;
+    }
+  .cutout {
+    &.animate { -webkit-animation: slide_up $animate-in;}
+    &.unanimate { -webkit-animation: unslide_up $animate-out;}
+    &.reanimate { -webkit-animation: slide_up $animate-out;} 
     }
   .icon {
     position: absolute;

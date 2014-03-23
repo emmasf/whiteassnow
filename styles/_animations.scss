@@ -1,3 +1,7 @@
+/***********************************************************************************/
+/******** Begin CSS Animation Stylesheet *******************************************/
+/***********************************************************************************/
+
 /** Cover Page ****************************/
 /** BG Rotate ********/
 
@@ -11,7 +15,8 @@
   }
   
 /** Begin Page ****************************/
-/** Title Grow ***********/
+
+/** Title ***********/
 /*
 @-webkit-keyframes scale_title {
 0% {font-size:92px; top:162px;}
@@ -22,37 +27,110 @@
 100% {font-size:92px; top:162px;}
 }
 */
+
 @-webkit-keyframes scale_title {
 0% {-webkit-transform: scale(1.2, 1.2)}
 100% {-webkit-transform: scale(1,1)}
-}
+  }
 @-webkit-keyframes unscale_title {
 0% {-webkit-transform: scale(1,1)}
 100% {-webkit-transform: scale(1.2, 1.2)}
-}
+  }
 
-/** Hand In ***********/
+/** Cutout ***********/
 @-webkit-keyframes rotate_in_right {
-0% {
-  -webkit-transform:rotate(-60deg);}
-100% {    
-  -webkit-transform:rotate(0deg);}
-}
+0% { -webkit-transform:rotate(-60deg);}
+100% { -webkit-transform:rotate(0deg);} 
+  }
 @-webkit-keyframes unrotate_in_right {
-0% {    
-  -webkit-transform:rotate(0deg);}
-100% {
-  -webkit-transform:rotate(-60deg);}
-}
+0% { -webkit-transform:rotate(0deg);}
+100% { -webkit-transform:rotate(-60deg); }
+  }
 
 
 /** Instructions Out ***********/
 @-webkit-keyframes fade_out {
 0% {opacity:1}
 100% {opacity:0}
-}
+  }
 
+ 
+/** SW Page ****************************/
+
+/** Title ***********/
+@-webkit-keyframes unfade_title {
+0% {opacity: 1 }
+100% {opacity: 0.25 }
+  }
+@-webkit-keyframes fade_title {
+0% {opacity: 0.25}
+100% {opacity: 1}
+  }
+
+/** Cutout ***********/
+@-webkit-keyframes unslide_in {
+0% {margin-top:200px}
+100% {margin-top:-40px} 
+  }
+@-webkit-keyframes slide_in {
+0% {margin-top:-40px}
+100% {margin-top:200px} 
+  }
   
+/** Queen Page ****************************/
+
+/** Title ***********/
+@-webkit-keyframes skew_title {
+0% { -webkit-transform:skewX(1deg);}
+100% { -webkit-transform:skewX(0deg);}
+  }
+@-webkit-keyframes unskew_title {
+0% { -webkit-transform:skewX(0deg);}
+100% { -webkit-transform:skewX(1deg);}
+  }
+
+/** Cutout ***********/
+/*
+@-webkit-keyframes reflect {
+0% { -webkit-transform:rotateY(180deg)}
+100% { -webkit-transform:rotateY(0deg)} 
+  }
+*/
+/*
+@-webkit-keyframes skew_cutout {
+0% { -webkit-transform:skewX(4deg);}
+100% { -webkit-transform:skewX(0deg);}
+  }
+@-webkit-keyframes unskew_cutout {
+0% { -webkit-transform:skewX(0deg);}
+100% { -webkit-transform:skewX(4deg);}
+  }
+*/
+@-webkit-keyframes fatten {
+0% { -webkit-transform:scale(1.05,1);}
+100% { -webkit-transform:scale(1,1);}
+  }
+@-webkit-keyframes unfatten {
+0% { -webkit-transform:scale(1,1);}
+100% { -webkit-transform:scale(1.05,1);}
+  }
+  
+/** Huntsman Page ****************************/
+
+/** Title ***********/
+
+/** Cutout ***********/
+@-webkit-keyframes slide_up {
+0% {margin-top:450px}
+100% {margin-top:0px}
+  }
+@-webkit-keyframes unslide_up {
+0% {margin-top:0px}
+100% {margin-top:450px}
+  }
+
+
+/** General ****************************/
   
 /** Factoid Bar Glow ****************************/  
 @-webkit-keyframes textcolormorph
@@ -89,4 +167,7 @@
 100%   {background-color: rgba($blue,0.8);}
 }
 */
+
+
+/******** End CSS Animation Stylesheet *******************************/
 

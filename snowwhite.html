@@ -9,43 +9,21 @@
 </head>
 
 <body>
+	<div id="snowwhite" class="page">
 
-	<div id="progress" data-0="width:0%;background:hsl(200, 100%, 50%);" data-900="width:100%;background:hsl(920, 100%, 50%);"></div>
-
-	<div id="snowwhite" class="page"
-    data-0="opacity:1"
-    data-end="opacity:1">
-
-    <h2 class="middle"
-      data-0="opacity:1"
-      data-end="opacity:1">
+    <h2 class="middle animate">
       Snow White is an empty shell.</h2>
   
-    <img class="cutout back" src="img/snowwhite.png"      
-      data-0="top:200px;"
-      data-300="top:-40px;">
-      
-    <div class="slider">
-      <div class="bar"      data-0="opacity:1"
-      data-end="opacity:1"></div>
-      <div class="handle"      
-        data-0="top:275px;"
-        data-end="top:8px;">
-      </div>
-    </div>
+    <img class="cutout back animate" src="img/snowwhite.png">
 
-    <div id="idea03" class="hideshow-text"
-      data-0="opacity:1;"
-      data-end="opacity:1;">
+    <div id="idea03" class="hideshow-text">
       <div class="hideshow"></div>
       <div class="hideshow history" style="display: none">
         <p>Snow White is not alone in her emptiness. Characters in fairy tales are often painted in very general terms. They become containers for the imagination, frameworks to be adapted to the time and place of the telling. This is why the basic plots of most fairy tales work across the globe, and why the stories can be broken down so easily into archetypes.</p>
         </div>
       </div>
           
-    <div id="hide-show" class="icon"
-      data-0="opacity:1;"
-      data-end="opacity:1;">
+    <div id="hide-show" class="icon">
       <div id="icon-button-03" class="svg-draw">
         	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="hideshow"> 	  	    
             <rect x="79.138" y="52.64" fill="none" width="85.146" height="118.323"/>
@@ -64,17 +42,13 @@
         </div>
       </div>     
       
-  <div id="factoid03" class="factoid hide"    
-    data-0="opacity:1;"
-    data-end="opacity:1;">
+  <div id="factoid03" class="factoid hide">
     <p>She has no characteristics beyond her physicality: her coloration, her beauty, her youth. She has no personality. She makes no choices.</p>
     </div>
     
     </div><!-- /Page: Snow White -->
     
-  <div class="page-nav"
-    data-0="opacity:1"
-    data-end="opacity:1">
+  <div class="page-nav">
     <a class="nav-icon previous" href="javascript:delay('begin.html')"><img src="img/nav_next.svg"></a>
     <a class="nav-icon next" href="javascript:delay('queen.html')"><img class="flip-horiz" src="img/nav_next.svg"></a>
     <a class="nav-icon beginning" href="begin.html"><img src="img/nav_skip.svg"></a>
@@ -84,9 +58,7 @@
       </div>
     </div>     
     
-  <div id="coverup"   
-    data-0="opacity:1"
-    data-end="opacity:1"></div>    	
+  <div id="coverup"></div>    	
 <!--------------------------------------------------------------->
 <!--------------------------------------------------------------->    	
 <!- Begin Javascript -------------------------------------------->
@@ -162,29 +134,36 @@ function delay (URL) {
     });
   });
 </script>
-   
-<!-- Skrollr ---------------------------->
-<script type="text/javascript" src="scripts/skrollr.min.js"></script>
-<script type="text/javascript">
-var s = skrollr.init({
-	edgeStrategy: 'set',
-	easing: {
-		WTF: Math.random,
-		inverted: function(p) {
-			return 1-p;
-		}
-	}
-});
-</script>
 
+<!-- Tap image to play animation -->
+<script>
+  $( "h2" ).click(function() {
+    if ($('h2').hasClass( "animate" )) {
+      $('h2').removeClass('animate');
+      $('h2').addClass('unanimate');
+      $('.cutout').removeClass('animate');
+      $('.cutout').addClass('unanimate');
+      } 
+    else if ($('h2').hasClass( "unanimate" )) {	
+      $('h2').removeClass('unanimate');
+      $('h2').addClass('reanimate');
+      $('.cutout').removeClass('unanimate');
+      $('.cutout').addClass('reanimate');
+      }
+    else {	
+      $('h2').removeClass('reanimate');
+      $('h2').addClass('unanimate');
+      $('.cutout').removeClass('reanimate');
+      $('.cutout').addClass('unanimate');
+      }
+  });  
+</script>
 
 
 <!-- Livereload REMOVE BEFORE LAUNCH ---------------------------->	
-<!--
 <script>
   document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
 </script>
--->
 
 </body>
 </html>
