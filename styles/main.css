@@ -194,7 +194,7 @@ h2 { font-size: 5em; color: black; line-height: 1.125em; letter-spacing: 0.009em
 */ }
 
 /** Cutout Images ****************************/
-.cutout { width: 100%; }
+.cutout { width: 768px; height: 1024px; }
 
 /** Bottom Nav ****************************/
 .page-nav { bottom: 20px; position: fixed; height: 60px; width: 100%; opacity: 1; z-index: 5000; }
