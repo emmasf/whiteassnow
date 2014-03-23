@@ -10,33 +10,21 @@
 
 <body>
 
-	<div id="progress" data-0="width:0%;background:hsl(200, 100%, 50%);" data-900="width:100%;background:hsl(920, 100%, 50%);"></div>
-
-	<div id="dwarves" class="page"
-    data-0="opacity:1"
-    data-end="opacity:1">
+	<div id="dwarves" class="page">
   
-  <h2 class="middle"
-    data-0="opacity:1"
-    data-end="opacity:1">
+  <h2 class="middle">
     The Dwarves are outsiders.</h2>
   
-  <img class="cutout back" src="img/dwarves.png"      
-      data-0="opacity:1"
-      data-end="opacity:1"> 
+  <img class="cutout back" src="img/dwarves.png"> 
       
-  <div id="idea06" class="hideshow-text"
-    data-0="opacity:1;"
-    data-end="opacity:1;">
+  <div id="idea06" class="hideshow-text">
         <div class="hideshow"></div>
         <div class="hideshow history" style="display: none">
           <p>Disney sweetened these characters, giving the Dwarves individual names and personalities. In most other versions, Snow White spends her exile more as an indentured servant than a cherished guest. Cast as seven robbers, gypsies, eunuchs, fairies or other &ldquo;strange people&rdquo; as well as dwarves, they often treat Snow White as an outsider herself.</p>
         </div>
       </div>      
 
-  <div id="hide-show" class="icon"
-    data-0="opacity:1;"
-    data-end="opacity:1;">
+  <div id="hide-show" class="icon">
     <div id="icon-button-06" class="svg-draw">
       	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="hideshow"> 	  		    
           <path 
@@ -69,17 +57,13 @@
       </div>
     </div>     
   
-  <div id="factoid06" class="factoid hide"    
-    data-0="opacity:1;"
-    data-end="opacity:1;">
+  <div id="factoid06" class="factoid hide">
     <p>They are outcasts who operate outside society's rules. They are presented as nonsexual creatures, immune to Snow White’s physical beauty.</p>
   </div>       
          
   </div><!-- /Page: Dwarves -->
   
-  <div class="page-nav"
-    data-0="opacity:1"
-    data-end="opacity:1">
+  <div class="page-nav">
     <a class="nav-icon previous" href="huntsman.html"><img src="img/nav_next.svg"></a>
     <a class="nav-icon next" href="king.html"><img class="flip-horiz" src="img/nav_next.svg"></a>
     <a class="nav-icon beginning" href="begin.html"><img src="img/nav_skip.svg"></a>
@@ -89,9 +73,7 @@
       </div>
     </div>
 
-  <div id="coverup"   
-    data-0="opacity:1"
-    data-end="opacity:1"></div> 
+  <div id="coverup"></div> 
     	
 
 <!--------------------------------------------------------------->
@@ -159,18 +141,29 @@ function delay (URL) {
   });
 </script>   
    
-<!-- Skrollr ---------------------------->
-<script type="text/javascript" src="scripts/skrollr.min.js"></script>
-<script type="text/javascript">
-var s = skrollr.init({
-	edgeStrategy: 'set',
-	easing: {
-		WTF: Math.random,
-		inverted: function(p) {
-			return 1-p;
-		}
-	}
-});
+<!-- Tap image to play animation -->
+<script>
+  $( "h2" ).click(function() {
+    if ($('h2').hasClass( "animate" )) {
+      $('h2').removeClass('animate');
+      $('h2').addClass('unanimate');
+      $('.cutout').removeClass('animate');
+      $('.cutout').addClass('unanimate');
+      } 
+    else if ($('h2').hasClass( "unanimate" )) {	
+      $('h2').removeClass('unanimate');
+      $('h2').addClass('reanimate');
+      $('.cutout').removeClass('unanimate');
+      $('.cutout').addClass('reanimate');
+      }
+    else {	
+      $('h2').removeClass('reanimate');
+      $('h2').addClass('unanimate');
+      $('.cutout').removeClass('reanimate');
+      $('.cutout').addClass('unanimate');
+      }
+  });  
+  
 </script>
 
 
