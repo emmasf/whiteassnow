@@ -35,8 +35,8 @@
 @-webkit-keyframes scale_title { 0% { -webkit-transform: scale(1.2, 1.2); }
   100% { -webkit-transform: scale(1, 1); } }
 
-@-webkit-keyframes unscale_title { 0% { font-size: 72px; top: 170px; }
-  100% { font-size: 92px; top: 162px; } }
+@-webkit-keyframes unscale_title { 0% { -webkit-transform: scale(1, 1); }
+  100% { -webkit-transform: scale(1.2, 1.2); } }
 
 /** Hand In ***********/
 @-webkit-keyframes rotate_in_right { 0% { -webkit-transform: rotate(-60deg); }
@@ -237,7 +237,8 @@ h2 { font-size: 5em; color: black; line-height: 1.125em; letter-spacing: 0.009em
 #begin #instructions p { font-family: "Helvetica Neue", Helvetica, Arial, serif; font-weight: 700; font-size: 17px; letter-spacing: 0.025em; line-height: 1.25em; display: block; margin: 0; margin-bottom: 12px; }
 #begin #factoid02 { width: 507px; height: 32px; top: 74px; left: 0px; }
 #begin #factoid02 p { padding-top: 202px; margin-left: 37px; }
-#begin .history { width: 615px; left: 42px; width: 725px; left: 0px; top: 256px; /*     p:first-child {background-color: #fff} */ }
+#begin .history { width: 615px; left: 42px; top: 120px; padding-right: 400px; /*     p:first-child {background-color: #fff} */ }
+#begin .hider { position: absolute; width: 500px; height: 100px; top: 170px; left: 40px; background-color: #fff; }
 
 #snowwhite {   /*
 .svg-draw { position: absolute; top: 720px; }

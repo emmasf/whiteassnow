@@ -15,11 +15,13 @@
   <img class="cutout animate back" src="img/begin.png">
 
   <div class="title animate"><h2 class="middle">
-    Let's begin.</h2></div>
+    Let&rsquo;s begin.</h2></div>
+    
+  <div class="hider history hideshow" style="display:none;"></div>
         
   <div id="instructions" class="history hideshow">
-        <p>Tap on colored bars to reveal the characters' inner workings.</p>
-        <p>Tap on icons to uncover Snow White's origins and global presence.</p>
+        <p>Tap on colored bars to reveal the characters&rsquo; inner workings.</p>
+        <p>Tap on icons to uncover Snow White&rsquo;s origins and global presence.</p>
         <!-- <p>Spin, pinch, and swipe around to play with elements on the page.</p> -->
         <p>Tap on round buttons to read the full tale or move between pages.</p>         
     </div>
@@ -140,21 +142,21 @@ function delay (URL) {
 <!-- Tap image to play animation -->
 <script>
   $( "h2" ).click(function() {
-    if ($('h2').hasClass( "animate" )) {
-      $('h2').removeClass('animate');
-      $('h2').addClass('unanimate');
+    if ($('div.title').hasClass( "animate" )) {
+      $('div.title').removeClass('animate');
+      $('div.title').addClass('unanimate');
       $('.cutout').removeClass('animate');
       $('.cutout').addClass('unanimate');
       } 
-    else if ($('h2').hasClass( "unanimate" )) {	
-      $('h2').removeClass('unanimate');
-      $('h2').addClass('reanimate');
+    else if ($('div.title').hasClass( "unanimate" )) {	
+      $('div.title').removeClass('unanimate');
+      $('div.title').addClass('reanimate');
       $('.cutout').removeClass('unanimate');
       $('.cutout').addClass('reanimate');
       }
     else {	
-      $('h2').removeClass('reanimate');
-      $('h2').addClass('unanimate');
+      $('div.title').removeClass('reanimate');
+      $('div.title').addClass('unanimate');
       $('.cutout').removeClass('reanimate');
       $('.cutout').addClass('unanimate');
       }

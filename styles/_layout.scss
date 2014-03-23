@@ -123,12 +123,18 @@
   .history {
     width: 615px;
     left: 42px;
-    width: 725px;
-    left: 0px;
-    top:256px;
+    top:120px;
+    padding-right: 400px;
 /*     p:first-child {background-color: #fff} */
    }
-  
+  .hider {
+    position: absolute;
+    width: 500px;
+    height: 100px;
+    top: 170px;
+    left:40px;
+    background-color: #fff;;
+  }
   }
 
 #snowwhite {
