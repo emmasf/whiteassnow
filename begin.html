@@ -74,8 +74,8 @@
   </div><!-- /Page: Begin -->
   
   <div class="page-nav">
-    <a class="nav-icon previous" href="javascript:delay('index.html')"><img src="img/nav_next.svg"></a>
-    <a class="nav-icon next" href="javascript:delay('snowwhite.html')"><img class="flip-horiz" src="img/nav_next.svg"></a>
+    <a class="nav-icon previous" href="index.html"><img src="img/nav_next.svg"></a>
+    <a class="nav-icon next" href="snowwhite.html"><img class="flip-horiz" src="img/nav_next.svg"></a>
     <a class="nav-icon beginning inactive" href="#"><img src="img/nav_skip.svg"></a>
     <a class="nav-icon ending" href="end.html"><img class="flip-horiz" src="img/nav_skip.svg"></a>
     <div class="story-modal" id="modal-02">   
@@ -97,6 +97,7 @@
 
 
 <!-- Page delay, maybeee --->
+<!--
 <script>
 function delay (URL) {
   setTimeout( function() { window.location = URL }, 500 );
@@ -110,6 +111,30 @@ function delay (URL) {
       });
   });
 </script>
+-->
+
+<!--
+<script type="text/javascript">
+ function delay (URL) {
+  setTimeout( function() { window.location = URL }, 2000 );
+  }
+  
+  $(document).ready(function() {
+    $("html").css("background-color", "#fff");
+    $(".page").css("display", "none"); 
+    $(".page").fadeIn(2000); 
+    $("a.transition").click(function(event){
+        event.preventDefault();
+        linkLocation = this.href;
+        $(".page").fadeOut(2000, redirectPage);      
+    });         
+  
+  function redirectPage() {
+    window.location = linkLocation;
+    }
+});
+</script>
+-->
 
 <!-- Page transition fader  -->
  <script type="text/javascript">
