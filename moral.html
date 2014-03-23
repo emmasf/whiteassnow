@@ -17,7 +17,7 @@
     
   <img class="cutout back animate" src="img/moral.png">
 
-  <div id="factoid10" class="factoid hide">
+  <div id="factoid" class="factoid hide">
     <p>What do we learn? Revenge is sweet? Don't dare to grow old? Can we really condemn vanity and worship beauty in the same breath?</p>
     </div> 
     
@@ -130,7 +130,7 @@
 <!-- Factoid Toggle Bar -->
 <script>
   $(document).ready(function(){
-    $("#factoid10").click(function(){
+    $("#factoid").click(function(){
       if($(this).hasClass('hide')) {
         $(this).animate({height:232},200).removeClass('hide');
       } else { 

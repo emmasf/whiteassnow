@@ -67,7 +67,7 @@
     </div>
     
     
-  <div id="factoid02" class="factoid hide">
+  <div id="factoid" class="factoid hide">
     <p>Let go of the Snow White in your mind.</p>
     </div>
     
@@ -191,7 +191,7 @@ function delay (URL) {
 <!-- Factoid Toggle Bar -->
 <script>
   $(document).ready(function(){
-    $("#factoid02").click(function(){
+    $("#factoid").click(function(){
       if($(this).hasClass('hide')) {
         $(this).animate({height:315},200).removeClass('hide');
       } else { 
