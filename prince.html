@@ -2,7 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="viewport" content="width=device-width, height=device-height">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<title>White as Snow</title>
 	<link href="styles/main.css" rel="stylesheet" type="text/css" />
@@ -85,6 +85,16 @@
 <!-- JQuery please god don't conflict --------------------->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+
+<!-- Prevent vertical scrolling  -->
+<script>
+$(document).bind(
+      'touchmove',
+          function(e) {
+            e.preventDefault();
+          }
+);
+</script>
 
 <!-- Page transition fader  -->
  <script type="text/javascript">
