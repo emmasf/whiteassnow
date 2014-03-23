@@ -68,24 +68,23 @@
   
 #begin {
   h2 {    
-    top:120px;
     left: 60px;
-    -webkit-animation: scale_title 1s ease-out 2s both;
+    &.animate { -webkit-animation: scale_title $animate-in;}
+    &.unanimate { -webkit-animation: unscale_title $animate-out;}
+    &.reanimate { -webkit-animation: scale_title $animate-out;}
     height: 100px;
     }  	
-  .slider {
-    top: 620px;
-    left:50px;
-    }
   .cutout {
     -webkit-transform-origin:100% 0;
     transform-origin:100% 0; 
-    -webkit-animation: rotate_in_right 1s ease-out 2s both;   
-  	top: -70px; 
+    &.animate { -webkit-animation: rotate_in_right $animate-in;}
+    &.unanimate { -webkit-animation: unrotate_in_right $animate-out;}
+    &.reanimate { -webkit-animation: rotate_in_right $animate-out;}  
+    margin-top:70px;
     }  	
   .icon {
     position: absolute;
-    top:560px;
+    top:710px;
     right:50px;
     }        
   #instructions {
@@ -93,8 +92,8 @@
     opacity: 1;
     width: 580px;
     left: 41px;
-    top:213px;
-    top:313px;
+    top:253px;
+/*     top:773px; */
     background-color: rgba(0,0,0,0);    
       p { 
       font-family: $sans-type;
@@ -108,13 +107,12 @@
       }
     }     
   #factoid02 {
-    width: 670px;
+    width: 507px;
     height: 32px;
-    top: 164px;
+    top: 74px;
     left: 0px;    
     p {
-      padding-top: 72px;
-      padding-top: 139px;
+      padding-top: 202px;
       margin-left: 37px}
     } 
   .history {

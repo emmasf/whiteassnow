@@ -12,9 +12,9 @@
 
 	<div id="begin" class="page">
 
-  <img class="cutout back" src="img/begin.png">
+  <img class="cutout animate back" src="img/begin.png">
 
-  <h2 class="middle">
+  <h2 class="middle animate">
     Let's begin.</h2>
         
   <div id="instructions" class="history hideshow">
@@ -136,13 +136,37 @@ function delay (URL) {
   });
   
 </script>
+  
+<!-- Tap image to play animation -->
+<script>
+  $( "h2" ).click(function() {
+    if ($('h2').hasClass( "animate" )) {
+      $('h2').removeClass('animate');
+      $('h2').addClass('unanimate');
+      $('.cutout').removeClass('animate');
+      $('.cutout').addClass('unanimate');
+      } 
+    else if ($('h2').hasClass( "unanimate" )) {	
+      $('h2').removeClass('unanimate');
+      $('h2').addClass('reanimate');
+      $('.cutout').removeClass('unanimate');
+      $('.cutout').addClass('reanimate');
+      }
+    else {	
+      $('h2').removeClass('reanimate');
+      $('h2').addClass('unanimate');
+      $('.cutout').removeClass('reanimate');
+      $('.cutout').addClass('unanimate');
+      }
+  });  
+</script>
 
 <!-- Factoid Toggle Bar -->
 <script>
   $(document).ready(function(){
     $("#factoid02").click(function(){
       if($(this).hasClass('hide')) {
-        $(this).animate({height:305},200).removeClass('hide');
+        $(this).animate({height:315},200).removeClass('hide');
       } else { 
         $(this).animate({height:32},200).addClass('hide');
       }

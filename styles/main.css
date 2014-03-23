@@ -22,12 +22,18 @@
 
 /** Begin Page ****************************/
 /** Title Grow ***********/
-@-webkit-keyframes scale_title { 0% { font-size: 5em; }
-  100% { font-size: 6.1em; } }
+@-webkit-keyframes scale_title { 0% { font-size: 92px; top: 162px; }
+  100% { font-size: 72px; top: 170px; } }
+
+@-webkit-keyframes unscale_title { 0% { font-size: 72px; top: 170px; }
+  100% { font-size: 92px; top: 162px; } }
 
 /** Hand In ***********/
 @-webkit-keyframes rotate_in_right { 0% { -webkit-transform: rotate(-60deg); }
   100% { -webkit-transform: rotate(0deg); } }
+
+@-webkit-keyframes unrotate_in_right { 0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(-60deg); } }
 
 /** Instructions Out ***********/
 @-webkit-keyframes fade_out { 0% { opacity: 1; }
@@ -93,11 +99,13 @@ body { background-attachment: fixed; }
 
 p { font-family: "Arnhem", Georgia, serif; color: black; font-size: 24px; font-weight: 700; line-height: 1.3em; letter-spacing: 0.0125em; padding: 0; margin: 0; margin-bottom: 12px; }
 
-h1, h2 { font-family: "Helvetica Neue", Helvetica, Arial, serif; color: white; font-weight: 700; letter-spacing: 0; line-height: 1.05em; padding: 0; margin: 0; font-size: 6.5em; position: absolute; pointer-events: none; }
+h1, h2 { font-family: "Helvetica Neue", Helvetica, Arial, serif; color: white; font-weight: 700; letter-spacing: 0; line-height: 1.05em; padding: 0; margin: 0; font-size: 6.5em; position: absolute; /*   pointer-events: none; */ }
 
 h2 { font-size: 5em; color: black; line-height: 1.125em; letter-spacing: 0.009em; }
 
-.page { width: 768px; height: 1024px; top: 0px; border-bottom: 4px solid #cccccc; overflow: hidden; -webkit-transition: all cubic-bezier(0.68, -0.55, 0.265, 1.55); transition: all cubic-bezier(0.68, -0.55, 0.265, 1.55); }
+.page { width: 768px; height: 1020px; top: 0px; border-bottom: 4px solid #cccccc; overflow: hidden; /*
+	-webkit-transition: all cubic-bezier(0.68, -0.55, 0.265, 1.55); transition:         all cubic-bezier(0.68, -0.55, 0.265, 1.55); 
+*/ }
 
 /** Bottom Nav ****************************/
 .page-nav { bottom: 20px; position: fixed; height: 60px; width: 100%; opacity: 1; }
@@ -206,14 +214,19 @@ h2 { font-size: 5em; color: black; line-height: 1.125em; letter-spacing: 0.009em
 #story .svg-draw.coffin { -webkit-transform: scale(0.175) rotate(-95deg); stroke-width: 12; }
 #story p { clear: both; }
 
-#begin h2 { top: 120px; left: 60px; -webkit-animation: scale_title 1s ease-out 2s both; height: 100px; }
-#begin .slider { top: 620px; left: 50px; }
-#begin .cutout { -webkit-transform-origin: 100% 0; transform-origin: 100% 0; -webkit-animation: rotate_in_right 1s ease-out 2s both; top: -70px; }
-#begin .icon { position: absolute; top: 560px; right: 50px; }
-#begin #instructions { /*     -webkit-animation: fade_out 0.75s ease-out 2s both; */ opacity: 1; width: 580px; left: 41px; top: 213px; top: 313px; background-color: rgba(0, 0, 0, 0); }
+#begin h2 { left: 60px; height: 100px; }
+#begin h2.animate { -webkit-animation: scale_title 1s ease-out 1s both; }
+#begin h2.unanimate { -webkit-animation: unscale_title 1s ease-out 0s both; }
+#begin h2.reanimate { -webkit-animation: scale_title 1s ease-out 0s both; }
+#begin .cutout { -webkit-transform-origin: 100% 0; transform-origin: 100% 0; margin-top: 70px; }
+#begin .cutout.animate { -webkit-animation: rotate_in_right 1s ease-out 1s both; }
+#begin .cutout.unanimate { -webkit-animation: unrotate_in_right 1s ease-out 0s both; }
+#begin .cutout.reanimate { -webkit-animation: rotate_in_right 1s ease-out 0s both; }
+#begin .icon { position: absolute; top: 710px; right: 50px; }
+#begin #instructions { /*     -webkit-animation: fade_out 0.75s ease-out 2s both; */ opacity: 1; width: 580px; left: 41px; top: 253px; /*     top:773px; */ background-color: rgba(0, 0, 0, 0); }
 #begin #instructions p { font-family: "Helvetica Neue", Helvetica, Arial, serif; font-weight: 700; font-size: 17px; letter-spacing: 0.025em; line-height: 1.25em; display: block; margin: 0; margin-bottom: 12px; }
-#begin #factoid02 { width: 670px; height: 32px; top: 164px; left: 0px; }
-#begin #factoid02 p { padding-top: 72px; padding-top: 139px; margin-left: 37px; }
+#begin #factoid02 { width: 507px; height: 32px; top: 74px; left: 0px; }
+#begin #factoid02 p { padding-top: 202px; margin-left: 37px; }
 #begin .history { width: 615px; left: 42px; width: 725px; left: 0px; top: 256px; /*     p:first-child {background-color: #fff} */ }
 
 #snowwhite {   /*
