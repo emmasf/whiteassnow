@@ -51,6 +51,16 @@
       });         
  });
  </script>
+ 
+ <!-- Prevent vertical scrolling  -->
+<script>
+$(document).bind(
+      'touchmove',
+          function(e) {
+            e.preventDefault();
+          }
+);
+</script>
 
 
 <!-- Livereload REMOVE BEFORE LAUNCH ---------------------------->	
