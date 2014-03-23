@@ -12,9 +12,19 @@
   
 /** Begin Page ****************************/
 /** Title Grow ***********/
+/*
 @-webkit-keyframes scale_title {
 0% {font-size:92px; top:162px;}
 100% {font-size:72px; top:170px;}
+}
+@-webkit-keyframes unscale_title {
+0% {font-size:72px; top:170px;}
+100% {font-size:92px; top:162px;}
+}
+*/
+@-webkit-keyframes scale_title {
+0% {-webkit-transform: scale(1.2, 1.2)}
+100% {-webkit-transform: scale(1,1)}
 }
 @-webkit-keyframes unscale_title {
 0% {font-size:72px; top:170px;}
