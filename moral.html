@@ -10,40 +10,26 @@
 
 <body>	
 
-	<div id="progress" data-0="width:0%;background:hsl(200, 100%, 50%);" data-900="width:100%;background:hsl(920, 100%, 50%);"></div>
-
-	<div id="moral" class="page"
-    data-0="opacity:1"
-    data-end="opacity:1"
+	<div id="moral" class="page">
     
-  <h2 class="middle"
-    data-0="opacity:1"
-    data-end="opacity:1">
+  <h2 class="middle animate">
     History repeats itself.</h2>
     
-  <img class="cutout back" src="img/moral.png"      
-    data-0="opacity:1"
-    data-end="opacity:1">
+  <img class="cutout back animate" src="img/moral.png">
 
-  <div id="factoid10" class="factoid hide"    
-    data-0="opacity:1;"
-    data-end="opacity:1;">
+  <div id="factoid10" class="factoid hide">
     <p>What do we learn? Revenge is sweet? Don't dare to grow old? Can we really condemn vanity and worship beauty in the same breath?</p>
     </div> 
     
-  <div id="idea10" class="hideshow-text"
-    data-0="opacity:1;"
-    data-end="opacity:1;">
+  <div id="idea10" class="hideshow-text">
         <div class="hideshow"></div>
         <div class="hideshow history" style="display: none">
           <p>In a classic Western fashion, we think of Disney's Snow White and her Prince riding off into the sunset. Snow White will soon become Queen and inherit the kingdom, a role she's given solely because of her own soon-to-wane beauty.</p>
-          <p>The Disney film preserves the moral innocence of the couple, killing off the old Queen with an accidental fall. Most versions end with Snow White exacting a gruesome revenge. In the Grimm tale, the couple invites the Queen to the wedding, then forces her to dance to her death in hot iron shoes.</p>
+          <p>The Disney film preserves the moral innocence of the couple, killing off the old Queen with an accidental fall. Most versions end with Snow White exacting a gruesome revenge. In the Grimm tale, the couple invites the Queen to the wedding, then forces her to dance to her death in red-hot iron shoes pulled from the fire.</p>
         </div>
       </div>             
       
-  <div id="hide-show" class="icon"
-    data-0="opacity:1;"
-    data-end="opacity:1;">
+  <div id="hide-show" class="icon">
     <div id="icon-button-10" class="svg-draw">
       	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="hideshow"> 	  		    
          <path 
@@ -70,9 +56,7 @@
       
   </div><!-- /Page: Moral -->
     
-  <div class="page-nav"
-    data-0="opacity:1"
-    data-end="opacity:1">
+  <div class="page-nav">
     <a class="nav-icon previous" href="prince.html"><img src="img/nav_next.svg"></a>
     <a class="nav-icon next" href="end.html"><img class="flip-horiz" src="img/nav_next.svg"></a>
     <a class="nav-icon beginning" href="begin.html"><img src="img/nav_skip.svg"></a>
@@ -82,9 +66,7 @@
       </div>
     </div>
 
-  <div id="coverup"   
-    data-0="opacity:1"
-    data-end="opacity:1"></div> 
+  <div id="coverup"></div> 
     	
     	
 <!--------------------------------------------------------------->
@@ -97,22 +79,6 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 
-<!-- Page delay, maybeee --->
-<script>
-function delay (URL) {
-  setTimeout( function() { window.location = URL }, 500 );
-}
-
-  $(document).ready(function(){
-    $(".next").click(function(){
-      $(".page").animate({right:768}, 500);    
-      });
-    $(".previous").click(function(){
-      $(".page").animate({left:768}, 500);    
-      });
-  });
-</script>
-
 <!-- Page transition fader  -->
  <script type="text/javascript">
 
@@ -122,11 +88,36 @@ function delay (URL) {
 
  $(document).ready(function() { 
      $("#coverup").css("display","none");
-     $(".page").fadeIn(0); 
+     $(".page").fadeIn(1000);  
      $("a.center").click(function(event){
          $("#coverup").fadeIn(500);  
       });         
  });
+ </script>
+ 
+ <!-- Tap image to play animation -->
+<script>
+  $( "h2" ).click(function() {
+    if ($('h2').hasClass( "animate" )) {
+      $('h2').removeClass('animate');
+      $('h2').addClass('unanimate');
+      $('.cutout').removeClass('animate');
+      $('.cutout').addClass('unanimate');
+      } 
+    else if ($('h2').hasClass( "unanimate" )) {	
+      $('h2').removeClass('unanimate');
+      $('h2').addClass('reanimate');
+      $('.cutout').removeClass('unanimate');
+      $('.cutout').addClass('reanimate');
+      }
+    else {	
+      $('h2').removeClass('reanimate');
+      $('h2').addClass('unanimate');
+      $('.cutout').removeClass('reanimate');
+      $('.cutout').addClass('unanimate');
+      }
+  });  
+</script>
  </script>
 
 <!-- Icon Fact Toggle -->
@@ -148,21 +139,7 @@ function delay (URL) {
     });
   });
 </script>
-   
-   
-<!-- Skrollr ---------------------------->
-<script type="text/javascript" src="scripts/skrollr.min.js"></script>
-<script type="text/javascript">
-var s = skrollr.init({
-	edgeStrategy: 'set',
-	easing: {
-		WTF: Math.random,
-		inverted: function(p) {
-			return 1-p;
-		}
-	}
-});
-</script>
+
 
 
 <!-- Livereload REMOVE BEFORE LAUNCH ---------------------------->	

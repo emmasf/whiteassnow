@@ -12,10 +12,10 @@
 
 	<div id="dwarves" class="page">
   
-  <h2 class="middle">
+  <h2 class="middle animate">
     The Dwarves are outsiders.</h2>
   
-  <img class="cutout back" src="img/dwarves.png"> 
+  <img class="cutout back animate" src="img/dwarves.png"> 
       
   <div id="idea06" class="hideshow-text">
         <div class="hideshow"></div>
@@ -86,24 +86,6 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 
-<!-- Page delay, maybeee --->
-<!--
-<script>
-function delay (URL) {
-  setTimeout( function() { window.location = URL }, 500 );
-}
-
-  $(document).ready(function(){
-    $(".next").click(function(){
-      $(".page").animate({right:768}, 500);    
-      });
-    $(".previous").click(function(){
-      $(".page").animate({left:768}, 500);    
-      });
-  });
-</script>
--->
-
 <!-- Page transition fader  -->
  <script type="text/javascript">
 
@@ -112,9 +94,8 @@ function delay (URL) {
   }
 
  $(document).ready(function() { 
-     $("#coverup").css("display","none");
-     $(".page").css("display", "none");  
-     $(".page").fadeIn(600); 
+     $("#coverup").css("display","none"); 
+     $(".page").fadeIn(1000); 
      $("a.center").click(function(event){
          $("#coverup").fadeIn(500);  
       });         

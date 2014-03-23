@@ -10,14 +10,13 @@
 
 <body>
 	<div id="snowwhite" class="page">
-
+  
+    <img class="cutout back animate" src="img/snowwhite.png">    
+    
     <h2 class="middle animate">
       Snow White is an empty shell.</h2>
-  
-    <img class="cutout back animate" src="img/snowwhite.png">
 
-    <div id="idea03" class="hideshow-text">
-      <div class="hideshow"></div>
+    <div id="idea03" class="hideshow-text front">
       <div class="hideshow history" style="display: none">
         <p>Snow White is not alone in her emptiness. Characters in fairy tales are often painted in very general terms. They become containers for the imagination, frameworks to be adapted to the time and place of the telling. This is why the basic plots of most fairy tales work across the globe, and why the stories can be broken down so easily into archetypes.</p>
         </div>
@@ -69,23 +68,6 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 
-<!-- Page slider --->
-<!--
-<script>
-function delay (URL) {
-  setTimeout( function() { window.location = URL }, 500 );
-  }
-  $(document).ready(function(){
-    $(".next").click(function(){
-      $(".page").animate({right:768}, 500);    
-      });
-    $(".previous").click(function(){
-      $(".page").animate({left:768}, 500);    
-      });
-  });
-</script>
--->
-
 <!-- Page transition fader  -->
  <script type="text/javascript">
 
@@ -95,26 +77,11 @@ function delay (URL) {
 
  $(document).ready(function() { 
      $("#coverup").css("display","none");
-     $(".page").fadeIn(0); 
+     $(".page").fadeIn(1000); 
      $("a.center").click(function(event){
          $("#coverup").fadeIn(500);  
       });         
  });
- 
- /*
-(document).ready(function() { 
-     $("#coverup").css("display","none");
-     $(".page").fadeIn(0); 
-     $("a.center").click(function(event){
-         event.preventDefault();
-         linkLocation = this.href; 
-         $("#coverup").fadeIn(500, redirectPage);  
-      });         
-     function redirectPage() {
-         window.location = linkLocation;
-     }
- });
-*/
  </script>
 
 <!-- Icon Fact Toggle -->
@@ -163,9 +130,11 @@ function delay (URL) {
 
 
 <!-- Livereload REMOVE BEFORE LAUNCH ---------------------------->	
+<!--
 <script>
   document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
 </script>
+-->
 
 </body>
 </html>

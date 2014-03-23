@@ -10,40 +10,18 @@
 
 <body>	
 
-	<div id="progress" data-0="width:0%;background:hsl(200, 100%, 50%);" data-900="width:100%;background:hsl(920, 100%, 50%);"></div>
-
-	<div id="king" class="page"
-    data-0="opacity:1"
-    data-end="opacity:1">
+	<div id="king" class="page">
   
-  <div
-    data-0="opacity:1"
-    data-end="opacity:1"
-    class="middle">
+  <div class="middle animate title">
     <h2>The King</h2>
     <h2 class="second">is absent.</h2>
     </div>
     
-  <img class="cutout back" src="img/king.png"      
-      data-0="filter: saturate(1) brightness(1) contrast(1)"
-      data-300="filter: saturate(0) brightness(1.5) contrast(.25)"
-      > 
-      
-  <div class="slider">
-    <div class="bar"      
-      data-0="opacity:1"
-      data-end="opacity:1"></div>
-    <div class="handle"      
-      data-0="top:275px;"
-      data-end="top:8px;">
-    </div>
-  </div>
+  <img class="cutout back animate" src="img/king.png"> 
       
   <div id="king-rectangle"></div>
   
-  <div id="hide-show" class="icon"
-    data-0="opacity:1;"
-    data-end="opacity:1;">
+  <div id="hide-show" class="icon">
     <div id="icon-button-07" class="svg-draw">
       	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="hideshow"> 	  		    
           <path 
@@ -59,15 +37,11 @@
     </div>
       
       
-  <div id="factoid07" class="factoid hide"    
-    data-0="opacity:1;"
-    data-end="opacity:1;">
+  <div id="factoid07" class="factoid hide">
     <p>You would think he might notice that his wife is psychotic and his daughter has gone missing.</p>
     </div>
     
-  <div id="idea07" class="hideshow-text"
-    data-0="opacity:1;"
-    data-end="opacity:1;">
+  <div id="idea07" class="hideshow-text">
         <div class="hideshow"></div>
         <div class="hideshow history" style="display: none">
           <p>Snow White’s conception and birth take place with no mention of a father. In the second Grimm edition, the King appears only once, in reference to his remarriage. Snow White is a story about women passing through phases of life: a maiden becomes a mother, a child becomes a maiden, and a mother becomes a crone.</p>
@@ -77,9 +51,7 @@
       
   </div><!-- /Page: King -->
 
-  <div class="page-nav"
-    data-0="opacity:1"
-    data-end="opacity:1">
+  <div class="page-nav">
     <a class="nav-icon previous" href="dwarves.html"><img src="img/nav_next.svg"></a>
     <a class="nav-icon next" href="sin.html"><img class="flip-horiz" src="img/nav_next.svg"></a>
     <a class="nav-icon beginning" href="begin.html"><img src="img/nav_skip.svg"></a>
@@ -89,9 +61,7 @@
       </div>
     </div>
 
-  <div id="coverup"   
-    data-0="opacity:1"
-    data-end="opacity:1"></div> 
+  <div id="coverup"></div> 
     	
     	
 <!--------------------------------------------------------------->
@@ -104,22 +74,6 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>  
 
-<!-- Page delay, maybeee --->
-<script>
-function delay (URL) {
-  setTimeout( function() { window.location = URL }, 500 );
-}
-
-  $(document).ready(function(){
-    $(".next").click(function(){
-      $(".page").animate({right:768}, 500);    
-      });
-    $(".previous").click(function(){
-      $(".page").animate({left:768}, 500);    
-      });
-  });
-</script>
-
 <!-- Page transition fader  -->
  <script type="text/javascript">
 
@@ -129,12 +83,37 @@ function delay (URL) {
 
  $(document).ready(function() { 
      $("#coverup").css("display","none");
-     $(".page").fadeIn(0); 
+     $(".page").fadeIn(1000);  
      $("a.center").click(function(event){
          $("#coverup").fadeIn(500);  
       });         
  });
+ 
  </script>
+ 
+ <!-- Tap image to play animation -->
+<script>
+  $( "h2.second" ).click(function() {
+    if ($('div.title').hasClass( "animate" )) {
+      $('div.title').removeClass('animate');
+      $('div.title').addClass('unanimate');
+      $('.cutout').removeClass('animate');
+      $('.cutout').addClass('unanimate');
+      } 
+    else if ($('div.title').hasClass( "unanimate" )) {	
+      $('div.title').removeClass('unanimate');
+      $('div.title').addClass('reanimate');
+      $('.cutout').removeClass('unanimate');
+      $('.cutout').addClass('reanimate');
+      }
+    else {	
+      $('div.title').removeClass('reanimate');
+      $('div.title').addClass('unanimate');
+      $('.cutout').removeClass('reanimate');
+      $('.cutout').addClass('unanimate');
+      }
+  });  
+</script>
 
 <!-- Icon Fact Toggle -->
 <script>
@@ -155,21 +134,6 @@ function delay (URL) {
     });
   });
 </script>  
-   
-   
-<!-- Skrollr ---------------------------->
-<script type="text/javascript" src="scripts/skrollr.min.js"></script>
-<script type="text/javascript">
-var s = skrollr.init({
-	edgeStrategy: 'set',
-	easing: {
-		WTF: Math.random,
-		inverted: function(p) {
-			return 1-p;
-		}
-	}
-});
-</script>
 
 
 <!-- Livereload REMOVE BEFORE LAUNCH ---------------------------->	

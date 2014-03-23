@@ -128,6 +128,37 @@
 0% {margin-top:0px}
 100% {margin-top:450px}
   }
+  
+/** Dwarves Page ****************************/
+
+/** Title ***********/
+@-webkit-keyframes rotate_in_title {
+0% { -webkit-transform:rotate(90deg);}
+100% { -webkit-transform:rotate(0deg);} 
+  }
+@-webkit-keyframes unrotate_in_title {
+0% { -webkit-transform:rotate(0deg);}
+100% { -webkit-transform:rotate(90deg); }
+  }
+
+/** Cutout ***********/
+
+/** King Page ****************************/
+
+/** Title ***********/
+
+/** Cutout ***********/
+@-webkit-keyframes fade_in_cutout {
+/* 100% {-webkit-filter: saturate(0) brightness(1.5) contrast(.25)} */
+0% {-webkit-filter: saturate(1) brightness(1) contrast(1) opacity(1)}
+100% {-webkit-filter: saturate(1) brightness(1) contrast(1) opacity(0.5)}
+  }
+@-webkit-keyframes unfade_in_cutout {
+0% {-webkit-filter: saturate(1) brightness(1) contrast(1) opacity(0.5)}
+100% {-webkit-filter: saturate(1) brightness(1) contrast(1) opacity(1)}
+  }
+
+
 
 
 /** General ****************************/

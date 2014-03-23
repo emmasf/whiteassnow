@@ -10,20 +10,12 @@
 
 <body>
 
-	<div id="progress" data-0="width:0%;background:hsl(200, 100%, 50%);" data-900="width:100%;background:hsl(920, 100%, 50%);"></div>
-
-	<div id="end" class="page"
-    data-0="top:0px"
-    data-end="top:0px">
+	<div id="end" class="page">
   
-  <h2 class="middle"
-    data-0="opacity:1"
-    data-end="opacity:1">
+  <h2 class="middle animate">
     The end.</h2>         
   
-  <div id="hide-show" class="icon"
-    data-0="opacity:1;"
-    data-end="opacity:1;">
+  <div id="hide-show" class="icon">
     <div id="icon-button" class="svg-draw fill">
       	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="hideshow"> 	  		    
          <path d="M193.394,69.846h-14.194l3.626-11.756H83.639L39.858,164.857l11.65,17.214l0.021-0.015h108.012
@@ -42,9 +34,7 @@
       </div>
     </div>
          
-  <div id="factoid" class="factoid hide"    
-    data-0="opacity:1;"
-    data-end="opacity:1;">
+  <div id="factoid" class="factoid hide">
     <p>Did you give in to the seductive emptiness of fashion, fairy tales and iPads? <br/>
     This project was created while pursuing a Master of Fine Arts at the Maryland Institute College of Art. I set out to explore new possibilities for narrative in the interactive realm. Interface design is often built on the idea that the design should be invisible, a mean to deliver content rather than an end it itself. The interactivity in this project aims to be as fun as it is functional, an act of uncovering and creating, and a new means of exercising the imagination.<br/>
     I’d like to thank Ellen Lupton and Jennifer Cole Phillips, my mentors for this project. They helped me take risks, explore and create, and work through challenges rather than avoiding them.</p>
@@ -52,9 +42,7 @@
       
   </div><!-- /Page: End -->
     
-  <div class="page-nav"
-    data-0="opacity:1"
-    data-end="opacity:1">
+  <div class="page-nav">
     <a class="nav-icon previous" href="moral.html"><img src="img/nav_next.svg"></a>
     <a class="nav-icon next inactive" href="#"><img class="flip-horiz"  src="img/nav_next.svg"></a>
     <a class="nav-icon beginning" href="begin.html"><img src="img/nav_skip.svg"></a>
@@ -64,9 +52,7 @@
       </div>
     </div>
 
-  <div id="coverup"   
-    data-0="opacity:1"
-    data-end="opacity:1"></div> 
+  <div id="coverup"></div> 
     	
       
 <!--------------------------------------------------------------->
@@ -80,23 +66,7 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 <!-- <script src="scripts/main.js"></script> -->
 
-<!-- Page slider, maybeee --->
-<script>
-function delay (URL) {
-  setTimeout( function() { window.location = URL }, 500 );
-}
-
-  $(document).ready(function(){
-    $(".next").click(function(){
-      $(".page").animate({right:768}, 500);    
-      });
-    $(".previous").click(function(){
-      $(".page").animate({left:768}, 500);    
-      });
-  });
-</script>
-
-<!-- Page transition / modal fader  -->
+<!-- Page transition fader  -->
  <script type="text/javascript">
 
  function delayModal (URL) {
@@ -105,12 +75,36 @@ function delay (URL) {
 
  $(document).ready(function() { 
      $("#coverup").css("display","none");
-     $(".page").fadeIn(0); 
+     $(".page").fadeIn(1000);  
      $("a.center").click(function(event){
          $("#coverup").fadeIn(500);  
       });         
  });
  </script>
+ 
+ <!-- Tap image to play animation -->
+<script>
+  $( "h2" ).click(function() {
+    if ($('h2').hasClass( "animate" )) {
+      $('h2').removeClass('animate');
+      $('h2').addClass('unanimate');
+      $('.cutout').removeClass('animate');
+      $('.cutout').addClass('unanimate');
+      } 
+    else if ($('h2').hasClass( "unanimate" )) {	
+      $('h2').removeClass('unanimate');
+      $('h2').addClass('reanimate');
+      $('.cutout').removeClass('unanimate');
+      $('.cutout').addClass('reanimate');
+      }
+    else {	
+      $('h2').removeClass('reanimate');
+      $('h2').addClass('unanimate');
+      $('.cutout').removeClass('reanimate');
+      $('.cutout').addClass('unanimate');
+      }
+  });  
+</script>
 
 <!-- Icon Fact Toggle -->
 <script>
@@ -131,21 +125,7 @@ function delay (URL) {
     });
   });
 </script>  
-   
- 
-<!-- Skrollr ---------------------------->
-<script type="text/javascript" src="scripts/skrollr.min.js"></script>
-<script type="text/javascript">
-var s = skrollr.init({
-	edgeStrategy: 'set',
-	easing: {
-		WTF: Math.random,
-		inverted: function(p) {
-			return 1-p;
-		}
-	}
-});
-</script>
+
 
 
 </body>

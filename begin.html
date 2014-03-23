@@ -145,7 +145,7 @@ function delay (URL) {
 
  $(document).ready(function() { 
      $("#coverup").css("display","none");
-     $(".page").fadeIn(0); 
+          $(".page").fadeIn(1000);  
      $("a.center").click(function(event){
          $("#coverup").fadeIn(500);  
       });         
@@ -203,9 +203,11 @@ function delay (URL) {
 
 
 <!-- Livereload REMOVE BEFORE LAUNCH ---------------------------->
+<!--
 <script>
   document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
 </script>
+-->
 
 </body>
 </html>

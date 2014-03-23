@@ -59,19 +59,6 @@
     <div id="factoid04" class="factoid hide">
       <p>She is the center of her own world, delusional about the importance of her beauty, willing to go to any length to deny her waning youth.</p>
     </div>        
-  
-  <!--
-    <div class="icon-positioner middle"           
-      data-0="opacity:1;"
-      data-end="opacity:1;">
-      <div class="icon-field">
-        <div id="drag2" class="icon story middle">
-          <img src="img/queen_drawn.svg">
-          <p>Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. Grimm / cross-culture factoids. </p>  
-        </div>  
-      </div> 
-    </div>
-  -->
 
   </div><!-- /Page: Queen -->
       
@@ -97,29 +84,6 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 
-<!-- Page transition fader  -->
-<!--
-<script type="text/javascript">
- function delay (URL) {
-  setTimeout( function() { window.location = URL }, 2000 );
-  }
-  
-  $(document).ready(function() {
-    $("html").css("background-color", "#fff");
-    $(".page").css("display", "none"); 
-    $(".page").fadeIn(2000); 
-    $("a.transition").click(function(event){
-        event.preventDefault();
-        linkLocation = this.href;
-        $(".page").fadeOut(2000, redirectPage);      
-    });         
-  
-  function redirectPage() {
-    window.location = linkLocation;
-    }
-});
-</script>
--->
 
 <!-- Page transition fader  -->
  <script type="text/javascript">
@@ -130,45 +94,14 @@
 
  $(document).ready(function() { 
      $("#coverup").css("display","none");
-     $(".page").fadeIn(0); 
+     $(".page").fadeIn(1000);  
      $("a.center").click(function(event){
          $("#coverup").fadeIn(500);  
       });         
  });
  </script>
-
-<!-- Icon Fact Toggle -->
-<script>
-  $( "#icon-button-04" ).click(function() {
-    $( "#queen .hideshow" ).toggle();
-  });
-</script>
-
-<!-- Factoid Toggle Bar -->
-<script>
-  $(document).ready(function(){
-    $("#factoid04").click(function(){
-      if($(this).hasClass('hide')) {
-        $(this).animate({width:398},200).removeClass('hide');
-      } else { 
-        $(this).animate({width:32},200).addClass('hide');
-      }
-    });
-  });
-</script>
-
-<!-- Draggable -->
-<!--
-<script type="text/javascript" src="scripts/jquery.event.ue.js"></script>
-<script type="text/javascript" src="scripts/jquery.udraggable.js"></script>
-
-<script type="text/javascript">
-  $('#drag2').udraggable({
-  });
-</script>
--->   
-
-<!-- Tap image to play animation -->
+ 
+ <!-- Tap image to play animation -->
 <script>
   $( "h2" ).click(function() {
     if ($('h2').hasClass( "animate" )) {
@@ -192,11 +125,33 @@
   });  
 </script>
 
+<!-- Icon Fact Toggle -->
+<script>
+  $( "#icon-button-04" ).click(function() {
+    $( "#queen .hideshow" ).toggle();
+  });
+</script>
+
+<!-- Factoid Toggle Bar -->
+<script>
+  $(document).ready(function(){
+    $("#factoid04").click(function(){
+      if($(this).hasClass('hide')) {
+        $(this).animate({width:398},200).removeClass('hide');
+      } else { 
+        $(this).animate({width:32},200).addClass('hide');
+      }
+    });
+  });
+</script>  
+
 
 <!-- Livereload REMOVE BEFORE LAUNCH ---------------------------->	
+<!--
 <script>
   document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
 </script>
+-->
 
 </body>
 </html>

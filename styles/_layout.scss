@@ -176,7 +176,7 @@
     top: 154px;
     right: 0px;
     }   
-  .hideshow-text {
+  .hideshow.history {
     width: 530px;
     left: 20px;
     top: 562px;
@@ -224,13 +224,13 @@
     top: 488px;
     left: 0px;   
     p {width:320px}    
-    }   
-  .hideshow-text {
+    }     
+  .hideshow.history {
     width: 680px;
     left: 59px;
     top: 400px;
    } 
-   .cutout {
+  .cutout {
     margin-top:0px; 
     &.animate { -webkit-animation: fatten $animate-in;}
     &.unanimate { -webkit-animation: unfatten $animate-out;}
@@ -260,7 +260,7 @@
     top: 312px;
     left: 0px;
     }
-  .hideshow-text {
+  .hideshow.history {
     width: 500px;
     left: 12px;
     left: 90px;
@@ -270,13 +270,11 @@
   
 #dwarves {    
   h2 {    
-    /*
-width: 600px;
-    top:309px;
-    left: 300px;
-    -webkit-transform: rotate(90deg);
-*/
-    width: 600px;
+    -webkit-transform-origin:100% 0; 
+    &.animate { -webkit-animation: rotate_in_title $animate-in;}
+    &.unanimate { -webkit-animation: unrotate_in_title $animate-out;}
+    &.reanimate { -webkit-animation: rotate_in_title $animate-out;}  
+    width: 540px;
     top: 669px;
     left: 180px;
   	}  	
@@ -293,8 +291,8 @@ width: 600px;
     top: 182px;
     left: 0px;
     /* p {width:360px} */
-    }
-  .hideshow-text {
+    } 
+  .hideshow.history {
     width: 620px;
     left: 133px;
     top:650px;
@@ -305,23 +303,28 @@ width: 600px;
   }
 
 #king {    
-  h2 {    
+  .title {    
     width: 400px;
-    top:125px;
-    left:178px;
     text-align: center;
+    position: absolute;
+    left:198px;
+    h2 {
+      top:125px;   
+      padding-left: 5px;
+      }
+    h2.second { 
+      top:214px;   
+
+    	} 
   	}  	
-  h2.second { 
-    top:214px;   
-    left:188px;
-  	} 
   .slider {
     top: 620px;
     right:54px;
     }
   .cutout {
-    -webkit-filter: saturate(0) brightness(90) contrast(.1);
-    filter: saturate(0) brightness(90) contrast(.1); 
+    &.animate { -webkit-animation: fade_in_cutout $animate-in;}
+    &.unanimate { -webkit-animation: unfade_in_cutout $animate-out;}
+    &.reanimate { -webkit-animation: fade_in_cutout $animate-out;} 
     } 
   #king-rectangle {
     background-color: #fff;
@@ -346,7 +349,7 @@ width: 600px;
     top: 154px;
     p {margin: 170px 20px 0 10px;}
     } 
-  .hideshow-text {
+.hideshow.history {
     width: 740px;
     left: 20px;
     top:40px;
@@ -355,8 +358,10 @@ width: 600px;
 
 #sin {  
   h2 {    
-    top:570px;
-    left:-116px;
+    width: 600px;
+    bottom:140px;
+    left:230px;
+    -webkit-transform-origin:0 100%; 
     -webkit-transform: rotate(-90deg);
   	}  	
   .icon {
@@ -373,16 +378,21 @@ width: 600px;
   #factoid08 {
     width: 330px;
     height:32px;
-    top: 635px;
+    top: 630px;
     right: 0px;
     } 
-  .hideshow-text {
+  .hideshow.history {
     width: 366px;
     width: 440px;
     width: 659px;
     left: 6px;
     top:206px;
-   }   
+   } 
+  .cutout {
+    &.animate { -webkit-animation: fade_in_cutout $animate-in;}
+    &.unanimate { -webkit-animation: unfade_in_cutout $animate-out;}
+    &.reanimate { -webkit-animation: fade_in_cutout $animate-out;} 
+    }  
   }
 
 #prince {    
@@ -391,6 +401,8 @@ width: 600px;
     top:448px;
     top:688px;
     left:58px;
+    pointer-events: none;
+    span.prince-title {pointer-events: all;}
   	}  	
   .slider {
     bottom: 120px;
@@ -414,7 +426,7 @@ width: 600px;
     right: 0px;
     p {width:510px;}
     }
-  .hideshow-text {
+  .hideshow.history {
     width: 728px;
     left: 0px;
     top: 449px;
@@ -424,6 +436,11 @@ width: 600px;
     right:40px;
     bottom: -400px;
     }   
+  .cutout {
+    &.animate { -webkit-animation: fade_in_cutout $animate-in;}
+    &.unanimate { -webkit-animation: unfade_in_cutout $animate-out;}
+    &.reanimate { -webkit-animation: fade_in_cutout $animate-out;} 
+    }
   }
 
 #moral {
@@ -447,7 +464,7 @@ width: 600px;
     top: 392px;
     right: 0px;
     }
-  .hideshow-text {
+  .hideshow.history {
     width: 460px;
     left: 146px;
     left: 236px;
@@ -455,7 +472,12 @@ width: 600px;
     width: 733px;
     left: 26px;
     top:500px;
-   }  
+   }
+   .cutout {
+    &.animate { -webkit-animation: fade_in_cutout $animate-in;}
+    &.unanimate { -webkit-animation: unfade_in_cutout $animate-out;}
+    &.reanimate { -webkit-animation: fade_in_cutout $animate-out;} 
+    }  
   }
 
 #end {
@@ -476,7 +498,7 @@ width: 600px;
     top: 310px;
     left: 170px;
     }
-  .hideshow-text {
+  .hideshow.history {
     width: 390px;
     left: 10px;
     top:360px;
