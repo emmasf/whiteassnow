@@ -124,6 +124,56 @@ h2 {
 
 /** Story Modal ****************************/    
   
+.close { 
+  right: 20px; 
+  top: 20px;} 
+
+.modal {
+  display: none;
+  width: 708px;
+  height: 956px;
+  background: $paper-color;
+  padding: 0;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  }
+  
+.inset-story {
+  width:574px;
+  height:870px;
+  position: fixed;
+  top:40px;
+  left: 60px;
+  overflow: auto;
+  overflow-scrolling: touch;
+  -webkit-overflow-scrolling: touch;
+  padding: 80px 100px 0 0;
+  margin: 0;
+  p:last-child {margin-bottom: 100px}
+  }
+  
+.story-fader  {
+  width: 620px;
+  height: 80px;
+  position: absolute;
+  left:20px;
+  }
+  
+.story-fader.top {
+    top:0;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(50%,rgba($paper-color,1)), color-stop(100%,rgba($paper-color,0)));
+    background: -webkit-linear-gradient(top, rgba($paper-color,1) 50%,rgba($paper-color,0) 100%);
+    background: linear-gradient(to bottom, rgba($paper-color,1) 50%,rgba($paper-color,0) 100%);
+    }
+  
+.story-fader.bottom {
+    bottom:0;
+    background: -webkit-gradient(linear, left bottom, left top, color-stop(50%,rgba($paper-color,1)), color-stop(100%,rgba($paper-color,0)));
+    background: -webkit-linear-gradient(bottom, rgba($paper-color,1) 50%,rgba($paper-color,0) 100%);
+    background: linear-gradient(to top, rgba($paper-color,1) 50%,rgba($paper-color,0) 100%);
+    }
+    
+    /*
 .inset-story {
   width:560px;
   height:895px;
@@ -197,6 +247,7 @@ h2 {
  width: 768px;
  height: 1024px; 
  }
+*/
 
 
 /** Cutout Images ****************************/   	
