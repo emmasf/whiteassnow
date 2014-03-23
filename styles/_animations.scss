@@ -1,0 +1,71 @@
+/** Cover Page ****************************/
+/** BG Rotate ********/
+
+@keyframes spin {
+  from { transform: scale3d(2,2,1) rotateZ(0deg);  }
+  to { transform: scale3d(2,2,1) rotateZ(360deg); }
+  }
+@-webkit-keyframes spin {
+  from { -webkit-transform: scale3d(2,2,1) rotateZ(0deg); }
+  to { -webkit-transform: scale3d(2,2,1) rotateZ(360deg); }
+  }
+  
+/** Begin Page ****************************/
+/** Title Grow ***********/
+@-webkit-keyframes scale_title {
+0% {font-size:5em;}
+100% {font-size:6.1em;}
+}
+
+/** Hand In ***********/
+@-webkit-keyframes rotate_in_right {
+0% {
+  -webkit-transform:rotate(-60deg);}
+100% {    
+  -webkit-transform:rotate(0deg);}
+}
+
+/** Instructions Out ***********/
+@-webkit-keyframes fade_out {
+0% {opacity:1}
+100% {opacity:0}
+}
+
+  
+  
+/** Factoid Bar Glow ****************************/  
+@-webkit-keyframes textcolormorph
+{
+0%    {background-color: rgba($blue,0.8);}
+20%   {background-color: rgba($blue,0.8);}
+50%   {background-color: rgba(102,15,255,0.8);}
+80%   {background-color: rgba($blue,0.8)}
+100%  {background-color: rgba($blue,0.8);}
+}
+
+
+
+/*
+@-webkit-keyframes textcolormorph
+{
+0%    {background-color: rgba($blue,0.8);}
+10%   {background-color: rgba($blue,0.8);}
+25%   {background-color: rgba(102,15,255,0.8);}
+40%   {background-color: rgba($blue,0.8);}
+60%   {background-color: rgba($blue,0.8);}
+75%   {background-color: rgba(9,6,255,0.8);}
+90%   {background-color: rgba($blue,0.8)}
+100%  {background-color: rgba($blue,0.8)}
+}
+*/
+/*
+@-webkit-keyframes textcolormorph
+{
+0%     {background-color: rgba($blue,0.8);}
+25%    {background-color: rgba(102,15,255,0.8);}
+50%    {background-color: rgba($blue,0.8);}
+75%    {background-color: rgba(9,6,255,0.8);}
+100%   {background-color: rgba($blue,0.8);}
+}
+*/
+

@@ -2,19 +2,9 @@
 /******** Begin Page Layout Stylesheet *********************************************/
 /***********************************************************************************/
 
-#progress {
-  /*width: 6px;
-	height:1024px;
-  right:0;*/
-  width:768px;
-  height:12px;
-  bottom:0;
-	background:#444;
-	z-index:51;
-  }
 
 #bgwrap {
-    position:fixed;
+  position:fixed;
     left:0;top:0;right:0;bottom:0;
     width: 100%; height: 100%;
     overflow: visible;
@@ -32,14 +22,7 @@
     -moz-animation: spin 5s linear infinite;
     -webkit-animation: spin 5s linear infinite;
     }
-  @keyframes spin {
-    from { transform: scale3d(2,2,1) rotateZ(0deg);  }
-    to { transform: scale3d(2,2,1) rotateZ(360deg); }
-    }
-  @-webkit-keyframes spin {
-    from { -webkit-transform: scale3d(2,2,1) rotateZ(0deg); }
-    to { -webkit-transform: scale3d(2,2,1) rotateZ(360deg); }
-    }
+
     
     
 #cover {
@@ -47,11 +30,6 @@
     position: absolute;
     left: 60px;
     top: 583px;
-  	-webkit-transform-origin:0 0;
-  	-moz-transform-origin:0 0;
-  	-ms-transform-origin:0 0;
-  	-o-transform-origin:0 0;
-  	transform-origin:0 0;
   	}
   	
   p {
@@ -92,18 +70,17 @@
   h2 {    
     top:120px;
     left: 60px;
-  	-webkit-transform-origin:0 0;
-  	transform-origin:0 0;
-  	}  	
+    -webkit-animation: scale_title 1s ease-out 2s both;
+    height: 100px;
+    }  	
   .slider {
     top: 620px;
     left:50px;
     }
   .cutout {
-    -webkit-transform:rotate(0deg);
-  	transform:rotate(0deg); 
-  	-webkit-transform-origin:0 0;
-  	transform-origin:0 0; 
+    -webkit-transform-origin:100% 0;
+    transform-origin:100% 0; 
+    -webkit-animation: rotate_in_right 1s ease-out 2s both;   
   	top: -70px; 
     }  	
   .icon {
@@ -112,21 +89,23 @@
     right:50px;
     }        
   #instructions {
+/*     -webkit-animation: fade_out 0.75s ease-out 2s both; */
+    opacity: 1;
     width: 580px;
     left: 41px;
     top:213px;
-    opacity: 0;
-    background-color: rgba(0,0,0,0);
+    top:313px;
+    background-color: rgba(0,0,0,0);    
       p { 
-    font-family: $sans-type;
-    font-weight: 700;
-    font-size: 17px;
-    letter-spacing: 0.025em;
-    line-height: 1.25em;
-    display: block;
-    margin: 0;
-    margin-bottom: 12px;
-    }
+      font-family: $sans-type;
+      font-weight: 700;
+      font-size: 17px;
+      letter-spacing: 0.025em;
+      line-height: 1.25em;
+      display: block;
+      margin: 0;
+      margin-bottom: 12px;
+      }
     }     
   #factoid02 {
     width: 670px;
@@ -135,12 +114,15 @@
     left: 0px;    
     p {
       padding-top: 72px;
-      margin-left: 36px}
+      padding-top: 139px;
+      margin-left: 37px}
     } 
   .history {
     width: 615px;
     left: 42px;
-    top:206px;
+    width: 725px;
+    left: 0px;
+    top:256px;
 /*     p:first-child {background-color: #fff} */
    }
   

@@ -11,12 +11,29 @@
 /***********************************************************************************/
 /******** Begin Variables **********************************************************/
 /***********************************************************************************/
-@keyframes textcolormorph { 0% { background-color: rgba(2, 111, 195, 0.8); }
-  20% { background-color: rgba(2, 111, 195, 0.8); }
-  50% { background-color: rgba(102, 15, 255, 0.8); }
-  80% { background-color: rgba(2, 111, 195, 0.8); }
-  100% { background-color: rgba(2, 111, 195, 0.8); } }
+/******** End Variables **********************************************/
+/** Cover Page ****************************/
+/** BG Rotate ********/
+@keyframes spin { from { transform: scale3d(2, 2, 1) rotateZ(0deg); }
+  to { transform: scale3d(2, 2, 1) rotateZ(360deg); } }
 
+@-webkit-keyframes spin { from { -webkit-transform: scale3d(2, 2, 1) rotateZ(0deg); }
+  to { -webkit-transform: scale3d(2, 2, 1) rotateZ(360deg); } }
+
+/** Begin Page ****************************/
+/** Title Grow ***********/
+@-webkit-keyframes scale_title { 0% { font-size: 5em; }
+  100% { font-size: 6.1em; } }
+
+/** Hand In ***********/
+@-webkit-keyframes rotate_in_right { 0% { -webkit-transform: rotate(-60deg); }
+  100% { -webkit-transform: rotate(0deg); } }
+
+/** Instructions Out ***********/
+@-webkit-keyframes fade_out { 0% { opacity: 1; }
+  100% { opacity: 0; } }
+
+/** Factoid Bar Glow ****************************/
 @-webkit-keyframes textcolormorph { 0% { background-color: rgba(2, 111, 195, 0.8); }
   20% { background-color: rgba(2, 111, 195, 0.8); }
   50% { background-color: rgba(102, 15, 255, 0.8); }
@@ -24,18 +41,6 @@
   100% { background-color: rgba(2, 111, 195, 0.8); } }
 
 /*
-@keyframes textcolormorph
-{
-0%    {background-color: rgba($blue,0.8);}
-10%   {background-color: rgba($blue,0.8);}
-25%   {background-color: rgba(102,15,255,0.8);}
-40%   {background-color: rgba($blue,0.8);}
-60%   {background-color: rgba($blue,0.8);}
-75%   {background-color: rgba(9,6,255,0.8);}
-90%   {background-color: rgba($blue,0.8)}
-100%  {background-color: rgba($blue,0.8)}
-}
-
 @-webkit-keyframes textcolormorph
 {
 0%    {background-color: rgba($blue,0.8);}
@@ -49,15 +54,6 @@
 }
 */
 /*
-@keyframes textcolormorph
-{
-0%     {background-color: rgba($blue,0.8);}
-25%    {background-color: rgba(102,15,255,0.8);}
-50%    {background-color: rgba($blue,0.8);}
-75%    {background-color: rgba(9,6,255,0.8);}
-100%   {background-color: rgba($blue,0.8)}
-}
-
 @-webkit-keyframes textcolormorph
 {
 0%     {background-color: rgba($blue,0.8);}
@@ -67,7 +63,6 @@
 100%   {background-color: rgba($blue,0.8);}
 }
 */
-/******** End Variables **********************************************/
 /***********************************************************************************/
 /******** Begin Fixed Positition Stylesheet ****************************************/
 /***********************************************************************************/
@@ -149,7 +144,8 @@ h2 { font-size: 5em; color: black; line-height: 1.125em; letter-spacing: 0.009em
 #coverup { z-index: 6000; background-color: #ccc; width: 768px; height: 1024px; }
 
 /** Cutout Images ****************************/
-.cutout { width: 100%; position: relative; top: 0px; }
+.cutout { width: 100%; /* top:0px; position: relative;
+*/ margin-top: -80px; padding-top: 0px; }
 
 /** Page Slider ****************************/
 .slider { position: absolute; pointer-events: none; }
@@ -180,7 +176,7 @@ h2 { font-size: 5em; color: black; line-height: 1.125em; letter-spacing: 0.009em
 .history p { /* display: inline; */ /* To make white hug text */ margin-right: 9px; }
 .history p:last-child { margin-bottom: 0px; }
 
-.history { position: absolute; background-color: rgba(255, 255, 255, 0.75); padding: 24px; }
+.history { position: absolute; background-color: rgba(255, 255, 255, 0.75); padding: 24px; z-index: 2; }
 
 /** Generic Modifiers ****************************/
 .back { z-index: 1 !important; }
@@ -197,20 +193,11 @@ h2 { font-size: 5em; color: black; line-height: 1.125em; letter-spacing: 0.009em
 /***********************************************************************************/
 /******** Begin Page Layout Stylesheet *********************************************/
 /***********************************************************************************/
-#progress {   /*width: 6px;
-	height:1024px; right:0;*/ width: 768px; height: 12px; bottom: 0; background: #444; z-index: 51; }
-
 #bgwrap { position: fixed; left: 0; top: 0; right: 0; bottom: 0; width: 100%; height: 100%; overflow: visible; z-index: 0; }
 
 #bg { position: absolute; left: 0; top: 0; width: 100%; height: 100%; padding: 0; margin: 0; border-radius: 50%; background: gradient(linear, left top, left bottom, color-stop(0%, #660fff), color-stop(100%, #319bfd)); background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #660fff), color-stop(100%, #319bfd)); animation: spin 5s linear infinite; -moz-animation: spin 5s linear infinite; -webkit-animation: spin 5s linear infinite; }
 
-@keyframes spin { from { transform: scale3d(2, 2, 1) rotateZ(0deg); }
-  to { transform: scale3d(2, 2, 1) rotateZ(360deg); } }
-
-@-webkit-keyframes spin { from { -webkit-transform: scale3d(2, 2, 1) rotateZ(0deg); }
-  to { -webkit-transform: scale3d(2, 2, 1) rotateZ(360deg); } }
-
-#cover h1 { position: absolute; left: 60px; top: 583px; -webkit-transform-origin: 0 0; -moz-transform-origin: 0 0; -ms-transform-origin: 0 0; -o-transform-origin: 0 0; transform-origin: 0 0; }
+#cover h1 { position: absolute; left: 60px; top: 583px; }
 #cover p { color: white; font-size: 29px; font-weight: 700; position: absolute; left: 60px; top: 825px; }
 
 #story .icons { height: 0px; width: 600px; -webkit-transform: scale(0.8); margin-top: 130px; }
@@ -219,15 +206,15 @@ h2 { font-size: 5em; color: black; line-height: 1.125em; letter-spacing: 0.009em
 #story .svg-draw.coffin { -webkit-transform: scale(0.175) rotate(-95deg); stroke-width: 12; }
 #story p { clear: both; }
 
-#begin h2 { top: 120px; left: 60px; -webkit-transform-origin: 0 0; transform-origin: 0 0; }
+#begin h2 { top: 120px; left: 60px; -webkit-animation: scale_title 1s ease-out 2s both; height: 100px; }
 #begin .slider { top: 620px; left: 50px; }
-#begin .cutout { -webkit-transform: rotate(0deg); transform: rotate(0deg); -webkit-transform-origin: 0 0; transform-origin: 0 0; top: -70px; }
+#begin .cutout { -webkit-transform-origin: 100% 0; transform-origin: 100% 0; -webkit-animation: rotate_in_right 1s ease-out 2s both; top: -70px; }
 #begin .icon { position: absolute; top: 560px; right: 50px; }
-#begin #instructions { width: 580px; left: 41px; top: 213px; opacity: 0; background-color: rgba(0, 0, 0, 0); }
+#begin #instructions { /*     -webkit-animation: fade_out 0.75s ease-out 2s both; */ opacity: 1; width: 580px; left: 41px; top: 213px; top: 313px; background-color: rgba(0, 0, 0, 0); }
 #begin #instructions p { font-family: "Helvetica Neue", Helvetica, Arial, serif; font-weight: 700; font-size: 17px; letter-spacing: 0.025em; line-height: 1.25em; display: block; margin: 0; margin-bottom: 12px; }
 #begin #factoid02 { width: 670px; height: 32px; top: 164px; left: 0px; }
-#begin #factoid02 p { padding-top: 72px; margin-left: 36px; }
-#begin .history { width: 615px; left: 42px; top: 206px; /*     p:first-child {background-color: #fff} */ }
+#begin #factoid02 p { padding-top: 72px; padding-top: 139px; margin-left: 37px; }
+#begin .history { width: 615px; left: 42px; width: 725px; left: 0px; top: 256px; /*     p:first-child {background-color: #fff} */ }
 
 #snowwhite {   /*
 .svg-draw { position: absolute; top: 720px; }

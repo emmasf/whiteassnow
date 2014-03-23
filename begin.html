@@ -10,57 +10,24 @@
 
 <body>
 
-	<div id="progress" data-0="width:0%;background:hsl(200, 100%, 50%);" data-end="width:100%;background:hsl(920, 100%, 50%);"></div>
+	<div id="begin" class="page">
 
-	<div id="begin" class="page"
-    data-0="opacity:1"
-    data-end="opacity:1">
+  <img class="cutout back" src="img/begin.png">
 
-  <img class="cutout back" src="img/begin.png"      
-    data-0="
-      -webkit-transform:rotate(-60deg);
-    	transform:rotate(-60deg); 
-    	-webkit-transform-origin:100% 0;
-    	transform-origin:100% 0;"
-    data-300="
-      -webkit-transform:rotate(0deg);
-    	transform:rotate(0deg); "
-    	>
-    	
-  <div class="slider">
-    <div class="bar"></div>
-    <div class="handle"      
-      data-0="top:275px;"
-      data-end="top:8px;">
-    </div>
-  </div>
-
-  <h2 class="middle"
-    data-0="
-      font-size: 5em;
-      top:120px"
-    data-300="
-      font-size: 6em;
-      top:108px" >
+  <h2 class="middle">
     Let's begin.</h2>
         
-  <div id="instructions" class="history hideshow"
-    data-0="opacity:1;"
-    data-300="opacity:0;">
+  <div id="instructions" class="history hideshow">
         <p>Tap on colored bars to reveal the characters' inner workings.</p>
         <p>Tap on icons to uncover Snow White's origins and global presence.</p>
         <!-- <p>Spin, pinch, and swipe around to play with elements on the page.</p> -->
         <p>Tap on round buttons to read the full tale or move between pages.</p>         
     </div>
-  <div id="instructions" class="history hideshow" style="display: none"
-    data-0="opacity:1;"
-    data-300="opacity:0;">
+  <div class="history hideshow" style="display: none">
         <p></p>
     </div>
     
-    <div id="idea" class="hideshow-text"
-    data-0="opacity:1;"
-    data-end="opacity:1;">
+    <div id="idea" class="hideshow-text front">
         <div class="hideshow"></div>
         <div class="hideshow history" style="display: none">
         <p>When you think of Snow White, you probably picture the film that launched the Disney empire. The tale was actually first published by Jacob and Wilhelm Grimm in their 1812 book, <i>Kinder-und Hausmaerchen</i>, or <i>Tales of Children and the Home</i>.</p>
@@ -70,9 +37,7 @@
       </div>
     
         
-  <div id="hide-show" class="icon"
-    data-0="opacity:1;"
-    data-end="opacity:1;">
+  <div id="hide-show" class="icon front">
     <div id="icon-button" class="svg-draw">
     	<svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="hideshow">	    
         <polyline points="194.021,80.694 211.479,77.796 
@@ -100,17 +65,13 @@
     </div>
     
     
-  <div id="factoid02" class="factoid hide"    
-    data-0="opacity:1;"
-    data-end="opacity:1;">
+  <div id="factoid02" class="factoid hide">
     <p>Let go of the Snow White in your mind.</p>
     </div>
     
   </div><!-- /Page: Begin -->
   
-  <div class="page-nav"
-    data-0="opacity:1"
-    data-end="opacity:1">
+  <div class="page-nav">
     <a class="nav-icon previous" href="javascript:delay('index.html')"><img src="img/nav_next.svg"></a>
     <a class="nav-icon next" href="javascript:delay('snowwhite.html')"><img class="flip-horiz" src="img/nav_next.svg"></a>
     <a class="nav-icon beginning inactive" href="#"><img src="img/nav_skip.svg"></a>
@@ -120,9 +81,7 @@
       </div>
     </div>
     
-  <div id="coverup"   
-    data-0="opacity:1"
-    data-end="opacity:1"></div> 
+  <div id="coverup"></div> 
 
 <!--------------------------------------------------------------->
 <!--------------------------------------------------------------->    	
@@ -189,20 +148,6 @@ function delay (URL) {
       }
     });
   });
-</script>
-   
-<!-- Skrollr ---------------------------->
-<script type="text/javascript" src="scripts/skrollr.min.js"></script>
-<script type="text/javascript">
-var s = skrollr.init({
-	edgeStrategy: 'set',
-	easing: {
-		WTF: Math.random,
-		inverted: function(p) {
-			return 1-p;
-		}
-	}
-});
 </script>
 
 
