@@ -396,7 +396,7 @@ h2 { font-size: 5em; color: black; line-height: 1.125em; letter-spacing: 0.009em
 #prince #factoid09 { width: 32px; height: 223px; top: 434px; right: 0px; }
 #prince #factoid09 p { width: 510px; }
 #prince .hideshow.history { width: 728px; left: 0px; top: 449px; }
-#prince #spin { position: absolute; right: 40px; bottom: -400px; }
+#prince #spin { position: absolute; right: 40px; bottom: -400px; height: 498px; overflow: hidden; }
 #prince .cutout.animate { -webkit-animation: fade_in_cutout 1s ease 1s both; }
 #prince .cutout.unanimate { -webkit-animation: unfade_in_cutout 1s ease 0s both; }
 #prince .cutout.reanimate { -webkit-animation: fade_in_cutout 1s ease 0s both; }

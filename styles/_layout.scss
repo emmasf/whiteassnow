@@ -435,6 +435,8 @@
     position: absolute;
     right:40px;
     bottom: -400px;
+    height: 498px;
+    overflow:hidden;
     }   
   .cutout {
     &.animate { -webkit-animation: fade_in_cutout $animate-in;}
