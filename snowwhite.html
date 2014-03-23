@@ -10,6 +10,8 @@
 
 <body>
 	<div id="snowwhite" class="page">
+	
+	  <div id="spin" class="interactive_3d middle"></div>
   
     <img class="cutout back animate" src="img/snowwhite.png">    
     
@@ -126,6 +128,23 @@
       $('.cutout').addClass('unanimate');
       }
   });  
+</script>
+
+<!-- Spinner --------------------->
+<script type="text/javascript" src="scripts/jquery.interactive_3d.js"></script>
+<script>
+  $(document).ready( function() {
+    $("#spin").interactive_3d({
+      frames: 80,
+      cursor: "move",
+      speed: 0,
+      entrance: false,
+      preloadImages: true,
+      touchSupport: true,
+      loading: "",
+      autoPlay: false, 
+    });
+  });		
 </script>
 
 
