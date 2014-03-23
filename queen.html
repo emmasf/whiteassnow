@@ -17,7 +17,7 @@
   
     <img class="cutout back animate" src="img/queen.png">
 
-    <div id="idea04" class="hideshow-text">
+    <div id="idea" class="hideshow-text">
           <div class="hideshow"></div>
           <div class="hideshow history" style="display: none">
           <p>Stepmothers everywhere can blame the Grimms for their bad reputation. Once the brothers realized that the tales were being read to children, they published a radically softened second edition. To this end, they transformed an evil mother into an evil stepmother.</p>
@@ -130,6 +130,9 @@
   $( "#icon-button-04" ).click(function() {
     $( "#queen .hideshow" ).toggle();
   });
+  $( "#idea .hideshow.history" ).click(function() {
+    $( ".hideshow" ).toggle();
+  });  
 </script>
 
 <!-- Factoid Toggle Bar -->

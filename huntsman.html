@@ -17,7 +17,7 @@
 
   <img class="cutout back animate" src="img/huntsman.png">  
     
-  <div id="idea05" class="hideshow-text">
+  <div id="idea" class="hideshow-text">
         <div class="hideshow"></div>
         <div class="hideshow history" style="display: none">
           <p>The Disney film glosses over the gorier bits of Snow White's exodus, even compared to the Grimms’ softer second edition. In the Grimms’ version and most appearances around the world, the servant figure returns with some type of organ meat&mdash;a heart, lung, liver, or kidney&mdash;as proof of the girl's demise. In a classic warrior move, the Queen then eats these pieces of her enemy.</p>
@@ -160,6 +160,9 @@
 <script>
   $( "#icon-button-05" ).click(function() {
     $( "#huntsman .hideshow" ).toggle();
+  });
+  $( "#idea .hideshow.history" ).click(function() {
+    $( ".hideshow" ).toggle();
   });
 </script>
 

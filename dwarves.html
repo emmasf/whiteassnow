@@ -17,7 +17,7 @@
   
   <img class="cutout back animate" src="img/dwarves.png"> 
       
-  <div id="idea06" class="hideshow-text">
+  <div id="idea" class="hideshow-text">
         <div class="hideshow"></div>
         <div class="hideshow history" style="display: none">
           <p>Disney sweetened these characters, giving the Dwarves individual names and personalities. In most other versions, Snow White spends her exile more as an indentured servant than a cherished guest. Cast as seven robbers, gypsies, eunuchs, fairies or other &ldquo;strange people&rdquo; as well as dwarves, they often treat Snow White as an outsider herself.</p>
@@ -106,6 +106,9 @@
 <script>
   $( "#icon-button-06" ).click(function() {
     $( "#dwarves .hideshow" ).toggle();
+  });  
+  $( "#idea .hideshow.history" ).click(function() {
+    $( ".hideshow" ).toggle();
   });
 </script>
   

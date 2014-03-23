@@ -21,7 +21,7 @@
   <h2 class="front animate">
     <span class="prince-title">The Prin</span>ce likes <span class="prince-title">an easy</span> target.</h2>
     
-  <div id="idea09" class="hideshow-text">
+  <div id="idea" class="hideshow-text">
         <div class="hideshow"></div>
         <div class="hideshow history" style="display: none">
           <p>Snow White's resurrection has been repeatedly sanitized. At best the Prince has odd taste; at worst, he's a necrophiliac.</p>
@@ -132,7 +132,10 @@
   $( "#icon-button-09" ).click(function() {
     $( "#prince .hideshow" ).toggle();
   });
-</script>
+  $( "#idea .hideshow.history" ).click(function() {
+    $( ".hideshow" ).toggle();
+  });
+  </script>
 
 <!-- Factoid Toggle Bar -->
 <script>

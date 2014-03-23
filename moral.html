@@ -21,7 +21,7 @@
     <p>What do we learn? Revenge is sweet? Don't dare to grow old? Can we really condemn vanity and worship beauty in the same breath?</p>
     </div> 
     
-  <div id="idea10" class="hideshow-text">
+  <div id="idea" class="hideshow-text">
         <div class="hideshow"></div>
         <div class="hideshow history" style="display: none">
           <p>In a classic Western fashion, we think of Disney's Snow White and her Prince riding off into the sunset. Snow White will soon become Queen and inherit the kingdom, a role she's given solely because of her own soon-to-wane beauty.</p>
@@ -125,7 +125,10 @@
   $( "#icon-button-10" ).click(function() {
     $( "#moral .hideshow" ).toggle();
   });
-</script>
+  $( "#idea .hideshow.history" ).click(function() {
+    $( ".hideshow" ).toggle();
+  });
+  </script>
 
 <!-- Factoid Toggle Bar -->
 <script>

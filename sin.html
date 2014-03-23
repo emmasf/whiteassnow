@@ -17,7 +17,7 @@
     
   <img class="cutout back animate" src="img/sin.png">
   
-  <div id="idea08" class="hideshow-text">
+  <div id="idea" class="hideshow-text">
         <div class="hideshow"></div>
         <div class="hideshow history" style="display: none">
           <p>Botanists and many religious scholars suggest that the forbidden fruit was a pomegranate, not an apple. In keeping with this theory, versions of the tale from the German <i>Richilda</i> to the Moroccan <i>The Woman and the Sun</i> describe the Queen enchanting the young girl with a pomegranate.</p>
@@ -127,6 +127,9 @@
 <script>
   $( "#icon-button-08" ).click(function() {
     $( "#sin .hideshow" ).toggle();
+  });
+  $( "#idea .hideshow.history" ).click(function() {
+    $( ".hideshow" ).toggle();
   });
 </script>
 
