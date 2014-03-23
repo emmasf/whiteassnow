@@ -179,7 +179,7 @@ html, body, div, span, p, a, del, em, img, ol, ul, li, fieldset, form, label { m
 
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
 
-html, body { background-color: #fff; text-align: left; width: 768px; line-height: 1.2em; font-family: "Helvetica Neue", Helvetica, Arial, serif; text-align: left; }
+html, body { background-color: #fff; text-align: left; width: 768px; height: 1024px; overflow: hidden; line-height: 1.2em; font-family: "Helvetica Neue", Helvetica, Arial, serif; text-align: left; }
 
 body { background-attachment: fixed; }
 
