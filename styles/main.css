@@ -264,9 +264,9 @@ h2 { font-size: 5em; color: black; line-height: 1.125em; letter-spacing: 0.009em
 
 .svg-draw.fill { fill: black; stroke: black; stroke-width: 1; }
 
-.svg-draw .red { stroke: #e72900; opacity: 0.85; }
+.svg-draw .red { stroke: #e72900; opacity: 0.75; }
 
-.svg-draw.fill .red { stroke: #e72900; fill: #e72900; opacity: 0.85; }
+.svg-draw.fill .red { stroke: #e72900; fill: #e72900; opacity: 0.75; }
 
 .history p { /* display: inline; */ /* To make white hug text */ margin-right: 9px; }
 .history p:last-child { margin-bottom: 0px; }
@@ -313,7 +313,7 @@ h2 { font-size: 5em; color: black; line-height: 1.125em; letter-spacing: 0.009em
 #begin #instructions { /*     -webkit-animation: fade_out 0.75s ease-out 2s both; */ opacity: 1; width: 580px; left: 41px; top: 253px; /*     top:773px; */ background-color: rgba(0, 0, 0, 0); }
 #begin #instructions p { font-family: "Helvetica Neue", Helvetica, Arial, serif; font-weight: 700; font-size: 17px; letter-spacing: 0.025em; line-height: 1.25em; display: block; margin: 0; margin-bottom: 12px; }
 #begin #factoid { width: 507px; height: 32px; top: 74px; left: 0px; }
-#begin #factoid p { padding-top: 202px; margin-left: 37px; }
+#begin #factoid p { padding-top: 304px; margin-left: 37px; }
 #begin .history { width: 615px; left: 42px; top: 120px; padding-right: 400px; /*     p:first-child {background-color: #fff} */ }
 #begin .hider { position: absolute; width: 500px; height: 100px; top: 170px; left: 40px; background-color: #fff; }
 
