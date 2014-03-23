@@ -142,17 +142,17 @@
 <!-- Page transition fader  -->
 <script type="text/javascript">
  function delay (URL) {
-  setTimeout( function() { window.location = URL }, 500 );
+  setTimeout( function() { window.location = URL }, 2000 );
   }
   
   $(document).ready(function() {
     $("html").css("background-color", "#fff");
     $(".page").css("display", "none"); 
-    $(".page").fadeIn(500); 
+    $(".page").fadeIn(2000); 
     $("a.transition").click(function(event){
         event.preventDefault();
         linkLocation = this.href;
-        $(".page").fadeOut(500, redirectPage);      
+        $(".page").fadeOut(2000, redirectPage);      
     });         
     function redirectPage() {
         window.location = linkLocation;
