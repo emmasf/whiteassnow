@@ -165,7 +165,7 @@ h2 { font-size: 5em; color: black; line-height: 1.125em; letter-spacing: 0.009em
 .page { width: 768px; height: 1024px; top: 0px; overflow: hidden; }
 
 .title_hider { zoom: 1; *display: inline; }
-.title_hider.animate { -webkit-animation: unhide_title 1s ease 0.05s both; }
+.title_hider.animate { -webkit-animation: unhide_title 0.33s ease 1s both; }
 .title_hider.unanimate { -webkit-animation: hide_title 1s ease 0s both; }
 .title_hider.reanimate { -webkit-animation: unhide_title 1s ease 0s both; }
 
@@ -279,11 +279,11 @@ h2 { font-size: 5em; color: black; line-height: 1.125em; letter-spacing: 0.009em
 #story p { clear: both; }
 
 #begin .title { left: 60px; position: absolute; top: 170px; -webkit-transform-origin: 0 100%; transform-origin: 0 100%; height: 100px; width: 768px; }
-#begin .title.animate { -webkit-animation: scale_title 1s ease 1s both; }
+#begin .title.animate { -webkit-animation: scale_title 1s ease 0.75s both; }
 #begin .title.unanimate { -webkit-animation: unscale_title 1s ease 0s both; }
 #begin .title.reanimate { -webkit-animation: scale_title 1s ease 0s both; }
 #begin .cutout { -webkit-transform-origin: 100% 0; transform-origin: 100% 0; margin-top: 70px; }
-#begin .cutout.animate { -webkit-animation: rotate_in_right 1s ease 1s both; }
+#begin .cutout.animate { -webkit-animation: rotate_in_right 1s ease 0.75s both; }
 #begin .cutout.unanimate { -webkit-animation: unrotate_in_right 1s ease 0s both; }
 #begin .cutout.reanimate { -webkit-animation: rotate_in_right 1s ease 0s both; }
 #begin .icon { position: absolute; top: 710px; right: 50px; }
@@ -296,7 +296,7 @@ h2 { font-size: 5em; color: black; line-height: 1.125em; letter-spacing: 0.009em
 
 #snowwhite { margin-top: 5px; }
 #snowwhite h2 { width: 600px; top: 686px; left: 55px; -webkit-transform-origin: 0 0; -webkit-transform: rotate(-90deg); }
-#snowwhite .cutout.animate { -webkit-animation: slide_in 1s ease 1s both; }
+#snowwhite .cutout.animate { -webkit-animation: slide_in 1s ease 0.75s both; }
 #snowwhite .cutout.unanimate { -webkit-animation: unslide_in 1s ease 0s both; }
 #snowwhite .cutout.reanimate { -webkit-animation: slide_in 1s ease 0s both; }
 #snowwhite .icon { position: absolute; top: 347px; right: 14px; }
@@ -312,12 +312,12 @@ h2 { font-size: 5em; color: black; line-height: 1.125em; letter-spacing: 0.009em
 #queen #factoid p { width: 320px; }
 #queen .hideshow.history { width: 630px; left: 59px; top: 402px; top: 365px; }
 #queen .cutout { margin-top: 0px; }
-#queen .cutout.animate { -webkit-animation: fatten 1s ease 1s both; }
+#queen .cutout.animate { -webkit-animation: fatten 1s ease 0.75s both; }
 #queen .cutout.unanimate { -webkit-animation: unfatten 1s ease 0s both; }
 #queen .cutout.reanimate { -webkit-animation: fatten 1s ease 0s both; }
 
 #huntsman h2 { width: 650px; top: 103px; left: 60px; }
-#huntsman .cutout.animate { -webkit-animation: slide_up 1s ease 1s both; }
+#huntsman .cutout.animate { -webkit-animation: slide_up 1s ease 0.75s both; }
 #huntsman .cutout.unanimate { -webkit-animation: unslide_up 1s ease 0s both; }
 #huntsman .cutout.reanimate { -webkit-animation: slide_up 1s ease 0s both; }
 #huntsman .icon { position: absolute; top: 644px; left: 267px; }
@@ -330,7 +330,7 @@ h2 { font-size: 5em; color: black; line-height: 1.125em; letter-spacing: 0.009em
 #dwarves #factoid { width: 32px; height: 405px; top: 182px; left: 0px; }
 #dwarves #factoid p { width: 360px; }
 #dwarves .hideshow.history { width: 584px; left: 115px; top: 203px; padding-bottom: 40px; }
-#dwarves .cutout.animate { -webkit-animation: scoot_in 1s ease 1s both; }
+#dwarves .cutout.animate { -webkit-animation: scoot_in 1s ease 0.75s both; }
 #dwarves .cutout.unanimate { -webkit-animation: unscoot_in 1s ease 0s both; }
 #dwarves .cutout.reanimate { -webkit-animation: scoot_in 1s ease 0s both; }
 
@@ -338,7 +338,7 @@ h2 { font-size: 5em; color: black; line-height: 1.125em; letter-spacing: 0.009em
 #king .title h2 { top: 125px; padding-left: 5px; }
 #king .title h2.second { top: 214px; }
 #king .slider { top: 620px; right: 54px; }
-#king .cutout.animate { -webkit-animation: fade_in_cutout 1s ease 1s both; }
+#king .cutout.animate { -webkit-animation: fade_in_cutout 1s ease 0.75s both; }
 #king .cutout.unanimate { -webkit-animation: unfade_in_cutout 1s ease 0s both; }
 #king .cutout.reanimate { -webkit-animation: fade_in_cutout 1s ease 0s both; }
 #king .icon { position: absolute; top: 461px; left: 34.5%; }
@@ -351,7 +351,7 @@ h2 { font-size: 5em; color: black; line-height: 1.125em; letter-spacing: 0.009em
 #sin .story { width: 510px; left: 175px; left: 155px; top: 1024px; }
 #sin #factoid { width: 340px; height: 32px; top: 630px; right: 0px; }
 #sin .hideshow.history { width: 366px; width: 440px; width: 659px; width: 605px; left: 26px; top: 200px; padding-bottom: 35px; }
-#sin .cutout.animate { -webkit-animation: angle_cutout 1s ease 1s both; }
+#sin .cutout.animate { -webkit-animation: angle_cutout 1s ease 0.75s both; }
 #sin .cutout.unanimate { -webkit-animation: unangle_cutout 1s ease 0s both; }
 #sin .cutout.reanimate { -webkit-animation: angle_cutout 1s ease 0s both; }
 
@@ -364,7 +364,7 @@ h2 { font-size: 5em; color: black; line-height: 1.125em; letter-spacing: 0.009em
 #prince #factoid p { width: 510px; }
 #prince .hideshow.history { width: 688px; left: 3px; top: 468px; }
 #prince #spin { position: absolute; right: 40px; bottom: 0px; height: 498px; overflow: hidden; }
-#prince .cutout.animate { -webkit-animation: desaturate_cutout 1s ease 1s both; }
+#prince .cutout.animate { -webkit-animation: desaturate_cutout 1s ease 0.75s both; }
 #prince .cutout.unanimate { -webkit-animation: undesaturate_cutout 1s ease 0s both; }
 #prince .cutout.reanimate { -webkit-animation: desaturate_cutout 1s ease 0s both; }
 
@@ -374,7 +374,7 @@ h2 { font-size: 5em; color: black; line-height: 1.125em; letter-spacing: 0.009em
 #moral #factoid { width: 260px; height: 32px; top: 693px; top: 392px; right: 0px; }
 #moral .hideshow.history { width: 670px; left: 26px; top: 470px; }
 #moral .cutout { -webkit-transform-origin: 65% 50%; }
-#moral .cutout.animate { -webkit-animation: fatten 1s ease 1s both; }
+#moral .cutout.animate { -webkit-animation: fatten 1s ease 0.75s both; }
 #moral .cutout.unanimate { -webkit-animation: unfatten 1s ease 0s both; }
 #moral .cutout.reanimate { -webkit-animation: fatten 1s ease 0s both; }
 

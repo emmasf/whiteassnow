@@ -91,24 +91,18 @@
  
  </script>
  
- <!-- Tap image to play animation -->
+<!-- Tap image to play animation -->
 <script>
-  $( "h2.second" ).click(function() {
-    if ($('div.title').hasClass( "animate" )) {
-      $('div.title').removeClass('animate');
-      $('div.title').addClass('unanimate');
+  $( ".cutout, h2.second" ).click(function() {
+    if ($('.cutout').hasClass( "animate" )) {
       $('.cutout').removeClass('animate');
       $('.cutout').addClass('unanimate');
       } 
-    else if ($('div.title').hasClass( "unanimate" )) {	
-      $('div.title').removeClass('unanimate');
-      $('div.title').addClass('reanimate');
+    else if ($('.cutout').hasClass( "unanimate" )) {	
       $('.cutout').removeClass('unanimate');
       $('.cutout').addClass('reanimate');
       }
     else {	
-      $('div.title').removeClass('reanimate');
-      $('div.title').addClass('unanimate');
       $('.cutout').removeClass('reanimate');
       $('.cutout').addClass('unanimate');
       }

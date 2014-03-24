@@ -30,9 +30,9 @@ $serif-type: "Arnhem", Georgia, serif;
 
 $text-color: rgba(0,0,0,1);
 
-$animate-in: 1s ease 1s both;
+$animate-in: 1s ease 0.75s both;
 $animate-out: 1s ease 0s both;
-$animate-in-fast: 1s ease 0.05s both;
+$animate-in-fast: 0.33s ease 1s both;
 
 /******** End Variables **********************************************/
 
