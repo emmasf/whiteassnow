@@ -15,19 +15,6 @@
   }
   
 /** Begin Page ****************************/
-
-/** Title ***********/
-/*
-@-webkit-keyframes scale_title {
-0% {font-size:92px; top:162px;}
-100% {font-size:72px; top:170px;}
-}
-@-webkit-keyframes unscale_title {
-0% {font-size:72px; top:170px;}
-100% {font-size:92px; top:162px;}
-}
-*/
-
 @-webkit-keyframes scale_title {
 0% {-webkit-transform: scale(1.2, 1.2)}
 100% {-webkit-transform: scale(1,1)}
@@ -47,25 +34,8 @@
 100% { -webkit-transform:rotate(-60deg); }
   }
 
-
-/** Instructions Out ***********/
-@-webkit-keyframes fade_out {
-0% {opacity:1}
-100% {opacity:0}
-  }
-
  
 /** SW Page ****************************/
-
-/** Title ***********/
-@-webkit-keyframes unfade_title {
-0% {opacity: 1 }
-100% {opacity: 0.25 }
-  }
-@-webkit-keyframes fade_title {
-0% {opacity: 0.25}
-100% {opacity: 1}
-  }
 
 /** Cutout ***********/
 @-webkit-keyframes unslide_in {
@@ -77,35 +47,7 @@
 100% {margin-top:200px} 
   }
   
-/** Queen Page ****************************/
-
-/** Title ***********/
-@-webkit-keyframes skew_title {
-0% { -webkit-transform:skewX(1deg);}
-100% { -webkit-transform:skewX(0deg);}
-  }
-@-webkit-keyframes unskew_title {
-0% { -webkit-transform:skewX(0deg);}
-100% { -webkit-transform:skewX(1deg);}
-  }
-
-/** Cutout ***********/
-/*
-@-webkit-keyframes reflect {
-0% { -webkit-transform:rotateY(180deg)}
-100% { -webkit-transform:rotateY(0deg)} 
-  }
-*/
-/*
-@-webkit-keyframes skew_cutout {
-0% { -webkit-transform:skewX(4deg);}
-100% { -webkit-transform:skewX(0deg);}
-  }
-@-webkit-keyframes unskew_cutout {
-0% { -webkit-transform:skewX(0deg);}
-100% { -webkit-transform:skewX(4deg);}
-  }
-*/
+/** Queen / Moral Pages ****************************/
 @-webkit-keyframes fatten {
 0% { -webkit-transform:scale(1.05,1);}
 100% { -webkit-transform:scale(1,1);}
@@ -116,20 +58,6 @@
   }
   
 /** Huntsman Page ****************************/
-
-/** Title ***********/
-
-/** Cutout ***********/
-/*
-@-webkit-keyframes slide_up {
-0% {margin-top:450px}
-100% {margin-top:0px}
-  }
-@-webkit-keyframes unslide_up {
-0% {margin-top:0px}
-100% {margin-top:450px}
-  }
-*/
 @-webkit-keyframes slide_up {
 0% {-webkit-transform:translate(85px, 45px);}
 100% {-webkit-transform:translate(0px,0px);}
@@ -140,8 +68,6 @@
   }
   
 /** Dwarves Page ****************************/
-
-/** Title ***********/
 @-webkit-keyframes scoot_in {
 0% {-webkit-transform:translate(240px,0px);}
 100% {-webkit-transform:translate(0px,0px);} 
@@ -151,13 +77,8 @@
 100% {-webkit-transform:translate(0px,0px);}
   }
 
-/** Cutout ***********/
 
 /** King Page ****************************/
-
-/** Title ***********/
-
-/** Cutout ***********/
 @-webkit-keyframes fade_in_cutout {
 /* 100% {-webkit-filter: saturate(0) brightness(1.5) contrast(.25)} */
 0% {-webkit-filter: opacity(1); -webkit-transform:translate(0px,0px);}
@@ -169,10 +90,6 @@
   }
   
 /** Sin Page ****************************/
-
-/** Title ***********/
-
-/** Cutout ***********/
 @-webkit-keyframes angle_cutout {
 0% {-webkit-transform: translate(93px,93px);}
 100% {-webkit-transform: translate(0px,0px);}
@@ -182,11 +99,7 @@
 100% {-webkit-transform: translate(93px,93px);}
   }
   
-  /** Prince Page ****************************/
-
-/** Title ***********/
-
-/** Cutout ***********/
+/** Prince Page ****************************/
 @-webkit-keyframes desaturate_cutout {
 0% {-webkit-filter: saturate(1.5); -webkit-transform: translate(-15px,0px);}
 100% {-webkit-filter: saturate(0.75); -webkit-transform: translate(0px,0px);}
@@ -198,12 +111,20 @@
   
 
 
-
 /** General ****************************/
   
 /** Factoid Bar Glow ****************************/  
-@-webkit-keyframes textcolormorph
-{
+@-webkit-keyframes unhide_title {
+0% {-webkit-filter: opacity(0);}
+100% {-webkit-filter: opacity(1);}
+  }
+@-webkit-keyframes hide_title {
+0% {-webkit-filter: opacity(1);}
+100% {-webkit-filter: opacity(0);}
+  }
+  
+  
+@-webkit-keyframes textcolormorph {
 0%    {background-color: rgba($blue,0.8);}
 20%   {background-color: rgba($blue,0.8);}
 50%   {background-color: rgba(102,15,255,0.8);}

@@ -26,17 +26,6 @@
   to { -webkit-transform: scale3d(2, 2, 1) rotateZ(360deg); } }
 
 /** Begin Page ****************************/
-/** Title ***********/
-/*
-@-webkit-keyframes scale_title {
-0% {font-size:92px; top:162px;}
-100% {font-size:72px; top:170px;}
-}
-@-webkit-keyframes unscale_title {
-0% {font-size:72px; top:170px;}
-100% {font-size:92px; top:162px;}
-}
-*/
 @-webkit-keyframes scale_title { 0% { -webkit-transform: scale(1.2, 1.2); }
   100% { -webkit-transform: scale(1, 1); } }
 
@@ -50,18 +39,7 @@
 @-webkit-keyframes unrotate_in_right { 0% { -webkit-transform: rotate(0deg); }
   100% { -webkit-transform: rotate(-60deg); } }
 
-/** Instructions Out ***********/
-@-webkit-keyframes fade_out { 0% { opacity: 1; }
-  100% { opacity: 0; } }
-
 /** SW Page ****************************/
-/** Title ***********/
-@-webkit-keyframes unfade_title { 0% { opacity: 1; }
-  100% { opacity: 0.25; } }
-
-@-webkit-keyframes fade_title { 0% { opacity: 0.25; }
-  100% { opacity: 1; } }
-
 /** Cutout ***********/
 @-webkit-keyframes unslide_in { 0% { margin-top: 200px; }
   100% { margin-top: -45px; } }
@@ -69,28 +47,7 @@
 @-webkit-keyframes slide_in { 0% { margin-top: -45px; }
   100% { margin-top: 200px; } }
 
-/** Queen Page ****************************/
-/** Title ***********/
-@-webkit-keyframes skew_title { 0% { -webkit-transform: skewX(1deg); }
-  100% { -webkit-transform: skewX(0deg); } }
-
-@-webkit-keyframes unskew_title { 0% { -webkit-transform: skewX(0deg); }
-  100% { -webkit-transform: skewX(1deg); } }
-
-/** Cutout ***********/
-/*
-@-webkit-keyframes reflect {
-0% { -webkit-transform:rotateY(180deg)}
-100% { -webkit-transform:rotateY(0deg)}  }
-*/
-/*
-@-webkit-keyframes skew_cutout {
-0% { -webkit-transform:skewX(4deg);}
-100% { -webkit-transform:skewX(0deg);} }
-@-webkit-keyframes unskew_cutout {
-0% { -webkit-transform:skewX(0deg);}
-100% { -webkit-transform:skewX(4deg);} }
-*/
+/** Queen / Moral Pages ****************************/
 @-webkit-keyframes fatten { 0% { -webkit-transform: scale(1.05, 1); }
   100% { -webkit-transform: scale(1, 1); } }
 
@@ -98,16 +55,6 @@
   100% { -webkit-transform: scale(1.05, 1); } }
 
 /** Huntsman Page ****************************/
-/** Title ***********/
-/** Cutout ***********/
-/*
-@-webkit-keyframes slide_up {
-0% {margin-top:450px}
-100% {margin-top:0px} }
-@-webkit-keyframes unslide_up {
-0% {margin-top:0px}
-100% {margin-top:450px} }
-*/
 @-webkit-keyframes slide_up { 0% { -webkit-transform: translate(85px, 45px); }
   100% { -webkit-transform: translate(0px, 0px); } }
 
@@ -115,17 +62,13 @@
   100% { -webkit-transform: translate(85px, 45px); } }
 
 /** Dwarves Page ****************************/
-/** Title ***********/
 @-webkit-keyframes scoot_in { 0% { -webkit-transform: translate(240px, 0px); }
   100% { -webkit-transform: translate(0px, 0px); } }
 
 @-webkit-keyframes unscoot_in { 0% { -webkit-transform: translate(0px, 0px); }
   100% { -webkit-transform: translate(0px, 0px); } }
 
-/** Cutout ***********/
 /** King Page ****************************/
-/** Title ***********/
-/** Cutout ***********/
 @-webkit-keyframes fade_in_cutout { /* 100% {-webkit-filter: saturate(0) brightness(1.5) contrast(.25)} */
   0% { -webkit-filter: opacity(1); -webkit-transform: translate(0px, 0px); }
   100% { -webkit-filter: opacity(0.75); -webkit-transform: translate(0px, 60px); } }
@@ -134,8 +77,6 @@
   100% { -webkit-filter: opacity(1); -webkit-transform: translate(0px, 0px); } }
 
 /** Sin Page ****************************/
-/** Title ***********/
-/** Cutout ***********/
 @-webkit-keyframes angle_cutout { 0% { -webkit-transform: translate(93px, 93px); }
   100% { -webkit-transform: translate(0px, 0px); } }
 
@@ -143,8 +84,6 @@
   100% { -webkit-transform: translate(93px, 93px); } }
 
 /** Prince Page ****************************/
-/** Title ***********/
-/** Cutout ***********/
 @-webkit-keyframes desaturate_cutout { 0% { -webkit-filter: saturate(1.5); -webkit-transform: translate(-15px, 0px); }
   100% { -webkit-filter: saturate(0.75); -webkit-transform: translate(0px, 0px); } }
 
@@ -153,6 +92,12 @@
 
 /** General ****************************/
 /** Factoid Bar Glow ****************************/
+@-webkit-keyframes unhide_title { 0% { -webkit-filter: opacity(0); }
+  100% { -webkit-filter: opacity(1); } }
+
+@-webkit-keyframes hide_title { 0% { -webkit-filter: opacity(1); }
+  100% { -webkit-filter: opacity(0); } }
+
 @-webkit-keyframes textcolormorph { 0% { background-color: rgba(2, 111, 195, 0.8); }
   20% { background-color: rgba(2, 111, 195, 0.8); }
   50% { background-color: rgba(102, 15, 255, 0.8); }
@@ -218,6 +163,11 @@ h1, h2 { font-family: "Helvetica Neue", Helvetica, Arial, serif; color: white; f
 h2 { font-size: 5em; color: black; line-height: 1.125em; letter-spacing: 0.009em; }
 
 .page { width: 768px; height: 1024px; top: 0px; overflow: hidden; }
+
+.title_hider { zoom: 1; *display: inline; }
+.title_hider.animate { -webkit-animation: unhide_title 1s ease 1s both; }
+.title_hider.unanimate { -webkit-animation: hide_title 1s ease 0s both; }
+.title_hider.reanimate { -webkit-animation: unhide_title 1s ease 0s both; }
 
 /** Cutout Images ****************************/
 .cutout { width: 768px; height: 1024px; position: absolute; }
@@ -337,34 +287,25 @@ h2 { font-size: 5em; color: black; line-height: 1.125em; letter-spacing: 0.009em
 #begin .cutout.unanimate { -webkit-animation: unrotate_in_right 1s ease 0s both; }
 #begin .cutout.reanimate { -webkit-animation: rotate_in_right 1s ease 0s both; }
 #begin .icon { position: absolute; top: 710px; right: 50px; }
-#begin #instructions { /*     -webkit-animation: fade_out 0.75s ease-out 2s both; */ opacity: 1; width: 580px; left: 41px; top: 253px; /*     top:773px; */ background-color: rgba(0, 0, 0, 0); }
+#begin #instructions { opacity: 1; width: 580px; left: 41px; top: 253px; background-color: rgba(0, 0, 0, 0); }
 #begin #instructions p { font-family: "Helvetica Neue", Helvetica, Arial, serif; font-weight: 700; font-size: 17px; letter-spacing: 0.025em; line-height: 1.25em; display: block; margin: 0; margin-bottom: 12px; }
 #begin #factoid { width: 507px; height: 32px; top: 74px; left: 0px; }
 #begin #factoid p { padding-top: 305px; margin-left: 37px; }
-#begin .history { width: 615px; left: 42px; top: 120px; padding-right: 400px; /*     p:first-child {background-color: #fff} */ }
+#begin .history { width: 615px; left: 42px; top: 120px; padding-right: 400px; }
 #begin .hider { position: absolute; width: 500px; height: 100px; top: 170px; left: 40px; background-color: #fff; }
 
 #snowwhite { margin-top: 5px; }
-#snowwhite h2 { width: 600px; top: 686px; left: 55px; -webkit-transform-origin: 0 0; transform-origin: 0 0; -webkit-transform: rotate(-90deg); transform: rotate(-90deg); }
-#snowwhite h2.animate { -webkit-animation: fade_title 1s ease 1s both; }
-#snowwhite h2.unanimate { -webkit-animation: unfade_title 1s ease 0s both; }
-#snowwhite h2.reanimate { -webkit-animation: fade_title 1s ease 0s both; }
-#snowwhite .cutout {     /*
--webkit-filter: blur(5px); filter: blur(5px) 	
-*/ }
+#snowwhite h2 { width: 600px; top: 686px; left: 55px; -webkit-transform-origin: 0 0; -webkit-transform: rotate(-90deg); }
 #snowwhite .cutout.animate { -webkit-animation: slide_in 1s ease 1s both; }
 #snowwhite .cutout.unanimate { -webkit-animation: unslide_in 1s ease 0s both; }
 #snowwhite .cutout.reanimate { -webkit-animation: slide_in 1s ease 0s both; }
 #snowwhite .icon { position: absolute; top: 347px; right: 14px; }
 #snowwhite #factoid { width: 408px; height: 32px; top: 154px; right: 0px; }
-#snowwhite .hideshow.history { width: 530px; width: 370px; width: 410px; left: 133px; top: 582px; }
+#snowwhite .hideshow.history { width: 410px; left: 133px; top: 582px; }
 
 #queen { /* #drag2 { position: absolute; top:780px; left:70px; width:580px; img { -webkit-transform: rotate(-15deg); display: block; }
 */ }
-#queen h2 { width: 500px; top: 82px; left: 256px; left: 350px; top: 84px; left: 226px; }
-#queen h2.animate { -webkit-animation: fatten 1s ease 1s both; }
-#queen h2.unanimate { -webkit-animation: unfatten 1s ease 0s both; }
-#queen h2.reanimate { -webkit-animation: fatten 1s ease 0s both; }
+#queen h2 { width: 500px; top: 84px; left: 226px; }
 #queen .icon { position: absolute; top: 770px; left: 90px; top: 670px; left: 475px; width: 580px; }
 #queen .icon svg { -webkit-transform: rotate(-36deg); display: block; }
 #queen #factoid { width: 32px; height: 250px; top: 488px; left: 0px; }
@@ -383,10 +324,8 @@ h2 { font-size: 5em; color: black; line-height: 1.125em; letter-spacing: 0.009em
 #huntsman #factoid { width: 336px; height: 32px; top: 312px; left: 0px; }
 #huntsman .hideshow.history { width: 550px; left: 12px; left: 40px; padding-right: 20px; top: 415px; }
 
-#dwarves h2 { -webkit-transform-origin: 100% 0; width: 540px; top: 669px; left: 180px; }
-#dwarves h2.animate { -webkit-animation: rotate_in_title 1s ease 1s both; }
-#dwarves h2.unanimate { -webkit-animation: unrotate_in_title 1s ease 0s both; }
-#dwarves h2.reanimate { -webkit-animation: rotate_in_title 1s ease 0s both; }
+#dwarves h2 { /* -webkit-transform-origin:100% 0; -webkit-transform: rotate(90deg);
+*/ width: 540px; top: 669px; left: 180px; }
 #dwarves .icon { position: absolute; top: 516px; left: 172px; top: 9px; left: 500px; }
 #dwarves #factoid { width: 32px; height: 405px; top: 182px; left: 0px; }
 #dwarves #factoid p { width: 360px; }
@@ -402,13 +341,12 @@ h2 { font-size: 5em; color: black; line-height: 1.125em; letter-spacing: 0.009em
 #king .cutout.animate { -webkit-animation: fade_in_cutout 1s ease 1s both; }
 #king .cutout.unanimate { -webkit-animation: unfade_in_cutout 1s ease 0s both; }
 #king .cutout.reanimate { -webkit-animation: fade_in_cutout 1s ease 0s both; }
-#king #king-rectangle { background-color: #fff; width: 174px; height: 29px; position: absolute; top: 717px; left: 298px; z-index: 5000; }
 #king .icon { position: absolute; top: 461px; left: 34.5%; }
 #king #factoid { width: 57%; left: 21.5%; height: 32px; top: 154px; }
 #king #factoid p { margin: 150px 20px 0 13px; }
 #king .hideshow.history { width: 550px; left: 90px; top: 40px; }
 
-#sin h2 { width: 600px; bottom: 140px; left: 230px; -webkit-transform-origin: 0 100%; -webkit-transform: rotate(-90deg); }
+#sin h2 { width: 600px; bottom: 140px; left: 230px; -webkit-transform-origin: 0 100%; -webkit-transform: rotate(-90deg); padding-bottom: 10px; }
 #sin .icon { position: absolute; top: 7%; left: 33%; }
 #sin .story { width: 510px; left: 175px; left: 155px; top: 1024px; }
 #sin #factoid { width: 340px; height: 32px; top: 630px; right: 0px; }
@@ -419,9 +357,6 @@ h2 { font-size: 5em; color: black; line-height: 1.125em; letter-spacing: 0.009em
 
 #prince h2 { width: 700px; top: 448px; top: 688px; left: 58px; pointer-events: none; }
 #prince h2 span.prince-title { pointer-events: all; }
-#prince h2.animate { -webkit-animation: arrow_in 1s ease 1s both; }
-#prince h2.unanimate { -webkit-animation: arrow_out 1s ease 0s both; }
-#prince h2.reanimate { -webkit-animation: arrow_in 1s ease 0s both; }
 #prince .slider { bottom: 120px; left: 730px; transform: rotate(90deg); -webkit-transform: rotate(90deg); }
 #prince .slider .bar { height: 390px; }
 #prince .icon { position: absolute; top: 15%; left: 32%; top: 198px; left: 295px; -webkit-transform: rotate(260deg); }
@@ -435,9 +370,6 @@ h2 { font-size: 5em; color: black; line-height: 1.125em; letter-spacing: 0.009em
 
 #moral h2 { -webkit-transform: rotate(90deg); }
 #moral .title { width: 480px; height: 200px; position: absolute; top: 154px; left: -68px; }
-#moral .title.animate { -webkit-animation: fatten 1s ease 1s both; }
-#moral .title.unanimate { -webkit-animation: unfatten 1s ease 0s both; }
-#moral .title.reanimate { -webkit-animation: fatten 1s ease 0s both; }
 #moral .icon { position: absolute; left: 31%; top: 689px; left: 219px; -webkit-transform: rotate(0deg); }
 #moral #factoid { width: 260px; height: 32px; top: 693px; top: 392px; right: 0px; }
 #moral .hideshow.history { width: 670px; left: 26px; top: 470px; }

@@ -42,6 +42,7 @@
     } 
   }
   
+
 #story {
   .icons {
     height: 0px;
@@ -93,12 +94,10 @@
     right:50px;
     }        
   #instructions {
-/*     -webkit-animation: fade_out 0.75s ease-out 2s both; */
     opacity: 1;
     width: 580px;
     left: 41px;
     top:253px;
-/*     top:773px; */
     background-color: rgba(0,0,0,0);    
       p { 
       font-family: $sans-type;
@@ -125,7 +124,6 @@
     left: 42px;
     top:120px;
     padding-right: 400px;
-/*     p:first-child {background-color: #fff} */
    }
   .hider {
     position: absolute;
@@ -143,18 +141,9 @@
     top:686px;
     left: 55px;
   	-webkit-transform-origin:0 0;
-  	transform-origin:0 0;
     -webkit-transform:rotate(-90deg);
-  	transform:rotate(-90deg);
-    &.animate { -webkit-animation: fade_title $animate-in;}
-    &.unanimate { -webkit-animation: unfade_title $animate-out;}
-    &.reanimate { -webkit-animation: fade_title $animate-out;}
   	}   	
   .cutout {    
-    /*
--webkit-filter: blur(5px);
-    filter: blur(5px) 	
-*/
     &.animate { -webkit-animation: slide_in $animate-in;}
     &.unanimate { -webkit-animation: unslide_in $animate-out;}
     &.reanimate { -webkit-animation: slide_in $animate-out;}   
@@ -172,8 +161,7 @@
     right: 0px;
     }   
   .hideshow.history {
-    width: 530px;
-    width: 370px;
+
     width: 410px;
     left: 133px;
     top: 582px;
@@ -183,14 +171,8 @@
 #queen {  
   h2 {    
     width: 500px;
-    top:82px;
-    left: 256px;
-    left: 350px;
     top: 84px;
     left: 226px;
-    &.animate { -webkit-animation: fatten $animate-in;}
-    &.unanimate { -webkit-animation: unfatten $animate-out;}
-    &.reanimate { -webkit-animation: fatten $animate-out;}
   	}  	
 /*
   #drag2 {
@@ -269,10 +251,10 @@
   
 #dwarves {    
   h2 {    
-    -webkit-transform-origin:100% 0; 
-    &.animate { -webkit-animation: rotate_in_title $animate-in;}
-    &.unanimate { -webkit-animation: unrotate_in_title $animate-out;}
-    &.reanimate { -webkit-animation: rotate_in_title $animate-out;}  
+/*
+    -webkit-transform-origin:100% 0;
+    -webkit-transform: rotate(90deg);
+*/
     width: 540px;
     top: 669px;
     left: 180px;
@@ -327,16 +309,7 @@
     &.animate { -webkit-animation: fade_in_cutout $animate-in;}
     &.unanimate { -webkit-animation: unfade_in_cutout $animate-out;}
     &.reanimate { -webkit-animation: fade_in_cutout $animate-out;} 
-    } 
-  #king-rectangle {
-    background-color: #fff;
-    width:174px;
-    height:29px;
-    position: absolute;
-    top: 717px;
-    left:298px;
-    z-index: 5000;
-    }	
+    } 	
   .icon {
     position: absolute;
     top:461px;
@@ -363,6 +336,7 @@
     left:230px;
     -webkit-transform-origin:0 100%; 
     -webkit-transform: rotate(-90deg);
+    padding-bottom: 10px;
   	}  	
   .icon {
     position: absolute;
@@ -405,9 +379,6 @@
     left:58px;
     pointer-events: none;
     span.prince-title {pointer-events: all;}
-    &.animate { -webkit-animation: arrow_in $animate-in;}
-    &.unanimate { -webkit-animation: arrow_out $animate-out;}
-    &.reanimate { -webkit-animation: arrow_in $animate-out;} 
   	}  	
   .slider {
     bottom: 120px;
@@ -460,9 +431,6 @@
     position: absolute;
     top:154px;
     left:-68px;
-    &.animate { -webkit-animation: fatten $animate-in;}
-    &.unanimate { -webkit-animation: unfatten $animate-out;}
-    &.reanimate { -webkit-animation: fatten $animate-out;} 
     }
   .icon {
     position: absolute;

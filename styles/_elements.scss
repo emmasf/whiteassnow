@@ -72,6 +72,14 @@ h2 {
 	overflow: hidden;	
 	}
 	
+.title_hider {
+  zoom: 1;
+  *display: inline;
+  &.animate { -webkit-animation: unhide_title $animate-in;}
+  &.unanimate { -webkit-animation: hide_title $animate-out;}
+  &.reanimate { -webkit-animation: unhide_title $animate-out;}  
+  }
+	
 
 
 /** Cutout Images ****************************/   	
