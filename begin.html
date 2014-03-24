@@ -95,47 +95,6 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 
-
-<!-- Page delay, maybeee --->
-<!--
-<script>
-function delay (URL) {
-  setTimeout( function() { window.location = URL }, 500 );
-  }
-  $(document).ready(function(){
-    $(".next").click(function(){
-      $(".page").animate({right:768}, 500);    
-      });
-    $(".previous").click(function(){
-      $(".page").animate({left:768}, 500);    
-      });
-  });
-</script>
--->
-
-<!--
-<script type="text/javascript">
- function delay (URL) {
-  setTimeout( function() { window.location = URL }, 2000 );
-  }
-  
-  $(document).ready(function() {
-    $("html").css("background-color", "#fff");
-    $(".page").css("display", "none"); 
-    $(".page").fadeIn(2000); 
-    $("a.transition").click(function(event){
-        event.preventDefault();
-        linkLocation = this.href;
-        $(".page").fadeOut(2000, redirectPage);      
-    });         
-  
-  function redirectPage() {
-    window.location = linkLocation;
-    }
-});
-</script>
--->
-
 <!-- Page transition fader  -->
  <script type="text/javascript">
 
@@ -145,9 +104,11 @@ function delay (URL) {
 
  $(document).ready(function() { 
      $("#coverup").css("display","none");
-          $(".page").fadeIn(1000);  
+     $("a.nav-icon").click(function(event){
+         $("body").fadeOut(500);  
+      });  
      $("a.center").click(function(event){
-         $("#coverup").fadeIn(500);  
+         $("#coverup").fadeIn(100);  
       });         
  });
  </script>

@@ -90,9 +90,11 @@
 
  $(document).ready(function() { 
      $("#coverup").css("display","none");
-     $(".page").fadeIn(1000);  
+     $("a.nav-icon").click(function(event){
+         $("body").fadeOut(500);  
+      });  
      $("a.center").click(function(event){
-         $("#coverup").fadeIn(500);  
+         $("#coverup").fadeIn(100);  
       });         
  });
  
