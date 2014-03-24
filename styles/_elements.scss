@@ -111,12 +111,9 @@ h2 {
    img {   
    height:60px;
    width: 60px;}
-   a {
-   -webkit-transition-property: none !important;
-   }
    }
    
-.nav-icon:hover, .nav-icon:active {
+.nav-icon:hover, .nav-icon:active, .nav-icon:focus {
    background-color: rgba($red,0.8);
     transition: background-color 0.25s ease-in; 
    -webkit-transition: background-color 0.25s ease-in; 
