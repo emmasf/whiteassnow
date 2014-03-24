@@ -165,7 +165,7 @@ function delay (URL) {
   
 <!-- Tap image to play animation -->
 <script>
-  $( ".cutout" ).click(function() {
+  $( ".cutout, div.title" ).click(function() {
     if ($('.cutout').hasClass( "animate" )) {
       $('.cutout').removeClass('animate');
       $('.cutout').addClass('unanimate');
