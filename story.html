@@ -62,10 +62,11 @@ function delayModal (URL) {
  $(document).ready(function() {
      $("body").css("background-color", "#ccc");
      $(".modal-bg").css("display", "none"); 
-     $(".modal-bg").fadeIn(300); 
+     $(".modal-bg").fadeIn(900); 
      $("a").click(function(event){
          event.preventDefault();
          linkLocation = this.href;
+         $("body").fadeOut(900); 
          $(".modal-bg").fadeOut(600, redirectPage);      
       });         
      function redirectPage() {
