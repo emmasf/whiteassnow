@@ -165,7 +165,7 @@ h2 { font-size: 5em; color: black; line-height: 1.125em; letter-spacing: 0.009em
 .page { width: 768px; height: 1024px; top: 0px; overflow: hidden; }
 
 .title_hider { zoom: 1; *display: inline; }
-.title_hider.animate { -webkit-animation: unhide_title 1s ease 1s both; }
+.title_hider.animate { -webkit-animation: unhide_title 1s ease 0.05s both; }
 .title_hider.unanimate { -webkit-animation: hide_title 1s ease 0s both; }
 .title_hider.reanimate { -webkit-animation: unhide_title 1s ease 0s both; }
 

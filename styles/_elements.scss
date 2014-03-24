@@ -75,7 +75,7 @@ h2 {
 .title_hider {
   zoom: 1;
   *display: inline;
-  &.animate { -webkit-animation: unhide_title $animate-in;}
+  &.animate { -webkit-animation: unhide_title $animate-in-fast;}
   &.unanimate { -webkit-animation: hide_title $animate-out;}
   &.reanimate { -webkit-animation: unhide_title $animate-out;}  
   }
