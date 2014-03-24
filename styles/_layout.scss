@@ -117,7 +117,7 @@
     top: 74px;
     left: 0px;    
     p {
-      padding-top: 304px;
+      padding-top: 305px;
       margin-left: 37px}
     } 
   .history {
@@ -138,12 +138,6 @@
   }
 
 #snowwhite {
-  /*
-.svg-draw {
-    position: absolute;
-    top: 720px;
-    }
-*/
   h2 {    
     width: 600px;
     top:686px;
@@ -165,9 +159,10 @@
     &.unanimate { -webkit-animation: unslide_in $animate-out;}
     &.reanimate { -webkit-animation: slide_in $animate-out;}   
     }
+    margin-top:5px;
   .icon {
     position: absolute;
-    top:342px;
+    top:347px;
     right:14px;
     }       
   #factoid {
@@ -178,8 +173,10 @@
     }   
   .hideshow.history {
     width: 530px;
-    left: 20px;
-    top: 562px;
+    width: 370px;
+    width: 410px;
+    left: 133px;
+    top: 582px;
    }
   }
 
@@ -220,15 +217,16 @@
     }    
   #factoid {
     width: 32px;
-    height: 260px;
+    height: 250px;
     top: 488px;
     left: 0px;   
     p {width:320px}    
     }     
   .hideshow.history {
-    width: 680px;
+    width: 630px;
     left: 59px;
-    top: 400px;
+    top: 402px;
+    top: 365px;
    } 
   .cutout {
     margin-top:0px; 
@@ -255,16 +253,17 @@
     left:267px;
     }       
   #factoid {
-    width: 386px;
+    width: 336px;
     height:32px;
     top: 312px;
     left: 0px;
     }
   .hideshow.history {
-    width: 500px;
+    width: 550px;
     left: 12px;
-    left: 90px;
-    top:404px;
+    left: 40px;
+    padding-right:20px;
+    top:415px;
    } 
   }
   
@@ -290,16 +289,19 @@
     height: 405px;
     top: 182px;
     left: 0px;
-    /* p {width:360px} */
+    p {width:360px}
     } 
   .hideshow.history {
-    width: 620px;
-    left: 133px;
-    top:650px;
-    width: 654px;
-    left: 12px;
-    top:35px;
+    width: 584px;
+    left: 115px;
+    top:203px;
+    padding-bottom: 40px;
    } 
+  .cutout{
+    &.animate { -webkit-animation: scoot_in $animate-in;}
+    &.unanimate { -webkit-animation: unscoot_in $animate-out;}
+    &.reanimate { -webkit-animation: scoot_in $animate-out;}  
+  }
   }
 
 #king {    
@@ -341,17 +343,15 @@
     left:34.5%;
     }       
   #factoid {
-    width: 65%;
-    left: 17.5%;
     width: 57%;
     left: 21.5%;
     height:32px;
     top: 154px;
-    p {margin: 170px 20px 0 10px;}
+    p {margin: 150px 20px 0 13px;}
     } 
-.hideshow.history {
-    width: 740px;
-    left: 20px;
+  .hideshow.history {
+    width: 550px;
+    left: 90px;
     top:40px;
    }   
   }
@@ -376,7 +376,7 @@
     top:1024px;
     }    
   #factoid {
-    width: 330px;
+    width: 340px;
     height:32px;
     top: 630px;
     right: 0px;
@@ -385,13 +385,15 @@
     width: 366px;
     width: 440px;
     width: 659px;
-    left: 6px;
-    top:206px;
+    width: 605px;
+    left: 26px;
+    top:200px;
+    padding-bottom: 35px;
    } 
   .cutout {
-    &.animate { -webkit-animation: fade_in_cutout $animate-in;}
-    &.unanimate { -webkit-animation: unfade_in_cutout $animate-out;}
-    &.reanimate { -webkit-animation: fade_in_cutout $animate-out;} 
+    &.animate { -webkit-animation: angle_cutout $animate-in;}
+    &.unanimate { -webkit-animation: unangle_cutout $animate-out;}
+    &.reanimate { -webkit-animation: angle_cutout $animate-out;} 
     }  
   }
 
@@ -403,6 +405,9 @@
     left:58px;
     pointer-events: none;
     span.prince-title {pointer-events: all;}
+    &.animate { -webkit-animation: arrow_in $animate-in;}
+    &.unanimate { -webkit-animation: arrow_out $animate-out;}
+    &.reanimate { -webkit-animation: arrow_in $animate-out;} 
   	}  	
   .slider {
     bottom: 120px;
@@ -421,15 +426,15 @@
     }     
   #factoid {
     width: 32px;
-    height: 223px;
+    height: 216px;
     top: 434px;
     right: 0px;
     p {width:510px;}
     }
   .hideshow.history {
-    width: 728px;
-    left: 0px;
-    top: 449px;
+    width: 688px;
+    left: 3px;
+    top: 468px;
    }   
   #spin {
     position: absolute;
@@ -439,19 +444,26 @@
     overflow:hidden;
     }   
   .cutout {
-    &.animate { -webkit-animation: fade_in_cutout $animate-in;}
-    &.unanimate { -webkit-animation: unfade_in_cutout $animate-out;}
-    &.reanimate { -webkit-animation: fade_in_cutout $animate-out;} 
+    &.animate { -webkit-animation: desaturate_cutout $animate-in;}
+    &.unanimate { -webkit-animation: undesaturate_cutout $animate-out;}
+    &.reanimate { -webkit-animation: desaturate_cutout $animate-out;} 
     }
   }
 
 #moral {
   h2 {    
+    -webkit-transform:rotate(90deg); 
+    } 	
+  .title {
     width: 480px;
+    height: 200px;
+    position: absolute;
     top:154px;
-    left:-48px;
-    -webkit-transform:rotate(90deg);
-  	}
+    left:-68px;
+    &.animate { -webkit-animation: fatten $animate-in;}
+    &.unanimate { -webkit-animation: unfatten $animate-out;}
+    &.reanimate { -webkit-animation: fatten $animate-out;} 
+    }
   .icon {
     position: absolute;
     left:31%;
@@ -467,18 +479,15 @@
     right: 0px;
     }
   .hideshow.history {
-    width: 460px;
-    left: 146px;
-    left: 236px;
-    top:30px;
-    width: 733px;
+    width: 670px;
     left: 26px;
-    top:500px;
-   }
-   .cutout {
-    &.animate { -webkit-animation: fade_in_cutout $animate-in;}
-    &.unanimate { -webkit-animation: unfade_in_cutout $animate-out;}
-    &.reanimate { -webkit-animation: fade_in_cutout $animate-out;} 
+    top:470px;
+    }
+  .cutout {
+    -webkit-transform-origin: 65% 50%;
+    &.animate { -webkit-animation: fatten $animate-in;}
+    &.unanimate { -webkit-animation: unfatten $animate-out;}
+    &.reanimate { -webkit-animation: fatten $animate-out;} 
     }  
   }
 
@@ -495,10 +504,11 @@
     left:34%;
     }
   #factoid {
-    width: 430px;
+    width: 450px;
     height:32px;
     top: 310px;
-    left: 170px;
+    left: 159px;
+    p {margin-bottom: 10px;}
     }
   .hideshow.history {
     width: 390px;
