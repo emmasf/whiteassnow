@@ -24,13 +24,6 @@
           	<polygon points="89.649,84.186 139.684,84.186 142.034,76.587 92.466,76.587"/>
           	<polygon points="84.947,96.921 123.227,96.921 125.576,89.519 87.764,89.519"/>
       		</svg>
-        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" class="red hideshow" style="display: none"> 	  		    
-          <path d="M193.394,69.846h-14.194l3.626-11.756H83.639L39.858,164.857l11.65,17.214l0.021-0.015h108.012
-        		L193.394,69.846z M88.334,65.09h85.006l-29.562,95.859H49.026L88.334,65.09z M55.213,175.057l-4.81-7.107h98.542l28.097-91.103
-        		h6.929l-29.628,98.21H55.213z"/>
-          	<polygon points="89.649,84.186 139.684,84.186 142.034,76.587 92.466,76.587"/>
-          	<polygon points="84.947,96.921 123.227,96.921 125.576,89.519 87.764,89.519"/>
-      		</svg>	
       </div>
     </div>
          
@@ -63,21 +56,14 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 
-<!-- Icon Fact Toggle -->
-<script>
-  $( "#icon-button" ).click(function() {
-    $( ".hideshow" ).toggle();
-  });
-</script>
-
 <!-- Factoid Toggle Bar -->
 <script>
   $(document).ready(function(){
     $("#factoid").click(function(){
       if($(this).hasClass('hide')) {
-        $(this).animate({height:520},200).removeClass('hide');
+        $(this).animate({height:520},600).removeClass('hide');
       } else { 
-        $(this).animate({height:32},200).addClass('hide');
+        $(this).animate({height:32},600).addClass('hide');
       }
     });
   });
