@@ -197,7 +197,7 @@ h2 { font-size: 5em; color: black; line-height: 1.125em; letter-spacing: 0.009em
 .inset-story { width: 560px; height: 895px; position: fixed; top: 35px; left: 75px; margin: 0; padding: 60px 100px 0 0; overflow: auto; overflow-scrolling: touch; -webkit-overflow-scrolling: touch; }
 .inset-story p:last-child { margin-bottom: 80px; }
 
-.story-title { font-size: 70px; margin: 45px 0 20px 0; }
+.story-title { font-size: 70px; margin: 290px 0 20px 0; }
 
 .story-byline { font-style: italic; color: #8c8c8c; }
 
