@@ -30,15 +30,17 @@
     position: absolute;
     left: 60px;
     top: 583px;
+    top: 613px;
   	}
   	
   p {
     color:rgba(255,255,255,1);
-    font-size: 29px;
+    font-size: 34px;
     font-weight: 700;
     position: absolute;
     left: 60px;
     top: 825px;
+    display:none;
     } 
   }
   
@@ -170,7 +172,7 @@
 
 #queen {  
   h2 {    
-    width: 500px;
+    width: 480px;
     top: 84px;
     left: 226px;
   	}  	
@@ -220,7 +222,7 @@
   
 #huntsman {  
   h2 {    
-    width: 650px;
+    width: 610px;
     top:103px;
     left: 60px;
     }
