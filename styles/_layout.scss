@@ -420,8 +420,10 @@
     &.animate { -webkit-animation: desaturate_cutout $animate-in;}
     &.unanimate { -webkit-animation: undesaturate_cutout $animate-out;}
     &.reanimate { -webkit-animation: desaturate_cutout $animate-out;}
-    img {height: 623px; width: 580px } 
+    
     }
+    
+    img.cutout {height: 623px; width: 580px }
   }
 
 #moral {
