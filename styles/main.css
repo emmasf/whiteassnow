@@ -316,7 +316,7 @@ h2 { font-size: 5em; color: black; line-height: 1.125em; letter-spacing: 0.009em
 #queen .cutout.unanimate { -webkit-animation: unfatten 1s ease 0s both; }
 #queen .cutout.reanimate { -webkit-animation: fatten 1s ease 0s both; }
 
-#huntsman h2 { width: 650px; top: 103px; left: 60px; }
+#huntsman h2 { width: 640px; top: 103px; left: 60px; }
 #huntsman .cutout.animate { -webkit-animation: slide_up 1s ease 0.75s both; }
 #huntsman .cutout.unanimate { -webkit-animation: unslide_up 1s ease 0s both; }
 #huntsman .cutout.reanimate { -webkit-animation: slide_up 1s ease 0s both; }
