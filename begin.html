@@ -95,23 +95,18 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 
-<!-- Page transition fader  -->
- <script type="text/javascript">
-
- function delayModal (URL) {
-  setTimeout( function() { window.location = URL }, 500 );
-  }
-
- $(document).ready(function() { 
-     $("#coverup").css("display","none");
-     $("a.nav-icon").click(function(event){
-         $("body").fadeOut(500);  
-      });  
-     $("a.center").click(function(event){
-         $("#coverup").fadeIn(100);  
-      });         
- });
- </script>
+<!-- Factoid Toggle Bar -->
+<script>
+  $(document).ready(function(){
+    $("#factoid").click(function(){
+      if($(this).hasClass('hide')) {
+        $(this).animate({height:500},600).removeClass('hide');
+      } else { 
+        $(this).animate({height:32},600).addClass('hide');
+      }
+    });
+  });
+</script>
 
 <!-- Hide / Show via button -->
 <script>
@@ -123,6 +118,22 @@
   });
   
 </script>
+
+<!-- Page transition fader  -->
+ <script type="text/javascript">
+
+ function delayModal (URL) {
+  setTimeout( function() { window.location = URL }, 100 );
+  }
+
+ $(document).ready(function() { s
+     $("a.nav-icon").click(function(event){
+         $("body").fadeOut(900); 
+         $("#coverup").fadeIn(300);  
+      });           
+ });
+ </script>
+
   
 <!-- Tap image to play animation -->
 <script>
@@ -142,18 +153,6 @@
   });  
 </script>
 
-<!-- Factoid Toggle Bar -->
-<script>
-  $(document).ready(function(){
-    $("#factoid").click(function(){
-      if($(this).hasClass('hide')) {
-        $(this).animate({height:500},200).removeClass('hide');
-      } else { 
-        $(this).animate({height:32},200).addClass('hide');
-      }
-    });
-  });
-</script>
 
 <!-- Prevent vertical scrolling  -->
 <script>

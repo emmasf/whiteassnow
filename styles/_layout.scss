@@ -30,15 +30,17 @@
     position: absolute;
     left: 60px;
     top: 583px;
+    top: 613px;
   	}
   	
   p {
     color:rgba(255,255,255,1);
-    font-size: 29px;
+    font-size: 34px;
     font-weight: 700;
     position: absolute;
     left: 60px;
     top: 825px;
+    display:none;
     } 
   }
   
@@ -170,7 +172,7 @@
 
 #queen {  
   h2 {    
-    width: 500px;
+    width: 480px;
     top: 84px;
     left: 226px;
   	}  	
@@ -220,7 +222,11 @@
   
 #huntsman {  
   h2 {    
+<<<<<<< HEAD
     width: 640px;
+=======
+    width: 610px;
+>>>>>>> FETCH_HEAD
     top:103px;
     left: 60px;
     }
@@ -412,13 +418,17 @@
     right:40px;
     bottom: 0px;
     height: 498px;
+    height: 508px;
     overflow:hidden;
     }   
   .cutout {
     &.animate { -webkit-animation: desaturate_cutout $animate-in;}
     &.unanimate { -webkit-animation: undesaturate_cutout $animate-out;}
-    &.reanimate { -webkit-animation: desaturate_cutout $animate-out;} 
+    &.reanimate { -webkit-animation: desaturate_cutout $animate-out;}
+    
     }
+    
+    img.cutout {height: 623px; width: 580px }
   }
 
 #moral {

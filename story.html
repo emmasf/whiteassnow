@@ -6,6 +6,25 @@
 	<!-- <meta name="viewport" content="width=device-width, minimal-ui” /> -->
 	<title>White as Snow</title>
 	<link href="styles/main.css" rel="stylesheet" type="text/css" />	
+
+
+<script src="scripts/jquery-1.11.0-min.js"></script>
+<script type="text/javascript">
+$(document).onload(function() {
+     $("body").css("background-color", "#ccc");
+     $(".modal-bg").css("display", "none"); 
+     $(".modal-bg").fadeIn(900); 
+     $("a").click(function(event){
+         event.preventDefault();
+         linkLocation = this.href;
+         $("body").fadeOut(900); 
+         $(".modal-bg").fadeOut(600, redirectPage);      
+      });         
+     function redirectPage() {
+         window.location = linkLocation;
+     }
+ });
+ </script>
 </head>
 
 <body>
@@ -38,49 +57,5 @@
       <div class="story-fader bottom"></div>
       <a class="nav-icon close" href="javascript:history.back(-1);"><img src="img/nav_close.svg"></a>
 	</div>
-
-    
-
-<!--------------------------------------------------------------->
-<!--------------------------------------------------------------->    	
-<!- Begin Javascript -------------------------------------------->
-<!--------------------------------------------------------------->
-<!--------------------------------------------------------------->
-
-<!-- JQuery please god don't conflict --------------------->
-<script src="scripts/jquery-1.11.0-min.js"></script>
-
-<!-- Page transition fader  -->
-
- <script type="text/javascript">
- /*
-function delayModal (URL) {
-  setTimeout( function() { window.location = URL }, 1000 );
-  }
-*/
-
- $(document).ready(function() {
-     $("body").css("background-color", "#ccc");
-     $(".modal-bg").css("display", "none"); 
-     $(".modal-bg").fadeIn(300); 
-     $("a").click(function(event){
-         event.preventDefault();
-         linkLocation = this.href;
-         $(".modal-bg").fadeOut(600, redirectPage);      
-      });         
-     function redirectPage() {
-         window.location = linkLocation;
-     }
- });
- </script>
-  
-
-<!-- Livereload REMOVE BEFORE LAUNCH ---------------------------->	
-<!--
-<script>
-  document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
-</script>
--->
-
 </body>
 </html>

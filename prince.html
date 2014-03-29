@@ -12,11 +12,11 @@
 
 	<div id="prince" class="page">
   
-  <img class="cutout back animate" src="img/prince.png">      
-      
-  <div id="spin" class="interactive_3d middle">
-    <img src="img/spin/model_1.jpg">
-  </div>
+  <img class="cutout back animate" src="img/prince.png">     
+  
+  	  <div id="spin" class="interactive_3d middle">
+    <img src="img/spin/model_1.png">
+  </div> 
   
   <h2 class="front animate title_hider">
     <span class="prince-title">The Prin</span>ce likes <span class="prince-title">an easy</span> target.</h2>
@@ -68,13 +68,10 @@
     <a class="nav-icon beginning" href="index.html"><img src="img/nav_skip.svg"></a>
     <a class="nav-icon ending" href="end.html"><img class="flip-horiz" src="img/nav_skip.svg"></a>
     <div class="story-modal" id="modal-09">   
-      <a class="nav-icon center" href="javascript:delayModal('story.html#story-prince')"><img src="img/nav_text.svg"></a> 
+      <a class="nav-icon center" href="story.html#story-prince"><img src="img/nav_text.svg"></a> 
       </div>
     </div>
-
-  <div id="coverup"></div> 
-    	
-    	
+ 	
 <!--------------------------------------------------------------->
 <!--------------------------------------------------------------->    	
 <!- Begin Javascript -------------------------------------------->
@@ -86,26 +83,28 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 
-<!-- Page transition fader  -->
- <script type="text/javascript">
+<!-- Icon Fact Toggle -->
+<script>
+  $( "#icon-button-09" ).click(function() {
+    $( "#prince .hideshow" ).toggle();
+  });
+  $( "#idea .hideshow.history" ).click(function() {
+    $( ".hideshow" ).toggle();
+  });
+  </script>
 
- function delayModal (URL) {
-  setTimeout( function() { window.location = URL }, 500 );
-  }
-
- $(document).ready(function() { 
-     $("#coverup").css("display","none");
-     $("a.nav-icon").click(function(event){
-         $("body").fadeOut(500);  
-      });  
-     $("a.center").click(function(event){
-         $("#coverup").fadeIn(100);  
-      });         
- });
- 
- </script>
- 
-
+<!-- Factoid Toggle Bar -->
+<script>
+  $(document).ready(function(){
+    $("#factoid").click(function(){
+      if($(this).hasClass('hide')) {
+        $(this).animate({width:560},600).removeClass('hide');
+      } else { 
+        $(this).animate({width:32},600).addClass('hide');
+      }
+    });
+  });
+</script>
  
 <!-- Tap image to play animation -->
 <script>
@@ -125,35 +124,12 @@
   });  
 </script>
 
-<!-- Icon Fact Toggle -->
-<script>
-  $( "#icon-button-09" ).click(function() {
-    $( "#prince .hideshow" ).toggle();
-  });
-  $( "#idea .hideshow.history" ).click(function() {
-    $( ".hideshow" ).toggle();
-  });
-  </script>
-
-<!-- Factoid Toggle Bar -->
-<script>
-  $(document).ready(function(){
-    $("#factoid").click(function(){
-      if($(this).hasClass('hide')) {
-        $(this).animate({width:560},200).removeClass('hide');
-      } else { 
-        $(this).animate({width:32},200).addClass('hide');
-      }
-    });
-  });
-</script>
-
 <!-- Spinner --------------------->
 <script type="text/javascript" src="scripts/jquery.interactive_3d.js"></script>
 <script>
   $(document).ready( function() {
     $("#spin").interactive_3d({
-      frames: 80,
+      frames: 136,
       cursor: "move",
       speed: 0,
       entrance: false,

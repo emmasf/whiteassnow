@@ -111,16 +111,16 @@ h2 {
    img {   
    height:60px;
    width: 60px;}
-   a {
-   transition-delay: 5s;
-   -webkit-transition-delay: 5s; /* Safari */}
+   -webkit-tap-highlight-color: rgba(0,0,0,0);
    }
    
-.nav-icon:hover, .nav-icon:active {
+.nav-icon:hover, .nav-icon:active, .nav-icon:focus {
    background-color: rgba($red,0.8);
     transition: background-color 0.25s ease-in; 
    -webkit-transition: background-color 0.25s ease-in; 
    }
+   
+
   
 .previous { 
   left: 30px; 
@@ -128,10 +128,12 @@ h2 {
 .next { right: 30px; }  
 .center { right: 354px; }    
 .beginning { 
-  left: 100px; 
+  left: 100px;
+/*   background-color: rgba(0,0,0,0.1);  */
   } 
 .ending { 
   right: 100px; 
+/*   background-color: rgba(0,0,0,0.1);  */
   } 
   
 .inactive {opacity: 0.25}
@@ -358,6 +360,5 @@ h2 {
   transform: scaleY(-1); 
   }
   
-
 
 /******** End Elements Stylesheet ************************************/

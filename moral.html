@@ -62,12 +62,9 @@
     <a class="nav-icon beginning" href="index.html"><img src="img/nav_skip.svg"></a>
     <a class="nav-icon ending" href="end.html"><img class="flip-horiz" src="img/nav_skip.svg"></a>
     <div class="story-modal" id="modal-10">   
-      <a class="nav-icon center" href="javascript:delayModal('story.html#story-moral')"><img src="img/nav_text.svg"></a> 
+      <a class="nav-icon center" href="story.html#story-moral"><img src="img/nav_text.svg"></a> 
       </div>
     </div>
-
-  <div id="coverup"></div> 
-    	
     	
 <!--------------------------------------------------------------->
 <!--------------------------------------------------------------->    	
@@ -78,24 +75,30 @@
 <!-- JQuery please god don't conflict --------------------->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+ 
 
-<!-- Page transition fader  -->
- <script type="text/javascript">
+<!-- Icon Fact Toggle -->
+<script>
+  $( "#icon-button-10" ).click(function() {
+    $( "#moral .hideshow" ).toggle();
+  });
+  $( "#idea .hideshow.history" ).click(function() {
+    $( ".hideshow" ).toggle();
+  });
+  </script>
 
- function delayModal (URL) {
-  setTimeout( function() { window.location = URL }, 500 );
-  }
-
- $(document).ready(function() { 
-     $("#coverup").css("display","none");
-     $("a.nav-icon").click(function(event){
-         $("body").fadeOut(500);  
-      });  
-     $("a.center").click(function(event){
-         $("#coverup").fadeIn(100);  
-      });         
- });
- </script>
+<!-- Factoid Toggle Bar -->
+<script>
+  $(document).ready(function(){
+    $("#factoid").click(function(){
+      if($(this).hasClass('hide')) {
+        $(this).animate({height:232},600).removeClass('hide');
+      } else { 
+        $(this).animate({height:32},600).addClass('hide');
+      }
+    });
+  });
+</script> 
  
 <!-- Tap image to play animation -->
 <script>
@@ -113,30 +116,6 @@
       $('.cutout').addClass('unanimate');
       }
   });  
-</script>
- </script>
-
-<!-- Icon Fact Toggle -->
-<script>
-  $( "#icon-button-10" ).click(function() {
-    $( "#moral .hideshow" ).toggle();
-  });
-  $( "#idea .hideshow.history" ).click(function() {
-    $( ".hideshow" ).toggle();
-  });
-  </script>
-
-<!-- Factoid Toggle Bar -->
-<script>
-  $(document).ready(function(){
-    $("#factoid").click(function(){
-      if($(this).hasClass('hide')) {
-        $(this).animate({height:232},200).removeClass('hide');
-      } else { 
-        $(this).animate({height:32},200).addClass('hide');
-      }
-    });
-  });
 </script>
 
 <!-- Prevent vertical scrolling  -->
