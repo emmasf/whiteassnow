@@ -222,9 +222,9 @@
   
 #huntsman {  
   h2 {    
-    width: 640px;
     top:103px;
     left: 60px;
+    width: 640px;
     }
   .cutout {
     &.animate { -webkit-animation: slide_up $animate-in;}
