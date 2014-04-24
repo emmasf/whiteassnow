@@ -97,7 +97,7 @@ h2 {
   position: fixed;
   height: 60px;
   width: 100%;  
-  opacity: 0;
+/*   opacity: 0; */
   z-index: 5000;
   }
   
@@ -126,7 +126,7 @@ h2 {
   left: 30px; 
   }    
 .next { right: 30px; }  
-.center { right: 354px; }    
+.center { right: 50%; margin-left:-30px }    
 .beginning { 
   left: 100px;
 /*   background-color: rgba(0,0,0,0.1);  */
